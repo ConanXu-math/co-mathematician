@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Codex Co-Mathematician Reviewer Output",
+  "type": "object",
+  "required": [
+    "approved",
+    "severity",
+    "issue_type",
+    "reviewer",
+    "comment",
+    "suggested_fix"
+  ],
+  "properties": {
+    "approved": {
+      "type": "boolean"
+    },
+    "severity": {
+      "type": "string",
+      "enum": ["info", "warning", "blocking"]
+    },
+    "issue_type": {
+      "type": "string",
+      "enum": [
+        "logic",
+        "citation",
+        "code",
+        "exposition",
+        "missing_provenance",
+        "uncertainty"
+      ]
+    },
+    "reviewer": {
+      "type": "string",
+      "minLength": 1
+    },
+    "comment": {
+      "type": "string",
+      "minLength": 1
+    },
+    "suggested_fix": {
+      "type": "string"
+    },
+    "checked_artifacts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    }
+  },
+  "additionalProperties": false
+}

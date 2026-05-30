@@ -1,0 +1,13 @@
+research_question:
+  status: onboarding
+  text: ""
+goals: []
+
+# Example after user approval:
+# goals:
+#   - id: G1
+#     title: "Formalize baseline definitions"
+#     status: approved
+#     approved_by: user
+#     approved_at: "YYYY-MM-DDTHH:MM:SSZ"
+#     workstreams: []

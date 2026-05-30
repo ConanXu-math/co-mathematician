@@ -1,0 +1,83 @@
+# macOS / editor noise
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+*~
+.vscode/
+.idea/
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+*.local
+
+# Python caches and virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+env/
+
+# Notebook and analysis scratch state
+.ipynb_checkpoints/
+.jupyter/
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.nav
+*.out
+*.run.xml
+*.snm
+*.synctex.gz
+*.toc
+*.xdv
+
+# Node / web tooling, in case a local benchmark UI is added
+node_modules/
+dist/
+build/
+.next/
+.vite/
+
+# Logs and temporary outputs
+logs/
+tmp/
+temp/
+.cache/
+
+# Local-only examples and demos.
+examples/
+
+# Downloaded literature payloads for local experiments.
+literature/papers/
+
+# Cloned or snapshotted third-party repositories for local experiments.
+external_repos/*
+!external_repos/README.md
+!external_repos/manifest.tsv
+!external_repos/clone_report.tsv
+!external_repos/snapshot_report.tsv
+
+# Repo archive downloads are reproducible from scripts/ and manifest.tsv.
+external_repos/_archives/
+
+# Large/generated experiment artifacts for future benchmark runs
+benchmarks/**/runs/
+benchmarks/**/outputs/
+benchmarks/**/artifacts/
+results/
+artifacts/
