@@ -1,0 +1,1063 @@
+Canad. J. Math. V ol.53 (3), 2001 pp. 470–488
+Hyperbolic Polynomials and Convex
+Analysis
+Heinz H. Bauschke, Osman G ¨uler, Adrian S. Lewis and Hristo
+S. Sendov
+Abstract. A homogeneous real polynomial p is hyperbolic with respect to a given vector d if the uni-
+variate polynomial t ↦→ p(x −td) has all real roots for all vectors x. Motivated by partial differential
+equations, G˚arding proved in 1951 that the largest such root is a convex function of x,a n ds h o w e dv a r -
+ious ways of constructing new hyperbolic polynomials. W e present a powerful new such construction,
+and use it to generalize G ˚arding’s result to arbitrary symmetric functions of the roots. Many classi-
+cal and recent inequalities follow easily. W e develop various convex-analytic tools for such symmetric
+functions, of interest in interior-point methods for optimization problems over related cones.
+1 Introduction
+A homogeneous polynomial p is hyperbolic with respect to some ﬁxed direction d if
+t h eu n i v a r i a t ep o l y n o m i a l
+(1) t ↦→ p(x − td)
+has only real roots for all points x. A canonical example is the determinant, consid-
+ered as a polynomial on the space of symmetric matrices: the determinant is hyper-
+bolic with respect to the identity matrix (the roots then being simply the eigenvalues).
+Interest in hyperbolic polynomials was originally motivated by the partial differ-
+ential equations literature [8], [14]. An important paper of G ˚arding [9] showed vari-
+ous ways of constructing new hyperbolic polynomials from old ones; it is known they
+form a rich class. Our key result is a new such construction. Speciﬁcally, we show that
+if a symmetric polynomial q is hyperbolic with respect to the direction (1 ,1,...,1)
+then the composition q ◦λ is hyperbolic with respect to d, where the components of
+λ are the roots of the original hyperbolic polynomial (1).
+W e apply this simple and powerful result to show that for any symmetric convex
+function f ,t h ef u n c t i o nf ◦ λ is convex. This generalizes a fundamental tool of
+G˚arding: the largest root is a convex function. In the determinant example above, our
+result shows that any symmetric convex function of the eigenvalues of a symmetric
+Received by the editors November 6, 1998; revised January 6, 2000.
+The ﬁrst author’s research was supported by an NSERC Postdoctoral Fellowship and by the Depart-
+ment of Combinatorics & Optimization, University of Waterloo. The second author’s research was par-
+tially supported by the National Science Foundation under grant DMS-9623135. The research of the third
+and fourth authors was supported by NSERC.
+AMS subject classiﬁcation: Primary: 90C25; secondary: 15A45, 52A41.
+Keywords: convex analysis, eigenvalue, G ˚arding’s inequality, hyperbolic barrier function, hyperbolic
+polynomial, hyperbolicity cone, interior-point method, semideﬁnite program, singular value, symmetric
+function, unitarily invariant norm.
+c⃝Canadian Mathematical Society 2001.
+470
+Hyperbolic Polynomials and Convex Analysis 471
+matrix is a convex function of that matrix, a beautiful theorem of Davis [6]. Another
+choice of hyperbolic polynomial gives von Neumann’s famous characterization of
+unitarily invariant matrix norms as symmetric gauge functions of the singular values
+[33]. By varying the choice of polynomial we derive many elegant, often classical,
+inequalities in a remarkably uniﬁed way. Examples include diverse properties of the
+elementary symmetric functions, and in particular some sophisticated recent results
+of Krylov [19].
+The second half of this paper is convex-analytic in character. Symmetric func-
+tions of eigenvalues are fundamental in eigenvalue optimization and semideﬁnite
+programming [24]. They have an attractive duality theory: the Fenchel conjugate
+is described elegantly by the formula ( f ◦λ)
+∗ = f ∗ ◦λ [21]. V on Neumann proved a
+similar result for unitarily invariant norms, useful in matrix approximation problems
+[15].
+Hyperbolic polynomials offer a a unifying framework in which to study such con-
+vexity and duality results. They also have potential application in modern interior
+point methodology. Following G ˚arding, we can associate with any hyperbolic poly-
+nomial the open convex cone
+{x : p(x − td) ̸= 0,∀t ≤ 0}.
+In the determinant example this is simply the cone of positive deﬁnite matrices. Opti-
+mization problems over such cones are good candidates for interior point algorithms
+analogous to the dramatically successful techniques current in semideﬁnite program-
+ming [11]. With these aims in mind, we outline an attractive duality theory, devel-
+oping convex-analytic tools for symmetric convex functions of the roots associated
+with general hyperbolic polynomials. For clarity, we omit some of the details: they
+may be found in [1], which is accessible at http://orion.uwaterloo.ca/∼ aslewis.
+Notation
+We w r i te
+Rm
+++ (resp. Rm
++ )f o rt h es e t {u ∈ Rm : ui > 0,∀i} (resp. {u ∈ Rm :
+ui ≥ 0,∀i}). The closure (resp. boundary, convex hull , linear span )o fas e t S is
+denoted cl S (resp. bd S,c o n vS,s p a nS). A cone is a nonempty set that contains every
+nonnegative multiple of all its members. If u ∈ Rm,t h e nu↓ is the vector u with its
+coordinates arranged decreasingly; also, U↓ := {u↓ : u ∈ U },f o re v e r ys u b s e tU
+of Rm.T h e transpose of a matrix (or vector) A is denoted AT .T h e identity matrix
+or map is written I.I f X is a Euclidean space with inner product ⟨·,·⟩and h : X →
+[−∞ ,+∞ ]i sc o n v e x ,t h e nh∗ (resp. ∂h, ∇ h,d o mh)s t a n d sf o rt h eFenchel conjugate
+(resp. subdifferential map , gradient map , domain)o f h. (Rockafellar’s [32] is the
+standard reference for these notions from convex analysis.) Higher order derivatives
+are denoted by ∇ kh.I f U ⊆ X, then the positive polar cone is U ⊕ := {x ∈ X :
+⟨x,U ⟩≥ 0}.I f A is a linear operator between Euclidean spaces, then its conjugate is
+written A∗.T h e range of a map λ is denoted by ran λ.F i n a l l y ,i fA,B are two subsets
+of X,t h e nd(A,B): = inf ∥A − B∥ is the distance between A and B.
+472 H. H. Bauschke, O. G ¨u l e r ,A .S .L e w i sa n dH .S .S e n d o v
+2 T ools
+W e assume throughout the paper that
+X is a ﬁnite-dimensional real vector space.
+This section contains a selection of important facts on hyperbolic polynomials
+from G˚arding’s fundamental work [8], [9], and a deep inequality on elementary sym-
+metric functions.
+Hyperbolic Polynomials and Characteristic Roots
+If p is a nonconstant polynomial on X and m is a positive integer then we say p is
+homogeneous of degree m if p(tx) = tm p(x)f o ra l lt ∈ R and every x ∈ X.
+Deﬁnition 2.1 (Hyperbolic Polynomial) Suppose that p is a homogeneous poly-
+nomial of degree m on X and d ∈ X with p(d) ̸= 0. Then pi sh y p e r b o l i cw i t hr e s p e c t
+to d, if the polynomial t ↦→ p(x − td)( w h e r et is a scalar) has only real zeros, for every
+x ∈ X.
+Deﬁnition 2.2 (“Characteristic Roots and Trace”) Suppose p is hyperbolic with
+respect to d ∈ X of degree m.T h e nf o re v e r yx ∈ X,w ec a nw r i t e
+p(x + td) = p(d)
+m∏
+i=1
+(
+t + λi (x)
+)
+and assume without loss of generality that λ1(x) ≥ λ2(x) ≥ ··· ≥ λm(x). The
+corresponding map X → Rm
+↓ : x ↦→
+(
+λ1(x),...,λm(x)
+)
+is denoted by λ and called
+the characteristic map (with respect to p and d) .W e s a y t h a tλi (x)i st h e i-th largest
+characteristic root of x (with respect to p and d) and deﬁne the sum of the k largest
+characteristic roots by σk := ∑k
+i=1 λi ,f o re v e r y1≤ k ≤ m.T h ef u n c t i o nσm is called
+the trace.
+The characteristic roots {λi (x)} are thus the roots of the polynomial t ↦→
+p(x − td). It follows that the trace σm is linear (see also the paragraph following
+Fact 2.10).
+Unless stated otherwise, we assume throughout the paper that
+p is a hyperbolic polynomial of degree m with respect to d,
+with characteristic map λ and σk := ∑k
+i=1 λk,
+for every 1 ≤ k ≤ m. The notions “characteristic root” and “trace” are well-
+motivated by the the following example.
+The Hermitian Matrices Let X be the real vector space of the m × m Hermitian
+matrices and p := det. Then p is hyperbolic of degree m with respect to d := I and λ
+Hyperbolic Polynomials and Convex Analysis 473
+maps x ∈ X to its eigenvalues, arranged decreasingly. Thus for every 1 ≤ k ≤ m,t h e
+function σk is indeed the sum of the k largest eigenvalues and σm is the (ordinary)
+trace.
+As we go, we will point out what some of the results become in the important case
+of the Hermitian matrices. Further examples are provided in Section 6.
+A simple way to generate new hyperbolic polynomials is differentiation:
+Proposition 2.3 If m > 1,t h e nq(x): = d
+dt p(x +td)|t=0 =
+(
+∇ p(x)
+)
+(d) is hyperbolic
+with respect to d.
+Proof This is essentially a consequence of Rolle’s theorem; see also [9, Lemma 1].
+The following property of the characteristic roots is well-known [9, Equation (2)].
+Fact 2.4 For all r,s ∈ R and every 1 ≤ i ≤ m:
+λi (rx + sd) =
+{
+rλi (x)+ s, if r ≥ 0;
+rλm+1− i (x)+ s, otherwise.
+Hence the characteristic map λ is positively homogeneous (λ(tx) = tλ(x), for all
+t ≥ 0a n de v e r yx ∈ X) and continuous (use, for instance, [31, Appendix A]).
+G˚arding showed that the largest characteristic root is a sublinear function, that is,
+positively homogeneous and convex.
+Theorem 2.5 (G˚arding) The largest characteristic root λ1(·) is a sublinear function.
+Proof Positive homogeneity follows from Fact 2.4. Now G ˚arding showed that λm
+is concave (see [9, Theorem 2] and [8]), which is equivalent to the convexity of λ1,
+since λ1(− x) = − λm(x), for every x ∈ X.
+G˚arding’s proof of his result is complex-variable-based. Other approaches include
+Lax’s PDE-based argument for an analogous result on matrices [20], and an argu-
+ment using Bezout’s Theorem proposed (without proof) in [18].
+The Hermitian Matrices (continued) It is well-known that the largest eigenvalue
+map is convex in this case; see, for instance, [13].
+Hyperbolicity Cone
+Deﬁnition 2.6 (Hyperbolicity Cone) The hyperbolicity cone of p with respect to d ,
+written C(d)o r C(p,d), is the set {x ∈ X : p(x − td) ̸= 0,∀t ≤ 0}.
+Fact 2.7 C(d) = {x ∈ X : λ
+m(x) > 0}.H e n c eC(d) is an open convex cone that
+contains d with closure cl C(d) = {x ∈ X : λm(x) ≥ 0}.I f c ∈ C(d), then p is
+hyperbolic with respect to c and C(c) = C(d).
+474 H. H. Bauschke, O. G ¨u l e r ,A .S .L e w i sa n dH .S .S e n d o v
+Proof See G ˚arding’s [8] and [9, Section 2].
+Deﬁnition 2.8 (Complete Hyperbolic Polynomial) p is complete if
+{x ∈ X : λ(x) = 0} = {0}.
+Fact 2.9 Suppose p is hyperbolic with respect to d, with corresponding character-
+istic map λ and hyperbolicity cone C(d). Then
+{x ∈ X : λ(x) = 0} = {x ∈ X : x + C(d) = C(d)}
+= {x ∈ X : p(tx + y) = p(y),∀y ∈ X,∀t ∈ R}.
+Consequently, {x ∈ X : λ(x) = 0} = cl C(d) ∩
+(
+− cl C(d)
+)
+.
+Proof See G ˚arding’s [8] and [9, Section 3].
+The Hermitian Matrices (continued) The hyperbolicity cone of p = det with re-
+spect to d = I is the set of all positive deﬁnite matrices. The polynomial p = det is
+complete, since every nonzero Hermitian matrix has at least one nonzero eigenvalue.
+Elementary Symmetric Functions
+Af u n c t i o nf on Rm is symmetric if f (u) = f (uπ(i)) for all permutations π of
+{1,...,m}and every u ∈ Rm.F o ra n yg i v e ni n t e g e rk = 1,2,...,m,t h em a p
+Ek : Rm → R : u ↦→
+∑
+i1< ···< ik
+k∏
+l=1
+uil
+is called the k-th elementary symmetric function on Rm.W ea l s os e tE0 := 1.
+Repeatedly applying Proposition 2.3 gives the following result.
+Fact 2.10 For every x ∈ X and all t ∈ R,
+p(x + td) = p(d)
+m∏
+i=1
+(
+t + λi (x)
+)
+= p(d)
+m∑
+i=0
+Ei
+(
+λ(x)
+)
+tm− i
+and for every 0 ≤ i ≤ m,
+p(d)Ei
+(
+λ(x)
+)
+= 1
+(m − i)! ∇ m− i p(x)[d,d,...,d
+ 
+ 
+m− i times
+].
+If 1 ≤ i ≤ m,t h e nEi ◦λ is hyperbolic with respect to d of degree i.
+In particular, the trace σm = E1 ◦λ is a homogeneous (hyperbolic) polynomial of
+degree 1 (and hence linear).
+Notice the elementary symmetric functions themselves are hyperbolic:
+Hyperbolic Polynomials and Convex Analysis 475
+Example 2.11 Let X = Rm and d = (1,1,...,1) ∈ Rm.T h e nf o re v e r y1≤ k ≤ m,
+the k-th elementary symmetric function Ek is hyperbolic of degree k with respect to d.
+Proof Let p := Em.I t i s s t r a i g h t f o r w a r d t o c h e c k t h a tEm is hyperbolic of degree m
+with respect to d with corresponding characteristic map λ(x) = x↓.S i n c e e a c hEk is
+symmetric, the result now follows from Fact 2.10.
+An Inequality in Elementary Symmetric Functions
+The following inequality was discovered independently by McLeod [28] and by
+Bullen and Marcus [4, Theorem 3].
+Fact 2.12 (McLeod, 1959; Bullen and Marcus, 1961) Suppose 1 ≤ k ≤ l ≤ m and
+u,v ∈ Rm
+++.S e t q := (El/El− k)1/k.T h e n
+q(u + v) > q(u)+ q(v),
+unless u and v are proportional or k = l = 1 ,i nw h i c hc a s ew eh a v ee q u a l i t y .
+Bullen and Marcus’s proof relies on an inequality by Marcus and Lopes [25, The-
+orem 1], which is the case k = 1 in Fact 2.12. (Proofs can also be found in [2,
+Theorem 1.16], [5, Section V .4], and [30, Section VI.5].) W e record two interesting
+consequences of Fact 2.12.
+Corollary 2.13 (Marcus and Lopes’s [25, Theorem 2]) The function − E1/m
+m is sub-
+linear on Rm
++ , and it vanishes on bd Rm
++ .
+Recall that a function h is called logarithmically convex , if log ◦h is convex. The
+function q in Fact 2.12 is concave (“strictly modulo rays”), which easily yields loga-
+rithmic and strict convexity of 1 /q (see [1]):
+Proposition 2.14 Suppose q is a function deﬁned on Rm
+++. Consider the following
+properties:
+(i) the range of q is contained in (0,+∞ );
+(ii) q (ru) = rq(u),f o ra l lr > 0 and every u ∈ Rm
+++;
+(iii) q (u + v) ≥ q(u)+ q(v),f o ra l lu,v ∈ Rm
+++;
+(iv) if u ,v ∈ Rm
+++ with q(u + v) = q(u)+ q(v),t h e nv = ρu, for some ρ> 0.
+Suppose q satisﬁes (i)–(iii). Then 1/q is logarithmically convex. If furthermore (iv)
+holds, then 1/qi ss t r i c t l yc o n v e x .
+Applying this to Fact 2.12 gives the following result.
+Corollary 2.15 Suppose 1 ≤ k ≤ l ≤ m. Then the function (El− k/El)1/k is sym-
+metric, positively homogeneous, and logarithmically convex. Moreover, the function is
+strictly convex on
+Rm
+++ unless l = 1 and m ≥ 2.
+476 H. H. Bauschke, O. G ¨u l e r ,A .S .L e w i sa n dH .S .S e n d o v
+3 Composition and Convexity
+W e begin this section with our key result, a powerful new construction for hyperbolic
+polynomials.
+Theorem 3.1 Suppose q is a homogeneous symmetric polynomial of degree n on Rm,
+hyperbolic with respect to e := (1,1,...,1) ∈ Rm, with characteristic map µ.T h e n
+q ◦λ is a hyperbolic polynomial of degree n with respect to d and its characteristic map
+is µ ◦λ.
+Proof For simplicity, write ˜p for q ◦λ.
+Step 1 ˜p is a polynomial on X.
+Since q(y) is a symmetric polynomial on Rm, it is (by, for example, [17, Proposi-
+tion V .2.20.(ii)]) a polynomial inE1(y),...,Em(y). On the other hand, by Fact 2.10,
+Ei ◦ λ is a hyperbolic polynomial with respect to d of degree i,f o r1 ≤ i ≤ m.
+Altogether, ˜p(x) = q
+(
+λ(x)
+)
+is a polynomial on X.
+Step 2 ˜p is homogeneous of degree n.
+Since q is symmetric and homogeneous, and in view of Fact 2.4, we obtain ˜p(tx) =
+q
+(
+λ(tx)
+)
+= tn ˜p(x), for all t ∈ R and every x ∈ X.
+Step 3 ˜p(d) ̸= 0.
+Again using Fact 2.4, we have ˜p(d) = q
+(
+λ(d)
+)
+= q(e) ̸= 0.
+Step 4 ˜p is hyperbolic with respect to d.
+Using once more Fact 2.4, we write for every x ∈ X and all t ∈ R:
+˜p(x + td) = q
+(
+λ(x + td)
+)
+= q
+(
+λ(x)+ te
+)
+= q(e)
+n∏
+k=1
+(
+t + µk
+(
+λ(x)
+))
+.
+The next example is easy to check.
+Example 3.2 Fix 1 ≤ k ≤ m,s e te := (1,1,...,1) ∈ Rm,a n dl e t
+q(u): =
+∏
+1≤ i1< i2 < ···< ik ≤ m
+k∑
+l=1
+uil .
+Then q is a homogeneous symmetric polynomial on Rm of degree
+(m
+k
+)
+,h y p e r b o l i c
+with respect to e, and its characteristic roots are
+{
+1
+k
+k∑
+l=1
+uil :1 ≤ i1 < i2 < ···< ik ≤ m
+}
+.
+In particular, the largest characteristic root of q is the arithmetic mean of the k largest
+components of u.
+Hyperbolic Polynomials and Convex Analysis 477
+Sublinearity of Sums of the Largest Characteristic Roots
+W e now present our generalization of G ˚arding’s theorem (2.5): the sum of the k
+largest characteristic roots is sublinear.
+Corollary 3.3 For every 1 ≤ k ≤ m, the function σk is sublinear.
+Proof Fix 1 ≤ k ≤ m,d e ﬁ n eq as in Example 3.2, and consider ˜p := q ◦ λ.B y
+Theorem 3.1 and Example 3.2, the largest characteristic root of ˜p is equal to 1
+k σk(x).
+Now Theorem 2.5 yields the sublinearity of σk.
+This readily implies Lipschitzness of the characteristic map (with respect to any
+norm on X).
+Corollary 3.4 Each characteristic root λk is (globally) Lipschitz.
+Proof Recall that every sublinear ﬁnite function is globally Lipschitz (this follows
+from [32, Theorem 13.2, Corollary 13.2.2, and Corollary 13.3.3]); in particular, so is
+each σ
+i .T h u sλ1 is Lipschitz. If k ≥ 2, then λk = σk − σk− 1 is—as the difference of
+two Lipschitz functions— Lipschitz as well.
+The Hermitian Matrices (continued) Here it is well known that the sum of the k
+largest eigenvalues is a convex function and that the k-th largest eigenvalue map is
+Lipschitz; see, for instance, [13].
+Corollary 3.5 The function wT λ(·) is sublinear, for every w ∈ Rm
+↓ .
+Proof Write wT λ = ∑m
+i=1 wi λi = wmσm + ∑m− 1
+i=1 (wi − wi+1)σi and then apply
+Corollary 3.3.
+W e can rewrite Corollary 3.5 as
+wT (
+λ(x + y) − λ(x)
+)
+≤ wT λ(y), for all x,y ∈ X and w ∈ Rm
+↓ .
+This leads to the following question:
+Open Problem 3.6 (The Lidskii Property) D e c i d ew h e t h e ro rn o t
+wT (
+λ(x + y) − λ(x)
+)
+≤ wT
+↓λ(y), for all x,y ∈ X and w ∈ Rm.
+The condition means that the vector λ(y)“ m a j o r i z e s ”t h ev e c t o rλ(x + y) − λ(x),
+for all x,y ∈ X; see [27, Proposition 4.B.8]. (The interested reader is referred to [27]
+for further information on majorization.) If this condition is satisﬁed, then we will
+simply say that “the Lidskii property holds” .
+The Hermitian Matrices (continued) The Lidskii property does hold for the Hermi-
+tians, and indeed is a crucial tool in perturbation theory. A recent and very complete
+reference is Bhatia’s [3]; see also [23] for a new proof rooted in nonsmooth analysis.
+In Section 6, we point out further examples where the Lidskii property holds.
+478 H. H. Bauschke, O. G ¨u l e r ,A .S .L e w i sa n dH .S .S e n d o v
+Convexity of Composition
+W e next aim to generalize G ˚arding’s theorem still further. W e begin with a useful
+tool.
+Fact 3.7 Suppose f : Rm → [−∞ ,+∞ ] is convex and symmetric. Suppose further
+u,v ∈ Rm
+↓ and u − v ∈ (Rm
+↓ )⊕ .T h e n f (u) ≥ f (v). Moreover: if f is strictly convex
+on conv
+{
+uπ(i) : π is a permutation of {1,...,m}
+}
+and u ̸= v,t h e nf (u) > f (v).
+Proof Imitate the proof of [22, Theorem 3.3] and consider [22, Example 7.1]. See
+also [27, 3.C.2.c on p. 68].
+Lemma 3.8 Suppose x,y ∈ X, α ∈ (0,1),a n d f : Rm → [−∞ ,+∞ ] is convex and
+symmetric. Then
+f
+(
+λ
+(
+αx +( 1 − α)y
+))
+≤ f
+(
+αλ (x)+( 1 − α)λ(y)
+)
+.
+If f is strictly convex and αλ (x)+(1 − α)λ(y) ̸= λ
+(
+αx +(1 − α)y
+)
+, then the inequality
+holds strictly.
+Proof (See also [22, Proof of Theorem 4.3]) Fix an arbitrary w ∈ Rm
+↓ .S e t u :=
+αλ (x)+( 1 − α)λ(y)a n d v := λ
+(
+αx +( 1 − α)y
+)
+.T h e n b o t hu and v belong
+to Rm
+↓ . By Corollary 3.5, wT λ is convex on X. Therefore, wT λ
+(
+αx +( 1 − α)y
+)
+≤
+αwT λ(x)+(1 − α)wT λ(y); equivalently, wT (u− v) ≥ 0. It follows that u− v ∈ (Rm
+↓ )⊕ .
+By Fact 3.7, f (u) ≥ f (v), as required. The last part now follows from Fact 3.7.
+W e hence obtain the following very pleasing generalization of G ˚arding’s theorem
+(which is the case f (u) = max ui ).
+Theorem 3.9 (Convexity) If f : Rm → [−∞ ,+∞ ] is convex and symmetric then
+f ◦λ is convex.
+The Hermitian Matrices (continued) In this case, the convexity of the composition
+is attributed to Davis [6]; see also [21, Corollary 2.7].
+Another consequence is G ˚arding’s inequality; see [11, Lemma 3.1].
+Corollary 3.10 (G˚arding’s Inequality) Suppose p (d) > 0.T h e n f u n c t i o n x↦→
+−
+(
+p(x)
+)1/m
+is sublinear on the hyperbolicity cone C(d), and it vanishes on its boundary.
+Proof By Corollary 2.13, the function − E1/m
+m is sublinear and symmetric on Rm
++ .
+Hence, by Theorem 3.9, the function x ↦→− Em
+(
+λ(x)
+)1/m
+is sublinear on {x ∈ X :
+λ(x) ≥ 0} = cl C(d). The result follows, since p(x) = p(d)Em
+(
+λ(x)
+)
+,f o re v e r y
+x ∈ X.
+
+Hyperbolic Polynomials and Convex Analysis 479
+For a further discussion of this and other inequalities involving hyperbolic poly-
+nomials, see [18].
+The Hermitian Matrices (continued) Corollary 3.10 implies the Minkowski Deter-
+minant Theorem: m
+√
+det(x + y) ≥
+m√
+det x + m
+√
+det y,w h e n e v e rx, y are positive semi-
+deﬁnite.
+Corollary 3.11 Suppose x,y ∈ X. Then:
+(i) ∥λ(x + y)∥≤∥ λ(x)+ λ(y)∥, and equivalently
+(ii) ∥λ(x + y)∥2 −∥ λ(x)∥2 −∥ λ(y)∥2 ≤ 2⟨λ(x),λ(y)⟩.
+Moreover, equality holds in (i) or (ii) if and only if λ(x + y) = λ(x)+ λ(y).
+Proof Let w := λ(x + y) ∈ Rm
+↓ . Then, using Corollary 3.5 and the Cauchy-Schwarz
+inequality in Rm,w ee s t i m a t e
+∥λ(x + y)∥2 = wT λ(x + y) ≤ wT (
+λ(x)+ λ(y)
+)
+≤∥ w∥∥ λ(x)+ λ(y)∥ = ∥λ(x + y)∥∥ λ(x)+ λ(y)∥.
+The inequality follows. The condition for equality follows from the condition for
+equality in the Cauchy-Schwarz inequality.
+4 Euclidean Structure
+The characteristic map λ induces a natural norm as follows.
+Deﬁnition 4.1 Deﬁne ∥·∥ : X → [0,+∞ ): x ↦→∥ λ(x)∥ and
+⟨·,·⟩: X × X → R :( x,y) ↦→ 1
+4 ∥x + y∥2 − 1
+4 ∥x − y∥2.
+Theorem 4.2 Suppose p is complete. Then X equipped with ⟨·,·⟩is a Euclidean space
+with induced norm ∥·∥.
+Proof We h ave ∥x∥2 = ∥λ(x)∥2 = ∑m
+i=1 λi (x)2 =
+(
+E1
+(
+λ(x)
+))2
+− 2E2
+(
+λ(x)
+)
+.
+Facts 2.4 and 2.10 imply that ∥·∥ 2 is a homogeneous polynomial of degree 2 on
+X.S i n c e∥·∥ ≥ 0a n d p is complete, the result now follows from the Polarization
+Identity.
+Remark 4.3 The norm ∥·∥ deﬁned in Deﬁnition 4.1 is precisely the Hessian norm
+used in interior point methods and thus well-motivated. T o see this, assume that
+p is complete and recall that the hyperbolic barrier function is deﬁned by F(x): =
+− ln
+(
+p(x)
+)
+. The Hessian norm at x is then given by
+∥x∥2
+d := ∇ 2F(d)[x,x].
+480 H. H. Bauschke, O. G ¨u l e r ,A .S .L e w i sa n dH .S .S e n d o v
+For small positive t we have p(tx + d) = p(d) ∏m
+i=1
+(
+1+ tλi (x)
+)
+and hence
+F(d + tx) = F(d) −
+m∑
+i=1
+ln
+(
+1+ tλi (x)
+)
+.
+Expanding each side and comparing coefﬁcients of t2 gives the result. Further infor-
+mation can be found in [11].
+Proposition 4.4 (Sharpened Cauchy-Schwarz) Suppose p is complete. Then
+⟨x,y⟩≤⟨ λ(x),λ(y)⟩≤∥ x∥∥ y∥,f o ra l lx,y ∈ X.
+Proof The Cauchy-Schwarz inequality in Rm and Corollary 3.11 imply
+2⟨λ(x),λ(y)⟩≥∥ λ(x + y)∥2 −∥ λ(x)∥2 −∥ λ(y)∥2
+= ∥x + y∥2 −∥ x∥2 −∥ y∥2 = 2⟨x,y⟩,
+as required.
+The Hermitian Matrices (continued) The inner product on the Hermitian matri-
+ces is precisely what one would expect: ⟨x,y⟩ = trace(xy ). The sharpening of the
+Cauchy-Schwarz inequality is essentially due to von Neumann; see [21, Theorem 2.2]
+and the discussion therein.
+W e can now reﬁne Theorem 3.9.
+Theorem 4.5 (Strict Convexity) Suppose p is complete and f :
+Rm → [−∞ ,+∞ ] is
+strictly convex and symmetric. Then the composition f ◦λ is strictly convex on X.
+Proof Fix α ∈ (0,1), x,y ∈ X and set β := 1 − α. Suppose
+( f ◦λ)(αx + β y) = α( f ◦λ)(x)+ β( f ◦λ)(y).
+We h ave to s h owx = y. By Lemma 3.8 and convexity of f ,w eh a v e
+α( f ◦λ)(x)+ β( f ◦λ)(y) = ( f ◦λ)(αx + β y)
+≤ f
+(
+αλ (x)+ βλ(y)
+)
+≤ α( f ◦λ)(x)+ β( f ◦λ)(y);
+hence equality must hold throughout. By strict convexity of f , we conclude that
+λ(x) = λ(y). W e also know thatαλ (x)+ βλ(y) = λ(αx+β y) (otherwise, Lemma 3.8
+would imply that the ﬁrst displayed inequality is strict, which is a contradiction).
+Thus λ(x) = λ(y) = αλ (x)+ βλ(y) = λ(αx + β y). Since λ is norm preserving, we
+obtain ∥x∥ = ∥y∥ = ∥αx + β y∥.B u t ∥·∥ is induced by an inner product, whence
+∥·∥
+2 is strictly convex. Therefore, x = y and the proof is complete.
+Theorem 4.5 gives an immediate, transparent proof of a recent result of Krylov:
+see [19, Thm 6.4.(ii)] (whose proof is considerably more involved).
+Hyperbolic Polynomials and Convex Analysis 481
+Corollary 4.6 Suppose p (d) > 0. Then each of the following functions is convex on
+the hyperbolicity cone C (d):
+− ln p, ln Em− 1 ◦λ
+Em ◦λ , Em− 1 ◦λ
+Em ◦λ .
+If p is complete, then each of these functions is strictly convex.
+Proof Deﬁne ﬁrst f (u): = − ln p(d) − ∑m
+i=1 ln ui on Rm
+++ and F(x): = − ln p(x)
+on C(d). Then f is strictly convex and symmetric. Since p(x) = p(d)Em
+(
+λ(x)
+)
+,
+we have F = f ◦ λ. It follows that F is convex (by Theorem 3.9), even strictly if p
+is complete (by Theorem 4.5). This proves the result for the ﬁrst function. Now let
+f := ln(Em− 1/Em)o n Rm
+++ and F := ln Em− 1◦λ
+Em ◦λ on C(d). Then f is strictly convex by
+Corollary 2.15. By Theorem 3.9 (or Theorem 4.5), F is convex (or strictly convex, if p
+is complete). This yields the statement for the second function. Finally observe that
+the third function is obtained by taking the exponential of the second function. But
+this operation preserves (strict) convexity.
+Krylov’s result relates closely to G ¨uler’s recent work on hyperbolic barrier func-
+tions. With this new approach we have a simple proof of G ¨uler’s [11, Theorem 6.1].
+The functions F and g below are crucial in interior-point theory, as they allow the
+construction of ‘long-step’ methods.
+Corollary 4.7 Suppose p (d) > 0 and c belongs to the hyperbolicity cone C := C(d).
+Deﬁne
+F : C → R : x ↦→− ln
+(
+p(x)
+)
+and g : C → R : x ↦→−
+(
+∇ F(x)
+)
+(c).
+Then F and g are convex on C. If p is complete, then both F and g are strictly convex.
+Proof The statement on F is already contained in Corollary 4.6. Now let µ be the
+characteristic map corresponding to c. Then, by Fact 2.10, p(x) = p(c)Em
+(
+µ(x)
+)
+and
+(
+∇ p(x)
+)
+(c) = p(c)Em− 1
+(
+µ(x)
+)
+.T h u s
+g(x) = 1
+p(x)
+(
+∇ p(x)
+)
+(c) = Em− 1
+(
+µ(x)
+)
+Em
+(
+µ(x)
+) .
+Now argue as for the second function in the proof of Corollary 4.6.
+The Hermitian Matrices (continued) The statement on F corresponds to strict con-
+vexity of the function x ↦→− ln det(x) on the cone of positive semi-deﬁnite Hermi-
+tian matrices; this result is due to Fan [7].
+W e end this section with an easy exercise emphasizing the naturalness of the inner
+product.
+Proposition 4.8 (T race) σm(x) = ⟨d,x⟩,f o re v e r yx∈ X.
+482 H. H. Bauschke, O. G ¨u l e r ,A .S .L e w i sa n dH .S .S e n d o v
+5 Duality
+The last part of our development concerns duality. For this we need a little more
+structure.
+Deﬁnition 5.1 (Isometric Hyperbolic Polynomial) We s ay p is isometric,i ff o ra l l
+y,z ∈ X,t h e r ee x i s t sx ∈ X such that
+λ(x) = λ(z)a n d λ(x + y) = λ(x)+ λ(y).
+Clearly, if p is isometric then ran λ is a closed convex cone contained in Rm
+↓ .H o w -
+ever, the next example shows the range of λ need not be convex.
+Example 5.2 (A Hyperbolic Polynomial That Is Not Isometric) If the polynomial
+p(x) = x1x2x3 is deﬁned on X = span{(1,1,1),(3,1,0)},t h e np is hyperbolic of
+degree m = 3w i t hr e s p e c tt od = (1,1,1). Hence λ(x) = x↓ and p is complete. It
+follows that for all α, β ∈ R,
+λ
+(
+α(1,1,1) + β(3,1,0)
+)
+=
+{
+α(1,1,1) + β(3,1,0), if β ≥ 0;
+α(1,1,1) + β(0,1,3), otherwise.
+Since λ(3,1,0) + λ(− 3,− 1,0) = (3,0,− 3) /∈ ran λ,t h es e tr a nλ is a closed noncon-
+vex cone in R3
+↓.I np a r t i c u l a r ,p is not isometric.
+Unless stated otherwise, we assume from now on that
+p is complete, with corresponding inner product ⟨·,·⟩and norm ∥·∥.
+We c a l lp “isometric” because of the equivalent condition (iii) in the following
+proposition [1, Proposition 5.4].
+Proposition 5.3 The following are equivalent:
+(i) p is isometric.
+(ii) maxx:λ(x)=u⟨x,y⟩ = ⟨u,λ(y)⟩,f o ra l lu ∈ ran λ and every y ∈ X.
+(iii) d
+(
+u,λ(y)
+)
+= d
+(
+λ− 1(u),y
+)
+,f o ra l lu ∈ ran λ and every y ∈ X.
+The Hermitian Matrices (continued) Clearly, ran λ = Rm
+↓ in this case, and an easy
+exercise shows p = det is indeed isometric [1].
+The isometric property leads to a very concise duality result.
+Theorem 5.4 (Fenchel Conjugacy) Suppose that f : Rm → (−∞ ,+∞ ] is symmet-
+ric. Then ( f ◦λ)∗ ≤ f ∗ ◦λ. If p is isometric and ran λ = Rm
+↓ then ( f ◦λ)∗ = f ∗ ◦λ.
+Hyperbolic Polynomials and Convex Analysis 483
+Proof Fix an arbitrary y ∈ X. Then, using Proposition 4.4, symmetry of f ,a n dt h e
+Hardy-Littlewood-P´olya inequality (see [12, Section 10.2]), the inequality follows
+from
+f ∗(
+λ(y)
+)
+= sup
+u∈ Rm
+{⟨u,λ(y)⟩− f (u)} = sup
+u∈ Rm
+↓
+{⟨u,λ(y)⟩− f (u)}
+≥ sup
+u∈ ran λ
+max
+x:λ(x)=u
+{
+⟨x,y⟩− f
+(
+λ(x)
+)}
+= sup
+x∈ X
+{⟨x,y⟩− ( f ◦λ)(x)}
+= ( f ◦λ)∗(y).
+Now assume that p is isometric and ran λ = Rm
+↓ . Then Proposition 5.3 shows
+f ∗(
+λ(y)
+)
+= sup
+u∈ Rm
+↓
+{⟨λ(y),u⟩− f (u)}≤ sup
+u ′ ∈ ran λ
+{⟨λ(y),u′⟩− f (u′)}
+= sup
+x∈ X
+{
+⟨y,x⟩− f
+(
+λ(x)
+)}
+= ( f ◦λ)∗(y).
+Without the assumption ran λ = Rm
+↓ this result may fail (see Example 6.1).
+As a consequence of our Fenchel conjugacy formula we are easily able to identify
+subgradients of such convex functions.
+Theorem 5.5 (Subgradients) Suppose p is isometric, ran λ = Rm
+↓ ,a n d f : Rm →
+(−∞ ,+∞ ] is convex and symmetric. Let x ,y ∈ X. Then
+y ∈ ∂( f ◦λ)(x) if and only if λ(y) ∈ ∂ f
+(
+λ(x)
+)
+and ⟨x,y⟩ = ⟨λ(x),λ(y)⟩.
+Consequently, λ[∂( f ◦λ)(x)] = ∂ f
+(
+λ(x)
+)
+.
+Proof We k n ow (f ◦λ)∗ = f ∗ ◦λ. In view of Proposition 4.4, the following equiv-
+alences hold true: y ∈ ∂( f ◦ λ)(x) ⇔ ( f ◦ λ)(x)+( f ◦ λ)∗(y) = ⟨x,y⟩⇔
+f
+(
+λ(x)
+)
++ f ∗(
+λ(y)
+)
+= ⟨λ(x),λ(y)⟩ and ⟨x,y⟩ = ⟨λ(x),λ(y)⟩⇔ λ(y) ∈ ∂ f
+(
+λ(x)
+)
+and ⟨x,y⟩ = ⟨λ(x),λ(y)⟩. “Consequently”: Clearly, by the above, λ[∂( f ◦λ)(x)] ⊆
+∂ f
+(
+λ(x)
+)
+.C o n v e r s e l y , p i c kv ∈ ∂ f
+(
+λ(x)
+)
+.T h e n f
+(
+λ(x)
+)
++ f ∗(v) = ⟨v,λ(x)⟩.B y
+the assumption that ran λ = Rm and Proposition 5.3.(ii), ⟨v,λ(x)⟩ = ⟨y,x⟩,f o rs o m e
+y with λ(y) = v.H e n c e (f ◦λ)(x)+( f ◦λ)∗(y) = ⟨y,x⟩ and so y ∈ ∂( f ◦λ)(x),
+which implies v = λ(y) ∈ λ[∂( f ◦λ)(x)].
+The Hermitian Matrices (continued) Theorem 5.5 corresponds to [21, Theo-
+rem 3.2].
+W e end with another nice generalization of a result of Fan.
+Corollary 5.6 (V ariational Description ofσk) Let p be isometric, and suppose
+ran λ = Rm
+↓ .L e t 1 ≤ k ≤ m. Then for every x ∈ X,
+σk(x) = max{⟨x,y⟩ : λ(y) ≥ 0,σm(y) = k,λ1(y) ≤ 1}, and
+∂σk(x) = {y ∈ X : ⟨x,y⟩ = σk(x),λ(y) ≥ 0,σm(y) = k,λ1(y) ≤ 1}.
+484 H. H. Bauschke, O. G ¨u l e r ,A .S .L e w i sa n dH .S .S e n d o v
+Proof Deﬁne f (u): = maxi1< ···< ik
+∑k
+l=1 uil .T h e nf is symmetric and convex on Rm
+and f ∗ is the indicator function of the set
+{
+u ∈ Rm :
+∑
+ui = k and each 0 ≤ ui ≤ 1
+}
+.
+Now σk = f ◦λ and so Theorem 5.4 yields σ∗
+k = f ∗ ◦λ.T h u sy ∈ ∂σk(x) ⇔ x ∈
+∂σ∗
+k (y) ⇔⟨ x,y⟩ = σk(x), λ(y) ≥ 0, σm(y) = k,a n dλ1(y) ≤ 1.
+The Hermitian Matrices (conclusion) Corollary 5.6 is a generalization of the varia-
+tional formulations due to Rayleigh and Ky Fan; see also [13, Section 2].
+6 Further Examples
+This section contains some particularly natural examples (see [1]). Our aim is to get
+across the idea of the unity of the method and its breadth.
+Reordering on Rn
+Consider the vector space X = Rn, the polynomial
+p(x) =
+n∏
+i=1
+xi ,
+and the direction d = (1,1,...,1). Then p is hyperbolic and complete with char-
+acteristic map λ(x) = x↓. The induced norm and inner product in X are just the
+standard Euclidean ones in Rn. W eh a v er a nλ = Rn
+↓. It can be seen easily that p is
+isometric. In this case the sharpened Cauchy-Schwarz inequality (Proposition 4.4)
+reduces to the well-known Hardy-Littlewood-P ´olya inequality (see [12, Chapter X])
+x
+T y ≤ xT
+↓ y↓.
+Equality holds if and only if the vectors x and y can be simultaneously ordered with
+the same permutation. Since ran λ = Rn
+↓, Theorem 5.4 shows that for every symmet-
+ric function f : Rn → (−∞ ,+∞ ]w eh a v e(f ◦λ)∗ = f ∗◦λ. Also the Lidskii property
+holds, because λ(x) is the ordered set of eigenvalues of the symmetric matrix Diag(x)
+(see [3, p. 69]).
+Singular Values
+Consider the vector space Mn,m of n by m real matrices. W e assume m ≤ n and de-
+note the singular values of a matrix x in Mn,m by σ1(x) ≥ σ2(x) ≥ ··· ≥ σm(x).
+The Frobenius (or Hilbert-Schmidt) norm [15, pp. 291, 421] is deﬁned by ∥x∥F =
+∥σ(x)∥, where the latter norm is the standard Euclidean norm in Rn,a n d σ(x) =(
+σ1(x),σ2(x),...,σm(x)
+)
+. Now consider the vector space X = Mn,m × R,t h ep o l y -
+nomial
+p(x,α) = det(α2Im − xT x)( x ∈ Mn,m,α ∈ R),
+Hyperbolic Polynomials and Convex Analysis 485
+and the direction d = (0,1). Then p is hyperbolic and complete with characteristic
+map
+λ(x,α) =
+(
+α + σ1(x),α + σ2(x),...,α− σ2(x),α − σ1(x)
+)
+.
+The induced norm and inner product are given by
+∥(x,α)∥2 = 2mα2 +2 ∥x∥2
+F ,
+⟨(x,α),(x,β)⟩ = 2mαβ +2t r xT y,
+for ( x,α)a n d( y,β)i n X. With the help of the singular value decomposition one
+can see that p is isometric. Notice that in this case the sharpened Cauchy-Schwarz
+inequality (Proposition 4.4) reduces to
+tr xT y ≤ σ(x)T σ(y).
+Equality holds if and only if x and y have a simultaneous ‘ordered’ singular value de-
+composition (that is, there are unitary matrices u and v such that x = u
+(
+Diag σ(x)
+)
+v
+and y = u
+(
+Diag σ(y)
+)
+v). This is the classical result known as ‘von Neumann’s
+Lemma’ (see for example [16, p. 182]). For a proof using results from this paper
+see [1]. W e note that the Lidskii property holds too.
+Note that when m = 1w eg e tt h eL o r e n t zC o n ee x a m p l ew h i c hi sd i s c u s s e db e l o w .
+An analogous example can be obtained by considering the vector spaceX =
+Cn,m × R.
+Interestingly, in this case we may have ( f ◦λ)∗ ̸= f ∗ ◦λ.
+Example 6.1 Consider the symmetric function f (u) = max ui .I f m = 2a n d
+y ∈ X is such that λ(y) = 1
+4 (3,1,1,− 1), a short calculation [1] shows that 0 =
+( f ◦λ)∗(y) ̸= ( f ∗ ◦λ)(y) = +∞ .
+Remark 6.2 V on Neumann’s famous characterization of unitarily invariant matrix
+norms as symmetric gauge functions of the singular values [33] also follows naturally
+in this framework [1].
+Absolute Reordering
+Consider the vector space X =
+Rn × R. Let the polynomial be
+p(x,α) =
+n∏
+i=1
+(α2 − x2
+i ),
+and the direction be d = (0,1). Then p is hyperbolic and complete with characteris-
+tic map
+λ(x,α) =
+(
+|x|↓,(−|x|)↓
+)
++ αe,
+where |x|= (|x1|,|x2|,...,|xn|), and e = (1,1,...,1) ∈ R2n. Direct veriﬁcation
+of the deﬁnition shows that p is isometric and furthermore that the Lidskii property
+holds. Note that the similarities with the previous example are not accidental. It
+corresponds to the subspace (Diag
+Rn) × R of Mn,m × R.
+486 H. H. Bauschke, O. G ¨u l e r ,A .S .L e w i sa n dH .S .S e n d o v
+Lorentz Cone
+Let the vector space be X = Rn, and the polynomial be
+p(x) = xT Ax = x2
+1 − x2
+2 −···−x2
+n,
+where A = Diag(1,− 1,− 1,...,− 1) ∈ Mn (n × n real matrices). Let the direction
+be d = (d1,d2,...,dn) ∈ X such that d2
+1 > d2
+2 + ···+ d2
+n.T h e np is hyperbolic and
+complete with characteristic map
+λ(x) =
+( xT Ad + √
+ D(x)
+p(d) ,xT Ad − √
+ D(x)
+p(d)
+)
+,
+where D(x) = (xT Ad)2 − p(x)p(d) is the discriminant of p(x + td)c o n s i d e r e da sa
+quadratic polynomial in t.( T h e f a c t t h a tD(x) ≥ 0f o re a c hx,a n ds ot h a tp(x)i s
+hyperbolic, is known as Aczel’s inequality, see [29, p. 57].) The induced norm and
+inner product are given by
+∥x∥
+2 = 2 2(xT Ad)2 − p(x)p(d)
+p(d)2 , and
+⟨x,y⟩ = 4(xT Ad)(yT Ad) − 2(xT Ay)p(d)
+p(d)2 ,
+for x and y in X. I ti sab i tt r i c k i e rt os e et h a tp is isometric. Notice that in this case
+the sharpened Cauchy-Schwarz inequality (Proposition 4.4) becomes
+(xT Ad)(yT Ad) − (xT Ay)p(d) ≤
+√
+D(x)D(y),
+and [1] gives the necessary and sufﬁcient condition for equality. The Lidskii property
+holds as well.
+The Degree 2 Case
+Let the vector space be X = Rn. W e assume that p(x) is homogeneous polynomial of
+degree two. Without loss of generality, we write
+p(x) = xT Ax,
+where A ∈ Sn. Fix a direction d in X with p(d) ̸= 0. Then p(x) is hyperbolic with
+respect to d if and only if the matrix ( dT Ad)− 1A has exactly one positive eigenvalue
+(see [9, p. 958]). Furthermore, p is complete if and only if A is nonsingular. Such a p
+is always isometric, and the Lidskii property holds.
+Hyperbolic Polynomials and Convex Analysis 487
+Antisymmetric Tensor Powers
+Consider the function p(x) = det x on the vector space of n × n real symmetric (or
+Hermitian) matrices, and let q = Ek be the elementary symmetric function of order k
+and pk(x) = Ek ◦λ(x). W e saw earlier thatpk is a hyperbolic polynomial with respect
+to the identity matrix I (see Fact 2.10). W e have
+pk(x) =
+∑
+α=(i1 < i2 < ···< ik )
+det x[α|α] = tr(∧kx),
+where x[α|α] is the principal submatrix obtained from x by keeping its rows and
+columns i1,...,ik, and the second equality above can be regarded as the deﬁnition
+of the symbol tr( ∧kx). For the ﬁrst equality above, see [26], and justiﬁcation for the
+use of the symbol tr( ∧kx) can be found in [10]. Now, from Corollary 3.10 (G ˚arding’s
+inequality) and from the fact that pk(x) = tr(∧kx) is a homogeneous hyperbolic
+polynomial, it follows immediately that
+tr
+(
+∧k(x + y)
+)1/k
+≥ tr(∧kx)1/k +t r (∧k y)1/k,
+when x, y are symmetric and positive deﬁnite. This is one of the main results in [25].
+Acknowledgment It is our pleasure to thank Lars G ˚arding and Lars H ¨ormander for
+their encouragement and very valuable comments on an earlier version of this paper.
+References
+[1] H. H. Bauschke, A. S. Lewis, O. G ¨uler, and H. S. Sendov, Hyperbolic Polynomials and Convex
+Analysis. Research Report CORR 98-29, Department of Combinatorics and Optimization,
+University of W aterloo, June 1998.
+[2] E. F . Beckenbach and R. Bellman, Inequalities. Springer-V erlag, 1961.
+[3] R. Bhatia, Matrix Analysis. Springer-V erlag, 1997.
+[4] P . Bullen and M. Marcus, Symmetric means and matrix inequalities. Proc. Amer. Math. Soc.
+12(1961), 285–290.
+[5] P . S. Bullen, D. S. Mitrinovi ´ca n dP .M .V a s i´c, Means and Their Inequalities. Math. Appl. (East
+European Ser.), D. Reidel Publishing Company, Dordrecht, Holland, 1987.
+[6] C. Davis, All convex invariant functions of hermitian matrices. Arch. Math. 8(1957), 276–278.
+[7] Ky Fan, On a theorem of Weyl concerning eigenvalues of linear transformations II. Proc. Nat. Acad.
+Sci. U.S.A. 36(1950), 31–35.
+[8] L. G ˚arding, Linear hyperbolic differential equations with constant coefﬁcients. Acta Math. 85(1951),
+2–62.
+[9]
+ , An inequality for hyperpolic polynomials. J. Math. Mech. (6) 8(1959), 957–965.
+[10] W . H. Greub, Multilinear Algebra. Springer-V erlag, 1967.
+[11] O. G ¨uler, Hyperbolic polynomials and interior point methods for convex programming. Math. Oper.
+Res. (2) 22(1997), 350–377.
+[12] G. H. Hardy, J. E. Littlewood and G. P ´olya, Inequalities. Cambridge University Press, 2nd edition,
+1952.
+[13] J.-B. Hiriart-Urruty and D. Y e, Sensitivity analysis of all eigenvalues of a symmetric matrix. Numer.
+Math. 70(1992), 45–72.
+[14] L. H ¨ormander, Notions of Convexity.P r o g r e s si nM a t h e m a t i c s127,B i r k h¨auser, Boston, 1994.
+[15] R. A. Horn and C. R. Johnson, Matrix Analysis. Cambridge University Press, 2nd edition, 1985.
+[16]
+ , Topics in Matrix Analysis. Cambridge University Press, 1st edition, 1991; paperback
+edition with corrections, 1994.
+[17] T . W . Hungerford, Algebra. Graduate T exts in Math.73, Springer-V erlag, New Y ork, 1974.
+488 H. H. Bauschke, O. G ¨u l e r ,A .S .L e w i sa n dH .S .S e n d o v
+[18] A. G. Khovanskii, Analogues of the Aleksandrov-Fenchel inequalities for hyperbolic forms. Soviet
+Math. Dokl. 29(1984), 710–713.
+[19] N. V . Krylov, On the general notion of fully nonlinear second-order elliptic equations. Tr a n s . A m e r.
+Math. Soc. (3) 347(1995), 857–895.
+[20] P . D. Lax, Differential equations, difference equations and matrix theory. Comm. Pure Applied Math.
+11(1958), 175–194.
+[21] A. S. Lewis, Convex analysis on the Hermitian matrices. SIAM J. Optim. (1) 6(1996), 164–177.
+[22]
+ , Group invariance and convex matrix analysis. S I A MJ .M a t r i xA n a l .A p p l .( 4 )17(1996),
+927–949.
+[23]
+ , Lidskii’s theorem via nonsmooth analysis. SIAM J. Matrix Anal. Appl. 21(1999), 379–381.
+[24] A. S. Lewis and M. L. Overton, Eigenvalue optimization. Acta Numerica 5(1996), 149–190.
+[25] M. Marcus and L. Lopes, Inequalities for symmetric functions and Hermitian matrices . Canad. J.
+Math. 9(1957), 305–312.
+[26] M. Marcus and H. Minc, The invariance of symmetric functions of singular values. Paciﬁc J. Math.
+12(1962), 327–332.
+[27] A. W . Marshall and I. Olkin, Inequalities: Theory of Majorization and Its Applications .M a t h e m a t i c s
+in Science and Engineering 143, Academic Press, New Y ork, 1979.
+[28] J. B. McLeod, On four inequalities in symmetric functions. Proc. Edinburgh Math. Soc.
+11(1958/1959), 211–219.
+[29] D. S. Mitrinovi ´c, Analytic Inequalities. Die Grundlehren der mathematischen Wisenschaften, Band
+1965; Springer-V erlag, New Y ork, 1970.
+[30] D. S. Mitrinovi ´c, J. E. Peˇcari´c and A. M. Fink, Classical and New Inequalities in Analysis. Math.
+Appl. (East European Ser.) 61, Kluwer, 1993.
+[31] A. M. Ostrowski, Solution of Equations in Euclidean and Banach Spaces . Academic Press, New Y ork,
+3rd edition, 1973.
+[32] R. T . Rockafellar, Convex Analysis. Princeton University Press, Princeton, NJ, 1970.
+[33] J. von Neumann, Some matrix inequalities and metrization of matric-space. To m s k Un i v e r s i t y
+Review 1(1937), 286–300. In: Collected W orks vol. IV , Pergamon, Oxford, 1962, 205–218.
+Department of Mathematics and Statistics
+Okanagan University College
+Kelowna, British Columbia
+V1V 1V7
+email: bauschke@cecm.sfu.ca
+Department of Mathematics and Statistics
+University of Maryland Baltimore County
+Baltimore, Maryland 21228,
+USA
+email: guler@math.umbc.edu
+Department of Combinatorics & Optimization
+University of Waterloo
+Waterloo, Ontar io
+N2L 3G1
+email: aslewis@math.uwaterloo.ca
+Department of Combinatorics & Optimization
+University of Waterloo
+Waterloo, Ontar io
+N2L 3G1
+email: hssendov@barrow.uwaterloo.ca

@@ -1,0 +1,14 @@
+{
+  "approved": true,
+  "severity": "info",
+  "issue_type": "logic",
+  "reviewer": "logic_reviewer_revised_2026-05-30",
+  "comment": "Approved. I checked the revised theorem in `report.md` (especially lines 56-178), the detailed `n=3,m=2` proof in `artifacts/n3_m2_lorentzian_bilinear_proof.md` (lines 20-108), and the full bivariate counterexample chain in `artifacts/bivariate_volume_polynomial_counterexamples.md` (lines 23-194). The positive cases now close logically: `m=1` is trivial, `m=n` follows from mixed-volume Brunn-Minkowski plus convexity of `t -> t^{-(n-1)}`, and `n=3,m=2` has a correct second-variation/Lorentzian argument. The `m=0` box model is valid and really reduces midpoint convexity to `4R >= (R+1)^2`, which fails for `R != 1`. For the negative chain in all `n>=4` intermediate cases, the derivative-to-`F` identity is correct, the reported Hessians/determinants for `(N,m)=(4,2)` and `(4,3)` match exact symbolic computation, the general `m>=4` determinant formula is correct and negative for all `d>=4`, the Shephard realization dependency is supported by the quoted Branden-Huh passage stating that every polynomial in `L_d^2 cap Q[w]` is the volume polynomial of a pair of `d`-dimensional rational polytopes, and the product lift preserves nonconvexity by continuity because the lifted volume polynomial is `f(x,y)(x+epsilon y)^r` and at `epsilon=0` the quotient reduces to the base quotient with nonvanishing denominator near the chosen positive base point.",
+  "suggested_fix": "Optional only: inline the exact Branden-Huh/Shephard citation in the artifact and add one sentence in the lifting section making the nonvanishing of `partial_y[f(x,y)(x+epsilon y)^r]` near the base point explicit.",
+  "checked_artifacts": [
+    "workspace/workstreams/WS-G1-001-classify-minkowski-convexity-of-f-m-l/report.md",
+    "workspace/workstreams/WS-G1-001-classify-minkowski-convexity-of-f-m-l/artifacts/bivariate_volume_polynomial_counterexamples.md",
+    "workspace/workstreams/WS-G1-001-classify-minkowski-convexity-of-f-m-l/artifacts/n3_m2_lorentzian_bilinear_proof.md",
+    "workspace/workstreams/WS-G1-001-classify-minkowski-convexity-of-f-m-l/artifacts/branden_huh_2020_lorentzian_polynomials.txt"
+  ]
+}

@@ -1,0 +1,4282 @@
+
+
+--- page 1 ---
+Annals of Mathematics 192 (2020), 821–891
+https://doi.org/10.4007/annals.2020.192.3.4
+Lorentzian polynomials
+By Petter Br¨and´en and June Huh
+Abstract
+We study the class of Lorentzian polynomials. The class contains homo-
+geneous stable polynomials as well as volume polynomials of convex bodies
+and projective varieties. We prove that the Hessian of a nonzero Lorentzian
+polynomial has exactly one positive eigenvalue at any point on the positive
+orthant. This property can be seen as an analog of the Hodge–Riemann
+relations for Lorentzian polynomials.
+Lorentzian polynomials are intimately connected to matroid theory and
+negative dependence properties. We show that matroids, and more gen-
+erally M-convex sets, are characterized by the Lorentzian property, and
+develop a theory around Lorentzian polynomials. In particular, we provide
+a large class of linear operators that preserve the Lorentzian property and
+prove that Lorentzian measures enjoy several negative dependence prop-
+erties. We also prove that the class of tropicalized Lorentzian polynomi-
+als coincides with the class of M-convex functions in the sense of discrete
+convex analysis. The tropical connection is used to produce Lorentzian
+polynomials from M-convex functions.
+We give two applications of the general theory. First, we prove that the
+homogenized multivariate Tutte polynomial of a matroid is Lorentzian
+whenever the parameter q satisﬁes 0 < q≤ 1. Consequences are proofs
+of the strongest Mason’s conjecture from 1972 and negative dependence
+properties of the random cluster model in statistical physics. Second, we
+prove that the multivariate characteristic polynomial of an M-matrix is
+Lorentzian. This reﬁnes a result of Holtz who proved that the coeﬃcients
+of the characteristic polynomial of an M-matrix form an ultra log-concave
+sequence.
+Contents
+1. Introduction 822
+2. Basic theory 827
+2.1. The space of Lorentzian polynomials 827
+2.2. Hodge–Riemann relations for Lorentzian polynomials 837
+Keywords: Lorentzian polynomials, stable polynomials, log-concavity, matroids, M-
+convexity, tropicalization
+AMS Classiﬁcation: Primary: 52B40, 14T15, 05A20, 05E14.
+© 2020 Department of Mathematics, Princeton University.
+821
+
+
+--- page 2 ---
+822 PETTER BR ¨AND´EN and JUNE HUH
+2.3. Independence and negative dependence 839
+2.4. Characterizations of Lorentzian polynomials 845
+3. Advanced theory 849
+3.1. Linear operators preserving Lorentzian polynomials 849
+3.2. Matroids, M-convex sets, and Lorentzian polynomials 855
+3.3. Valuated matroids, M-convex functions, and Lorentzian
+polynomials 857
+4. Examples and applications 869
+4.1. Convex bodies and Lorentzian polynomials 869
+4.2. Projective varieties and Lorentzian polynomials 871
+4.3. Potts model partition functions and Lorentzian polynomials 874
+4.4. M-matrices and Lorentzian polynomials 877
+4.5. Lorentzian probability measures 882
+References 885
+1. Introduction
+Let Hd
+n be the space of degree d homogeneous polynomials in n variables
+with real coeﬃcients. Inspired by Hodge’s index theorem for projective va-
+rieties, we introduce a class of polynomials with remarkable properties. Let
+˚L2
+n⊆ H2
+n be the open subset of quadratic forms with positive coeﬃcients that
+have the Lorentzian signature (+,−, . . . ,−). For d larger than 2, we deﬁne an
+open subset ˚Ld
+n⊆ Hd
+n by setting
+˚Ld
+n =
+{
+f∈ Hd
+n| ∂if∈ ˚Ld−1
+n for all i
+}
+,
+where ∂i is the partial derivative with respect to the i-th variable. Thus f
+belongs to ˚Ld
+n if and only if all polynomials of the form ∂i1∂i2··· ∂id−2f belong
+to ˚L2
+n. The polynomials in ˚Ld
+n are called strictly Lorentzian, and the limits of
+strictly Lorentzian polynomials are calledLorentzian. We show that the class of
+Lorentzian polynomials contains the class of homogeneous stable polynomials
+(Section 2.1) as well as volume polynomials of convex bodies and projective
+varieties (Sections 4.1 and 4.2).
+Lorentzian polynomials link discrete and continuous notions of convexity.
+Let L 2
+n⊆ H2
+n be the closed subset of quadratic forms with nonnegative coef-
+ﬁcients that have at most one positive eigenvalue, which is the closure of ˚L2
+n
+in H 2
+n. We write supp( f)⊆ Nn for the support of f∈ Hd
+n, the set of mono-
+mials appearing in f with nonzero coeﬃcients. For d larger than 2, we deﬁne
+Ld
+n⊆ Hd
+n by setting
+Ld
+n =
+{
+f∈ Md
+n| ∂if∈ Ld−1
+n for all i
+}
+,
+
+
+--- page 3 ---
+LORENTZIAN POLYNOMIALS 823
+where Md
+n⊆ Hd
+n is the set of polynomials with nonnegative coeﬃcients whose
+supports are M -convex in the sense of discrete convex analysis [Mur03]: For
+any index i and any α, β∈ supp(f) whose i-th coordinates satisfy αi > βi,
+there is an index j satisfying
+αj < βj and α− ei + ej∈ supp(f) and β− ej + ei∈ supp(f),
+where ei is the i-th standard unit vector in Nn. Since f∈ Md
+n implies ∂if∈
+Md−1
+n , we have
+Ld
+n =
+{
+f∈ Md
+n| ∂i1∂i2··· ∂id−2f∈ L2
+n for all i1, i2, . . . , id−2
+}
+.
+Our central result states that L d
+n is the set of Lorentzian polynomials in
+Hd
+n (Theorem 2.25). To show that L d
+n is contained in the closure of ˚Ld
+n, we
+construct a Nuij-type homotopy for L d
+n in Section 2.1. The construction is
+used in Section 2.2 to prove that all polynomials in L d
+n satisfy a formal ver-
+sion of the Hodge–Riemann relations: The Hessian of any nonzero polynomial
+in Ld
+n has exactly one positive eigenvalue at any point on the positive or-
+thant. To show that L d
+n contains the closure of ˚Ld
+n, we develop the theory of
+c-Rayleigh polynomials in Section 2.3. Since homogeneous stable polynomials
+are Lorentzian, the latter inclusion generalizes a result of Choe et al. that the
+support of any homogenous multi-aﬃne stable polynomial is the set of bases
+of a matroid [COSW04]. In Section 2.4, we use the above results to show that
+the classes of strongly log-concave [Gur09], completely log-concave [AOGV18],
+and Lorentzian polynomials are identical for homogeneous polynomials (The-
+orem 2.30). This enables us to aﬃrmatively answer two questions of Gurvits
+on strongly log-concave polynomials (Corollaries 2.31 and 2.32).
+Lorentzian polynomials are intimately connected to matroid theory and
+discrete convex analysis. We show that matroids, and more generally M-convex
+sets, are characterized by the Lorentzian property. LetPHd
+n be the projectiviza-
+tion of the vector space H d
+n, and let L J be the set of polynomials in L d
+n with
+nonempty support J. We denote the images of L d
+n, ˚Ld
+n, and LJ in PHd
+n by PLd
+n,
+P˚Ld
+n, and PLJ respectively, and we write
+PLd
+n =
+∐
+J
+PLJ,
+where the union is over all nonempty M-convex subsets of the d-th discrete
+simplex in Nn. The space PLd
+n is homeomorphic to the intersection of Ld
+n with
+the unit sphere in H d
+n for the Euclidean norm on the coeﬃcients. We prove
+that PLd
+n is a compact contractible set with contractible interior P˚Ld
+n (Theo-
+rem 2.28). 1 In addition, we show that PLJ is nonempty and contractible for
+1We conjecture that PLd
+n is homeomorphic to the closed Euclidean ball of the same di-
+mension (Conjecture 2.29).
+
+
+--- page 4 ---
+824 PETTER BR ¨AND´EN and JUNE HUH
+every nonempty M-convex set J (Theorem 3.10 and Proposition 3.25). Simi-
+larly, writing Hd
+n for the space of multi-aﬃne degree d homogeneous polynomi-
+als in n variables and Ld
+n for the corresponding set of multi-aﬃne Lorentzian
+polynomials, we have
+PLd
+n =
+∐
+B
+PLB,
+where the union is over all rank d matroids on the n-element set [ n]. The
+space PLd
+n is compact and contractible, and PLB is nonempty and contractible
+for every matroid B (Remark 3.6). The latter fact contrasts the case of stable
+polynomials. For example, there is no stable polynomial whose support is the
+set of bases of the Fano plane [Br¨ a07].
+In Section 3.1, we describe a large class of linear operators preserving the
+class of Lorentzian polynomials, thus providing a toolbox for working with
+Lorentzian polynomials. We give a Lorentzian analog of a theorem of Borcea
+and Br¨ and´ en for stable polynomials [BB09], who characterized linear operators
+preserving stable polynomials (Theorem 3.2). It follows from our result that
+any homogeneous linear operator that preserves stable polynomials and poly-
+nomials with nonnegative coeﬃcients also preserves Lorentzian polynomials
+(Theorem 3.4).
+In Section 3.3, we strengthen the connection between Lorentzian polyno-
+mials and discrete convex analysis. For a function ν : Nn→ R∪{∞}, we write
+dom(ν)⊆ Nn for the eﬀective domain of ν, the subset of Nn where ν is ﬁnite.
+For a positive real parameter q, we consider the generating function
+fν
+q (w) =
+∑
+α∈dom(ν)
+qν(α)
+α! wα, w = (w1, . . . , wn).
+The main result here is Theorem 3.14, which states that fν
+q is a Lorentzian
+polynomial for all 0 < q ≤ 1 if and only if the function ν is M -convex in
+the sense of discrete convex analysis [Mur03]: For any index i and any α, β∈
+dom(ν) whose i-th coordinates satisfy αi > βi, there is an index j satisfying
+αj < βj and ν(α) + ν(β)≥ ν(α− ei + ej) + ν(β− ej + ei).
+In particular, J⊆ Nn is M-convex if and only if its exponential generating func-
+tion ∑
+α∈J
+1
+α! wα is a Lorentzian polynomial (Theorem 3.10). Another special
+case of Theorem 3.14 is the statement that a homogeneous polynomial with
+nonnegative coeﬃcients is Lorentzian if the natural logarithms of its normal-
+ized coeﬃcients form an M-concave function (Corollary 3.16). Working over
+the ﬁeld of formal Puiseux series K, we show that the tropicalization of any
+Lorentzian polynomial over K is an M-convex function, and that all M-convex
+functions are limits of tropicalizations of Lorentzian polynomials overK (Corol-
+lary 3.28). This generalizes a result of Br¨ and´ en [Br¨ a10], who showed that the
+
+
+--- page 5 ---
+LORENTZIAN POLYNOMIALS 825
+tropicalization of any homogeneous stable polynomial over K is M-convex. 2
+In particular, for any matroid M with the set of bases B, the Dressian of all
+valuated matroids on M can be identiﬁed with the tropicalization of the space
+of Lorentzian polynomials over K with support B.
+In Sections 4.1 and 4.2, we show that the volume polynomials of convex
+bodies and projective varieties are Lorentzian. It follows that, for any convex
+bodies K 1, . . . ,Kn in Rd, the set of all α∈ Nn satisfying the conditions
+α1 +··· + αn = d and V (K1, . . . ,K1  
+α1
+, . . . ,Kn, . . . ,Kn  
+αn
+)̸= 0
+is M-convex, where the symbol V stands for the mixed volume of convex bodies
+in Rd. Similarly, for any d-dimensional projective varietyY and any nef divisors
+H1, . . . ,Hn on Y , the set of all α∈ Nn satisfying the conditions
+α1 +··· + αn = d and (H 1· . . .· H1  
+α1
+· . . .· Hn· . . .· Hn  
+αn
+)̸= 0
+is M-convex, where the symbol· stands for the intersection product of Cartier
+divisors on Y . The problem of ﬁnding a Lorentzian polynomial that is not a
+volume polynomial remains open. For a precise formulation, see Question 4.9.
+In Section 4.3, we use the basic theory developed in Section 2 to show that
+the homogenized multivariate Tutte polynomial of any matroid is Lorentzian.
+We use the Lorentzian property to prove a conjecture of Mason from 1972 on
+the enumeration of independent sets [Mas72]: For any matroid M on [ n] and
+any positive integer k,
+Ik(M)2
+(n
+k
+)2 ≥ Ik+1(M)(n
+k+1
+) Ik−1(M)(n
+k−1
+) ,
+where Ik(M) is the number ofk-element independent sets of M. More generally,
+the Lorentzian property reveals several inequalities satisﬁed by the coeﬃcients
+of the classical Tutte polynomial
+TM(x, y) =
+∑
+A⊆[n]
+(x− 1)rkM([n])−rkM(A)(y− 1)|A|−rkM(A),
+where rkM :{0, 1}n→ N is the rank function of M. For example, if we write
+wrkM([n])TM
+(
+1 + q
+w , 1 + w
+)
+=
+n∑
+k=0
+ck
+q(M)wk,
+then the sequence ck
+q(M) is ultra log-concave for every 0 ≤ q≤ 1.
+2In [Br¨ a10], the ﬁeld of formal Puiseux series with real exponents was used. The tropical-
+ization used in [Br¨ a10] diﬀers from ours by a sign.
+
+
+--- page 6 ---
+826 PETTER BR ¨AND´EN and JUNE HUH
+In Section 4.4, we show that the multivariate characteristic polynomial of
+any M-matrix is Lorentzian.3 This strengthens a theorem of Holtz [Hol05], who
+proved that the coeﬃcients of the characteristic polynomial of any M-matrix
+form an ultra log-concave sequence.
+In Section 4.5, we deﬁne a class of discrete probability measures, called
+Lorentzian measures, properly containing the class of strongly Rayleigh mea-
+sures studied in [BBL09]. We show that Lorentzian measures enjoy several
+negative dependence properties and prove that the class of Lorentzian mea-
+sures is closed under the symmetric exclusion process. As an example, we
+show that the uniform measure µM on{0, 1}n concentrated on the indepen-
+dent sets of a matroid M on [ n] is Lorentzian (Proposition 4.25). A conjecture
+of Kahn [Kah00] and Grimmett–Winkler [GW04] states that, for any graphic
+matroid M and distinct elements i and j,
+Pr(F contains i and j)≤ Pr(F contains i)Pr( F contains j),
+where F is an independent set of M chosen uniformly at random. The
+Lorentzian property of the measure µM shows that, for any matroid M and
+distinct elements i and j,
+Pr(F contains i and j)≤ 2Pr(F contains i)Pr( F contains j),
+where F is an independent set of M chosen uniformly at random.
+Remark. Nima Anari, Kuikui Liu, Shayan Oveis Gharan and Cynthia
+Vinzant have independently developed methods that partially overlap with
+our work in a series of papers [AOGV18], [ALGV19], [ALGV18]. They study
+the class of completely log-concave polynomials. For homogenous polynomials,
+this class agrees with the class of Lorentzian polynomials; see Theorem 2.30 in
+this paper. The main overlap is an independent proof of Mason’s conjecture
+in [ALGV18]. The manuscript [BH18], which is not intended for publication,
+contains a short self-contained proof of Mason’s conjecture that was published
+on arXiv simultaneously as [ALGV18]. In addition, the authors of [AOGV18]
+prove that the basis generating polynomial of any matroid is completely log-
+concave, using results of Adiprasito, Huh, and Katz [AHK18]. An equivalent
+statement on the Hessian of the basis generating polynomial can be found
+in [HW17, Rem. 15]. A self-contained proof of the complete log-concavity of
+the basis generating polynomial, based on an implication similar to (3) ⇒ (1)
+of Theorem 2.30 in this paper, appears in [ALGV19, §5.1]. The authors of
+[ALGV19] apply these results to design an FPRAS to count the number of
+3Ann×n matrix is an M-matrix if all the oﬀ-diagonal entries are nonpositive and all the
+principal minors are positive. The class of M-matrices shares many properties of hermitian
+positive deﬁnite matrices and appears in mathematical economics and computational biology
+[BP94].
+
+
+--- page 7 ---
+LORENTZIAN POLYNOMIALS 827
+bases of any matroid given by an independent set oracle, and to prove the
+conjecture of Mihail and Vazirani that the bases exchange graph of any matroid
+has expansion at least 1.
+Acknowledgments. Petter Br¨ and´ en is a Wallenberg Academy Fellow sup-
+ported by the Knut and Alice Wallenberg Foundation and Vetenskapsr˚ adet.
+June Huh was supported by NSF Grant DMS-1638352 and the Ellentuck Fund.
+Special thanks go to anonymous referees, whose valuable suggestions signiﬁ-
+cantly improved the quality of the paper.
+2. Basic theory
+2.1. The space of Lorentzian polynomials . Let n and d be nonnegative
+integers, and set [ n] = {1, . . . , n}. We write H d
+n for the set of degree d ho-
+mogeneous polynomials in R[w1, . . . , wn]. We deﬁne a topology on H d
+n using
+the Euclidean norm for the coeﬃcients, and we write P d
+n⊆ Hd
+n for the open
+subset of polynomials all of whose coeﬃcients are positive. The Hessian of
+f∈ R[w1, . . . , wn] is the symmetric matrix
+Hf(w) =
+(
+∂i∂jf
+)n
+i,j=1
+,
+where ∂i stands for the partial derivative ∂
+∂wi
+. For α∈ Nn, we write
+α =
+n∑
+i=1
+αiei and |α|1 =
+n∑
+i=1
+αi,
+where αi is a nonnegative integer and ei is the standard unit vector in Nn, and
+set
+wα = wα1
+1 ··· wαn
+n and ∂α = ∂α1
+1 ··· ∂αn
+n .
+We deﬁne the d-th discrete simplex ∆d
+n⊆ Nn by
+∆d
+n =
+{
+α∈ Nn|| α|1 = d
+}
+and deﬁne the Boolean cube{0, 1}n⊆ Nn by
+{0, 1}n =
+{ ∑
+i∈S
+ei∈ Nn| S⊆ [n]
+}
+.
+The intersection of the d-th discrete simplex and the Boolean cube will be
+denoted ñ
+n
+d
+ô
+={0, 1}n∩ ∆d
+n.
+The cardinality of [n
+d
+] is the binomial coeﬃcient (n
+d
+). We often identify a subset
+S of [n] with the zero-one vector ∑
+i∈S ei in Nn. For example, we write wS for
+the square-free monomial ∏
+i∈S wi.
+
+
+--- page 8 ---
+828 PETTER BR ¨AND´EN and JUNE HUH
+Deﬁnition 2.1 (Lorentzian polynomials). We set ˚L0
+n = P0
+n, ˚L1
+n = P1
+n, and
+˚L2
+n =
+{
+f∈ P2
+n| Hf is nonsingular and has exactly one positive eigenvalue
+}
+.
+For d larger than 2, we deﬁne ˚Ld
+n recursively by setting
+˚Ld
+n =
+{
+f∈ Pd
+n| ∂if∈ ˚Ld−1
+n for all i∈ [n]
+}
+.
+The polynomials in ˚Ld
+n are called strictly Lorentzian, and the limits of strictly
+Lorentzian polynomials are called Lorentzian.
+Clearly, ˚Ld
+n is an open subset of H d
+n, and the space ˚L2
+n may be identiﬁed
+with the set of n× n symmetric matrices with positive entries that have the
+Lorentzian signature (+,−, . . . ,−). Unwinding the recursive deﬁnition, we
+have
+˚Ld
+n =
+{
+f∈ Pd
+n| ∂αf∈ ˚L2
+n for every α∈ ∆d−2
+n
+}
+.
+Proposition 2.2 below on stable polynomials shows that ˚Ld
+n is nonempty for
+every n and d.
+An important subclass of Lorentzian polynomials is homogeneous stable
+polynomials, which play a guiding role in many of our proofs. Recall that a
+polynomial f in R[w1, . . . , wn] is stable if f is nonvanishing onHn or identically
+zero, whereH is the open upper half plane in C. Let Sd
+n be the set of degree d
+homogeneous stable polynomials in n variables with nonnegative coeﬃcients.
+Hurwitz’s theorem shows that Sd
+n is a closed subset of H d
+n [Wag11, §2]. When
+f is homogeneous and has nonnegative coeﬃcients, the stability of f is equiv-
+alent to any one of the following statements on univariate polynomials in the
+variable x [BBL09, Th. 4.5]:
+– For any u∈ Rn
+>0, f(xu− v) has only real zeros for all v∈ Rn.
+– For some u∈ Rn
+>0, f(xu− v) has only real zeros for all v∈ Rn.
+– For any u∈ Rn
+≥0 with f(u) > 0, f(xu− v) has only real zeros for all v∈ Rn.
+– For some u∈ Rn
+≥0 with f(u) > 0, f(xu−v) has only real zeros for all v∈ Rn.
+We refer to [Wag11] and [Pem12] for background on the class of stable poly-
+nomials. We will use the fact that any polynomial f ∈ Sd
+n is the limit of
+polynomials in the interior of Sd
+n, that is, of strictly stable polynomials [Nui68].
+Proposition 2.2. Any polynomial in Sd
+n is Lorentzian.
+Proof. We show that the interior of S d
+n is a subset of ˚Ld
+n by induction
+on d. When d = 2, the statement follows from Lemma 2.5 below. The general
+case follows from the fact that ∂i is an open map sending S d
+n to Sd−1
+n [Wag11,
+Lemma 2.4]. □
+
+
+--- page 9 ---
+LORENTZIAN POLYNOMIALS 829
+All the nonzero coeﬃcients of a homogeneous stable polynomial have the
+same sign [COSW04, Th. 6.1]. Thus, any homogeneous stable polynomial is
+a constant multiple of a Lorentzian polynomial. For example, determinantal
+polynomials of the form
+f(w1, . . . , wn) = det(w1A1 +··· + wnAn),
+where A1, . . . , An are positive semideﬁnite matrices, are stable [BB08, Prop. 2.4],
+and hence Lorentzian.
+Example 2.3. Consider the homogeneous bivariate polynomial with posi-
+tive coeﬃcients
+f =
+d∑
+k=0
+akwk
+1 wd−k
+2 .
+Computing the partial derivatives of f reveals that f is strictly Lorentzian if
+and only if
+a2
+k
+(d
+k
+)2 > ak−1(d
+k−1
+)ak+1(d
+k+1
+) for all 0 < k < d.
+On the other hand, f is stable if and only if the univariate polynomial f|w2=1
+has only real zeros. Thus, a Lorentzian polynomial need not be stable. For
+example, consider the cubic form
+f = 2w3
+1 + 12w2
+1w2 + 18w1w2
+2 + θw3
+2,
+where θ is a real parameter. A straightforward computation shows that
+f is Lorentzian if and only if 0 ≤ θ≤ 9,
+and f is stable if and only if 0 ≤ θ≤ 8.
+Example 2.4. Clearly, if f is in the closure of ˚Ld
+n in Hd
+n, then f has non-
+negative coeﬃcients and
+∂αf has at most one positive eigenvalue for every α∈ ∆d−2
+n .
+The bivariate cubic f = w3
+1 + w3
+2 shows that the converse fails. In this case,
+∂1f and ∂2f are Lorentzian, but f is not Lorentzian.
+We give alternative characterizations of˚L2
+n. Similar arguments were given
+in [Gre81] and [COSW04, Th. 5.3].
+Lemma 2.5. The following conditions are equivalent for any f∈ P2
+n:
+(1) The Hessian of f has the Lorentzian signature (+,−, . . . ,−); i.e., f∈ ˚L2
+n.
+(2) For any nonzero u∈ Rn
+≥0, ( uT Hf v)2 > (uT Hf u)(vT Hf v) for any v∈ Rn
+not parallel to u.
+(3) For some u∈ Rn
+≥0, ( uT Hf v)2 > (uT Hf u)(vT Hf v) for any v∈ Rn not
+parallel to u.
+
+
+--- page 10 ---
+830 PETTER BR ¨AND´EN and JUNE HUH
+(4) For any nonzero u∈ Rn
+≥0, the univariate polynomial f(xu− v) in x has
+two distinct real zeros for any v∈ Rn not parallel to u.
+(5) For some u ∈ Rn
+≥0, the univariate polynomial f(xu− v) in x has two
+distinct real zeros for any v∈ Rn not parallel to u.
+It follows that a quadratic form with nonnegative coeﬃcients is strictly
+Lorentzian if and only if it is strictly stable. Thus, a quadratic form with
+nonnegative coeﬃcients is Lorentzian if and only if it is stable.
+Proof. We prove (1) ⇒ (2). Since all the entries of Hf are positive,
+uT Hf u > 0 for any nonzero u∈ Rn
+≥0. By Cauchy’s interlacing theorem, for
+any v∈ Rn not parallel to u, the restriction of Hf to the plane spanned by
+u, v has signature (+ ,−). It follows that
+det
+Ç
+uT Hf u u T Hf v
+uT Hf v v T Hf v
+å
+= (uT Hf u)(vT Hf v)− (uT Hf v)2 < 0.
+We prove (3)⇒ (1). Let u be the nonnegative vector in the statement (3).
+Then Hf is negative deﬁnite on the hyperplane {v∈ Rn| uT Hf v = 0}. Since
+f∈ P2
+n, we have uT Hf u > 0, and hence Hf has the Lorentzian signature.
+The remaining implications follows from the fact that the univariate poly-
+nomial 1
+2 f(xu− v) has the discriminant ( uT Hf v)2− (uT Hf u)(vT Hf v). □
+Matroid theory captures various combinatorial notions of independence.
+A matroid M on [ n] is a nonempty family of subsets B of [ n], called the set of
+bases of M, that satisﬁes the exchange property:
+For any B1, B2∈ B and i∈ B1\ B2, there is j∈ B2\ B1 such
+that (B1\ i)∪ j∈ B.
+We refer to [Oxl11] for background on matroid theory. More generally, follow-
+ing [Mur03], we deﬁne a subset J ⊆ Nn to be M -convex if it satisﬁes any one
+of the following equivalent conditions: 4
+– For any α, β∈ J and any index i satisfying αi > βi, there is an index j
+satisfying
+αj < βj and α− ei + ej∈ J.
+– For any α, β∈ J and any index i satisfying αi > βi, there is an index j
+satisfying
+αj < βj and α− ei + ej∈ J and β− ej + ei∈ J.
+4The class of M-convex sets is essentially identical to the class of generalized polymatroids
+in the sense of [Fuj05]. Some other notions in the literature that are equivalent to M-convex
+sets are integral polymatroids [Wel76], discrete polymatroids [HH02], and integral generalized
+permutohedras [Pos09]. We refer to [Mur03, §1.3] and [Mur03, §4.7] for more details.
+
+
+--- page 11 ---
+LORENTZIAN POLYNOMIALS 831
+The ﬁrst condition is called the exchange property for M-convex sets, and the
+second condition is called the symmetric exchange property for M-convex sets.
+A proof of the equivalence can be found in [Mur03, Ch. 4]. Note that any
+M-convex subset of Nn is necessarily contained in the discrete simplex ∆ d
+n for
+some d. We refer to [Mur03] for a comprehensive treatment of M-convex sets.
+Let f be a polynomial in R[w1, . . . , wn]. We write f in the normalized form
+f =
+∑
+α∈Nn
+cα
+α! wα, where α! =
+n∏
+i=1
+αi!.
+The support of the polynomial f is the subset of Nn deﬁned by
+supp(f) =
+{
+α∈ Nn| cα̸= 0
+}
+.
+We write M d
+n for the set of all degree d homogeneous polynomials in
+R≥0[w1, . . . , wn] whose supports are M-convex. Note that, in our convention,
+the empty subset of Nn is an M-convex set. Thus, the zero polynomial belongs
+to Md
+n, and f∈ Md
+n implies ∂if∈ Md−1
+n . It follows from [Br¨ a07, Th. 3.2] that
+Sd
+n⊆ Md
+n.
+Deﬁnition 2.6. We set L 0
+n = S 0
+n, L 1
+n = S 1
+n, and L 2
+n = S 2
+n. For d larger
+than 2, we deﬁne
+Ld
+n =
+{
+f∈ Md
+n| ∂if∈ Ld−1
+n for all i∈ [n]
+}
+=
+{
+f∈ Md
+n| ∂αf∈ L2
+n for every α∈ ∆d−2
+n
+}
+.
+Clearly, Ld
+n contains ˚Ld
+n. In Theorem 2.25, we show that L d
+n is the closure
+of ˚Ld
+n in Hd
+n. In other words, L d
+n is exactly the set of degree d Lorentzian
+polynomials in n variables. In this section, we show that ˚Ld
+n is contractible
+and its closure contains L d
+n. The following proposition plays a central role
+in our analysis of L d
+n. Analogous statements, in the context of hyperbolic
+polynomials and stable polynomials, appear in [Nui68] and [LS81]. We ﬁx a
+degree d homogeneous polynomial f in n variables and indices i, j in [n].
+Proposition 2.7. If f∈ Ld
+n, then (1 + θwi∂j
+)f∈ Ld
+n for every nonneg-
+ative real number θ.
+We prepare the proof of Proposition 2.7 with two lemmas.
+Lemma 2.8. If f∈ Md
+n, then (1 + θwi∂j
+)f∈ Md
+n for every nonnegative
+real number θ.
+Proof. We may suppose θ = 1 and j = n. We use two combinatorial
+lemmas from [KMT07]. Introduce a new variable wn+1, and set
+
+
+--- page 12 ---
+832 PETTER BR ¨AND´EN and JUNE HUH
+g(w1, . . . , wn, wn+1) = f(w1, . . . , wn + wn+1) =
+d∑
+k=0
+1
+k! wk
+n+1∂k
+nf(w1, . . . , wn).
+By [KMT07, Lemma 6], the support of g is M-convex. In terms of [KMT07],
+the support of g is obtained from the support of f by an elementary splitting,
+and the operation of splitting preserves M-convexity. Therefore, g belongs to
+Md
+n+1. Since the intersection of an M-convex set with a cartesian product of
+intervals is M-convex, it follows that
+(1 + wn+1∂n
+)f∈ Md
+n+1.
+By [KMT07, Lemma 9], the above displayed inclusion implies
+(1 + wi∂n
+)f∈ Md
+n.
+In terms of [KMT07], the support of(1+wi∂n
+)f is obtained from the support of(1+ wn+1∂n
+)f by an elementary aggregation, and the operation of aggregation
+preserves M-convexity. □
+For stable polynomials f and g in R[w1, . . . , wn], we deﬁne a relation f≺ g
+by
+f≺ g⇐⇒ g + wn+1f is a stable polynomial in R[w1, . . . , wn, wn+1].
+If f and g are univariate polynomials with leading coeﬃcients of the same sign,
+then f≺ g if and only if the zeros of f interlace the zeros of g [BB10, Lemma
+2.2]. In general, we have
+f≺ g⇐⇒ f(xu− v)≺ g(xu− v) for all u∈ Rn
+>0 and v∈ Rn.
+For later use, we record here basic properties of stable polynomials and the
+relation≺.
+Lemma 2.9. Let f, g1, g2, h1, h2 be stable polynomials satisfying h1≺ f≺ g1
+and h2≺ f≺ g2.
+(1) The derivative ∂1f is stable and ∂1f≺ f.
+(2) The diagonalization f(w1, w1, w3, . . . , wn) is stable.
+(3) The dilation f(a1w1, . . . , anwn) is stable for any a∈ Rn
+≥0.
+(4) If f is not identically zero , then f≺ θ1g1 + θ2g2 for any θ1, θ2≥ 0.
+(5) If f is not identically zero , then θ1h1 + θ2h2≺ f for any θ1, θ2≥ 0.
+The statement ∂1f≺ f appears, for example, in [BBL09, §4]. It follows
+that, if f is stable, then (1 + θwi∂j)f is stable for every nonnegative real
+number θ. The remaining proof of Lemma 2.9 can be found in [Wag11, §2] and
+[BB10, §2].
+
+
+--- page 13 ---
+LORENTZIAN POLYNOMIALS 833
+Proof of Proposition 2.7. When d = 2, Lemma 2.9 implies Proposition 2.7.
+Suppose d≥ 3, and set
+g = (1 + θwi∂j
+)f.
+By Lemma 2.8, the support of g is M-convex. Therefore, it is enough to prove
+that ∂αg is stable for all α∈ ∆d−2
+n . We give separate arguments when αi = 0
+and αi > 0. If αi = 0, then
+∂αg = ∂αf + θwi∂α+ej f.
+In this case, (1), (2), and (3) of Lemma 2.9 for ∂αf show that ∂αg is stable.
+If αi > 0, then
+∂αg = ∂αf + θαi∂α−ei+ej f + θwi∂α+ej f
+= ∂i
+(
+∂α−eif
+)
++ θαi∂j
+(
+∂α−eif
+)
++ θwi∂i∂j
+(
+∂α−eif
+)
+.
+In this case, (1) of Lemma 2.9 applies to the stable polynomials ∂αf and
+∂α−ei+ej f:
+∂i∂j
+(
+∂α−eif
+)
+≺ ∂i
+(
+∂α−eif
+)
+and ∂i∂j
+(
+∂α−eif
+)
+≺ ∂j
+(
+∂α−eif
+)
+.
+Therefore, unless ∂α+ej f is identically zero, ∂αg is stable by (2) and (4) of
+Lemma 2.9.
+It remains to prove that, whenever αi is positive and ∂α+ej f is identically
+zero,
+∂i
+(
+∂α−eif
+)
++ φ ∂j
+(
+∂α−eif
+)
+is stable for every nonnegative real number φ.
+Since the cubic form ∂α−eif is in L3
+n, it is enough to prove the statement when
+d = 3 and α = ei.
+We show that, if f is in L 3
+n and ∂i∂jf is identically zero, then
+∂if + φ ∂jf is stable for every nonnegative real number φ.
+The statement is clear when ( ∂if)(∂jf) is identically zero. If otherwise, there
+are monomials of the form wiwi′wi′′ and wjwj′wj′′ in the support of f. We
+apply the symmetric exchange property to the support of f, the monomials
+wiwi′wi′′, wjwj′wj′′, and the variable wi: We see that the monomial wjwi′wi′′
+must be in the support of f, since no monomial in the support of f is divisible
+by wiwj. For a positive real parameter s, set
+hs = (1 + swi∂i′
+)f.
+Since ∂i∂i′f is not identically zero, the argument in the ﬁrst paragraph shows
+that hs is in L 3
+n. Similarly, since ∂i∂jhs is not identically zero, we have
+(1 + φwi∂j
+)hs∈ L3
+n for every nonnegative real number φ.
+
+
+--- page 14 ---
+834 PETTER BR ¨AND´EN and JUNE HUH
+Since stability is a closed condition, it follows that
+lim
+s→0
+∂i
+(
+hs + φwi∂jhs
+)
+= ∂if + φ ∂jf is stable for every nonnegative real number φ. □
+We use Proposition 2.7 to show that any nonnegative linear change of
+variables preserves Ld
+n.
+Theorem 2.10. If f(w)∈ Ld
+n, then f(Av)∈ Ld
+m for any n× m matrix A
+with nonnegative entries .
+Proof. Fix f = f(w1, . . . , wn) in Ld
+n. Note that Theorem 2.10 follows from
+its three special cases:
+(I) the elementary splitting f(w1, . . . , wn−1, wn + wn+1) is in Ld
+n+1;
+(II) the dilation f(w1, . . . , wn−1, θwn) is in Ld
+n for any θ≥ 0;
+(III) the diagonalization f(w1, . . . , wn−2, wn−1, wn−1) is in Ld
+n−1.
+As observed in the proof of Lemma 2.8, an elementary splitting preserves
+M-convexity:
+f(w1, . . . , wn−1, wn + wn+1)∈ Md
+n+1.
+Therefore,5 the ﬁrst statement follows from Proposition 2.7:
+lim
+k→∞
+Å
+1 + wn+1∂n
+k
+ãk
+f = f(w1, . . . , wn−1, wn + wn+1)∈ Ld
+n+1.
+For the second statement, note from the deﬁnition of M-convexity that
+f(w1, . . . , wn−1, 0)∈ Md
+n.
+Thus the second statement for θ = 0 follows from the case θ > 0, which is
+trivial to verify.
+The proof of the third statement is similar to that of the ﬁrst statement.
+As observed in the proof of Lemma 2.8, an elementary aggregation preserves
+M-convexity, and hence
+f(w1, . . . , wn−1, wn−1 + wn)∈ Md
+n.
+Therefore, Proposition 2.7 implies that
+lim
+k→∞
+Å
+1 + wn−1∂n
+k
+ãk
+f = f(w1, . . . , wn−1, wn−1 + wn)∈ Ld
+n.
+By the second statement, we may substitute wn in the displayed equation by
+zero. □
+5It is necessary to check the inclusion in Md
+n+1 in advance because we have not yet proved
+that Ld
+n+1 is closed.
+
+
+--- page 15 ---
+LORENTZIAN POLYNOMIALS 835
+Theorem 2.10 can be used to show that taking directional derivatives in
+nonnegative directions takes polynomials in L d
+n to polynomials in Ld−1
+n .
+Corollary 2.11. If f ∈ Ld
+n, then we have ∑n
+i=1 ai∂if∈ Ld−1
+n for any
+a1, . . . , an≥ 0.
+Proof. We apply Theorem 2.10 to f and the matrix with column vectors
+e1, . . . , en and ∑n
+i=1 aiei:
+g := f(w1 + a1wn+1, . . . , wn + anwn+1)∈ Ld
+n+1, and hence ∂n+1g∈ Ld−1
+n+1.
+Applying Theorem 2.10 to ∂n+1g and the matrix with column vectorse1, . . . , en
+and 0, we get
+∂n+1g|wn+1=0 =
+n∑
+i=1
+ai∂if∈ Ld−1
+n . □
+Let θ be a nonnegative real parameter. We deﬁne a linear operator
+Tn(θ,−) by
+Tn(θ, f) =
+(n−1∏
+i=1
+(1 + θwi∂n
+)d
+)
+f.
+By Proposition 2.7, if f∈ Ld
+n, then Tn(θ, f)∈ Ld
+n. In addition, if f∈ Pd
+n, then
+Tn(θ, f)∈ Pd
+n. Most importantly, the operator Tn satisﬁes the following Nuij-
+type homotopy lemma. For a similar argument in the context of hyperbolic
+polynomials, see the proof of the main theorem in [Nui68].
+Lemma 2.12. If f∈ Ld
+n∩ Pd
+n, then Tn(θ, f)∈ ˚Ld
+n for every positive real
+number θ.
+Proof. Let ei be the i-th standard unit vector in Rn, and let v be any
+vector in Rn not parallel to en. From here on, in this proof, all polynomials
+are restricted to the line xen− v and considered as univariate polynomials in x.
+Let α be an arbitrary element of ∆d−2
+n . By Lemma 2.5, it is enough to show
+that the quadratic polynomial ∂αTn(θ, f) has two distinct real zeros. Using
+Proposition 2.7, we can deduce the preceding statement from the following
+claims:
+(I) If ∂αf has two distinct real zeros, then ∂α(1+ θwi∂n
+)f has two distinct
+zeros.
+(II) If vi is nonzero, then ∂α(1 + θwi∂n
+)df has two distinct real zeros.
+We ﬁrst prove (I). Suppose ∂αf has two distinct real zeros, and set g =(1 + θwi∂n
+)f. Note that
+∂αg = ∂αf + θαi∂α−ei+enf + θwi∂α+enf.
+
+
+--- page 16 ---
+836 PETTER BR ¨AND´EN and JUNE HUH
+Let c be the unique zero of ∂α+enf. Since c strictly interlaces two distinct
+zeros of ∂αf, we have
+∂αf|x=c < 0.
+Similarly, since ∂α−ei+enf has only real zeros and ∂α+enf ≺ ∂α−ei+enf, we
+have
+∂α−ei+enf|x=c≤ 0.
+Thus ∂αg|x=c < 0, and hence ∂αg has two distinct real zeros. This completes
+the proof of (I).
+Before proving (II), we strengthen (I) as follows:
+(III) A multiple zero of ∂αg is necessarily a multiple zero of ∂αf.
+Suppose ∂αg has a multiple zero. Using (I), we know that ∂αf has a multiple
+zero, say c. Clearly, c must be also a zero of ∂α+enf. Since c interlaces the two
+(not necessarily distinct) zeros of ∂α−ei+enf, we have
+∂αg|x=c = θαi∂α−ei+enf|x=c≤ 0.
+Therefore, if c is not a zero of ∂αg, then ∂αg has two distinct zeros, contra-
+dicting the hypothesis that ∂αg has a multiple zero. This completes the proof
+of (III).
+We prove (II). Suppose ∂α(1 +θwi∂n
+)df has a multiple zero, say c. Using
+(III), we know that
+the number c is a multiple zero of ∂α(1 + θwi∂n
+)kf for all 0≤ k≤ d.
+Expanding the k-th power and using the linearity of ∂α, we deduce that
+the number c is a zero of ∂αwk
+i ∂k
+n f for all 0≤ k≤ d.
+However, since f has positive coeﬃcients, the value of ∂αwαi+2
+i ∂αi+2
+n f at c is
+a positive multiple of v2
+i , and hence vi must be zero. This completes the proof
+of (II). □
+We use Lemma 2.12 to prove the main result of this subsection.
+Theorem 2.13. The closure of ˚Ld
+n in Hd
+n contains Ld
+n.
+Proof. Let f be a polynomial in L d
+n that is not identically zero, and let θ
+be a real parameter satisfying 0 ≤ θ≤ 1. By Theorem 2.10, we have
+S(θ, f):= 1
+|f|1
+f
+(
+(1−θ)w1+θ(w1+··· +wn), . . . ,(1−θ)wn+θ(w1+··· +wn)
+)
+∈Ld
+n,
+where|f|1 is the sum of all coeﬃcients of f. Since S(θ, f) belongs to Pd
+n when
+0 < θ≤ 1, Lemma 2.12 shows that we have a homotopy
+Tn
+(
+θ, S(θ, f)
+)
+∈ ˚Ld
+n, 0 < θ≤ 1,
+
+
+--- page 17 ---
+LORENTZIAN POLYNOMIALS 837
+that deforms f to the polynomial Tn
+(1, (w1 +··· + wn)d). It follows that the
+closure of ˚Ld
+n in Hd
+n contains Ld
+n. □
+We show in Theorem 2.25 that the closure of ˚Ld
+n in Hd
+n is, in fact, equal
+to Ld
+n.
+2.2. Hodge–Riemann relations for Lorentzian polynomials . Let f be a
+nonzero degree d≥ 2 homogeneous polynomial with nonnegative coeﬃcients
+in variables w1, . . . , wn. The following proposition may be seen as an analog
+of the Hodge–Riemann relations for homogeneous stable polynomials. 6
+Proposition 2.14. If f is in Sd
+n\ 0, then Hf(w) has exactly one positive
+eigenvalue for all w∈ Rn
+>0. Moreover, if f is in the interior of Sd
+n, then Hf(w)
+is nonsingular for all w∈ Rn
+>0.
+Proof. Fix a vector w∈ Rn
+>0. By Lemma 2.5, the Hessian of f has exactly
+one positive eigenvalue at w if and only if the following quadratic polynomial
+in z is stable:
+zT Hf(w)z =
+∑
+1≤i,j≤n
+zizj∂i∂jf(w).
+The above is the quadratic part of the stable polynomial with nonnegative
+coeﬃcients f(z + w), and hence is stable by [BBL09, Lemma 4.16].
+Moreover, if f is strictly stable, then fϵ = f± ϵ(wd
+1 +··· + wd
+n) is stable
+for all suﬃciently small positive ϵ. Therefore, by the result obtained in the
+previous paragraph, the matrix
+Hfϵ(w) = Hf(w)± d(d− 1)ϵ diag(wd−2
+1 , . . . , wd−2
+n )
+has exactly one positive eigenvalue for all suﬃciently small positive ϵ, and
+hence Hf(w) is nonsingular. □
+In Theorem 2.16, we extend the above result to Lorentzian polynomials.
+Lemma 2.15. If H∂if(w) has exactly one positive eigenvalue for every
+i∈ [n] and w∈ Rn
+>0, then
+ker Hf(w) =
+n⋂
+i=1
+ker H∂if(w) for every w∈ Rn
+>0.
+Proof. We may suppose d≥ 3. Fix w∈ Rn
+>0, and write Hf for Hf(w).
+We will use Euler’s formula for homogeneous functions:
+df =
+n∑
+i=1
+wi ∂if.
+6We refer to [Huh19] for a survey of the Hodge–Riemann relations in combinatorial
+contexts.
+
+
+--- page 18 ---
+838 PETTER BR ¨AND´EN and JUNE HUH
+It follows that the Hessians of f and ∂if satisfy the relation
+(d− 2) Hf =
+n∑
+i=1
+wi H∂if ,
+and hence the kernel of Hf contains the intersection of the kernels of H∂if.
+For the other inclusion, let z be a vector in the kernel of Hf. By Euler’s
+formula again,
+(d− 2) eT
+i Hf = wT H∂if for every i∈ [n],
+and hence wT H∂if z = 0 for every i∈ [n]. We have wT H∂if w > 0 because
+∂if is nonzero and has nonnegative coeﬃcients. Since H∂if(w) has exactly one
+positive eigenvalue, it follows that H∂if is negative semideﬁnite on the kernel
+of wT H∂if. In particular,
+zT H∂if z≤ 0, with equality if and only if H∂if z = 0.
+To conclude, we write zero as the positive linear combination
+0 = (d− 2)
+(
+zT Hf z
+)
+=
+n∑
+i=1
+wi
+(
+zT H∂if z
+)
+.
+Since every summand in the right-hand side is nonpositive by the previous
+analysis, we must have zT H∂if z = 0 for every i∈ [n], and hence H∂if z = 0 for
+every i∈ [n]. □
+We now prove an analog of the Hodge–Riemann relation for Lorentzian
+polynomials. When f is the volume polynomial of a projective variety as
+deﬁned in Section 4.2, then the one positive eigenvalue condition for the Hessian
+of f at w is equivalent to the validity of the Hodge–Riemann relations on the
+space of divisor classes of the projective variety with respect to the polarization
+corresponding to w.
+Theorem 2.16. Let f be a nonzero homogeneous polynomial of degree
+d≥ 2 in n variables.
+(1) If f is in ˚Ld
+n, then Hf(w) is nonsingular for all w∈ Rn
+>0.
+(2) If f is in Ld
+n, then Hf(w) has exactly one positive eigenvalue for all w∈
+Rn
+>0.
+Proof. By Theorem 2.13, L d
+n is in the closure of ˚Ld
+n. Note that, for any
+nonzero polynomial f of degree d≥ 2 with nonnegative coeﬃcients, Hf(w) has
+at least one positive eigenvalue for any w∈ Rn
+>0. Therefore, we may suppose
+f∈ ˚Ld
+n in (2). We prove (1) and (2) simultaneously by induction on d under
+this assumption. The base case d = 2 is trivial. We suppose that d≥ 3 and
+that the theorem holds for ˚Ld−1
+n .
+
+
+--- page 19 ---
+LORENTZIAN POLYNOMIALS 839
+That (1) holds for ˚Ld
+n follows from induction and Lemma 2.15. Using
+Proposition 2.14, we see that (2) holds for stable polynomials in ˚Ld
+n. Since ˚Ld
+n
+is connected by Theorem 2.13, the continuity of eigenvalues and the validity
+of (1) together implies (2). □
+Theorem 2.16, when combined with the following proposition, shows that
+all polynomials in L d
+n share a negative dependence property. The negative
+dependence property will be systematically studied in the following section.
+Proposition 2.17. If Hf(w) has exactly one positive eigenvalue for all
+w∈ Rn
+>0, then
+f(w) ∂i∂jf(w)≤ 2
+(
+1− 1
+d
+)
+∂if(w) ∂jf(w) for all w∈ Rn
+≥0 and i, j∈ [n].
+Proof. Fix w ∈ Rn
+>0, and write H for Hf(w). By Euler’s formula for
+homogeneous functions,
+wT Hw = d(d− 1)f(w) and wT Hei = (d− 1)∂if(w).
+Let t be a real parameter, and consider the restriction of H to the plane
+spanned by w and vt = ei + tej. By Theorem 2.16, H has exactly one positive
+eigenvalue. Therefore, by Cauchy’s interlacing theorem, the restriction of H
+also has exactly one positive eigenvalue. In particular, the determinant of the
+restriction must be nonpositive:
+Ä
+wT Hvt
+ä2
+−
+Ä
+wT Hw
+ä
+·
+Ä
+vT
+t Hvt
+ä
+≥ 0 for all t∈ R.
+In other words, for all t∈ R, we have
+(d− 1)2(∂if + t∂jf)2− d(d− 1)f(∂2
+i f + 2t∂i∂jf + t2∂2
+j f)≥ 0.
+It follows that, for all t∈ R, we have
+(d− 1)2(∂if + t∂jf)2− 2td(d− 1)f ∂i∂jf≥ 0.
+Thus, the discriminant of the above quadratic polynomial in t should be non-
+positive:
+f ∂i∂jf− 2
+(
+1− 1
+d
+)
+∂if ∂jf≤ 0.
+This completes the proof of Proposition 2.17. □
+2.3. Independence and negative dependence. Let c be a ﬁxed positive real
+number, and let f be a polynomial in R[w1, . . . , wn]. In this section, the
+polynomial f is not necessarily homogeneous. As before, we write ei for the
+i-th standard unit vector in Rn.
+
+
+--- page 20 ---
+840 PETTER BR ¨AND´EN and JUNE HUH
+Deﬁnition 2.18. We say that f is c-Rayleigh if f has nonnegative coeﬃ-
+cients and
+∂αf(w)∂α+ei+ej f(w)
+≤ c∂α+eif(w)∂α+ej f(w) for all i, j∈ [n], α∈ Nn, w∈ Rn
+≥0.
+When f is the partition function of a discrete probability measure µ, the
+c-Rayleigh condition captures a negative dependence property of µ. More
+precisely, when f is multi-aﬃne, that is, when f has degree at most one in
+each variable, the c-Rayleigh condition for f is equivalent to
+f(w) ∂i∂jf(w)≤ c∂if(w) ∂jf(w) for all distinct i, j∈ [n], and w∈ Rn
+≥0.
+Thus the 1-Rayleigh property of multi-aﬃne polynomials is equivalent to the
+Rayleigh property for discrete probability measures studied in [Wag08] and
+[BBL09].
+Proposition 2.19. Any polynomial in Ld
+n is 2
+(
+1− 1
+d
+)
+-Rayleigh.
+Proof. The statement follows from Theorem 2.16 and Proposition 2.17
+because 2 (1− 1
+d
+)is an increasing function of d. □
+The goal of this section is to show that the support of any homogeneous
+c-Rayleigh polynomial is M-convex (Theorem 2.23). The notion of M♮-convexity
+will be useful for the proof: A subset J ♮⊆ Nn is said to be M♮-convex if there
+is an M-convex set J in Nn+1 such that
+J♮ =
+{
+(α1, . . . , αn)| (α1, . . . , αn, αn+1)∈ J
+}
+.
+The projection from J to J ♮ should be bijective for any such J, as the M-
+convexity of J implies that J is in ∆d
+n for some d. We refer to [Mur03, §4.7] for
+more on M♮-convex sets.
+We prepare the proof of Theorem 2.23 with three lemmas. Veriﬁcation of
+the ﬁrst lemma is routine and will be omitted.
+Lemma 2.20. The following polynomials are c-Rayleigh whenever f is
+c-Rayleigh:
+(1) the contraction ∂if of f;
+(2) the deletion f\i of f, the polynomial obtained from f by evaluating wi = 0;
+(3) the diagonalization f(w1, w1, w3, . . . , wn);
+(4) the dilation f(a1w1, . . . , anwn) for (a1, . . . , an)∈ Rn
+≥0;
+(5) the translation f(a1 + w1, . . . , an + wn) for (a1, . . . , an)∈ Rn
+≥0.
+
+
+--- page 21 ---
+LORENTZIAN POLYNOMIALS 841
+We introduce a partial order≤ on Nn by setting
+α≤ β⇐⇒ αi≤ βi for all i∈ [n].
+We say that a subset J ♮ of Nn is interval convex if the following implication
+holds: (
+α∈ J♮, β∈ J♮, α≤ γ≤ β
+)
+=⇒ γ∈ J♮.
+The augmentation property for J♮⊆ Nn is the implication
+(
+α∈ J♮, β∈ J♮,|α|1 <|β|1
+)
+=⇒
+(
+αj < βj and α + ej∈ J♮ for some j∈ [n]
+)
+.
+Lemma 2.21. Let J♮ be an interval convex subset of Nn containing 0.
+Then J♮ is M♮-convex if and only if J♮ satisﬁes the augmentation property .
+Therefore, a nonempty interval convex subset of {0, 1}n containing 0 is
+M♮-convex if and only if it is the collection of independent sets of a matroid
+on [n].
+Proof. Let d be any suﬃciently large positive integer, and set
+J =
+{
+(α1, . . . , αn, d− α1−···− αn)∈ Nn+1| (α1, . . . , αn)∈ J♮
+}
+.
+The “only if” direction is straightforward: If J ♮ is M♮-convex, then J is M-
+convex, and the augmentation property for J♮ is a special case of the exchange
+property for J.
+We prove the “if” direction by checking the exchange property for J. Let
+α and β be elements of J, and let i be an index satisfying αi > βi. We claim
+that there is an index j satisfying
+αj < βj and α− ei + ej∈ J.
+By the augmentation property for J ♮, it is enough to justify the claim when
+i̸= n + 1. When αn+1 < βn+1, then we may take j = n + 1, again by the
+augmentation property for M♮.
+Suppose αn+1≥ βn+1. In this case, we consider the element γ = α−
+ei + en+1. The element γ belongs to J, because J ♮ is an interval convex set
+containing 0. We have γn+1 > βn+1, and hence the augmentation property for
+J♮ gives an index j satisfying
+γj < βj and α− ei + ej = γ− en+1 + ej∈ J.
+This index j is necessarily diﬀerent from i because αi > βi. It follows that
+αj = γj < βj, and the M-convexity of J is proved. □
+Lemma 2.22. Let f be a c-Rayleigh polynomial in R[w1, . . . , wn].
+(1) The support of f is interval convex .
+(2) If f(0) is nonzero, then supp(f) is M♮-convex.
+
+
+--- page 22 ---
+842 PETTER BR ¨AND´EN and JUNE HUH
+Proof. Suppose that the polynomial f and the vectors α≤ γ≤ β form/
+constitute a minimal counterexample to (1) with respect to the degree and the
+number of variables of f. We have
+αj = 0 for all j,
+since otherwise some contraction ∂jf is a smaller counterexample to (1). Sim-
+ilarly, we have
+βj > 0 for all j,
+since otherwise some deletion f\ j is a smaller counterexample to (1). In
+addition, we may assume that γ is a unit vector, say
+γ = ei,
+since otherwise the contraction ∂jf for any j satisfying γj > 0 is a smaller
+counterexample to (1). Suppose ej is in the support of f for some j. In this
+case, we should have
+β = ei + ej,
+since otherwise ∂jf is a smaller counterexample. However, the above implies
+∂if(0) = 0 and f(0) ∂i∂jf(0) > 0,
+contradicting the c-Rayleigh property of f. Therefore, no ej is in the support
+of f. By (3) of Lemma 2.20, the following univariate polynomial is c-Rayleigh:
+g(w1) = f(w1, w1, . . . , w1) = a1 + a2wk
+1 + a3wk+1
+1 +··· , k ≥ 2.
+The preceding analysis shows thatk≥ 2 and a1, a2 > 0 in the above expression.
+However,
+(∂1g)2 = a2
+2k2w2k−2
+1 + higher order terms,
+(∂2
+1 f)g = a1a2k(k− 1)wk−2
+1 + higher order terms,
+contradicting the c-Rayleigh property of g for suﬃciently small positive w1.
+This proves (1).
+Suppose f is a counterexample to (2) with minimal number of variables n.
+We may suppose in addition that f has minimal degree d among all such
+examples. By Lemma 2.21 and (1) of the current lemma, we know that the
+support of f fails to have the augmentation property. In other words, there
+are α, β∈ supp(f) such that|α|1 <|β|1 and
+αi < βi =⇒ α + ei̸∈ supp(f).
+For any γ, write S(γ) for the set of indices i such that γi > 0. If i is in the
+intersection of S(α) and S(β), then ∂if is a counterexample to (2) that has
+degree less than d, and hence
+S(α)∩ S(β) =∅.
+
+
+--- page 23 ---
+LORENTZIAN POLYNOMIALS 843
+Similarly, if i is not in the union ofS(α) and S(β), then f\i is a counterexample
+to (2) that involves less than n variables, and hence
+S(α)∪ S(β) = [n].
+In addition, we should have |S(β)| = 1, since otherwise we get a counterex-
+ample to (2) that involves less than n variables by identifying all the variables
+in S(β). Therefore, after replacing β with its multiple if necessary, we may
+suppose that
+β = den.
+Let T be the set of all γ in the support of f such that
+|γ|1 < d and γ + en /∈ supp(f).
+This set T is nonempty because it contains α. Let U be the set of elements in T
+with largest possible n-th coordinate, and take an element γ in U with smallest
+possible|γ|1. From (1), we know that γ is not a multiple of en. Therefore,
+there is an index j < n such that
+γ− ej∈ supp(f).
+Since|γ− ej|1 <|γ|1, the element γ− ej cannot be in T , and hence
+γ− ej + en∈ supp(f).
+Since γ is an element of U, the element γ− ej + en cannot be in T , and hence
+γ− ej + 2en∈ supp(f).
+Let g be the bivariate c-Rayleigh polynomial obtained from ∂γ−ej f by setting
+wi = 0 for all i other than j and n. By construction, we have
+0, ej, en, 2en∈ supp(g) and ej + en /∈ supp(g).
+Since the support of g is interval convex by (1), we may write
+g(wj, wn) = h(wj) + r(wn),
+where h and g are univariate polynomials satisfying deg h≥ 1 and deg r≥ 2.
+We have
+(∂ng)2 =
+( dr
+dwn
+)2
+and ( ∂2
+ng)g = d2r
+dw2n
+(h(wj) + r(wn)),
+which contradicts the c-Rayleigh property of g for ﬁxed wn and large wj. This
+proves (2). □
+Theorem 2.23. If f is homogeneous and c-Rayleigh, then the support of
+f is M-convex.
+
+
+--- page 24 ---
+844 PETTER BR ¨AND´EN and JUNE HUH
+Proof. By (5) of Lemma 2.20 and (2) of Lemma 2.22, the support of the
+translation
+g(w1, . . . , wn) = f(w1 + 1, . . . , wn + 1)
+is M♮-convex. In other words, the support J of the homogenization of g is
+M-convex. Since the intersection of an M-convex set with a coordinate hyper-
+plane is M-convex, this implies the M-convexity of the support of f. □
+A multi-aﬃne polynomial f is said to be strongly Rayleigh if
+f(w) ∂i∂jf(w)≤ ∂if(w) ∂jf(w) for all distinct i, j∈ [n], and w∈ Rn.
+Clearly, any strongly Rayleigh multi-aﬃne polynomial is 1-Rayleigh. Since a
+multi-aﬃne polynomial is stable if and only if it is strongly Rayleigh [Br¨ a07,
+Th. 5.6], Theorem 2.23 extends the following theorem of Choeet al. [COSW04,
+Th. 7.1]: If f is a nonzero homogeneous stable multi-aﬃne polynomial, then
+the support of f is the set of bases of a matroid.
+Lastly, we show that the bound in Proposition 2.19 is optimal.
+Proposition 2.24. When n≤ 2, all polynomials in Ld
+n are 1-Rayleigh.
+When n≥ 3, we have
+(
+all polynomials in Ld
+n are c-Rayleigh
+)
+=⇒ c≥ 2
+(
+1− 1
+d
+)
+.
+In other words , for any n≥ 3 and any c < 2
+(
+1− 1
+d
+)
+, there is f∈ Ld
+n that is
+not c-Rayleigh.
+Proof. We ﬁrst show by induction that, for any homogeneous bivariate
+polynomial f = f(w1, w2) with nonnegative coeﬃcients, we have
+f(w)
+(
+∂1∂2f(w)
+)
+≤
+(
+∂1f(w)
+)(
+∂2f(w)
+)
+for any w∈ R2
+≥0.
+We use the obvious fact that, for any homogeneous polynomial with nonnega-
+tive coeﬃcients h,
+(deg(h) + 1)h≥ (1 + wi∂i
+)h for any i∈ [n] and w∈ Rn
+≥0.
+Since f is bivariate, we may write f = c1wd
+1 + c2wd
+2 + w1w2g. We have
+∂1f ∂2f− f ∂1∂2f
+= d2c1c2wd−1
+1 wd−1
+2
++ dc1wd
+1(1 + w2∂2)g− c1wd
+1(1 + w1∂1)(1 + w2∂2)g
++ dc2wd
+2(1 + w1∂1)g− c2wd
+2(1 + w1∂1)(1 + w2∂2)g
++ w1w2(g + w1∂1g)(g + w2∂2g)− w1w2g(1 + w1∂1)(1 + w2∂2)g.
+The summand in the second line is nonnegative on R2
+≥0 by the mentioned fact
+for (1 + w2∂2)g. The summand in the third line is nonnegative on R2
+≥0 by the
+
+
+--- page 25 ---
+LORENTZIAN POLYNOMIALS 845
+mentioned fact for (1+ w1∂1)g. The summand in the fourth line is nonnegative
+on R2
+≥0 by the induction hypothesis applied to g.
+We next show that, for any bivariate Lorentzian polynomialf = f(w1, w2),
+we have
+f(w)
+(
+∂1∂1f(w)
+)
+≤
+(
+∂1f(w)
+)(
+∂1f(w)
+)
+for any w∈ R2
+≥0.
+Since f is homogeneous, it is enough to prove the inequality when w2 = 1.
+In this case, the inequality follows from the concavity of the function log f
+restricted to the line w2 = 1. This completes the proof that any bivariate
+Lorentzian polynomial is 1-Rayleigh.
+To see the second statement, consider the polynomial
+f = 2
+(
+1− 1
+d
+)
+wd
+1 + wd−1
+1 w2 + wd−1
+1 w3 + wd−2
+1 w2w3.
+It is straightforward to check that f is in Ld
+n. If f is c-Rayleigh, then, for any
+w∈ Rn
+≥0,
+w2d−4
+1
+(
+2
+(
+1− 1
+d
+)
+w2
+1 + w1w2 + w1w3 + w2w3
+)
+≤ cw2d−4
+1
+(
+w1 + w2
+)(
+w1 + w3
+)
+.
+The desired lower bound for c is obtained by setting w1 =1 , w2 =0 , w3 =0. □
+2.4. Characterizations of Lorentzian polynomials . We may now give a
+complete and useful description of the space of Lorentzian polynomials. As
+before, we write H d
+n for the space of degree d homogeneous polynomials in n
+variables.
+Theorem 2.25. The closure of ˚Ld
+n in Hd
+n is Ld
+n. In particular , Ld
+n is a
+closed subset of Hd
+n.
+Proof. By Theorem 2.13, the closure of ˚Ld
+n contains Ld
+n. Since any limit
+of c-Rayleigh polynomials must be c-Rayleigh, the other inclusion follows from
+Theorem 2.23 and Proposition 2.19. □
+Therefore, a degree d homogeneous polynomial f with nonnegative coef-
+ﬁcients is Lorentzian if and only if the support of f is M-convex and ∂αf has
+at most one positive eigenvalue for every α∈ ∆d−2
+n . In other words, Deﬁni-
+tions 2.1 and 2.6 deﬁne the same class of polynomials.
+Example 2.26. A sequence of nonnegative numbers a0, a1, . . . , ad is said
+to be ultra log-concave if
+a2
+k
+(d
+k
+)2≥ ak−1(d
+k−1
+)ak+1(d
+k+1
+) for all 0 < k < d.
+The sequence is said to have no internal zeros if
+ak1ak3 > 0 =⇒ ak2 > 0 for all 0 ≤ k1 < k2 < k3≤ d.
+
+
+--- page 26 ---
+846 PETTER BR ¨AND´EN and JUNE HUH
+Recall from Example 2.3 that a bivariate homogeneous polynomial
+d∑
+k=0
+akwk
+1 w2d− k
+is strictly Lorentzian if and only if the sequence ak is positive and strictly
+ultra log-concave. Theorem 2.25 says that, in this case, the polynomial is
+Lorentzian if and only if the sequence ak is nonnegative, ultra log-concave,
+and has no internal zeros.
+Example 2.27. Using Theorem 2.25, it is straightforward to check that
+elementary symmetric polynomials are Lorentzian. In fact, one can show more
+generally that all normalized Schur polynomials are Lorentzian [HMMSD19,
+Th. 3]. Any elementary symmetric polynomial is stable [COSW04, Th. 9.1],
+but a normalized Schur polynomial need not be stable [HMMSD19, Ex. 9].
+Let PHd
+n be the projectivization of H d
+n equipped with the quotient topol-
+ogy. The image PLd
+n of Ld
+n in the projective space is homeomorphic to the
+intersection of Ld
+n with the unit sphere in H d
+n for the Euclidean norm on the
+coeﬃcients.
+Theorem 2.28. The space PLd
+n is compact and contractible.
+Proof. Since PHd
+n is compact, Theorem 2.25 implies that PLd
+n is compact.
+A deformation retract of PLd
+n can be constructed using Theorem 2.10. □
+We conjecture that PLd
+n is homeomorphic to a familiar space.
+Conjecture 2.29. The space PLd
+n is homeomorphic to a closed Euclidean
+ball.
+For other appearances of stratiﬁed Euclidean balls in the interface of anal-
+ysis of combinatorics, see [GKL18], [GKL19] and references therein. Prominent
+examples are the totally nonnegative parts of Grassmannian and other partial
+ﬂag varieties.
+Let f be a polynomial in n variables with nonnegative coeﬃcients. In
+[Gur09], Gurvits deﬁnes f to be strongly log-concave if, for all α∈ Nn,
+∂αf is identically zero or log( ∂αf) is concave on Rn
+>0.
+In [AOGV18], Anari et al . deﬁne f to be completely log-concave if, for all
+m∈ N and any m× n matrix (aij) with nonnegative entries,
+( m∏
+i=1
+Di
+)
+f is identically zero or log
+((m∏
+i=1
+Di
+)
+f
+)
+is concave on Rn
+>0,
+
+
+--- page 27 ---
+LORENTZIAN POLYNOMIALS 847
+where Di is the diﬀerential operator ∑n
+j=1 aij∂j. We show that the two no-
+tions agree with each other and with the Lorentzian property for homogeneous
+polynomials.7
+Theorem 2.30. The following conditions are equivalent for any homoge-
+neous polynomial f:
+(1) f is completely log-concave;
+(2) f is strongly log-concave;
+(3) f is Lorentzian.
+The support of any Lorentzian polynomial is M-convex by Theorem 2.25.
+Thus, by Theorem 2.30, the same holds for any strongly log-concave homoge-
+neous polynomial. This answers a question of Gurvits [Gur09, §4.5(iii)].
+Corollary 2.31. The support of any strongly log-concave homogeneous
+polynomial is M-convex.
+Similarly, we can use Theorem 2.30 to show that the class of strongly log-
+concave homogeneous polynomials is closed under multiplication. This answers
+another question of Gurvits [Gur09, §4.5 (iv)] for homogeneous polynomials.
+Corollary 2.32. The product of strongly log-concave homogeneous poly-
+nomials is strongly log-concave.
+Proof. Let f(w) be an element of Ld
+n, and let g(w) be an element of Le
+n. It
+is straightforward to check that f(w)g(u) is an element of L d+e
+n+n, where u is a
+set of variables disjoint from w. It follows that f(w)g(w) is an element of Ld+e
+n ,
+since setting u = w preserves the Lorentzian property by Theorem 2.10. □
+Corollary 2.32 extends the following theorem of Liggett [Lig97, Th. 2]:
+The convolution product of two ultra log-concave sequences with no internal
+zeros is an ultra log-concave sequence with no internal zeros.
+To prove Theorem 2.30, we use the following elementary observation. Let
+f be a homogeneous polynomial in n≥ 2 variables of degree d≥ 2.
+Proposition 2.33. The following are equivalent for any w∈ Rn satisfy-
+ing f(w) > 0:
+(1) The Hessian of f 1/d is negative semideﬁnite at w.
+(2) The Hessian of log f is negative semideﬁnite at w.
+(3) The Hessian of f has exactly one positive eigenvalue at w.
+7An implication similar to (3)⇒ (1) of Theorem 2.30 can be found in [ALGV18, Th. 3.2].
+
+
+--- page 28 ---
+848 PETTER BR ¨AND´EN and JUNE HUH
+The equivalence of (2) and (3) appears in [AOGV18].
+Proof. We ﬁx w throughout the proof. For n× n symmetric matrices A
+and B, we write A≺ B to mean the following interlacing relationship between
+the eigenvalues of A and B:
+λ1(A)≤ λ1(B)≤ λ2(A)≤ λ2(B)≤···≤ λn(A)≤ λn(B).
+Let H1, H2, and H3 for the Hessians off 1/d, log f, and f, respectively. We have
+d f−1/dH1 = H2 + 1
+d f−2(gradf)(gradf)T
+and
+H2 = f−1H3− f−2(gradf)(gradf)T .
+Since (gradf)(gradf)T is positive semideﬁnite of rank one, Weyl’s inequalities
+for Hermitian matrices [Ser10, Th. 6.3] show that
+H2≺ H1 and H2≺ H3 and H1≺ H3.
+Since wT H3w = d(d− 1)f, H3 has at least one positive eigenvalue, and hence
+(1)⇒ (2)⇒ (3).
+For (3)⇒ (1), suppose that H3 has exactly one positive eigenvalue. We
+introduce a positive real parameter ϵ and consider the polynomial
+fϵ = f− ϵ(wd
+1 +··· + wd
+n).
+We write H3,ϵ for the Hessian of fϵ and write H1,ϵ for the Hessian of f 1/d
+ϵ .
+Note that H3,ϵ is nonsingular and has exactly one positive eigenvalue for
+all suﬃciently small positive ϵ. In addition, we have H1,ϵ≺ H3,ϵ, and hence
+H1,ϵ has at most one nonnegative eigenvalue for all suﬃciently small positiveϵ.
+However, by Euler’s formula for homogeneous functions, we have
+H1,ϵw = 0,
+so that 0 is the only nonnegative eigenvalue of H1,ϵ for any such ϵ. The impli-
+cation (3)⇒ (1) now follows by limiting ϵ to 0. □
+It follows that, for any nonzero degree d≥ 2 homogeneous polynomial f
+with nonnegative coeﬃcients, the following conditions are equivalent:
+– The function f 1/d is concave on Rn
+>0.
+– The function log f is concave on Rn
+>0.
+– The Hessian of f has exactly one positive eigenvalue on Rn
+>0.
+Proof of Theorem 2.30. We may suppose that f has degree d≥ 2. Clearly,
+completely log-concave polynomials are strongly log-concave.
+Suppose f is a strongly log-concave homogeneous polynomial of degree d.
+By Proposition 2.33, either ∂αf is identically zero or the Hessian of ∂αf has
+exactly one positive eigenvalue onRn
+>0 for all α∈ Nn. By Proposition 2.17, f is
+
+
+--- page 29 ---
+LORENTZIAN POLYNOMIALS 849
+2(1− 1
+d
+)-Rayleigh, and hence, by Theorem 2.23, the support of f is M-convex.
+Therefore, by Theorem 2.25, f is Lorentzian.
+Suppose f is a nonzero Lorentzian polynomial. Theorem 2.16 and Proposi-
+tion 2.33 together show that log f is concave on Rn
+>0. Therefore, it is enough to
+prove that (∑n
+i=1 ai∂i
+)f is Lorentzian for any nonnegative numbers a1, . . . , an.
+This is a direct consequence of Theorem 2.25 and Corollary 2.11. □
+3. Advanced theory
+3.1. Linear operators preserving Lorentzian polynomials . We describe a
+large class of linear operators that preserve the Lorentzian property. An analog
+was achieved for the class of stable polynomials in [BB09, Th. 2.2], where the
+linear operators preserving stability were characterized. For an element κ
+of Nn, we set
+Rκ[wi] =
+{
+polynomials in R[wi]1≤i≤n of degree at most κi in wi for every i
+}
+,
+Ra
+κ[wij] =
+{
+multi-aﬃne polynomials in R[wij]1≤i≤n,1≤j≤κi
+}
+.
+The projection operator Π↓
+κ : Ra
+κ[wij]→ Rκ[wi] is the linear map that substi-
+tutes each wij by wi:
+Π↓
+κ(g) = g|wij=wi.
+The polarization operator Π↑
+κ : Rκ[wi]→ Ra
+κ[wij] is the linear map that sends
+wα to the product
+1(κ
+α
+)
+n∏
+i=1
+(elementary symmetric polynomial of degree αi
+in the variables{wij}1≤j≤κi
+),
+where (κ
+α
+)stands for the product of binomial coeﬃcients ∏n
+i=1
+(κi
+αi
+). Note that
+– for every f, we have Π↓
+κ◦ Π↑
+κ(f) = f; and
+– for every f and every i, the polynomial Π↑
+κ(f) is symmetric in the variables
+{wij}1≤j≤κi.
+The above properties characterize Π↑
+κ among the linear operators from Rκ[wi]
+to Ra
+κ[wij].
+Proposition 3.1. The operators Π↓
+κ and Π↑
+κ preserve the Lorentzian
+property.
+In other words, Π↑
+κ(f) is a Lorentzian polynomial for any Lorentzian poly-
+nomial f∈ Rκ[wi], and Π↓
+κ(g) is a Lorentzian polynomial for any Lorentzian
+polynomial g∈ Ra
+κ[wij].
+
+
+--- page 30 ---
+850 PETTER BR ¨AND´EN and JUNE HUH
+Proof. The statement for Π ↓
+κ follows from Theorem 2.10. We prove the
+statement for Π↑
+κ. It is enough to prove that Π ↑
+κ(f) is Lorentzian when f∈
+˚Ld
+n∩ Rκ[wi] for d≥ 2.
+Set k =|κ|1, and identify Nk with the set of all monomials in wij. Since
+f∈ ˚Ld
+n, we have
+supp(Π↑
+κ(f))=
+ñ
+k
+d
+ô
+,
+which is clearly M-convex. Therefore, by Theorem 2.25, it remains to show
+that the quadratic form ∂βΠ↑
+κ(f) is stable for any β∈ [ k
+d−2
+].
+Deﬁne α by the equality Π↓
+κ(wβ) = wα. Note that, after renaming the
+variables if necessary, the β-th partial derivative of Π↑
+κ(f) is a positive multiple
+of a polarization of the α-th partial derivative of f:
+∂βΠ↑
+κ(f) = (κ− α)!
+κ! Π↑
+κ−α(∂αf).
+Since the operator Π↑
+κ−α preserves stability [BB09, Prop. 3.4], the conclusion
+follows from the stability of the quadratic form ∂αf. □
+Let κ be an element of Nn, let γ be an element of Nm, and set k =|κ|1.
+In the remainder of this section, we ﬁx a linear operator
+T : Rκ[wi]→ Rγ[wi]
+and suppose that the linear operator T is homogeneous of degree ℓ for some
+ℓ∈ Z:
+(
+0≤ α≤ κ and T (wα)̸= 0
+)
+=⇒ deg T (wα) = deg wα + ℓ.
+The symbol of T is a homogeneous polynomial of degree k+ℓ in m+n variables
+deﬁned by
+symT (w, u) =
+∑
+0≤α≤κ
+Ç
+κ
+α
+å
+T (wα)uκ−α.
+We show that the homogeneous operator T preserves the Lorentzian property
+if its symbol symT is Lorentzian.
+Theorem 3.2. If symT∈ Lk+ℓ
+m+n and f∈ Ld
+n∩ Rκ[wi], then T (f)∈ Ld+ℓ
+m .
+When n = 2, Theorem 3.2 provides a large class of linear operators that
+preserve the ultra log-concavity of sequences of nonnegative numbers with no
+internal zeros. We prepare the proof of Theorem 3.2 with a special case.
+
+
+--- page 31 ---
+LORENTZIAN POLYNOMIALS 851
+Lemma 3.3. Let T = Tw1,w2 : R(1,...,1)[wi]→ R(1,...,1)[wi] be the linear
+operator deﬁned by
+T (wS) =
+
+
+
+wS\1 if 1∈ S and 2∈ S,
+wS\1 if 1∈ S and 2 /∈ S,
+wS\2 if 1 /∈ S and 2∈ S,
+0 if 1 /∈ S and 2 /∈ S
+for all S⊆ [n].
+Then T preserves the Lorentzian property.
+Proof. It is enough to prove that T (f)∈ Ld
+n when f∈ ˚Ld+1
+n ∩ R(1,...,1)[wi]
+for d≥ 2. In this case,
+supp(T (f))= {d-element subsets of [ n] not containing 1 },
+which is clearly M-convex. Therefore, by Theorem 2.25, it suﬃces to show that
+the quadratic form ∂ST (f) is stable for any S∈ [ n
+d−2
+] not containing 1. We
+write h for the Lorentzian polynomial f|w1=0. Since f is multi-aﬃne, we have
+f = h + w1∂1f and T (f) = ∂2h + ∂1f.
+We give separate arguments when 2∈ S and 2 /∈ S. If S contains 2, then
+∂ST (f) = ∂S∪1f,
+and hence ∂ST (f) is stable. If S does not contain 2, then
+– the linear form ∂S∂1∂2f = ∂S∪1∪2f is not identically zero, because f∈ ˚Ld+1
+n ;
+– we have ∂S∪1∪2f≺ ∂S∪2h, because ∂S∪2f is stable; and
+– we have ∂S∪1∪2f≺ ∂S∪1f, by Lemma 2.9 (1).
+Therefore, by Lemma 2.9 (4), the quadratic form ∂ST (f) = ∂S∪2h + ∂S∪1f is
+stable. □
+Proof of Theorem 3.2. The polarization of T : Rκ[wi] → Rγ[wi] is the
+operator Π↑(T ) deﬁned by
+Π↑(T ) = Π↑
+γ◦ T◦ Π↓
+κ.
+We write γ⊕ κ for the concatenation of γ and κ in Nm+n. By [BB09, Lemma
+3.5], the symbol of the polarization is the polarization of the symbol 8:
+symΠ↑(T ) = Π↑
+γ⊕κ(symT ).
+Therefore, by Proposition 3.1, the proof reduces to the case κ = (1, . . . ,1) and
+γ = (1, . . . ,1).
+8The statement was proved in [BB09, Lemma 3.5] when m =n. Clearly, this special case
+implies the general case.
+
+
+--- page 32 ---
+852 PETTER BR ¨AND´EN and JUNE HUH
+Suppose f(v) is a multi-aﬃne polynomial in Ld
+n and symT (w, u) is a multi-
+aﬃne polynomial in L ℓ+n
+m+n. Since the product of Lorentzian polynomials is
+Lorentzian by Corollary 2.32, we have
+symT (w, u)f(v) =
+∑
+S⊆[n]
+T (wS)u[n]\Sf(v)∈ Ld+ℓ+n
+m+n+n.
+Applying the operator in Lemma 3.3 for the pair of variables ( ui, vi) for i =
+1, . . . , n, we have
+n∏
+i=1
+Tui,vi
+(symT (w, u)f(v))=
+∑
+S⊆[n]
+T (wS)(∂Sf)(v)∈ Ld+ℓ
+m+n.
+We substitute every vi by zero in the displayed equation to get
+[ ∑
+S⊆[n]
+T (wS)(∂Sf)(v)
+]
+v=0
+= T (f(w)).
+Theorem 2.10 shows that the right-hand side belongs to L d+ℓ
+m , completing the
+proof. □
+We remark that there are homogeneous linear operators T preserving the
+Lorentzian property whose symbols are not Lorentzian. This contrasts the
+analog of Theorem 3.2 for stable polynomials [BB09, Th. 2.2]. As an example,
+consider the linear operator T : R(1,1)[w1, w2]→ R(1,1)[w1, w2] deﬁned by
+T (1) = 0, T (w1) = w1, T (w2) = w2, T (w1w2) = w1w2.
+The symbol of T is not Lorentzian because its support is not M-convex. The
+operator T preserves Lorentzian polynomials but does not preserve (nonhomo-
+geneous) stable polynomials.
+Theorem 3.4. If T is a homogeneous linear operator that preserves stable
+polynomials and polynomials with nonnegative coeﬃcients , then T preserves
+Lorentzian polynomials.
+Proof. According to [BB09, Th. 2.2], T preserves stable polynomials if
+and only if either
+(I) the rank of T is not greater than two and T is of the form
+T (f) = α(f)P + β(f)Q,
+where α, β are linear functionals and P, Q are stable polynomials satis-
+fying P≺ Q;
+(II) the polynomial sym T (w, u) is stable; or
+(III) the polynomial sym T (w,−u) is stable.
+
+
+--- page 33 ---
+LORENTZIAN POLYNOMIALS 853
+Suppose one of the three conditions, and suppose in addition that T preserves
+polynomials with nonnegative coeﬃcients.
+Suppose (I) holds. In this case, the image of T is contained in the set of
+stable polynomials [BB10, Th. 1.6]. By Proposition 2.2, homogeneous stable
+polynomials with nonnegative coeﬃcients are Lorentzian. Since T preserves
+polynomials with nonnegative coeﬃcients, T (f) is Lorentzian whenever f is a
+homogeneous polynomial with nonnegative coeﬃcients.
+Suppose (II) holds. Since T preserves polynomials with nonnegative co-
+eﬃcients, symT (w, u) is Lorentzian by Proposition 2.2. Therefore, by Theo-
+rem 3.2, T (f) is Lorentzian whenever f is Lorentzian.
+Suppose (III) holds. Since all the nonzero coeﬃcients of a homogeneous
+stable polynomial have the same sign [COSW04, Th. 6.1], we have
+symT (w,−v) = symT (w, v) or sym T (w,−v) =−symT (w, v).
+In both cases, sym T (w, v) is stable and has nonnegative coeﬃcients. Thus
+symT (w, v) is Lorentzian, and the conclusion follows from Theorem 3.2. □
+In the rest of this section, we record some useful operators that preserve
+the Lorentzian property. The multi-aﬃne part of a polynomial ∑
+α∈Nn cαwα
+is the polynomial ∑
+α∈{0,1}n cαwα.
+Corollary 3.5. The multi-aﬃne part of any Lorentzian polynomial is a
+Lorentzian polynomial.
+Proof. Clearly, taking the multi-aﬃne part is a homogeneous linear op-
+erator that preserves polynomials with nonnegative coeﬃcients. Since this
+operator also preserves stable polynomials [COSW04, Prop. 4.17], the proof
+follows from Theorem 3.4. □
+Remark 3.6. Corollary 3.5 can be used to obtain a multi-aﬃne analog of
+Theorem 2.28. Write H d
+n for the space of multi-aﬃne degree d homogeneous
+polynomials in n variables, and write L d
+n for the corresponding set of multi-
+aﬃne Lorentzian polynomials. Let PHd
+n be the projectivization of the vector
+space Hd
+n, and let L B be the set of polynomials in L d
+n with support B. We
+identify a rank d matroid M on [ n] with its set of bases B ⊆ [n
+d
+]. Writing PLd
+n
+and PLB for the images of Ld
+n\ 0 and L B in PHd
+n respectively, we have
+PLd
+n =
+∐
+B
+PLB,
+where the union is over all rank d matroids on [ n]. By Theorem 2.10 and
+Corollary 3.5, PLd
+n is a compact contractible subset of PHd
+n. By Theorem 3.10,
+PLB is nonempty for every matroid B⊆ [n
+d
+]. In addition, by Proposition 3.25,
+PLB is contractible for every matroid B ⊆ [n
+d
+].
+
+
+--- page 34 ---
+854 PETTER BR ¨AND´EN and JUNE HUH
+Let N be the linear operator deﬁned by the condition N(wα) = wα
+α! . The
+normalization operator N turns generating functions into exponential generat-
+ing functions.
+Corollary 3.7. If f is a Lorentzian polynomial , then it follows that
+N(f) is a Lorentzian polynomial .
+It is shown in [HMMSD19, Th. 3] that the normalized Schur polynomial
+N(sλ(w1, . . . , wn)) is Lorentzian for any partition λ. Note that the converse of
+Corollary 3.7 fails in general. For example, complete symmetric polynomials,
+which are special cases of Schur polynomials, need not be Lorentzian.
+Proof. Let κ be any element of Nn. By Theorem 3.2, it suﬃces to show
+that the symbol
+symN(w, u) =
+∑
+0≤α≤κ
+Ç
+κ
+α
+å
+wα
+α! uκ−α =
+n∏
+j=1
+( ∑
+0≤αj≤κj
+Ç
+κj
+αj
+å wαj
+j
+αj! uκj−αj
+j
+)
+is a Lorentzian polynomial. Since the product of Lorentzian polynomials is
+Lorentzian by Corollary 2.32, the proof is reduced to the case when the symbol
+is bivariate. In this case, using the characterization of bivariate Lorentzian
+polynomials in Example 2.26, we get the Lorentzian property from the log-
+concavity of the sequence 1 /k!. □
+Corollary 3.8 below extends the classical fact that the convolution product
+of two log-concave sequences with no internal zeros is a log-concave sequence
+with no internal zeros. For early proofs of the classical fact, see [Kar68, Ch. 8]
+and [Men69].
+Corollary 3.8. If N(f) and N(g) are Lorentzian polynomials , then
+N(f g) is a Lorentzian polynomial .
+Note that the analogous statement for stable polynomials fails to hold in
+general. For example, when f = x3 + x2y + xy2 + y3, the polynomial N(f) is
+stable but N(f 2) is not.
+Proof. Suppose that f and g belong to Rκ[wi]. We consider the linear
+operator
+T : Rκ[wi]−→ R[wi], N (h)↦−→ N(hg).
+By Theorem 3.2, it is enough to show that its symbol
+symT (w, u) = κ!
+∑
+0≤α≤κ
+N(wαg) uκ−α
+(κ− α)!
+
+
+--- page 35 ---
+LORENTZIAN POLYNOMIALS 855
+is a Lorentzian polynomial in 2 n variables. For this, we consider the linear
+operator
+S : Rκ[wi]−→ R[wi, ui], N (h)↦−→
+∑
+0≤α≤κ
+N(wαh) uκ−α
+(κ− α)! .
+By Theorem 3.2, it is enough to show that its symbol
+symS(w, u, v) = κ!
+∑
+0≤β≤κ
+∑
+0≤α≤κ
+wα+β
+(α + β)!
+uκ−α
+(κ− α)!
+vκ−β
+(κ− β)!
+is a Lorentzian polynomial in 3 n variables. The statement is straightforward
+to check using Theorem 2.25. See Theorem 3.10 below for a more general
+statement. □
+The symmetric exclusion process is one of the main models considered
+in interacting particle systems. It is a continuous time Markov chain that
+models particles that jump symmetrically between sites, where each site may
+be occupied by at most one particle [Lig10]. A problem that has attracted much
+attention is to ﬁnd negative dependence properties that are preserved under the
+symmetric exclusion process. In [BBL09, Th. 4.20], it was proved that strongly
+Rayleigh measures are preserved under the symmetric exclusion process. In
+other words, if f = f(w1, w2, . . . , wn) is a stable multi-aﬃne polynomial with
+nonnegative coeﬃcients, then the multi-aﬃne polynomial Φ 1,2
+θ (f) deﬁned by
+Φ1,2
+θ (f) = (1− θ)f(w1, w2, w3, . . . , wn) + θf(w2, w1, w3, . . . , wn)
+is stable for all 0 ≤ θ≤ 1. We prove an analog for Lorentzian polynomials.
+Corollary 3.9. Let f = f(w1, w2, . . . , wn) be a multi-aﬃne polynomial
+with nonnegative coeﬃcients. If the homogenization of f is a Lorentzian poly-
+nomial, then the homogenization of Φ1,2
+θ (f) is a Lorentzian polynomial for all
+0≤ θ≤ 1.
+Proof. Recall that a polynomial with nonnegative coeﬃcients is stable if
+and only if its homogenization is stable [BBL09, Th. 4.5]. Clearly, Φ 1,2
+θ is
+homogeneous and preserves polynomials with nonnegative coeﬃcients. Since
+Φ1,2
+θ preserves stability of multi-aﬃne polynomials by [BBL09, Th. 4.20], the
+statement follows from Theorem 3.4. □
+3.2. Matroids, M -convex sets, and Lorentzian polynomials . The generat-
+ing function of a subset J⊆ Nn is, by deﬁnition,
+fJ =
+∑
+α∈J
+wα
+α! , where α! =
+n∏
+i=1
+αi!.
+We characterize matroids and M-convex sets in terms of their generating func-
+tions.
+
+
+--- page 36 ---
+856 PETTER BR ¨AND´EN and JUNE HUH
+Theorem 3.10. The following are equivalent for any nonempty J⊆ Nn:
+(1) There is a Lorentzian polynomial whose support is J.
+(2) There is a homogeneous 2-Rayleigh polynomial whose support is J.
+(3) There is a homogeneous c-Rayleigh polynomial whose support is J for some
+c > 0.
+(4) The generating function fJ is a Lorentzian polynomial .
+(5) The generating function fJ is a homogeneous 2-Rayleigh polynomial.
+(6) The generating function fJ is a homogeneous c-Rayleigh polynomial for
+some c > 0.
+(7) J is M-convex.
+When J⊆{ 0, 1}n, any one of the above conditions is equivalent to
+(8) J is the set of bases of a matroid on [n].
+The statement that the basis generating polynomial fJ is log-concave on
+the positive orthant can be found in [AOGV18, Th. 4.2]. An equivalent state-
+ment that the Hessian fJ has exactly one positive eigenvalue on the positive
+orthant has been noted earlier in [HW17, Rem. 15]. The equivalence of the con-
+ditions (4) and (7) will be generalized to M-convex functions in Theorem 3.14.
+We prepare the proof of Theorem 3.10 with an analysis of the quadratic
+case.
+Lemma 3.11. The following conditions are equivalent for any n× n sym-
+metric matrix A with entries in {0, 1}.
+(1) The quadratic polynomial wT Aw is Lorentzian.
+(2) The support of the quadratic polynomial wT Aw is M-convex.
+Proof. Theorem 2.25 implies (1) ⇒ (2). We prove (2) ⇒ (1). We may
+and will suppose that no column of A is zero. Let J be the M-convex support
+of wT Aw, and set
+S =
+{
+i∈ [n]| 2ei∈ J
+}
+.
+The exchange property for J shows that ei + ej∈ J for every i∈ S and j∈ [n].
+In addition, again by the exchange property for J,
+B :=
+{
+ei + ej∈ J| i /∈ S and j /∈ S
+}
+is the set of bases of a rank 2 matroid on [ n]\ S without loops. Writing
+S1∪···∪ Sk for the decomposition of [n]\ S into parallel classes in the matroid,
+
+
+--- page 37 ---
+LORENTZIAN POLYNOMIALS 857
+we have
+wT Aw =
+( ∑
+j∈[n]
+wj
+)2
+−
+( ∑
+j∈S1
+wj
+)2
+−···−
+( ∑
+j∈Sk
+wj
+)2
+,
+and hence wT Aw is a Lorentzian polynomial. □
+Proof of Theorem 3.10. From Theorems 2.23, 2.25, and Proposition 2.19,
+it follows that
+(1)⇒ (2)⇒ (3)⇒ (7) and (4) ⇒ (5)⇒ (6)⇒ (7).
+Since (4)⇒ (1), we only need to prove (7) ⇒ (4).
+If J is an M-convex subset of Nn, then fJ is a homogeneous polynomial
+of some degree d. Suppose d≥ 2, and let α be an element of ∆ d−2
+n . Note
+that, in general, the support of ∂αfJ is M-convex whenever the support of fJ
+is M-convex. Therefore, ∂αfJ is Lorentzian by Lemma 3.11, and hence fJ is
+Lorentzian by Theorem 2.25. □
+Let J be the set of bases of a matroid M on [ n]. If M is regular [FM92], if
+M is representable over the ﬁnite ﬁelds F3 and F4 [COSW04], if the rank of M
+is at most 3 [Wag05], or if the number of elements n is at most 7 [Wag05], then
+fJ is 1-Rayleigh. Seymour and Welsh found the ﬁrst example of a matroid
+whose basis generating function is not 1-Rayleigh [SW75]. We propose the
+following improvement of Theorem 3.10.
+Conjecture 3.12. The following conditions are equivalent for any non-
+empty J⊆{ 0, 1}n:
+(1) J is the set of bases of a matroid on [n].
+(2) The generating function fJ is a homogeneous 8
+7-Rayleigh polynomial.
+The constant 8
+7 is the best possible: For any positive real number c < 8
+7,
+there is a matroid whose basis generating function is not c-Rayleigh [HSW18,
+Th. 7].
+3.3. Valuated matroids, M-convex functions, and Lorentzian polynomials.
+Let ν be a function from Nn to R∪{∞} . The eﬀective domain of ν is, by
+deﬁnition,
+dom(ν) =
+{
+α∈ Nn| ν(α) <∞
+}
+.
+The function ν is said to be M -convex if satisﬁes the symmetric exchange
+property:
+(1) For any α, β∈ dom(ν) and any i satisfying αi > βi, there is j satisfying
+αj < βj and ν(α) + ν(β)≥ ν(α− ei + ej) + ν(β− ej + ei).
+
+
+--- page 38 ---
+858 PETTER BR ¨AND´EN and JUNE HUH
+Note that the eﬀective domain of an M-convex function on Nn is an M-convex
+subset of Nn. In particular, the eﬀective domain of an M-convex function on
+Nn is contained in ∆d
+n for some d. In this case, we identify ν with its restriction
+to ∆d
+n. When the eﬀective domain of ν is is M-convex, the symmetric exchange
+property for ν is equivalent to the following local exchange property:
+(2) For any α, β∈ dom(ν) with|α− β|1 = 4, there are i and j satisfying
+αi > βi, α j < βj and ν(α) + ν(β)≥ ν(α− ei + ej) + ν(β− ej + ei).
+A proof of the equivalence of the two exchange properties can be found in
+[Mur03, §6.2].
+Example 3.13. The indicator function of J ⊆ Nn is the function νJ : Nn→
+R∪{∞} deﬁned by
+νJ(α) =
+®
+0 if α∈ J,
+∞ if α /∈ J.
+Clearly, J⊆ Nn is M-convex if and only if the indicator functionνJ is M-convex.
+A function ν : Nn→ R∪{−∞} is said to be M-concave if−ν is M-convex.
+The eﬀective domain of an M-concave function is
+dom(ν) =
+{
+α∈ Nn| ν(α) >−∞
+}
+.
+A valuated matroid on [ n] is an M-concave function on Nn whose eﬀective
+domain is a nonempty subset of {0, 1}n. The eﬀective domain of a valuated
+matroid ν on [n] is the set of bases of a matroid on [ n], the underlying matroid
+of ν.
+In this section, we prove that the class of tropicalized Lorentzian polyno-
+mials coincides with the class of M-convex functions. The tropical connection
+is used to produce Lorentzian polynomials from M-convex functions. First, we
+state a classical version of the result. For any function ν : ∆d
+n→ R∪{∞} and
+a positive real number q, we deﬁne
+fν
+q (w) =
+∑
+α∈dom(ν)
+qν(α)
+α! wα and gν
+q (w) =
+∑
+α∈dom(ν)
+Ç
+δ
+α
+å
+qν(α)wα,
+where δ = (d, . . . , d) and (δ
+α
+)is the product of binomial coeﬃcients ∏n
+i=1
+(d
+αi
+).
+When ν is the indicator function of J⊆ Nn, the polynomial fν
+q is independent
+of q and equal to the generating function fJ considered in Section 3.2.
+Theorem 3.14. The following conditions are equivalent for ν : ∆d
+n →
+R∪{∞} :
+(1) The function ν is M-convex.
+(2) The polynomial fν
+q (w) is Lorentzian for all 0 < q≤ 1.
+
+
+--- page 39 ---
+LORENTZIAN POLYNOMIALS 859
+(3) The polynomial gν
+q (w) is Lorentzian for all 0 < q≤ 1.
+The proof of Theorem 3.14, which relies on the theory of phylogenetic trees
+and the problem of isometric embeddings of ﬁnite metric spaces in Euclidean
+spaces, will be given at the end of this subsection.
+Example 3.15. A function µ from Nn to R∪{∞} is said to be M♮-convex
+if, for some positive integer d, the function ν from Nn+1 to R∪{∞} deﬁned
+by
+ν(α0, α1, . . . , αn) =
+®
+µ(α1, . . . , αn) if α∈ ∆d
+n+1,
+∞ if α /∈ ∆d
+n+1
+is M-convex. The condition does not depend on d, and M♮-concave functions
+are deﬁned similarly. We refer to [Mur03, Ch. 6] for more on M ♮-convex and
+M♮-concave functions.
+It can be shown that every matroid rank function rkM, viewed as a function
+on Nn with the eﬀective domain {0, 1}n, is M ♮-concave. See [Shi12, §3] for
+an elementary proof and other related results. Thus, by Theorem 3.14, the
+normalized rank generating function
+∑
+A⊆[n]
+1
+c(A)! q−rkM(A)wAwc(A)
+0 , where w = (w1, . . . , wn) and c(A) = n−| A|,
+is Lorentzian for all 0 < q ≤ 1. We will obtain a sharper result on rk M in
+Section 4.3.
+Theorem 3.14 provides a useful suﬃcient condition for a homogeneous
+polynomial to be Lorentzian. Let f be an arbitrary homogeneous polynomial
+with nonnegative real coeﬃcients written in the normalized form
+f =
+∑
+α∈∆dn
+cα
+α! wα.
+We deﬁne a discrete function νf using natural logarithms of the normalized
+coeﬃcients:
+νf : ∆d
+n−→ R∪{−∞} , α ↦−→log(cα).
+Corollary 3.16. If νf is an M-concave function, then f is a Lorentzian
+polynomial.
+Proof. By Theorem 3.14, the polynomial
+∑
+α∈dom(νf )
+q−νf (α)
+α! wα
+is Lorentzian when q = e−1. □
+
+
+--- page 40 ---
+860 PETTER BR ¨AND´EN and JUNE HUH
+We note that the converse of Corollary 3.16 does not hold. For example,
+the polynomial
+f =
+n−1∏
+i=1
+(wi + wn)
+is Lorentzian, being a product of Lorentzian polynomials. However, νf fails to
+be M-concave when n > 2.
+We formulate a tropical counterpart of Theorem 3.14. Let C((t))conv be
+the ﬁeld of Laurent series with complex coeﬃcients that have a positive radius
+of convergence around 0. By deﬁnition, any nonzero element of C((t))conv is a
+series of the form
+s(t) = c1ta1 + c2ta2 + c3ta3 +··· ,
+where c1, c2, . . . are nonzero complex numbers and a1 < a2 <··· are integers,
+that converges on a punctured open disk centered at 0. Let R((t))conv be the
+subﬁeld of elements that have real coeﬃcients. We deﬁne the ﬁelds of real and
+complex convergent Puiseux series9 by
+K =
+⋃
+k≥1
+R((t1/k))conv and K =
+⋃
+k≥1
+C((t1/k))conv.
+Any nonzero element of K is a series of the form
+s(t) = c1ta1 + c2ta2 + c3ta3 +··· ,
+where c1, c2, . . . are nonzero complex numbers and a1 < a 2 <··· are rational
+numbers that have a common denominator. The leading coeﬃcient of s(t)
+is c1, and the leading exponent of s(t) is a1. A nonzero element of K is positive
+if its leading coeﬃcient is positive. The valuation map is the function
+val : K−→ R∪{∞}
+that takes the zero element to∞ and a nonzero element to its leading exponent.
+For a nonzero element s(t)∈ K, we have
+val(s(t))= lim
+t→0+
+logt
+(s(t)).
+The ﬁeld K is algebraically closed, and the ﬁeld K is real closed. See
+[Spe05, §1.5] and references therein. Since the theory of real closed ﬁelds has
+quantiﬁer elimination [Mar02, §3.3], for any ﬁrst-order formula ϕ(x1, . . . , xm)
+in the language of ordered ﬁelds and any s1(t), . . . , sm(t)∈ K, we have
+(
+ϕ(s1(t), . . . , sm(t)) holds in K
+)
+⇐⇒
+(
+ϕ(s1(q), . . . , sm(q)) holds in R for all suﬃciently small positive real numbers q
+)
+.
+9The main statements in this section are valid over the ﬁeld of formal Puiseux series as
+well.
+
+
+--- page 41 ---
+LORENTZIAN POLYNOMIALS 861
+In particular, Tarski’s principle holds for K: A ﬁrst-order sentence in the
+language of ordered ﬁelds holds in K if and only if it holds in R.
+Deﬁnition 3.17. Let ft = ∑
+α∈∆dn
+sα(t)wα be a nonzero homogeneous poly-
+nomial with coeﬃcients inK≥0. The tropicalization of ft is the discrete function
+deﬁned by
+trop(ft) : ∆d
+n−→ R∪{∞} , α ↦−→val(sα(t)).
+We say that ft is log-concave on Kn
+>0 if the function log( fq) is concave on Rn
+>0
+for all suﬃciently small positive real numbers q.
+Note that the support of ft is the eﬀective domain of the tropicalization
+of ft. We write Md
+n(K) for the set of all degree d homogeneous polynomials in
+K≥0[w1, . . . , wn] whose support is M-convex.
+Deﬁnition 3.18 (Lorentzian polynomials over K). We set L0
+n(K) = M0
+n(K),
+L1
+n(K) = M1
+n(K), and
+L2
+n(K)=
+{
+ft∈M2
+n(K)| The Hessian of ft has at most one eigenvalue in K>0
+}
+.
+For d≥ 3, we deﬁne Ld
+n(K) by setting
+Ld
+n(K) =
+{
+ft∈ Md
+n(K)| ∂αft∈ L2
+n(K) for all α∈ ∆d−2
+n
+}
+.
+The polynomials in Ld
+n(K) will be called Lorentzian.
+By Proposition 2.33, the log-concavity of homogeneous polynomials can be
+expressed in the ﬁrst-order language of ordered ﬁelds. It follows that the analog
+of Theorem 2.30 holds for any homogeneous polynomial ft with coeﬃcients
+in K≥0.
+Theorem 3.19. The following conditions are equivalent for ft:
+(1) For any m∈ N and any m× n matrix (aij) with entries in K≥0,
+( m∏
+i=1
+Di
+)
+ft is identically zero or
+( m∏
+i=1
+Di
+)
+ft is log-concave on Kn
+>0,
+where Di is the diﬀerential operator ∑n
+j=1 aij∂j.
+(2) For any α∈ Nn, the polynomial ∂αft is identically zero or log-concave
+on Kn
+>0.
+(3) The polynomial ft is Lorentzian.
+The ﬁeld K is real closed, and the ﬁeld K is algebraically closed [Spe05,
+§1.5]. Any element s(t) of K can be written as a sum
+s(t) = p(t) + i q(t),
+
+
+--- page 42 ---
+862 PETTER BR ¨AND´EN and JUNE HUH
+where p(t)∈ K is the real part of s(t) and q(t)∈ K is the imaginary part of
+s(t). The open upper half plane in K is the set of elements in K with positive
+imaginary parts. A polynomial ft in K[w1, . . . , wn] is stable if ft is nonvanish-
+ing on Hn
+K or identically zero, where HK is the open upper half plane in K.
+According to [Br¨ a10, Th. 4], tropicalizations of homogeneous stable polynomi-
+als over K are M-convex functions. 10 Here we prove that tropicalizations of
+Lorentzian polynomials over K are M-convex and that all M-convex functions
+are limits of tropicalizations of Lorentzian polynomials over K.11
+Theorem 3.20. The following conditions are equivalent for any function
+ν : ∆d
+n→ Q∪{∞} :
+(i) the function ν is M-convex;
+(ii) there is a Lorentzian polynomial in K[w1, . . . , wn] whose tropicalization
+is ν.
+Let M be a matroid with the set of bases B. The Dressian of M, denoted
+Dr(M), is the tropical variety inRB obtained by intersecting the tropical hyper-
+surfaces of the Pl¨ ucker relations inRB [MS15, §4.4]. Since Dr(M) is a rational
+polyhedral fan whose points bijectively correspond to the valuated matroids
+with underlying matroid M, Theorem 3.20 shows that
+Dr(M)=closure
+{
+−trop(ft)| ft is a Lorentzian polynomial with supp( ft)=B
+}
+.
+We note that the corresponding statement for stable polynomials fails to hold.
+For example, when M is the Fano plane, there is no stable polynomial whose
+support is B [Br¨ a07,§6].
+We prove Theorems 3.14 and 3.20 together after reviewing the needed
+results on the space of phylogenetic trees and the isometric embeddings of
+ﬁnite metric spaces in Euclidean spaces. A phylogenetic tree with n leaves is a
+tree with n labelled leaves and no vertices of degree 2. A function d : [n
+2
+]→ R
+is a tree distance if there is a phylogenetic tree τ with n leaves and edge weights
+10In [Br¨ a10], the ﬁeld of formal Puiseux series with real exponentsR{t} containing K was
+used. The tropicalization used in [Br¨ a10] diﬀers from ours by a sign.
+11If R{t} is used instead of K, then all M-convex functions are tropicalizations of
+Lorentzian polynomials. More precisely, a discrete function ν with values in R∪{∞} is
+M-convex if and only if there is a Lorentzian polynomial over R{t} whose tropicalization isν.
+In this setting, the Dressian of a matroid M can be identiﬁed with the set of tropicalized
+Lorentzian polynomials ft with supp(ft) = B, where B is the set of bases of M.
+
+
+--- page 43 ---
+LORENTZIAN POLYNOMIALS 863
+ℓe∈ R such that
+d(i, j) =
+(
+the sum of all ℓe along the unique path in τ
+joining the leaves i and j
+)
+.
+The space of phylogenetic trees Tn is the set of all tree distances in R(n
+2). The
+Fundamental Theorem of Phylogenetics shows that
+Tn = Dr(2, n),
+where Dr(2,n) is the Dressian of the rank 2 uniform matroid on [n] [MS15, §4.3].
+We give a spectral characterization of tree distances. For any function
+d : [n
+2
+]→ R and any positive real number q, we deﬁne an n× n symmetric
+matrix Hq(d) by
+Hq(d)ij =
+®
+0 if i = j,
+qd(i,j) if i̸= j.
+We say that an n× n symmetric matrix H is conditionally negative deﬁnite if
+(1, . . . ,1)w = 0 =⇒ wT Hw≤ 0.
+Basic properties of conditionally negative deﬁnite matrices are collected in
+[BR97, Ch. 4].
+Lemma 3.21. The following conditions are equivalent for any function
+d : [n
+2
+]→ R:
+(1) The matrix Hq(d) is conditionally negative semideﬁnite for all q≥ 1.
+(2) The matrix Hq(d) has exactly one positive eigenvalue for all q≥ 1.
+(3) The function d is a tree distance .
+Lemma 3.21 is closely linked to the problem of isometric embeddings of
+ultrametric spaces in Hilbert spaces. Let d be a metric on [ n]. Since d( i, i) = 0
+and d(i, j) = d(j, i) for all i, we may identify d with a function [n
+2
+]→ R. We
+deﬁne an n× n symmetric matrix E(d) by
+E(d)ij = d(i, j)2.
+We say that d admits an isometric embedding into Rm if there is φ : [n]→ Rm
+such that
+d(i, j) =|φ(i)− φ(j)|2 for all i, j∈ [n],
+where|·| 2 is the standard Euclidean norm on Rm. The following theorem
+of Schoenberg [Sch38] characterizes metrics on [ n] that admit an isometric
+embedding into some Rm.
+Theorem 3.22. A metric d on [n] admits an isometric embedding into
+some Rm if and only if the matrix E(d) is conditionally negative semideﬁnite .
+
+
+--- page 44 ---
+864 PETTER BR ¨AND´EN and JUNE HUH
+Recall that an ultrametric on [n] is a metric d on [ n] such that
+d(i, j)≤ max
+{
+d(i, k), d(j, k)
+}
+for any i, j, k∈ [n].
+Equivalently, d is an ultrametric if the maximum of d( i, j), d(i, k), d(j, k) is
+attained at least twice for any i, j, k∈ [n]. Any ultrametric is a tree distance
+given by a phylogenetic tree [MS15, §4.3]. In [TV83], Timan and Vestfrid
+proved that any separable ultrametric space is isometric to a subspace of ℓ2.
+We use the following special case.
+Theorem 3.23. Any ultrametric on [n] admits an isometric embedding
+into Rn−1.
+Proof of Lemma 3.21. Cauchy’s interlacing theorem shows (1)⇒ (2). We
+prove (2)⇒ (3). We may suppose that d takes rational values. If (2) holds,
+then the quadratic polynomial wT Hq(d)w is stable for all q≥ 1. Therefore,
+by the quantiﬁer elimination for the theory of real closed ﬁelds, the quadratic
+form ∑
+i<j
+t−d(i,j)wiwj∈ K[w1, . . . , wn]
+is stable. By [Br¨ a10, Th. 4], tropicalizations of stable polynomials are M-
+convex,12 and hence the function −d is M-convex. In other words, we have
+d∈ Dr(2, n) = Tn.
+For (3)⇒ (1), we ﬁrst consider the special case when d is an ultrametric
+on [ n]. In this case, qd is also an ultrametric on [ n] for all q≥ 1. It follows
+from Theorems 3.22 and 3.23 that Hq(d) is conditionally negative semideﬁnite
+for all q≥ 1. In the general case, we use that Tn is the sum of its linearity
+space with the space of ultrametrics on [ n] [MS15, Lemma 4.3.9]. Thus, for
+any tree distance d on [ n], there is an ultrametric d on [n] and real numbers
+c1, . . . , cn such that
+d = d +
+n∑
+i=1
+ci
+(∑
+i̸=j
+eij
+)
+∈ R(n
+2).
+Therefore, the symmetric matrix Hq(d) is congruent to Hq(d), and the conclu-
+sion follows from the case of ultrametrics. □
+We start the proof of Theorems 3.14 and 3.20 with a linear algebraic
+lemma. Let ( aij) be an n× n symmetric matrix with entries in R>0.
+Lemma 3.24. If (aij) has exactly one positive eigenvalue , then (ap
+ij) has
+exactly one positive eigenvalue for 0≤ p≤ 1.
+12The tropicalization used in [Br¨ a10] diﬀers from ours by a sign.
+
+
+--- page 45 ---
+LORENTZIAN POLYNOMIALS 865
+Proof. If ( vi) is the Perron eigenvector of ( aij), then ( aij
+vivj
+) is condition-
+ally negative deﬁnite [BR97, Lemma 4.4.1]. Therefore, (
+ap
+ij
+vp
+i vp
+j
+) is conditionally
+negative deﬁnite [BCR84, Cor. 2.10], and the conclusion follows. □
+Let f be a degree d homogeneous polynomial written in the normalized
+form
+f =
+∑
+α∈supp(f)
+cα
+α! wα.
+For any nonnegative real number p, we deﬁne
+Rp(f) =
+∑
+α∈supp(f)
+cp
+α
+α! wα.
+We use Lemma 3.24 to construct a homotopy from any Lorentzian polynomial
+to the generating function of its support. The following proposition was proved
+in [ALGV19] for strongly log-concave multi-aﬃne polynomials.
+Proposition 3.25. If f is Lorentzian, then Rp(f) is Lorentzian for all
+0≤ p≤ 1.
+Proof. The proof reduces to the case of quadratic polynomials, using the
+characterization of Lorentzian polynomials in Theorem 2.25. Using Theo-
+rem 2.10, the proof further reduces to the case f ∈ P2
+n. In this case, the
+assertion is Lemma 3.24. □
+Set m = nd, and let ν : ∆d
+n→ R∪{∞} and µ : ∆d
+m→ R∪{∞} be arbitrary
+functions. Write eij for the standard unit vectors in Rm with 1≤ i≤ n and
+1≤ j≤ d, and let φ be the linear map
+φ : Rm−→ Rn, e ij↦−→ ei.
+We deﬁne the polarization of ν to be the function Π ↑ν : ∆d
+m → R∪{∞}
+satisfying
+dom(Π↑ν)⊆
+ñ
+m
+d
+ô
+and Π ↑ν = ν◦ φ on
+ñ
+m
+d
+ô
+.
+We deﬁne the projection of µ to be the function Π↓µ : ∆d
+n→ R∪{∞} satisfying
+Π↓µ(α) = min
+{
+µ(β)| φ(β) = α
+}
+.
+It is straightforward to check the symmetric exchange properties of Π ↑ν and
+Π↓µ from the symmetric exchange properties of ν and µ.13
+13In the language of [KMT07], the polarization of ν is obtained from ν by splitting of
+variables and restricting to [m
+d
+], and the projection of µ is obtained from µ by aggregation
+of variables.
+
+
+--- page 46 ---
+866 PETTER BR ¨AND´EN and JUNE HUH
+Lemma 3.26. Let ν : ∆d
+n→ R∪{∞} and µ : ∆d
+m→ R∪{∞} be arbitrary
+functions.
+(1) If ν is an M-convex function, then Π↑ν is an M-convex function.
+(2) If µ is an M-convex function, then Π↓µ is an M-convex function.
+As a ﬁnal preparation for the proof of Theorems 3.14 and 3.20, we show
+that any M-convex function on ∆d
+n can be approximated by M-convex functions
+whose eﬀective domain is ∆d
+n.
+Lemma 3.27. For any M-convex function ν : ∆d
+n→ R∪{∞} , there is a
+sequence of M-convex functions νk : ∆d
+n→ R such that
+lim
+k→∞
+νk(α) = ν(α) for all α∈ ∆d
+n.
+The sequence νk can be chosen so that νk = ν in dom(ν) and νk < νk+1 outside
+dom(ν).
+Proof. It is enough to prove the case whenν is not the constant function∞.
+Write eij for the standard unit vectors in Rn2
+. Let ϕ : ∆d
+n2 → ∆d
+n and ψ :
+∆d
+n2→ ∆d
+n be the restrictions of the linear maps from Rn2
+to Rn given by
+ϕ(eij) = ei and ψ(eij) = ej.
+For any function µ : ∆d
+n→ R∪{∞} , we deﬁne the function ϕ∗µ : ∆d
+n2 →
+R∪{∞} by
+ϕ∗µ(β) = µ
+(
+ϕ(β)
+)
+.
+For any function µ : ∆d
+n2 → R∪{∞} , we deﬁne the function ψ∗µ : ∆d
+n→
+R∪{∞} by
+ψ∗µ(α) = min
+{
+µ(β)| ψ(β) = α
+}
+.
+Recall that the operations of splitting [KMT07, §4] and aggregation [KMT07,
+§5] preserve M-convexity of discrete functions. Therefore, ϕ∗ and ψ∗ preserve
+M-convexity. Now, given ν, set
+νk = ψ∗(ℓk + ϕ∗ν),
+where ℓk is the restriction of the linear function on Rn2
+deﬁned by
+ℓk(eij) =
+®
+0 if i = j,
+k if i̸= j.
+The existence theorem for nonnegative matrices with given row and column
+sums shows that the restriction of ψ to any ﬁber of ϕ is surjective [Bru06,
+Cor. 1.4.2]. Thus, the assumption that ν is not identically ∞ implies that
+νk <∞ for every k. It is straightforward to check that the sequence νk has
+the other required properties for large enough k. □
+
+
+--- page 47 ---
+LORENTZIAN POLYNOMIALS 867
+Proof of Theorem 3.20 (ii)⇒ (i). Let ft be a polynomial in Ld
+n(K) whose
+tropicalization is ν. We show the M-convexity of ν by checking the local
+exchange property: For any α, β∈ dom(ν) with|α− β|1 = 4, there are i and
+j satisfying
+αi > βi, α j < βj and ν(α) + ν(β)≥ ν(α− ei + ej) + ν(β− ej + ei).
+Since|α− β|1 = 4, we can ﬁnd γ in ∆d−2
+n and indices p, q, r, s in [n] such that
+such that
+α = γ + ep + eq and β = γ + er + es and {p, q}∩{ r, s} =∅.
+Since ∂γft is stable, the tropicalization of ∂γft is M-convex by [Br¨ a10, Th. 4].
+The conclusion follows from the local exchange property for the tropicalization
+of ∂γft. □
+Proof of Theorem 3.14. We prove (1)⇒ (3). We ﬁrst show the implication
+in the special case
+dom(ν) =
+ñ
+n
+d
+ô
+.
+Since dom(ν) is M-convex, it is enough to prove that ∂αgν
+q is has exactly one
+positive eigenvalue for all α∈ [ n
+d−2
+] and all 0 < q ≤ 1. Since Tn = Dr(2 , n)
+by [MS15, Th. 4.3.5] and [MS15, Def. 4.4.1], the desired statement follows
+from Lemma 3.21. This proves the ﬁrst special case. Now consider the second
+special case
+dom(ν) = ∆d
+n.
+By Lemma 3.26, the polarization Π ↑ν is an M-convex function with eﬀective
+domain [nd
+d
+], and hence we may apply the known implication (1) ⇒ (3) for
+Π↑ν. Therefore,
+Π↑
+δ(gν
+q ) = 1
+dd gΠ↑ν
+q is a Lorentzian polynomial for 0 < q≤ 1,
+where δ = (d, . . . , d). Thus, by Proposition 3.1, the polynomial gν
+q is Lorentzian
+for all 0 < q ≤ 1, and the second special case is proved. Next consider the
+third special case
+dom(ν) is an arbitrary M-convex set and q = 1.
+By Lemma 3.26, the eﬀective domain of Π ↑ν is an M-convex set. Therefore,
+by Theorem 3.10,
+Π↑
+δ(gν
+1) = 1
+dd gΠ↑ν
+1 is a Lorentzian polynomial.
+Thus, by Proposition 3.1, the polynomial gν
+1 is Lorentzian, and the the third
+special case is proved. In the remaining case when q < 1 and the eﬀective
+
+
+--- page 48 ---
+868 PETTER BR ¨AND´EN and JUNE HUH
+domain of ν is arbitrary, we express ν as the limit of M-convex functions νk
+with eﬀective domain ∆d
+n using Lemma 3.27. Since q < 1, we have
+gν
+q = lim
+k→∞
+gνk
+q .
+Thus the conclusion follows from the second special case applied to each gνk
+q .
+We prove (1) ⇒ (2). Introduce a positive real number p, and consider
+the M-convex function ν
+p. Applying the known implication (1) ⇒ (3), we
+see that the polynomial gν/p
+q is Lorentzian for all 0 < q ≤ 1. Therefore, by
+Proposition 3.25,
+Rp(gν/p
+q ) =
+∑
+α∈dom(ν)
+(α!)p
+Ç
+δ
+α
+åp
+qν(α)
+α! wα
+is Lorentzian for all 0 < p≤ 1. Taking the limit p to zero, we have (2).
+We prove (2) ⇒ (1) and (3) ⇒ (1). By the quantiﬁer elimination for
+the theory of real closed ﬁelds, the polynomial fν
+t with coeﬃcients in K is
+Lorentzian if (2) holds. Similarly, the polynomial gν
+t is Lorentzian if (3) holds.
+Since
+ν = trop(fν
+t ) = trop(gν
+t ),
+the conclusion follows from (ii) ⇒ (i) of Theorem 3.20. □
+Proof of Theorem 3.20, (i) ⇒ (ii). By Theorem 3.14, fν
+q is Lorentzian for
+all suﬃciently small positive real numbers q. Therefore, by the quantiﬁer
+elimination for the theory of real closed ﬁelds, the polynomial fν
+t is Lorentzian
+over K. Clearly, the tropicalization of fν
+t is ν. □
+Corollary 3.28. Tropicalizations of Lorentzian polynomials over K are
+M-convex. All M-convex functions are limits of tropicalizations of Lorentzian
+polynomials over K.
+Proof. By Theorem 3.20, it is enough to show that any M-convex function
+ν : ∆d
+n→ R∪{∞} is a limit of M-convex functions νk : ∆d
+n→ Q∪{∞} . By
+Lemma 3.27, we may suppose that
+dom(ν) = ∆d
+n.
+In this case, by Lemma 3.26, the polarization Π ↑ν is M-convex function satis-
+fying
+dom(Π↑ν)=
+ñ
+nd
+d
+ô
+.
+In other words,−Π↑ν is a valuated matroid whose underlying matroid is uni-
+form of rank d on nd elements. Since the Dressian of the matroid is a rational
+
+
+--- page 49 ---
+LORENTZIAN POLYNOMIALS 869
+polyhedral fan [MS15, §4.4], there are M-convex functions µk : ∆d
+nd→ Q∪{∞}
+satisfying
+Π↑ν = lim
+k→∞
+µk.
+By Lemma 3.26, ν = Π↓Π↑ν is the limit of M-convex functions Π ↓µk : ∆d
+n→
+Q∪{∞} . □
+4. Examples and applications
+4.1. Convex bodies and Lorentzian polynomials. For any collection of con-
+vex bodies K = (K 1, . . . ,Kn) in Rd, consider the function
+volK : Rn
+≥0−→ R, w ↦−→vol(w1K1 +··· + wnKn),
+where w1K1 +··· + wnKn is the Minkowski sum and vol is the Euclidean
+volume. Minkowski noticed that the function vol K is a degree d homogeneous
+polynomial in w = (w1, . . . , wn) with nonnegative coeﬃcients. We may write
+volK(w) =
+∑
+1≤i1,...,id≤n
+V (Ki1, . . . ,Kid)wi1··· wid =
+∑
+α∈∆dn
+d!
+α! Vα(K)wα,
+where Vα(K) is, by deﬁnition, the mixed volume
+Vα(K) = V (K1, . . . ,K1  
+α1
+, . . . ,Kn, . . . ,Kn  
+αn
+) := 1
+d! ∂αvolK.
+For any convex bodies C 0, C1, . . . ,Cd in Rd, their mixed volume is symmetric
+in its arguments and satisﬁes the relation
+V (C0 + C1, C2, . . . ,Cd) = V (C0, C2, . . . ,Cd) + V (C1, C2, . . . ,Cd).
+We refer to [Sch14] for background on mixed volumes.
+Theorem 4.1. The volume polynomial vol K is a Lorentzian polynomial
+for any K = (K1, . . . ,Kn).
+When combined with Theorem 2.25, Theorem 4.1 implies the following
+statement.
+Corollary 4.2. For any K = (K 1, . . . ,Kn), the support of volK is an
+M-convex set.
+In other words, the set of all α∈ ∆d
+n satisfying the nonvanishing condition
+V (K1, . . . ,K1  
+α1
+, . . . ,Kn, . . . ,Kn  
+αn
+)̸= 0
+is M-convex for any convex bodies K 1, . . . ,Kn in Rd.
+
+
+--- page 50 ---
+870 PETTER BR ¨AND´EN and JUNE HUH
+Remark 4.3. The mixed volume V (C1, . . . ,Cd) is positive precisely when
+there are line segments ℓi⊆ Ci with linearly independent directions [Sch14,
+Th. 5.1.8]. Thus, when K consists of n line segments in Rd, Corollary 4.2 states
+the familiar fact that, for any conﬁguration of n vectors A⊆ Rd, the collection
+of linearly independent d-subsets of A is the set of bases of a matroid.
+The same reasoning shows that, in fact, the basis generating polynomial of
+a matroid on [ n] is the volume polynomial of n convex bodies precisely when
+the matroid is regular. In particular, not every Lorentzian polynomial is a
+volume polynomial of convex bodies. For example, the elementary symmetric
+polynomial
+w1w2 + w1w3 + w1w4 + w2w3 + w2w4 + w3w4
+is not the volume polynomial of four convex bodies in the plane. By the com-
+pactness theorem of Shephard for the aﬃne equivalence classes of n convex
+bodies [She60, Th. 1], the image of the set of volume polynomials of convex
+bodies in PLd
+n is compact. Thus, the displayed elementary symmetric polyno-
+mial is not even the limit of volume polynomials of convex bodies.
+On the other hand, a collection J ⊆ [n
+d
+] is the support of a volume poly-
+nomial of n convex bodies in Rd if and only if J is the set of basis of a rank d
+matroid on [ n] that is representable over R. For example, there are no seven
+convex bodies in R3 whose volume polynomial has the support given by the
+set of bases of the Fano matroid.
+Proof of Theorem 4.1. By continuity of the volume functional, we may
+suppose that every convex body in K is d-dimensional [Sch14, Th. 1.8.20]. In
+this case, every coeﬃcient of vol K is positive. Thus, by Theorem 2.25, it is
+enough to show that ∂αvolH is Lorentzian for every α∈ ∆d−2
+n . For this we
+use a special case of the Brunn-Minkowski theorem [Sch14, Th. 7.4.5]: For any
+convex bodies C 3, . . . ,Cd in Rd, the function
+w↦−→ V
+( n∑
+i=1
+wiKi,
+n∑
+i=1
+wiKi, C3, . . . ,Cd
+)1/2
+is concave on Rn
+>0. In particular, the function
+(2!
+d! ∂αvolK(w)
+)1/2
+= V
+( n∑
+i=1
+wiKi,
+n∑
+i=1
+wiKi, K1, . . . ,K1  
+α1
+, . . . ,Kn, . . . ,Kn  
+αn
+)1/2
+is concave on Rn
+>0 for every α∈ ∆d−2
+n . The conclusion follows from Proposi-
+tion 2.33. □
+The Alexandrov–Fenchel inequality [Sch14, §7.3] states that
+V (C1, C2, C3, . . . ,Cd)2≥ V (C1, C1, C3, . . . ,Cd)V (C2, C2, C3, . . . ,Cd).
+
+
+--- page 51 ---
+LORENTZIAN POLYNOMIALS 871
+We show that an analog holds for any Lorentzian polynomial.
+Proposition 4.4. If f = ∑
+α∈∆dn
+cα
+α! wα is a Lorentzian polynomial , then
+c2
+α≥ cα+ei−ej cα−ei+ej for any i, j∈ [n] and any α∈ ∆d
+n.
+Proof. Consider the Lorentzian polynomial ∂α−ei−ej f. Substituting wk
+by zero for all k other than i and j, we get the bivariate quadratic polynomial
+1
+2 cα+ei−ej w2
+i + cαwiw+
+1
+2 cα−ei+ej w2
+j .
+The displayed polynomial is Lorentzian by Theorem 2.10, and hence c2
+α ≥
+cα+ei−ej cα−ei+ej. □
+We may reformulate Proposition 4.4 as follows. Let f be a homogeneous
+polynomial of degree d in n variables. The complete homogeneous form of f is
+the multi-linear function Ff : (Rn)d→ R deﬁned by
+Ff(v1, . . . , vd) = 1
+d!
+∂
+∂x1
+··· ∂
+∂xd
+f(x1v1 +··· + xdvd).
+Note that the complete homogeneous form of f is symmetric in its arguments.
+By Euler’s formula for homogeneous functions, we have
+Ff(w, w, . . . , w) = f(w).
+Proposition 4.5. If f is Lorentzian, then, for any v1∈ Rn and v2, . . . , vd
+∈ Rn
+≥0,
+Ff(v1, v2, v3, . . . , vd)2≥ Ff(v1, v1, v3, . . . , vd)Ff(v2, v2, v3, . . . , vd).
+Proof. For every k = 1, . . . , d, we write vk = (vk1, vk2, . . . , vkn) and set
+Dk = vk1
+∂
+∂w1
++ vk2
+∂
+∂w2
++··· + vkn
+∂
+∂wn
+.
+By Corollary 2.11, the quadratic polynomial D3··· Ddf is Lorentzian. We may
+suppose that the Hessian H of the quadratic polynomial is not identically zero
+and vT
+2 Hv2 > 0. Note that
+vT
+i Hvj = DiDjD3··· Ddf = d!Ff(vi, vj, v3, . . . , vd) for any i and j.
+Since the matrix H has exactly one positive eigenvalue, the conclusion follows
+from Cauchy’s interlacing theorem. □
+4.2. Projective varieties and Lorentzian polynomials. Let Y be a d-dimen-
+sional irreducible projective variety over an algebraically closed ﬁeld F. If
+D1, . . . ,Dd are Cartier divisors on Y , the intersection product (D1· . . .· Dd) is
+an integer deﬁned by the following properties:
+– the product (D 1· . . .· Dd) is symmetric and multilinear as a function of its
+arguments;
+
+
+--- page 52 ---
+872 PETTER BR ¨AND´EN and JUNE HUH
+– the product (D 1· . . .· Dd) depends only on the linear equivalence classes of
+the Di; and
+– if D 1, . . . ,Dn are eﬀective divisors meeting transversely at smooth points of
+Y , then
+(D1· . . .· Dd) = #D1∩ . . .∩ Dd.
+Given an irreducible subvarietyX⊆ Y of dimension k, the intersection product
+(D1· . . .· Dk· X)
+is then deﬁned by replacing each divisor D i with a linearly equivalent Cartier
+divisor whose support does not contain X and intersecting the restrictions
+of Di in X. The deﬁnition of the intersection product linearly extends to
+Q-linear combination of Cartier divisors, called Q-divisors [Laz04, §1.3]. If D
+is a Q-divisor on Y , we write (D)d for the self-intersection (D· . . .· D). For a
+gentle introduction to Cartier divisors and their intersection products, we refer
+to [Laz04, §1.1]. See [Ful98] for a comprehensive study.
+Let H = (H 1, . . . ,Hn) be a collection of Q-divisors on Y . We deﬁne the
+volume polynomial of H by
+volH(w) = (w1H1 +··· + wnHn)d =
+∑
+α∈∆dn
+d!
+α! Vα(H)wα,
+where Vα(H) is the intersection product
+Vα(H) = (H1· . . .· H1  
+α1
+· . . .· Hn· . . .· Hn  
+αn
+) = 1
+d! ∂αvolH.
+A Q-divisor D on Y is said to be nef if (D· C)≥ 0 for every irreducible curve
+C in Y [Laz04, §1.4].
+Theorem 4.6. If H1, . . . ,Hn are nef divisors on Y , then volH(w) is a
+Lorentzian polynomial.
+When combined with Theorem 2.25, Theorem 4.6 implies the statement.
+Corollary 4.7. If H1, . . . ,Hn are nef divisors on Y , then the support of
+volH(w) is M-convex.
+In other words, the set of all α∈ ∆d
+n satisfying the nonvanishing condition
+(H1· . . .· H1  
+α1
+· . . .· Hn· . . .· Hn  
+αn
+)̸= 0
+is M-convex for any d-dimensional projective variety Y and any nef divisors
+H1, . . . ,Hn on Y . Corollary 4.7 implies a result of Castillo et al . [CCRL +,
+Prop. 5.4], which says that the support of the multidegree of any irreducible
+mutiprojective variety is a discrete polymatroid.
+
+
+--- page 53 ---
+LORENTZIAN POLYNOMIALS 873
+Remark 4.8. Let A ={v1, . . . , vn} be a collection of n vectors in Fd. In
+[HW17, §4], one can ﬁnd a d-dimensional projective variety YA and nef divisors
+H1, . . . ,Hn on YA such that
+volH(w) =
+∑
+α∈[n
+d]
+cαwα,
+where cα = 1 if α corresponds to a linearly independent subset of A and cα = 0
+if otherwise. Thus, in this case, Corollary 4.7 states the familiar fact that the
+collection of linearly independent d-subsets of A⊆ Fd is the set of bases of a
+matroid.
+Proof of Theorem 4.6. By Kleiman’s theorem [Laz04, §1.4], every nef di-
+visor is a limit of ample divisors, and we may suppose that every divisor in H
+is very ample. In this case, every coeﬃcient of vol H is positive. Thus, by The-
+orem 2.25, it is enough to show that ∂αvolH is Lorentzian for every α∈ ∆d−2
+n .
+Note that
+2!
+d! ∂αvolH(w) =
+( n∑
+i=1
+wiHi·
+n∑
+i=1
+wiHi· H1· . . .· H1  
+α1
+· . . .· Hn· . . .· Hn  
+αn
+)
+.
+By Bertini’s theorem [Laz04, §3.3], there is an irreducible surface S⊆ Y such
+that
+2!
+d! ∂αvolH(w) =
+( n∑
+i=1
+wiHi·
+n∑
+i=1
+wiHi· S
+)
+.
+If S is smooth, then the Hodge index theorem [Har77, Th. V.1.9] shows that the
+displayed quadratic form has exactly one positive eigenvalue. In general, the
+Hodge index theorem applied to any resolution of singularities of S implies the
+one positive eigenvalue condition, by the projection formula [Ful98, Ex. 2.4.3].
+□
+The theory of toric varieties shows that the volume polynomial of any
+set of convex bodies is the limit of a sequence of volume polynomials of nef
+divisors on projective varieties [Ful93, §5.4]. How large is the set of volume
+polynomials of projective varieties within the set of Lorentzian polynomials?
+We formulate various precise versions of this question. Let V d
+n(F) be the set
+of volume polynomials of n nef divisors on a d-dimensional projective variety
+over F, and let Vd
+n = ⋃
+F Vd
+n(F), where the union is over all algebraically closed
+ﬁelds.
+Question 4.9. Fix any algebraically closed ﬁeld F.
+(1) Is there a polynomial in L d
+n that is not in the closure of V d
+n?
+(2) Is there a polynomial in L d
+n that is not in the closure of V d
+n(F)?
+(3) Is there a polynomial in L d
+n∩ Q[w] that is not in V d
+n?
+
+
+--- page 54 ---
+874 PETTER BR ¨AND´EN and JUNE HUH
+(4) Is there a polynomial in L d
+n∩ Q[w] that is not in V d
+n(F)?
+Shephard’s construction in [She60, §3] shows that every polynomial in
+Ld
+2∩Q[w] is the volume polynomial of a pair of d-dimensional convex polytopes
+with rational vertices. Thus, by [Ful93, §5.4], we have
+Ld
+2∩ Q[w] = Vd
+2 = Vd
+2(F) for any d and any F.
+A similar reasoning based on the construction of [Hei38, §I] shows that
+L2
+3∩ Q[w] = V2
+3 = V2
+3(F) for any F.
+When n≥ 4, not every Lorentzian polynomial is the limit of a sequence of
+volume polynomials of rational convex polytopes (Remark 4.3), and we do not
+know how to answer any of the above questions.
+4.3. Potts model partition functions and Lorentzian polynomials . The q-
+state Potts model , or the random-cluster model, of a graph is a much studied
+class of measures introduced by Fortuin and Kasteleyn [FK72]. We refer to
+[Gri06] for a comprehensive introduction to random-cluster models.
+Let M be a matroid on [ n], and let rk M be the rank function of M. For
+a nonnegative integer k and a positive real parameter q, consider the degree k
+homogeneous polynomial in n variables
+Zk
+q,M(w) =
+∑
+A∈[n
+k]
+q−rkM(A)wA, w = (w1, . . . , wn).
+We deﬁne the homogeneous multivariate Tutte polynomial of M by
+Zq,M(w0, w1, . . . , wn) =
+n∑
+k=0
+Zk
+q,M(w) wn−k
+0 ,
+which is a homogeneous polynomial of degree n in n + 1 variables. When M is
+the cycle matroid of a graph G, the polynomial obtained from Zq,M by setting
+w0 = 1 is the partition function of the q-state Potts model associated to G
+[Sok05].
+Since the rank function of a matroid is M ♮-concave, the normalized rank
+generating function of M is Lorentzian when the parameter q satisﬁes 0 < q≤1;
+see Example 3.15. In this subsection, we prove the following reﬁnement.
+Theorem 4.10. For any matroid M and 0 < q≤ 1, the polynomial Zq,M
+is Lorentzian.
+We prepare the proof with two simple lemmas.
+Lemma 4.11. The support of Zq,M is M-convex for all 0 < q≤ 1.
+
+
+--- page 55 ---
+LORENTZIAN POLYNOMIALS 875
+Proof. Writing Z ♮
+q,M for the polynomial obtained from Z q,M by setting
+w0 = 1, we have
+supp(Z♮
+q,M
+)= {0, 1}n.
+It is straightforward to verify the augmentation property in Lemma 2.21 for
+{0, 1}n. □
+For a nonnegative integer k and a subset S⊆ [n], we deﬁne a degree k
+homogeneous polynomial ek
+S(w) by the equation
+n∑
+k=0
+ek
+S(w) =
+∑
+A⊆S
+wA.
+In other words, ek
+S(w) is the k-th elementary symmetric polynomial in the
+variables{wi}i∈S.
+Lemma 4.12. If S1⊔ . . .⊔ Sm is a partition of [n] into m nonempty parts,
+then
+1
+n e1
+[n](w)2≤ e1
+S1(w)2 +··· + e1
+Sm(w)2 for all w∈ Rn.
+Proof. Since m≤ n, it is enough to prove the statement when m = n. In
+this case, we have
+(w1 +··· + wn)2≤ n(w2
+1 +··· + w2
+n),
+by the Cauchy-Schwarz inequality for the vectors (1 , . . . ,1) and ( w1, . . . , wn)
+in Rn. □
+Proof of Theorem 4.10. Let α be an element of ∆ n−2
+n+1. By Theorem 2.25
+and Lemma 4.11, the proof reduces to the statement that the quadratic form
+∂αZq,M is stable. We prove the statement by induction on n. The assertion is
+clear when n = 1, so suppose n≥ 2. When i̸= 0, we have
+∂iZq,M = q−rkM(i)Zq,M/i,
+where M/i is the contraction of M by i [Oxl11, Ch. 3]. Thus, it is enough to
+prove that the following quadratic form is stable:
+n!
+2 w2
+0 + (n− 1)!Z 1
+q,M(w)w0 + (n− 2)!Z 2
+q,M(w).
+Recall that a homogeneous polynomial f with nonnegative coeﬃcients in n+1
+variables is stable if and only if the univariate polynomial f(xu− v) has only
+real zeros for all v∈ Rn+1 for some u∈ Rn+1
+≥0 satisfying f(u) > 0. Therefore,
+it suﬃces to show that the discriminant of the displayed quadratic form with
+respect to w0 is nonnegative:
+Z1
+q,M(w)2≥ 2 n
+n− 1Z2
+q,M(w) for all w∈ Rn.
+
+
+--- page 56 ---
+876 PETTER BR ¨AND´EN and JUNE HUH
+We prove the inequality after making the change of variables
+wi↦−→
+®
+wi if i is a loop in M,
+qwi if i is not a loop in M.
+Write L⊆ [n] for the set of loops and P1, . . . , Pℓ⊆ [n]\ L for the parallel
+classes in M [Oxl11, §1.1]. The above change of variables gives
+Z1
+q,M(w) = e1
+[n](w) and Z 2
+q,M(w) = e2
+[n](w)− (1− q)(e2
+P1(w) +··· + e2
+Pℓ(w)).
+When q = 1, the desired inequality directly follows from the case m = n of
+Lemma 4.12. Therefore, when proving the desired inequality for an arbitrary
+0 < q≤ 1, we may assume that
+e2
+P1(w) +··· + e2
+Pℓ(w) < 0.
+Therefore, exploiting the monotonicity of Z 2
+q,M in q, the desired inequality
+reduces to
+(n− 1)e1
+[n](w)2− 2n
+(
+e2
+[n](w)− e2
+P1(w)−···− e2
+Pℓ(w)
+)
+≥ 0.
+Note that the left-hand side of the above inequality simpliﬁes to
+n
+(
+e1
+P1(w)2 +··· + e1
+Pℓ(w)2 +
+∑
+i∈L
+w2
+i
+)
+− e1
+[n](w)2.
+The conclusion now follows from Lemma 4.12. □
+Mason [Mas72] oﬀered the following three conjectures of increasing strength.
+Several authors studied correlations in matroid theory partly in pursuit of these
+conjectures [SW75], [Wag08], [BBL09], [KN10], [KN11].
+Conjecture 4.13. For any matroid M on [n] and any positive integer k,
+(1) Ik(M)2≥ Ik−1(M)Ik+1(M),
+(2) Ik(M)2≥ k+1
+k Ik−1(M)Ik+1(M),
+(3) Ik(M)2≥ k+1
+k
+n−k+1
+n−k Ik−1(M)Ik+1(M),
+where Ik(M) is the number of k-element independent sets of M.
+Conjecture 4.13(1) was proved in [AHK18], and Conjecture 4.13(2) was
+proved in [HSW18]. Note that Conjecture 4.13(3) may be written
+Ik(M)2
+(n
+k
+)2 ≥ Ik+1(M)(n
+k+1
+) Ik−1(M)(n
+k−1
+) ,
+and the equality holds when all ( k + 1)-subsets of [ n] are independent in M.
+Conjecture 4.13(3) is known to hold when n is at most 11 or k is at most 5
+[KN11]. See [Sey75], [Dow80], [Mah85], [Zha85], [HK12], [HS89], [Len13] for
+other partial results.
+
+
+--- page 57 ---
+LORENTZIAN POLYNOMIALS 877
+Theorem 4.14. For any matroid M on [n] and any positive integer k,
+Ik(M)2
+(n
+k
+)2 ≥ Ik+1(M)(n
+k+1
+) Ik−1(M)(n
+k−1
+) ,
+where Ik(M) is the number of k-element independent sets of M.
+In [BH18], direct proofs of Theorems 4.10 and 4.14 were given. 14 Here we
+deduce Theorem 4.14 from the Lorentzian property of
+fM(w0, w1, . . . , wn) =
+∑
+A∈I(M)
+wAwn−|A|
+0 , w = (w1, . . . , wn),
+where I(M) is the collection of independent sets of M.
+Proof of Theorem 4.14. The polynomial fM is Lorentzian by Theorem 4.10
+and the identity
+fM(w0, w1, . . . , wn) = lim
+q→0
+Zq,M(w0, qw1, . . . , qwn).
+Therefore, by Theorem 2.10, the bivariate polynomial obtained from fM by
+setting w1 =··· = wn is Lorentzian. The conclusion follows from the fact that
+a bivariate homogeneous polynomial with nonnegative coeﬃcients is Lorentzian
+if and only if the sequence of coeﬃcients form an ultra log-concave sequence
+with no internal zeros. □
+The Tutte polynomial of a matroid M on [ n] is the bivariate polynomial
+TM(x, y) =
+∑
+A⊆[n]
+(x− 1)rkM([n])−rkM(A)(y− 1)|A|−rkM(A).
+Theorem 4.10 reveals several nontrivial inequalities satisﬁed by the coeﬃcients
+of the Tutte polynomial. For example, if we write
+wrkM([n])TM
+(
+1 + q
+w , 1 + w
+)
+=
+n∑
+k=0
+( ∑
+A∈[n
+k]
+qrkM([n])−rkM(A)
+)
+wk =
+n∑
+k=0
+ck
+q(M)wk,
+then the sequence ck
+q(M) is ultra log-concave whenever 0 ≤ q≤ 1. This and
+other results in this subsection are recently extended to ﬂag matroids in [EH20].
+4.4. M -matrices and Lorentzian polynomials . We write I n for the n× n
+identity matrix, Jn for the n× n matrix all of whose entries are 1, and 1 n for
+the n× 1 matrix all of whose entries are 1. Let A = (aij) be an n× n matrix
+with real entries. The following conditions are equivalent if aij≤ 0 for all i̸= j
+[BP94, Ch. 6]:
+– The real part of each nonzero eigenvalue of A is positive.
+14An independent proof of 4.14 was given by Anari et al . in [ALGV18].
+
+
+--- page 58 ---
+878 PETTER BR ¨AND´EN and JUNE HUH
+– The real part of each eigenvalue of A is nonnegative.
+– All the principal minors of A are nonnegative.
+– Every real eigenvalue of A is nonnegative.
+– The matrix A + ϵIn is nonsingular for every ϵ > 0.
+– The univariate polynomial det( xIn + A) has nonnegative coeﬃcients.
+The matrix A is an M-matrix if aij≤ 0 for all i̸= j and if it satisﬁes any one of
+the above conditions. One can ﬁnd 50 diﬀerent characterizations of nonsingular
+M-matrices in [BP94, Ch. 6]. We will use the 29-th condition: There are
+positive diagonal matrices D and D′ such that DAD′ has all diagonal entries
+1 and all row sums positive. For a discussion of M-matrices in the context of
+ultrametrics and potentials of ﬁnite Markov chains, see [DMSM14].
+We deﬁne the multivariate characteristic polynomial of A by the equation
+pA(w0, w1, . . . , wn) = det
+(
+w0In + diag(w1, . . . , wn)A
+)
+.
+In [Hol05, Th. 4], Holtz proved that the coeﬃcients of the characteristic poly-
+nomial of an M-matrix form an ultra log-concave sequence. We will strengthen
+this result and prove that the multivariate characteristic polynomial of an
+M-matrix is Lorentzian.
+Theorem 4.15. If A is an M-matrix, then pA is a Lorentzian polynomial.
+Using Example 2.26, we may recover the theorem of Holtz by setting
+w1 =··· = wn.
+Corollary 4.16. If A is an M-matrix, the support of pA is M-convex.
+Since every M-matrix is a limit of nonsingular M-matrices, it is enough to
+prove Theorem 4.15 for nonsingular M-matrices.
+Lemma 4.17. If A is a nonsingular M-matrix, then the support of pA is
+M-convex.
+Proof. It is enough to prove that the support of p ♮
+A is M♮-convex, where
+p♮
+A(w1, . . . , wn) = pA(1, w1, . . . , wn).
+If A is a nonsingular M-matrix, then all the principal minors of A are positive,
+and hence
+supp(p♮
+A) ={0, 1}n.
+It is straightforward to verify the augmentation property in Lemma 2.21 for
+{0, 1}n. □
+We prepare the proof of Theorem 4.15 with a proposition on doubly sub-
+stochastic matrices. Recall that an n× n matrix B = ( bij) with nonnegative
+
+
+--- page 59 ---
+LORENTZIAN POLYNOMIALS 879
+entries is said to be doubly sub-stochastic if
+n∑
+j=1
+bij≤ 1 for every i and
+n∑
+i=1
+bij≤ 1 for every j.
+A partial permutation matrix is a zero-one matrix with at most one nonzero
+entry in each row and column. We use Mirsky’s analog of the Birkhoﬀ-von
+Neumann theorem for doubly sub-stochastic matrices [HJ94, Th. 3.2.6]: The
+set of n× n doubly sub-stochastic matrix is equal to the convex hull of the
+n× n partial permutation matrices.
+Lemma 4.18. For n≥ 2, deﬁne n× n matrices Mn and Nn by
+Mn =
+
+
+2 1 0 ··· 0 1
+1 2 1 ··· 0 0
+0 1 2 ··· 0 0
+... ... ... . . . ... ...
+0 0 0 ··· 2 1
+1 0 0 ··· 1 2
+
+
+, Nn =
+
+
+2 1 0 ··· 0 0
+1 2 1 ··· 0 0
+0 1 2 ··· 0 0
+... ... ... . . . ... ...
+0 0 0 ··· 2 1
+0 0 0 ··· 1 2
+
+
+.
+Then the matrices Mn− 2
+nJn and Nn− 2
+nJn are positive semideﬁnite. Equiva-
+lently,
+Mn+1 :=
+Ç
+Mn 1n
+1T
+n
+n
+2
+å
+, Nn+1 :=
+Ç
+Nn 1n
+1T
+n
+n
+2
+å
+are positive semideﬁnite.
+Proof. We deﬁne symmetric matrices L n+1 and Kn+1 by
+Ln+1 =
+
+
+1 1 0 ··· 0 0 1
+2
+1 2 1 ··· 0 0 1
+0 1 2 ··· 0 0 1
+... ... ... ... ... ... ...
+0 0 0 ··· 2 1 1
+0 0 0 ··· 1 1 1
+2
+1
+2 1 1 ··· 1 1
+2
+n
+2
+
+
+, Kn+1 =
+
+
+1 1 0 ··· 0 0 1
+2
+1 2 1 ··· 0 0 1
+0 1 2 ··· 0 0 1
+... ... ... ... ... ... ...
+0 0 0 ··· 2 1 1
+0 0 0 ··· 1 2 1
+1
+2 1 1 ··· 1 1 n
+2
+
+
+.
+As before, the subscript indicates the size of the matrix. We show, by induc-
+tion on n, that the matrices L n+1 and Kn+1 are positive semideﬁnite. It is
+straightforward to check that L3 and K3 are positive semideﬁnite. Perform the
+symmetric row and column elimination of Ln+1 and Kn+1 based on their 1× 1
+
+
+--- page 60 ---
+880 PETTER BR ¨AND´EN and JUNE HUH
+entries, and notice that
+Ln+1≃
+
+
+1 0 0 ··· 0 0 0
+0 1 1 ··· 0 0 1
+2
+0 1 2 ··· 0 0 1
+... ... ... ... ... ... ...
+0 0 0 ··· 2 1 1
+0 0 0 ··· 1 1 1
+2
+0 1
+2 1 ··· 1 1
+2
+n
+2− 1
+4
+
+
+,
+Kn+1≃
+
+
+1 0 0 ··· 0 0 0
+0 1 1 ··· 0 0 1
+2
+0 1 2 ··· 0 0 1
+... ... ... ... ... ... ...
+0 0 0 ··· 2 1 1
+0 0 0 ··· 1 1 1
+0 1
+2 1 ··· 1 1 n
+2− 1
+4
+
+
+,
+where the symbol≃ stands for the congruence relation for symmetric matrices.
+Since Ln is positive semideﬁnite, Ln+1 is congruent to the sum of positive semi-
+deﬁnite matrices, and hence L n+1 is positive semideﬁnite. Similarly, since K n
+is positive semideﬁnite, Kn+1 is congruent to the sum of positive semideﬁnite
+matrices, and hence Kn+1 is positive semideﬁnite.
+We now prove that the symmetric matrices M n+1 and Nn+1 are positive
+semideﬁnite. Perform the symmetric row and column elimination of Mn+1 and
+Nn+1 based on their 1× 1 entries, and notice that
+Mn+1≃
+
+
+2 0 0 ··· 0 0 0
+0 3
+2 1 ··· 0 − 1
+2
+1
+2
+0 1 2 ··· 0 0 1
+... ... ... ... ... ... ...
+0 0 0 ··· 2 1 1
+0 − 1
+2 0 ··· 1 3
+2
+1
+2
+0 1
+2 1 ··· 1 1
+2
+n−1
+2
+
+
+,
+Nn+1≃
+
+
+2 0 0 ··· 0 0 0
+0 3
+2 1 ··· 0 0 1
+2
+0 1 2 ··· 0 0 1
+... ... ... ... ... ... ...
+0 0 0 ··· 2 1 1
+0 0 0 ··· 1 2 1
+0 1
+2 1 ··· 1 1 n−1
+2
+
+
+.
+
+
+--- page 61 ---
+LORENTZIAN POLYNOMIALS 881
+Since Ln is positive semideﬁnite, M n+1 is congruent to the sum of two posi-
+tive semideﬁnite matrices, and hence M n+1 is positive semideﬁnite. Similarly,
+since Kn is positive semideﬁnite, Nn+1 is congruent to the sum of two positive
+semideﬁnite matrices, and hence Nn+1 is positive semideﬁnite. □
+Proposition 4.19. If B is an n× n doubly sub-stochastic matrix , then
+2In + B + BT− 2
+nJn is positive semideﬁnite .
+Proof. Let C n be the symmetric matrix 2I n + B + BT , and let C n+1 be
+the symmetric matrix
+Cn+1 :=
+Ç
+Cn 1n
+1T
+n
+n
+2
+å
+.
+It is enough to prove that C n+1 is positive semideﬁnite. Since the convex hull
+of the partial permutation matrices is the set of doubly sub-stochastic matrix,
+the proof reduces to the case when B is a partial permutation matrix. We use
+the following extension of the cycle decomposition for partial permutations:
+For any partial permutation matrix B, there is a permutation matrix P such
+that PBPT is a block diagonal matrix, where each block diagonal is either zero,
+identity,
+
+
+0 0 0 ··· 0 1
+1 0 0 ··· 0 0
+0 1 0 ··· 0 0
+... ... ... ... ... ...
+0 0 0 ··· 0 0
+0 0 0 ··· 1 0
+
+
+or
+
+
+0 0 0 ··· 0 0
+1 0 0 ··· 0 0
+0 1 0 ··· 0 0
+... ... ... ... ... ...
+0 0 0 ··· 0 0
+0 0 0 ··· 1 0
+
+
+.
+Using the cyclic decomposition for B, we can express the matrix C n+1 as a
+sum, where each summand is positive semideﬁnite by Lemma 4.18. □
+The remaining part of the proof of Theorem 4.15 parallels that of Theo-
+rem 4.10.
+Proof of Theorem 4.15. Since every M-matrix is a limit of nonsingular
+M-matrices, we may suppose that A is a nonsingular M-matrix. For k =
+0, 1, . . . , n, we set
+pk
+A(w) =
+∑
+α∈[n
+k]
+Aαwα, w = (w1, . . . , wn),
+where Aα is the principal minor of A corresponding to α, so that
+pA(w0, w1, . . . , wn) =
+n∑
+k=0
+pk
+A(w)wn−k
+0 .
+
+
+--- page 62 ---
+882 PETTER BR ¨AND´EN and JUNE HUH
+Lemma 4.17 shows that the support of p A is M-convex. Therefore, by The-
+orem 2.25, it is enough to prove that ∂i(pA) is Lorentzian for i = 0, 1, . . . , n.
+We prove this statement by induction on n. The assertion is clear when n = 1,
+so suppose n≥ 2. When i̸= 0, we have
+∂i(pA) = pA/i,
+where A /i is the M-matrix obtained from A by deleting the i-th row and
+column. Thus, it is enough to prove that the following quadratic form is
+stable:
+n!
+2 w2
+0 + (n− 1)!p 1
+A(w)w0 + (n− 2)!p 2
+A(w).
+As in the proof of Theorem 4.10, it suﬃces to show that the discriminant of
+the displayed quadratic form with respect to w0 is nonnegative:
+p1
+A(w)2≥ 2n
+n− 1p2
+A(w) for all w∈ Rn.
+In terms of the entries of A, the displayed inequality is equivalent to the state-
+ment that the matrix (aijaji− 1
+n aiiajj
+)is positive semideﬁnite. According to
+the 29-th characterization of nonsingular M-matrices in [BP94, Ch. 6], there
+are positive diagonal matrices D and D′ such that DAD′ has all diagonal
+entries 1 and all row sums are positive. Therefore, we may suppose that A
+has all diagonal entries 1 and all the row sums of A are positive. Under this
+assumption, (
+aijaji− 1
+n aiiajj
+)
+= In− B− 1
+nJn,
+where−B is a symmetric doubly sub-stochastic matrix all of whose diagonal
+entries are zero. The conclusion follows from Proposition 4.19. □
+4.5. Lorentzian probability measures. There are numerous important ex-
+amples of negatively dependent “repelling” random variables in probability
+theory, combinatorics, stochastic processes, and statistical mechanics. See,
+for example, [Pem00]. A theory of negative dependence for strongly Rayleigh
+measures was developed in [BBL09], but the theory is too restrictive for sev-
+eral applications. Here we introduce a broader class of discrete probability
+measures using the Lorentzian property.
+A discrete probability measure µ on{0, 1}n is a probability measure on
+{0, 1}n such that all subsets of {0, 1}n are measurable. The partition function
+of µ is the polynomial
+Zµ(w) =
+∑
+S⊆[n]
+µ({S})∏
+i∈S
+wi.
+The following notions capture various aspects of negative dependence:
+
+
+--- page 63 ---
+LORENTZIAN POLYNOMIALS 883
+– The measure µ is pairwise negatively correlated (PNC) if for all distinct i
+and j in [n],
+µ(Ei∩Ej)≤ µ(Ei)µ(Ej),
+whereEi is the collection of all subsets of [ n] containing i.
+– The measure µ is ultra log-concave (ULC) if for every positive integer k < n ,
+µ
+([n
+k
+])2
+(n
+k
+)2 ≥
+µ
+([ n
+k−1
+])
+(n
+k−1
+)
+µ
+([ n
+k+1
+])
+(n
+k+1
+) .
+– The measure µ is strongly Rayleigh if for all distinct i and j in [n],
+Zµ(w) ∂i∂jZµ(w)≤ ∂iZµ(w) ∂jZµ(w) for all w∈ Rn.
+Let P be a property of discrete probability measures. We say that µ has
+property P if, for every x∈ Rn
+>0, the discrete probability measure on {0, 1}n
+with the partition function
+Zµ(x1w1, . . . , xnwn)/Zµ(x1, . . . , xn)
+has property P. The new discrete probability measure is said to be obtained
+from µ by applying the external ﬁeld x∈ Rn
+>0. For example, the property
+PNC for µ is equivalent to the 1-Rayleigh property
+Zµ(w) ∂i∂jZµ(w)≤ ∂iZµ(w) ∂jZµ(w) for all distinct i, j in [n] and all w∈ Rn
+>0.
+More generally, for a positive real number c, we say that µ is c-Rayleigh if
+Zµ(w) ∂i∂jZµ(w)≤ c ∂iZµ(w) ∂jZµ(w) for all distinct i, j in [n] and all w∈ Rn
+>0.
+Deﬁnition 4.20. A discrete probability measure µ on{0, 1}n is Lorentzian
+if the homogenization of the partition function wn
+0 Zµ(w1/w0, . . . , wn/w0) is a
+Lorentzian polynomial.
+For example, if A is an M-matrix of size n, the probability measure on
+{0, 1}n given by
+µ({S})∝
+(
+the principal minor of A corresponding to S
+)
+, S ⊆ [n],
+is Lorentzian by Theorem 4.15. Results from the previous sections reveal basic
+features of Lorentzian measures, some of which may be interpreted as negative
+dependence properties.
+Proposition 4.21. If µ is Lorentzian, then µ is 2-Rayleigh.
+Proof. Lemma 2.20 and Proposition 2.19 show that Z µ is a 2 (1− 1
+n
+)-
+Rayleigh polynomial. □
+Proposition 4.22. If µ is Lorentzian, then µ is ULC.
+
+
+--- page 64 ---
+884 PETTER BR ¨AND´EN and JUNE HUH
+Proof. Since any probability measure obtained from a Lorentzian proba-
+bility measure by applying an external ﬁeld is Lorentzian, it suﬃces to prove
+that µ is ULC. By Theorem 2.10, the bivariate homogeneous polynomial
+wn
+0 Zµ(w1/w0, . . . , w1/w0) is Lorentzian. Therefore, by Example 2.26, its se-
+quence of coeﬃcients must be ultra log-concave. □
+Proposition 4.23. The class of Lorentzian measures is preserved under
+the symmetric exclusion process .
+Proof. The statement is Corollary 3.9 for homogenized partition functions
+of Lorentzian probability measures. □
+Proposition 4.24. If µ is strongly Rayleigh, then µ is Lorentzian.
+Proof. A multi-aﬃne polynomial is stable if and only if it is strongly
+Rayleigh [Br¨ a07, Th. 5.6], and a polynomial with nonnegative coeﬃcients is
+stable if and only if its homogenization is stable [BBL09, Th. 4.5]. By Propo-
+sition 2.2, homogeneous stable polynomials with nonnegative coeﬃcients are
+Lorentzian. □
+For a matroid M on [ n], we deﬁne probability measures µM and νM on
+{0, 1}n by
+µM = the uniform measure on {0, 1}n concentrated on the independent sets of M,
+νM = the uniform measure on {0, 1}n concentrated on the bases of M.
+Proposition 4.25. For any matroid M on [n], the measures µM and νM
+are Lorentzian.
+Proof. Note that the homogenized partition function fM of µM satisﬁes
+fM(w0, w1, . . . , wn) = lim
+q→0
+Zq,M(w0, qw1, . . . , qwn).
+Since a limit of Lorentzian polynomials is Lorentzian, µM is Lorentzian by
+Theorem 4.10. The partition function of νM is Lorentzian by Theorem 3.10. □
+Let G be an arbitrary ﬁnite graph, and let i and j be any distinct edges
+of G. A conjecture of Kahn [Kah00] and Grimmett–Winkler [GW04] states
+that, if F is a forest in G chosen uniformly at random, then
+Pr(F contains i and j)≤ Pr(F contains i)Pr( F contains j).
+The conjecture is equivalent to the statement that µM is 1-Rayleigh for any
+graphic matroid M. Propositions 4.21 and 4.25 show that µM is 2-Rayleigh for
+any matroid M.
+
+
+--- page 65 ---
+LORENTZIAN POLYNOMIALS 885
+References
+[AHK18] K. Adiprasito, J. Huh, and E. Katz, Hodge theory for combinatorial
+geometries, Ann. of Math. (2) 188 no. 2 (2018), 381–452. MR 3862944.
+Zbl 06921184. https://doi.org/10.4007/annals.2018.188.2.1.
+[ALGV18] N. Anari , K. Liu , S. O. Gharan , and C. Vinzant , Log-concave
+polynomials III: Mason’s ultra-log-concavity conjecture for independent
+sets of matroids, 2018. arXiv 1811.01600.
+[ALGV19] N. Anari, K. Liu, S. O. Gharan, and C. Vinzant, Log-concave poly-
+nomials II: High-dimensional walks and an FPRAS for counting bases of
+a matroid, in STOC’19—Proceedings of the 51st Annual ACM SIGACT
+Symposium on Theory of Computing , ACM, New York, 2019, pp. 1–
+12. MR 4003314. Zbl 1433.68606. https://doi.org/10.1145/3313276.
+3316385.
+[AOGV18] N. Anari, S. Oveis Gharan, and C. Vinzant, Log-concave polyno-
+mials, entropy and a deterministic approximation algorithm for count-
+ing bases of matroids, in 59 th Annual IEEE Symposium on Founda-
+tions of Computer Science—FOCS 2018, 2018, pp. 35–46. MR 3899575.
+https://doi.org/10.1109/FOCS.2018.00013.
+[BR97] R. B. Bapat and T. E. S. Raghavan, Nonnegative Matrices and Ap-
+plications, Encyclopedia Math. Appl. 64, Cambridge University Press,
+Cambridge, 1997. MR 1449393. Zbl 0879.15015. https://doi.org/10.
+1017/CBO9780511529979.
+[BCR84] C. Berg, J. P. R. Christensen , and P. Ressel, Harmonic Analysis
+on Semigroups. Theory of Positive Deﬁnite and Related Functions, Grad.
+Texts in Math . 100, Springer-Verlag, New York, 1984. MR 0747302.
+Zbl 0619.43001. https://doi.org/10.1007/978-1-4612-1128-0.
+[BP94] A. Berman and R. J. Plemmons, Nonnegative Matrices in the Math-
+ematical Sciences, Classics Appl . Math. 9, Society for Industrial and
+Applied Mathematics (SIAM), Philadelphia, PA, 1994, Revised reprint
+of the 1979 original. MR 1298430. Zbl 0815.15016. https://doi.org/10.
+1137/1.9781611971262.
+[BB08] J. Borcea and P. Br ¨and´en, Applications of stable polynomi-
+als to mixed determinants: Johnson’s conjectures, unimodality, and
+symmetrized Fischer products, Duke Math . J. 143 no. 2 (2008),
+205–223. MR 2420507. Zbl 1151.15013. https://doi.org/10.1215/
+00127094-2008-018.
+[BB09] J. Borcea and P. Br ¨and´en, The Lee-Yang and P´ olya-Schur pro-
+grams. I. Linear operators preserving stability, Invent. Math. 177 no. 3
+(2009), 541–569. MR 2534100. Zbl 1175.47032. https://doi.org/10.
+1007/s00222-009-0189-3.
+[BB10] J. Borcea and P. Br ¨and´en, Multivariate P´ olya-Schur classiﬁcation
+problems in the Weyl algebra, Proc. Lond. Math. Soc. (3) 101 no. 1
+(2010), 73–104. MR 2661242. Zbl 1196.47028. https://doi.org/10.1112/
+plms/pdp049.
+
+
+--- page 66 ---
+886 PETTER BR ¨AND´EN and JUNE HUH
+[BBL09] J. Borcea , P. Br ¨and´en, and T. M. Liggett , Negative depen-
+dence and the geometry of polynomials, J. Amer. Math. Soc. 22 no. 2
+(2009), 521–567. MR 2476782. Zbl 1206.62096. https://doi.org/10.
+1090/S0894-0347-08-00618-8.
+[Br¨ a07] P. Br ¨and´en, Polynomials with the half-plane property and matroid
+theory, Adv. Math. 216 no. 1 (2007), 302–320. MR 2353258. Zbl 1128.
+05014. https://doi.org/10.1016/j.aim.2007.05.011.
+[Br¨ a10] P. Br¨and´en, Discrete concavity and the half-plane property, SIAM J.
+Discrete Math. 24 no. 3 (2010), 921–933. MR 2680224. Zbl 1228.90091.
+https://doi.org/10.1137/090758738.
+[BH18] P. Br ¨and´en and J. Huh , Hodge–Riemann relations for Potts model
+partition functions, 2018. arXiv 1811.01696.
+[Bru06] R. A. Brualdi , Combinatorial Matrix Classes , Encycl. Math. Appl.
+108, Cambridge University Press, Cambridge, 2006. MR 2266203.
+Zbl 1106.05001. https://doi.org/10.1017/CBO9780511721182.
+[CCRL+] F. Castillo, Y. Cid Ruiz, B. Li, J. Monta˜no, and N. Zhang, When
+are multidegrees positive?, Adv. Math., to appear. arXiv 2005.07808.
+[COSW04] Y.-B. Choe, J. G. Oxley , A. D. Sokal , and D. G. Wagner, Ho-
+mogeneous multivariate polynomials with the half-plane property, Spe-
+cial issue on the Tutte polynomial, Adv. in Appl . Math. 32 no. 1-2
+(2004), 88–187. MR 2037144. Zbl 1054.05024. https://doi.org/10.1016/
+S0196-8858(03)00078-2.
+[DMSM14] C. Dellacherie , S. Martinez , and J. San Martin , Inverse M-
+Matrices and Ultrametric Matrices , Lecture Notes in Math . 2118,
+Springer, Cham, 2014. MR 3289211. Zbl 1311.15002. https://doi.org/
+10.1007/978-3-319-10298-6.
+[Dow80] T. A. Dowling , On the independent set numbers of a ﬁnite matroid,
+Ann. Discrete Math . 8 (1980), 21–28. MR 0597151. Zbl 0462.05020.
+https://doi.org/10.1016/S0167-5060(08)70842-2.
+[EH20] C. Eur and J. Huh, Logarithmic concavity for morphisms of matroids,
+Adv. Math. 367 (2020), 107094, 19. MR 4078485. Zbl 07190386. https:
+//doi.org/10.1016/j.aim.2020.107094.
+[FM92] T. Feder and M. Mihail , Balanced matroids, in Proceedings of the
+24th Annual ACM Symposium on Theory of Computing , ACM Press,
+1992, pp. 26–38. https://doi.org/10.1145/129712.129716.
+[FK72] C. M. Fortuin and P. W. Kasteleyn, On the random-cluster model.
+I. Introduction and relation to other models, Physica 57 no. 4 (1972),
+536–564. MR 0359655. https://doi.org/10.1016/0031-8914(72)90045-6.
+[Fuj05] S. Fujishige , Submodular Functions and Optimization , second ed.,
+Ann. Discrete Math. 58, Elsevier B. V., Amsterdam, 2005. MR 2171629.
+Zbl 1119.90044.
+[Ful93] W. Fulton, Introduction to Toric Varieties , Ann. Math. Stud. 131,
+Princeton University Press, Princeton, NJ, 1993, The William H. Roever
+
+
+--- page 67 ---
+LORENTZIAN POLYNOMIALS 887
+Lectures in Geometry. MR 1234037. Zbl 0813.14039. https://doi.org/
+10.1515/9781400882526.
+[Ful98] W. Fulton, Intersection Theory, second ed., Ergeb. Math. Grenzgeb.
+2, Springer-Verlag, Berlin, 1998. MR 1644323. Zbl 0885.14002. https:
+//doi.org/10.1007/978-1-4612-1700-8.
+[GKL18] P. Galashin , S. N. Karp , and T. Lam , The totally nonnegative
+Grassmannian is a ball, S´ em. Lothar. Combin. 80B (2018), Art. 23, 12.
+MR 3940598. Zbl 1417.05253. Available at https://www.mat.univie.ac.
+at/∼slc/.
+[GKL19] P. Galashin , S. N. Karp , and T. Lam , The totally nonnegative
+part of G/P is a ball, Adv. Math. 351 (2019), 614–620. MR 3954040.
+Zbl 07078817. https://doi.org/10.1016/j.aim.2019.05.009.
+[Gre81] J. Gregor, On quadratic Hurwitz forms. I, Apl. Mat. 26 no. 2 (1981),
+142–153, With a loose Russian summary. MR 0612670. Zbl 0457.15016.
+[GW04] G. R. Grimmett and S. N. Winkler , Negative association in uni-
+form forests and connected graphs, Random Structures Algorithms 24
+no. 4 (2004), 444–460. MR 2060630. Zbl 1048.60007. https://doi.org/
+10.1002/rsa.20012.
+[Gri06] G. Grimmett, The Random-Cluster Model , Grundlehren Math . Wiss.
+333, Springer-Verlag, Berlin, 2006. MR2243761. Zbl 1122.60087. https:
+//doi.org/10.1007/978-3-540-32891-9.
+[Gur09] L. Gurvits , On multivariate Newton-like inequalities, in Ad-
+vances in Combinatorial Mathematics , Springer, Berlin, 2009,
+pp. 61–78. MR 2683227. Zbl 1196.26020. https://doi.org/10.1007/
+978-3-642-03562-3 4.
+[HS89] Y. O. Hamidoune and I. Sala ¨un, On the independence numbers
+of a matroid, J. Combin. Theory Ser . B 47 no. 2 (1989), 146–152.
+MR 1047782. Zbl 0629.05020. https://doi.org/10.1016/0095-8956(89)
+90015-4.
+[Har77] R. Hartshorne, Algebraic Geometry, 52, Springer-Verlag, New York,
+1977, Grad. Texts in Math. MR 0463157. Zbl 0367.14001. https://doi.
+org/10.1007/978-1-4757-3849-0.
+[Hei38] R. Heine , Der Wertvorrat der gemischten Inhalte von zwei, drei
+und vier ebenen Eibereichen, Math. Ann. 115 no. 1 (1938), 115–129.
+MR 1513176. Zbl 0017.23003. https://doi.org/10.1007/BF01448930.
+[HH02] J. Herzog and T. Hibi, Discrete polymatroids, J. Algebraic Combin.
+16 no. 3 (2002), 239–268. MR 1957102. Zbl 1012.05046. https://doi.
+org/10.1023/A:1021852421716.
+[Hol05] O. Holtz, M-matrices satisfy Newton’s inequalities, Proc. Amer. Math.
+Soc. 133 no. 3 (2005), 711–717. MR 2113919. Zbl 1067.15018. https:
+//doi.org/10.1090/S0002-9939-04-07576-8.
+[HJ94] R. A. Hornand C. R. Johnson, Topics in Matrix Analysis, Cambridge
+University Press, Cambridge, 1994, corrected reprint of the 1991 original.
+MR 1288752. Zbl 0801.15001.
+
+
+--- page 68 ---
+888 PETTER BR ¨AND´EN and JUNE HUH
+[Huh19] J. Huh, Combinatorial applications of the Hodge-Riemann relations, in
+Proceedings of the International Congress of Mathematicians—Rio de
+Janeiro 2018. Vol. IV. Invited Lectures, World Sci. Publ., Hackensack,
+NJ, 2019, pp. 3093–3111. MR 3966524. Zbl 07250596. https://doi.org/
+10.1142/9789813272880 0173.
+[HK12] J. Huh and E. Katz , Log-concavity of characteristic polynomials
+and the Bergman fan of matroids, Math. Ann. 354 no. 3 (2012),
+1103–1116. MR 2983081. Zbl 1258.05021. https://doi.org/10.1007/
+s00208-011-0777-6.
+[HMMSD19] J. Huh, J. P. Matherne, K. M´esz´aros, and A. St. Dizier , Loga-
+rithmic concavity of Schur and related polynomials, 2019. arXiv 1906.
+09633.
+[HSW18] J. Huh , B. Schr ¨oter, and B. Wang, Correlation bounds for ﬁelds
+and matroids, 2018. arXiv 1806.02675.
+[HW17] J. Huh and B. Wang, Enumeration of points, lines, planes, etc, Acta
+Math. 218 no. 2 (2017), 297–317. MR 3733101. Zbl 1386.05021. https:
+//doi.org/10.4310/ACTA.2017.v218.n2.a2.
+[KN10] J. Kahn and M. Neiman, Negative correlation and log-concavity, Ran-
+dom Structures Algorithms 37 no. 3 (2010), 367–388. MR 2724667.
+Zbl 1211.62098. https://doi.org/10.1002/rsa.20292.
+[KN11] J. Kahn and M. Neiman , A strong log-concavity property for mea-
+sures on Boolean algebras, J. Combin. Theory Ser. A 118 no. 6 (2011),
+1749–1760. MR 2793607. Zbl 1227.60005. https://doi.org/10.1016/j.
+jcta.2011.02.007.
+[Kah00] J. Kahn , A normal law for matchings, Combinatorica 20 no. 3
+(2000), 339–391. MR 1774843. Zbl 0963.05111. https://doi.org/10.
+1007/PL00009835.
+[Kar68] S. Karlin , Total Positivity . Vol. I, Stanford University Press, Stan-
+ford, Calif, 1968. MR 0230102. Zbl 0219.47030. https://doi.org/10.
+1017/S0013091500009305.
+[KMT07] Y. Kobayashi, K. Murota , and K. Tanaka , Operations on M-
+convex functions on jump systems, SIAM J . Discrete Math . 21 no. 1
+(2007), 107–129. MR 2299698. Zbl 1144.90015. https://doi.org/10.
+1137/060652841.
+[Laz04] R. Lazarsfeld, Positivity in Algebraic Geometry I . Classical Setting :
+Line Bundles and Linear Series , Ergeb. Math. Grenzgeb. 48, Springer-
+Verlag, Berlin, 2004. MR 2095471. Zbl 1093.14501. https://doi.org/10.
+1007/978-3-642-18808-4.
+[Len13] M. Lenz , The f-vector of a representable-matroid complex is log-
+concave, Adv. in Appl . Math. 51 no. 5 (2013), 543–545. MR 3118543.
+Zbl 1301.05382. https://doi.org/10.1016/j.aam.2013.07.001.
+[LS81] E. H. Lieb and A. D. Sokal , A general Lee-Yang theorem for one-
+component and multicomponent ferromagnets, Comm. Math. Phys.
+
+
+--- page 69 ---
+LORENTZIAN POLYNOMIALS 889
+80 no. 2 (1981), 153–179. MR 0623156. https://doi.org/10.1007/
+BF01213009.
+[Lig97] T. M. Liggett , Ultra logconcave sequences and negative dependence,
+J. Combin. Theory Ser . A 79 no. 2 (1997), 315–325. MR 1462561.
+Zbl 0888.60013. https://doi.org/10.1006/jcta.1997.2790.
+[Lig10] T. M. Liggett , Continuous Time Markov Processes . An Introduc-
+tion, Grad. Stud. Math. 113, Amer. Math. Soc., Providence, RI, 2010.
+MR 2574430. Zbl 1205.60002. https://doi.org/10.1090/gsm/113.
+[MS15] D. Maclagan and B. Sturmfels , Introduction to Tropical Geome-
+try, Grad. Stud. Math. 161, Amer. Math. Soc., Providence, RI, 2015.
+MR 3287221. Zbl 1321.14048. https://doi.org/10.1090/gsm/161.
+[Mah85] C. Mahoney, On the unimodality of the independent set numbers of
+a class of matroids, J. Combin. Theory Ser. B 39 no. 1 (1985), 77–85.
+MR 0805457. Zbl 0554.05016. https://doi.org/10.1016/0095-8956(85)
+90038-3.
+[Mar02] D. Marker, Model Theory. An Introduction, Grad. Texts in Math. 217,
+Springer-Verlag, New York, 2002. MR 1924282. Zbl 1003.03034.
+[Mas72] J. H. Mason, Matroids: unimodal conjectures and Motzkin’s theorem,
+in Combinatorics (Proc. Conf. Combinatorial Math., Math. Inst., Ox-
+ford, 1972), 1972, pp. 207–220. MR 0349445.
+[Men69] K. V. Menon, On the convolution of logarithmically concave sequences,
+Proc. Amer. Math. Soc. 23 (1969), 439–441. MR 0246012. Zbl 0193.
+02302. https://doi.org/10.2307/2037189.
+[Mur03] K. Murota, Discrete Convex Analysis , SIAM Monogr. Discrete Math.
+Appl., Society for Industrial and Applied Mathematics (SIAM), Philadel-
+phia, PA, 2003. MR 1997998. Zbl 1029.90055. https://doi.org/10.1137/
+1.9780898718508.
+[Nui68] W. Nuij, A note on hyperbolic polynomials, Math. Scand. 23 (1968),
+69–72 (1969). MR 0250128. Zbl 0189.40803. https://doi.org/10.7146/
+math.scand.a-10898.
+[Oxl11] J. Oxley, Matroid Theory, second ed., Oxford Grad. Texts in Math. 21,
+Oxford University Press, Oxford, 2011. MR 2849819. Zbl 1254.05002.
+https://doi.org/10.1093/acprof:oso/9780198566946.001.0001.
+[Pem00] R. Pemantle , Towards a theory of negative dependence, Probabilis-
+tic techniques in equilibrium and nonequilibrium statistical physics, J.
+Math. Phys. 41 no. 3 (2000), 1371–1390. MR 1757964. Zbl 1052.62518.
+https://doi.org/10.1063/1.533200.
+[Pem12] R. Pemantle, Hyperbolicity and stable polynomials in combinatorics
+and probability, in Current Developments in Mathematics , 2011, Int.
+Press, Somerville, MA, 2012, pp. 57–123. MR 3098077. Zbl 1316.62078.
+https://doi.org/10.4310/CDM.2011.v2011.n1.a2.
+[Pos09] A. Postnikov, Permutohedra, associahedra, and beyond, Int. Math.
+Res. Not. IMRN no. 6 (2009), 1026–1106. MR2487491. Zbl 1162.52007.
+https://doi.org/10.1093/imrn/rnn153.
+
+
+--- page 70 ---
+890 PETTER BR ¨AND´EN and JUNE HUH
+[Sch14] R. Schneider , Convex Bodies : the Brunn-Minkowski Theory , ex-
+panded ed., Encyclopedia Math. Appl. 151, Cambridge University Press,
+Cambridge, 2014. MR 3155183. Zbl 1287.52001. https://doi.org/10.
+1017/CBO9781139003858.
+[Sch38] I. J. Schoenberg, Metric spaces and positive deﬁnite functions, Trans.
+Amer. Math. Soc. 44 no. 3 (1938), 522–536. MR 1501980. Zbl 0019.
+41502. https://doi.org/10.2307/1989894.
+[Ser10] D. Serre , Matrices, second ed., Grad. Texts in Math . 216, Springer,
+New York, 2010, Theory and applications. MR 2744852. Zbl 1206.
+15001. https://doi.org/10.1007/978-1-4419-7683-3.
+[Sey75] P. Seymour, Matroids, hypergraphs, and the max-ﬂow min-cut theo-
+rem, 1975, thesis, University of Oxford.
+[SW75] P. D. Seymour and D. J. A. Welsh , Combinatorial applications of
+an inequality from statistical mechanics, Math. Proc. Cambridge Philos.
+Soc. 77 (1975), 485–495. MR 0376378. Zbl 0345.05004. https://doi.
+org/10.1017/S0305004100051306.
+[She60] G. C. Shephard , Inequalities between mixed volumes of convex sets,
+Mathematika 7 (1960), 125–138. MR 0146736. Zbl 0108.35203. https:
+//doi.org/10.1112/S0025579300001674.
+[Shi12] A. Shioura, Matroid rank functions and discrete concavity,Jpn. J. Ind.
+Appl. Math. 29 no. 3 (2012), 535–546. MR 2996517. Zbl 1254.90196.
+https://doi.org/10.1007/s13160-012-0082-0.
+[Sok05] A. D. Sokal , The multivariate Tutte polynomial (alias Potts model)
+for graphs and matroids, in Surveys in Combinatorics 2005, London
+Math. Soc. Lecture Note Ser. 327, Cambridge Univ. Press, Cambridge,
+2005, pp. 173–226. MR 2187739. Zbl 1110.05020. https://doi.org/10.
+1017/CBO9780511734885.009.
+[Spe05] D. E. Speyer , Horn’s problem, Vinnikov curves, and the hive cone,
+Duke Math. J. 127 no. 3 (2005), 395–427. MR2132865. Zbl 1069.14037.
+https://doi.org/10.1215/S0012-7094-04-12731-0.
+[TV83] A. F. Timan and I. A. Vestfrid , Any separable ultrametric space
+is isometrically embeddable in l2, Funktsional. Anal. i Prilozhen . 17
+no. 1 (1983), 85–86. MR 0695109. Zbl 0522.46017. Available at http:
+//mi.mathnet.ru/eng/faa1525.
+[Wag05] D. G. Wagner, Rank-three matroids are Rayleigh, Electron. J. Com-
+bin. 12 (2005), Note 8, 11. MR 2134193. Zbl 1075.05017. https:
+//doi.org/10.37236/1975.
+[Wag08] D. G. Wagner , Negatively correlated random variables and Mason’s
+conjecture for independent sets in matroids, Ann. Comb. 12 no. 2
+(2008), 211–239. MR 2428906. Zbl 1145.05003. https://doi.org/10.
+1007/s00026-008-0348-z.
+[Wag11] D. G. Wagner , Multivariate stable polynomials: theory and
+applications, Bull. Amer. Math. Soc. ( N.S.) 48 no. 1 (2011),
+
+
+--- page 71 ---
+LORENTZIAN POLYNOMIALS 891
+53–84. MR 2738906. Zbl 1207.32006. https://doi.org/10.1090/
+S0273-0979-2010-01321-5.
+[Wel76] D. J. A. Welsh , Matroid Theory, L. M. S. Monographs 8, Academic
+Press [Harcourt Brace Jovanovich, Publishers], London-New York, 1976.
+MR 0427112. Zbl 0343.05002.
+[Zha85] C. K. Zhao , A conjecture on matroids, Neimenggu Daxue Xuebao 16
+no. 3 (1985), 321–326. MR 0827685. Zbl 1333.05070.
+(Received: February 17, 2019)
+(Revised: June 20, 2020)
+KTH Royal Institute of Technology, Stockholm, Sweden
+E-mail : pbranden@kth.se
+Institute for Advanced Study and Princeton University,
+Princeton, NJ, USA
+Korea Institute for Advanced Study, Seoul, Korea
+Current address : Stanford University, Stanford, CA, USA
+E-mail : junehuh@stanford.edu;junehuh@ias.edu

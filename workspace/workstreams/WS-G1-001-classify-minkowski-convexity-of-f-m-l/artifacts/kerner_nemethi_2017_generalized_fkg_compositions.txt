@@ -1,0 +1,1309 @@
+arXiv:1412.8200v2  [math.AC]  22 May 2017
+A generalized FKG-inequality for compositions
+Dmitry Kerner and Andr´ as N´ emethi
+Abstract. W e prove a Fortuin-Kasteleyn-Ginibre-type inequality for the lattice of compositions of the integer n with at
+most r parts. As an immediate application we get a wide generalizat ion of the classical Alexandrov-Fenchel inequality for
+mixed volumes and of Teissier’s inequality for mixed covolu mes.
+1. Introduction
+1.1. Consider a ﬁnite partially ordered set ( X, ⪯) and two non-decreasing (non-negative) functions, f, g : X → R≥ 0.
+(Namely, for any x, y ∈ X, if x ⪯ y then one has f (x) ≤ f (y) and g(x) ≤ g(y).) The product function f ·g : X → R≥ 0
+is also non-decreasing. Take the arithmetic average
+AvX (f ) := ( ∑
+x∈ X
+f (x))/ |X|.
+A natural question is whether AvX (f ) ·AvX (g) can be compared with AvX (f ·g).
+Example 1.1. Suppose that X is totally ordered. Then the non-decreasing functions are just th e non-decreasing
+sequences of real numbers, 0 ≤ a1 ≤ · · · ≤ an and 0 ≤ b1 ≤ · · · ≤ bn. In this case the comparison of the averages is
+realized by the classical Chebyshev sum inequality: ( ∑
+i ai)(∑
+j bj) ≤ n(∑
+i aibi).
+On the other hand, if the order on X is not “strong enough” then the inequality utterly fails. Hence, the more precise
+question is:
+(1) Which posets does AvX (f ) ·AvX (g) ≤ AvX (f ·g) hold for?
+If ( X, ⪯) admits an action of some group G, then one can consider the “equivariant” version of this question b y taking
+G-invariant functions f and g.
+The fundamental Fortuin-Kasteleyn-Ginibre (FKG) inequality sett les the question for a large class of lattices:
+Theorem 1.2. [FKG-1971], see also [Bollob´ as, pg. 147, Theorem 5].
+Let X be a ﬁnite distributive lattice. Consider a “measure”, X
+µ
+→ R≥ 0, which is log-supermodular, i.e. µ (x ∧ y)µ (x ∨ y) ≥
+µ (x)µ (y) for any x, y ∈ X. Then
+( ∑
+x∈ X
+f (x)g(x)µ (x)
+)
+· ∑
+x∈ X
+µ (x) ≥
+( ∑
+x∈ X
+f (x)µ (x)
+)( ∑
+x∈ X
+g(x)µ (x)
+)
+.
+(The inequality of equation (1) is obtained for the constant measur e, µ (x) = 1, which is trivially supermodular.)
+One of the interpretation of the FKG inequality is: “in many systems t he increasing events are positively correlated”
+(while an increasing event and a decreasing event are negatively cor related). Hence, the applications of this inequality
+go far beyond the combinatorics and include e.g. statistical mechan ics and probability.
+1.2. The condition “ X is a distributive lattice” in the above theorem is rather restrictive. M any of the natural posets
+appearing in arithmetics/algebra/geometry are not of this type. I n the current work we establish the inequality of
+equation (1) for a particular poset Kn,r of ordered compositions, cf. Theorem 3.1. This poset appears fre quently
+in the context of the Young diagrams (representation theory), c omplete intersections (algebraic geometry), mixed
+(co)volumes/multiplicities (integral geometry and commutative alge bra).
+It is known that lattices for which the FKG inequality holds (for any log -supermodular measure) are necessarily
+distributive. Theorem 3.1 gives an example of non-distributive lattice for which FKG holds for a particular measure.
+For related inequalities see also [Cu.Gr.Sk].
+Date: October 23, 2018.
+Key words and phrases. Fortuin-Kasteleyn-Ginibre inequality, Ahlswede-Daykin inequality, Muirhead inequality, statistical mechanics,
+probabilistic combinatorics, Young diagrams, Alexandrov -Fenchel inequality, convex polytopes, Newton polytopes.
+D.K. was supported by the grant FP7-People-MCA-CIG, 334347 . A.N. was supported by OTKA Grant 100796.
+W e thank Anders Bj¨ orner, Eﬁm Dinitz, P´ alv¨ olgyi D¨ om¨ ot¨or, L´ aszl´ o Lov´ asz, Ron Peled, Siddhartha Sahi, Michael Saks, Gjergji Zaimi for
+valuable advices.
+1
+
+2
+1.3. Sometimes one considers the geometric average, AvG
+X (f ) := ( ∏
+x∈ X f (x))
+1
+|X| as well. Then it is natural to compare
+(AvG
+X (f ))AvX (g) to AvG
+X (f g). For example, given the real numbers 1 ≤ a1 ≤ · · · ≤ an and 0 ≤ b1 ≤ · · · ≤ bn, one has:
+( n
+√∏ai)
+∑ bi
+n ≤
+n
+√∏abi
+i .
+One passes between AvX and AvG
+X by using ln and exp. Thus a simple reformulation of Theorem 3.1 provides
+automatically the comparison of the geometric averages as well, cf. Corollary 3.4.
+1.4. As an immediate application in §4.3 we prove a highly non-trivial convexity property for the mixed vo lumes of
+convex bodies in RN and the parallel statement for the mixed volumes of Newton diagram s (i.e. co-volumes of the
+Newton polyhedra). These generalize the classical Alexandrov-Fe nchel inequality and its Teissier’s counterpart. In
+particular, it gives a partial answer to a question of [Gromov90].
+Furthermore, in [Kerner-N´ emethi2014] we heavily use the inequalit y of averages to establish a bound on some topo-
+logical invariants of singularities. In fact this was our initial motivatio n for the inequality of averages.
+2. The poset Kn,r
+2.1. The set of compositions. Denote by Kn,r the set of the (ordered) compositions of the integer n into r summands,
+(2) Kn,r := {k = (k1, . . . , k r) : ki ≥ 0 for all i, and
+∑
+i
+ki = n}.
+This Kn,r can be thought of as the lattice points k of the simplex {∑
+i xi = n} ∩ Rr
+≥ 0. Its cardinality is |Kn,r|=
+( n+r− 1
+n
+)
+.
+The permutation group of r elements, Ξ r, acts on Kn,r by σ (k
+) = ( kσ(1), . . . , k σ(r)). The quotient Kn,r/ Ξr is the set of
+partitions into r summands. (In other words, a partition is an unordered composition.) For the general introduction see
+[Stanley, Chapter 7].
+For convenience we put Kn,r = ∅ when r ≤ 0 or n < 0.
+2.2. The ‘dominance’ order on Kn,r can be deﬁned as follows.
+• Suppose for k = (k1, k2, . . . , k r) ∈ K n,r one has k1 − 1 ≥ k2 + 1. Then put k ⪰ k′ := (k1 − 1, k2 + 1, k3, . . . , k r).
+• Extend this by transitivity, i.e. if k ⪰ k′ and k′ ⪰ k′′ then k ⪰ k′′.
+• Extend this by the action Ξ r ⟳ Kn,r, i.e. if k ⪰ k′ then σ (k) ⪰ σ (k′) for any σ ∈ Ξr.
+In this way we get a partially ordered set with the maximal elements, ( n, 0, . . . , 0) and its orbit under Ξ r, and the
+minimal elements, ( ⌊n
+r ⌋, . . . , ⌊n
+r ⌋, ⌈n
+r ⌉, . . . , ⌈n
+r ⌉) and its orbit under Ξ r. By construction, this partial order is Ξ r invariant.
+In particular, any two diﬀerent elements inside a Ξ r orbit are incomparable. This order descends to the quotient Kn,r/ Ξr .
+(Indeed, for any two elements of Kn,r/ Ξr , suppose some of their representatives in Kn,r are comparable, k ⪯ k′. Then put
+[k] ⪯ [k′]. By the Ξ r-invariance this assignment is consistent: if some other preimages a re comparable then they satisfy
+the same inequality.) The quotient poset Kn,r/ Ξr has a unique minimal and a unique maximal element.
+Example 2.1. 1. For Kn,2 we get ( n, 0) ⪰ (n − 1, 1) ⪰ · · · ⪰(⌈n
+2 ⌉, ⌊n
+2 ⌋) and ( ⌊n
+2 ⌋, ⌈n
+2 ⌉) ⪯ · · · ⪯(0, n). For Kn,2/ Ξ2 :
+(n, 0) ⪰ (n − 1, 1) ⪰ · · · ⪰(⌈n
+2 ⌉, ⌊n
+2 ⌋). In particular, Kn,2/ Ξ2 is totally ordered.
+2. As mentioned above, Kn,r is never totally ordered for r > 1: the elements of any Ξ r-orbit are incomparable. The
+quotient Kn,r/ Ξr is not totally ordered for r ≥ 3 and high enough n. For example, for ( n, r) = (6 , 3), the elements (4 , 1, 1)
+and (3 , 3, 0) are incomparable.
+3. In the particular case Kn,n/ Ξn coincides with the Young lattice of all the possible partitions of n, see e.g. [Brylawski],
+[Stanley, Chapter 7].
+4. Kn,r/ Ξr is always a lattice, but it is non-distributive for n ≥ 7. It contains the non-distributive sublattice:
+(3)
+(∗,4,2,1)
+• →
+(∗,4,1,1,1)
+•
+↓ ց
+•
+(∗,3,3,1)
+→ •
+(∗,3,2,2)
+→ •
+(∗,3,2,1,1)
+.
+Here ∗ denotes the rest of the partition, some ﬁxed tuple whose sum is ( n − 7) and such that all the entries go in the
+non-increasing order. For this lattice one has:
+(4) ( ∗, 3, 3, 1) ∧
+(
+(∗, 4, 1, 1, 1) ∨ (∗, 3, 2, 2)
+)
+= (∗, 3, 3, 1),
+(
+(∗, 3, 3, 1) ∧ (∗, 4, 1, 1, 1)
+)
+∨
+(
+(∗, 3, 3, 1) ∧ (∗, 3, 2, 2)
+)
+= (∗, 3, 2, 2).
+2.3. Suppose that a set of objects is indexed by this set of compositions , {Ak
+}k∈K n,r . We often use the standard
+set-theoretical inclusion-exclusion formula:
+(5)
+∑
+k
+∈K n,r
+Ak −
+r∑
+i=1
+∑
+k∈K n,r
+ki=0
+Ak +
+∑
+1≤ i1<i2≤ r
+∑
+k∈K n,r
+ki1 =ki2 =0
+Ak − · · ·=
+∑
+k∈K n,r
+k1,...,kr>0
+Ak.
+
+3
+3. The inequality for averages over Kn,r
+Theorem 3.1. Let f, g : Kn,r → R≥ 0 be non-negative functions. Suppose f is Ξr-invariant, i.e. f (σ (x)) = f (x) for any
+σ ∈ Ξr.
+(a) If both functions are non-decreasing then AvKnr (f ) ·AvKn,r (g) ≤ AvKn,r (f g).
+(b) If f is non-decreasing, while g is non-increasing then AvKn,r (f ) ·AvKn,r (g) ≥ AvKn,r (f g).
+(c) In the statements above, the equality holds if and only if either f is constant, or the symmetrization of g, ˜g(x) :=
+AvΞr(x)(g) is constant on Kn,r.
+Example 3.2. 1. This inequality was proved in [Kerner-N´ emethi2013, §1.3] in the particular case of f (k) :=
+r∏
+i=1
+dki
+i and
+g(k) :=
+( n+r
+k1+1,...,kr +1
+)
+, in which case it reads as
+(6)
+( ∑
+k∈K n,r
+( n + r
+k1 + 1, . . . , k r + 1
+) )( ∑
+k∈K n,r
+(
+r∏
+j=1
+dkj
+j )
+)
+≥ |K n,r|
+∑
+k∈K n,r
+( n + r
+k1 + 1, . . . , k r + 1
+) ( r∏
+j=1
+dkj
+j
+)
+.
+This was the essential ingredient in establishing a bound for some top ological invariants in Singularity Theory.
+2. If one does not assume that at least one of the functions is Ξ r-invariant then the inequality does not hold. For
+example, consider K2,2 = {(0, 2) ⪰ (1, 1) ⪯ (2, 0)}. The inequality is obviously violated for
+f (x) =
+{ 1, x = (0, 2)
+0, otherwise , g (x) =
+{ 1, x = (2, 0)
+0, otherwise .
+3. The statement can be reformulated as averaging over Kn,r/ Ξr , with the weight function µ ([k]) = |Ξr(k)|.
+Proof. Step 1. We start with some simplifying remarks.
+We can (and will) assume that g is Ξ r-invariant. Indeed, deﬁne ˜ g : Kn,r → R≥ 0 by the averaging over the orbit,
+˜g(x) := AvΞr(x)(g). By construction ˜ g is non-negative, non-decreasing and Ξ r-invariant. And AvKn,r (g) = AvKn,r (˜g),
+AvKn,r (f g) = AvKn,r (f ˜g).
+Note that the statement (b) follows from (a). (Indeed, if g is non-increasing then consider the number max
+Kn,r
+(g) and
+apply the ﬁrst statement to the functions f and max
+Kn,r
+(g) − g.) In particular, we can assume that both f and g are
+non-decreasing and Ξ r-invariant functions.
+Suppose ( f1, g) and ( f2, g) satisfy the statement of the theorem. Then the pair ( a1f1 + a2f2, g) satisﬁes the theorem
+too for any a1, a2 ∈ R≥ 0. (Note that a1f1 + a2f2 is Ξ r-invariant and non-decreasing as well.) Moreover, the equality
+holds iﬀ it holds for each pair separately: AvKn,r (fi)AvKn,r (g) = AvKn,r (fig). On the other hand, any Ξ r-invariant,
+non-decreasing function on Kn,r is presentable as a positive linear combination of certain {0, 1} valued functions, which
+are Ξ r-invariant and non-decreasing as well. Therefore, to prove (a), w e can assume that both f and g are of this form.
+Therefore, we assume that f and g are the characteristic functions of some subsets. E.g., f = 1 IX , where X ⊆ K n,r
+is Ξ r-invariant and “upward closed”. This later condition means the follow ing: if k ∈ X and k′ ⪰ k then k′ ∈ X. First
+and last, it is enough to prove the inequality for cardinalities of “upwa rd closed” and Ξ r-invariant subsets:
+(7) AvKn,r (X) ·AvKn,r (Y ) := |X|
+|Kn,r| · |Y |
+|Kn,r| ≤ |X ∩ Y |
+|Kn,r| = AvKn,r (X ∩ Y ).
+Furthermore, we also verify that the equality holds iﬀ either X = Kn,r or X = ∅.
+Our proof generalizes and reﬁnes the proof of [Kerner-N´ emethi2 013, §4].
+Step 2. The proof below consists of some counting over the subsets of Kn,r. First we deﬁne the stratiﬁcation:
+Kn,r = ∐
+s=0,...,r− 1
+Ks
+n,r, where Ks
+n,r := {k ∈ K n,r : |{i : ki = 0 }|= s}. Note that Ks
+n,r = ∅ for s < r − n. We often use
+the expression for cardinality of these sets:
+(8) |Ks
+n,r|=
+( r
+s
+)( n − 1
+r − s − 1
+)
+.
+If one thinks about Kn,r as a simplex (see §2.1) then Ks
+n,r are collections of open cells/faces of codimension s.
+Some strata of Kn,r are naturally isomorphic to (some strata of) Kn′,r′ with lower n′, r′. For example: K0
+n,r ∼− → K n− r,r,
+by ( k1, . . . , k r) → (k1 − 1, . . . , k r − 1). Usually we identify Kn− r,r with its image K0
+n,r ⊂ K n,r. For example, we write:
+|X ∩ K 0
+n,r|= |X ∩ K n− r,r|.
+In the following we often split the sets into parts, e.g. Ks
+n,r = ∐
+(i1,...,is)⊂ [1,...,r]
+Ks
+n,r(ki1 = · · ·= kis = 0). Here Ks
+n,r(ki1 =
+· · ·= kis = 0) = {k
+∈ K s
+n,r | kj = 0 iﬀ j ∈ { i1, . . . , i r}}. As before, we get Ks
+n,r(ki1 = · · ·= kis = 0) ∼− → K 0
+n,r− s.
+
+4
+Sometimes we write this in the sloppy way Ks
+n,r = ∐
+(i1,...,is)⊂ [1,...,r]
+K0
+n,r− s. These formulas give immediate implications
+for the cardinality of the sets: |Ks
+n,r|=
+( r
+s
+)
+|K0
+n,r− s|=
+( r
+s
+)
+|Kn− r+s,r− s|.
+Note that starting from a subset X ⊆ K n,r we get the set X ∩ K s
+n,r and its subsets X ∩ K s
+n,r = ∐
+(i1,...,is)⊂ [1,...,r]
+X ∩
+K0
+n,r− s = ∐
+(i1,...,is)⊂ [1,...,r]
+X ∩ K n− r+s,r− s. Moreover, if the initial X was Ξ r-invariant and upward closed then so are all
+the above subsets of type X ∩ Kn− r+s,r− s.
+Step 3. Let a subset X ⊂ K n,r be Ξ r-invariant and upward closed, as above. Consider its averages ove r the strata,
+{AvKs
+n,r X :=
+|X∩K s
+n,r|
+|Ks
+n,r| }s=0,...,r− 1. We prove:
+(9) AvK0
+n,r X ≤ AvK1
+n,r X ≤ · · · ≤ AvKr− 1
+n,r
+X
+and the equality holds iﬀ X = Kn,r or X = ∅.
+The proof goes by double induction on ( n, r). Recall that Ks
+n,r = ∅ if n < 0 or r ≤ 0. Note that if r = 1 or n = 1
+then the statement is empty ( Ks
+n,1 = ∅ for s > 0 and Ks
+1,r = ∅ for s < r − 1). For r = 2 the proof is trivial.
+Fix some ( n, r), suppose the statement holds for any ( n′, r′, X), with n′ < n and r′ < r and X an Ξ r-invariant set
+which is upward closed. First we reduce all the inequalities to AvK0
+n,r X ≤ AvK1
+n,r X. Indeed:
+(10) AvKs
+n,r X = |X ∩ K s
+n,r|
+|Ksn,r| =
+∑
+(i1,...,is)⊂ [1,...,r]
+|X ∩ K s
+n,r(ki1 = · · ·= kis = 0)|
+|Ksn,r|
+Ξr⟳X
+= = = =
+( r
+s
+) |X ∩ K 0
+n,r− s|
+|Ksn,r| .
+(Here in the last equality we used the Ξ r-invariance of X.)
+In addition:
+(11) |X ∩ K 1
+n,r+1− s|=
+r+1− s∑
+j=1
+|X ∩ K 1
+n,r+1− s(kj = 0)|
+Ξr⟳X
+= = = = (r + 1 − s)|X ∩ K 0
+n,r− s|.
+Thus AvKs
+n,r X = (r
+s)
+r+1− s
+|X∩K 1
+n,r+1− s|
+|Ks
+n,r| , while AvKs− 1
+n,r
+X =
+( r
+s− 1
+) |X∩K 0
+n,r+1− s|
+|Ks− 1
+n,r | . Altogether:
+(12) AvKs
+n,r X − AvKs− 1
+n,r
+X =
+( r
+s
+)r + 1 − s
+|K1
+n,r+1− s|
+|Ksn,r|
+(
+AvK1
+n,r+1− s
+X − AvK0
+n,r+1− s
+X
+)
+.
+(Here we used the equality of the coeﬃcients: (r
+s)
+r+1− s
+|K1
+n,r+1− s|
+|Ks
+n,r| =
+( r
+s− 1
+) |K0
+n,r+1− s|
+|Ks− 1
+n,r | .)
+If s > 1 then AvK1
+n,r+1− s
+X ≥ AvK0
+n,r+1− s
+X by the inductive assumption. Thus it remains to prove that AvK1
+n,r X ≥
+AvK0
+n,r X. Now we use the reduction:
+(13) |X ∩ K 1
+n,r|=
+r∑
+j=1
+|X ∩ K 1
+n,r(kj = 0)|=
+r∑
+j=1
+|X ∩ K 0
+n,r− 1|=
+r∑
+j=1
+|X ∩ K n− r+1,r− 1|=
+=
+r− 2∑
+s=0
+r∑
+j=1
+|X ∩ K s
+n− r+1,r− 1|=
+r− 2∑
+s=0
+(s + 1)|X ∩ K s+1
+n− r+1,r|=
+r− 1∑
+s=0
+s|X ∩ K s
+n− r+1,r|.
+Similarly:
+(14) |X ∩ K 0
+n,r|= 1
+r
+r∑
+j=1
+|X ∩ K n− r+1,r(kj > 0)|= 1
+r
+r∑
+j=1
+r− 1∑
+s=0
+|X ∩ K s
+n− r+1,r(kj > 0)|= 1
+r
+r− 1∑
+s=0
+(r − s)|X ∩ K s
+n− r+1,r|.
+Therefore:
+(15)
+AvK1
+n,r X− AvK0
+n,r X =
+r− 1∑
+s=0
+s|X ∩ K s
+n− r+1,r|
+|K1n,r| −
+1
+r
+r− 1∑
+s=0
+(r − s)|X ∩ K s
+n− r+1,r|
+|K0n,r| =
+r− 1∑
+s=0
+( s
+|K1n,r| −
+r− s
+r
+|K0n,r|
+)
+|Ks
+n− r+1,r|
+  
+αs
+AvKs
+n− r+1,r X
+
+ 
+βs
+.
+Here by the inductive assumption: βr− 1 ≥ βr− 2 ≥ · · · ≥ β0 ≥ 0. By direct check:
+(16) α s = 1( n− 2
+r− 2
+)
+(n − 1)
+( n − r
+r − s − 1
+) (
+n
+( r − 1
+s − 1
+)
+− (r − 1)
+( r
+s
+) )
+.
+(We use the convention:
+( m
+n
+)
+= 0 if n < 0 or m < n .)
+
+5
+We claim that
+r− 1∑
+s=k
+α s = 1
+(n− 2
+r− 2)(n− 1)
+( n− r
+r− k
+)( r− 1
+k
+)
+k, for 0 ≤ k ≤ r − 1. (In particular, this sum is positive for k > 0 and
+zero for k = 0.)
+The case k = 0 follows from n
+r− 1∑
+s=0
+( n− r
+r− s− 1
+)( r− 1
+s− 1
+)
+= ( r − 1)
+r− 1∑
+s=0
+( n− r
+r− s− 1
+)( r
+s
+)
+, which in turn follows from the classical
+p∑
+i=0
+( p
+i
+)( q
+k− i
+)
+=
+( p+q
+k
+)
+.
+Suppose the stated equality holds for some k, we prove it for k + 1:
+(17)
+r− 1∑
+s=k+1
+α s =
+r− 1∑
+s=k
+α s − α k =
+( n− r
+r− k
+)( r− 1
+k
+)
+k −
+( n− r
+r− k− 1
+) (
+n
+( r− 1
+k− 1
+)
+− (r − 1)
+( r
+k
+) )
+( n− 2
+r− 2
+)
+(n − 1) =
+=
+(n− r)!
+(r− k)!(n− 2r+k+1)!
+( r− 1
+k
+)
+(k2 + k − 2kr + r2 − r)
+( n− 2
+r− 2
+)
+(n − 1) =
+( n− r
+r− k− 1
+)( r− 1
+k+1
+)
+(k + 1)( n− 2
+r− 2
+)
+(n − 1) ,
+precisely as stated.
+Therefore:
+(18) AvK1
+n,r X − AvK0
+n,r X =
+r− 1∑
+s=0
+α sβs = α r− 1(βr− 1 − βr− 2)
+ 
+≥ 0
++ (α r− 1 + α r− 2)(βr− 2 − βr− 3)  
+≥ 0
++
++ · · ·+ (
+r− 1∑
+i=1
+α i)(β1 − β0)
+  
+≥ 0
++ (
+r− 1∑
+i=0
+α i)β0
+  
+=0
+.
+As each term is non-negative we get: AvK1
+n,r X ≥ AvK0
+n,r X. Furthermore, the equality holds iﬀ {βi+1 = βi}i, i.e. either
+{X ∩ K i
+n,r = Ki
+n,r}i or X = ∅.
+Step 4. Finally, using AvK0
+n,r X ≤ AvK1
+n,r X ≤ · · · ≤ AvKr− 1
+n,r
+X, we prove ( AvKn,r X)(AvKn,r Y ) ≤ AvKn,r (X ∩ Y ). As
+above, this is done by the double induction on ( n, r). Note that the statement holds trivially for r = 1 or n = 1. Suppose
+it holds for any ( n′, r′) with n′ < n and r′ < r .
+First observe:
+(19) |Kn,r| ·AvKn,r (X ∩ Y ) = |X ∩ Y ∩ K n,r|=
+r− 1∑
+s=0
+∑
+(i1,...,is)⊂ [1,...,r]
+|X ∩ Y ∩ K 0
+n,r− s(ki1 = 0 = · · ·= kis )|.
+Further:
+(20) |X ∩ Y ∩ K 0
+n,r− s(ki1 = 0 = · · ·= kis )|= |X ∩ Y ∩ K n− r+s,r− s(ki1 = 0 = · · ·= kis )| ≥
+≥ |X ∩ K n− r+s,r− s(ki1 = 0 = · · ·= kis )| · |Y ∩ K n− r+s,r− s(ki1 = 0 = · · ·= kis )|
+|Kn− r+s,r− s| .
+The last inequality here is the induction assumption.
+As was mentioned above, the cardinalities of the sets are related by : |Kn− r+s,r− s|= |K0
+n,r− s|=
+|Ks
+n,r|
+(r
+s) . Similarly (as
+X, Y are Ξ r-invariant): |X ∩ K n− r+s,r− s|= |X ∩ K 0
+n,r− s|=
+|X∩K s
+n,r|
+(
+r
+s) . Therefore:
+(21) |Kn,r|AvKn,r (X ∩ Y ) ≥
+r− 1∑
+s=0
+∑
+(i1,...,is)⊂ [1,...,r]
+|X ∩ K s
+n,r| · |Y ∩ K s
+n,r|( r
+s
+)
+|Ksn,r| =
+r− 1∑
+s=0
+|X ∩ K s
+n,r|
+|Ksn,r|
+  
+αs
+·|Y ∩ K s
+n,r|
+|Ksn,r|
+  
+βs
+· |Ks
+n,r|
+  
+γs
+.
+Here we have α 0 ≤ α 1 ≤ · · · ≤ α r− 1 and β0 ≤ β1 ≤ · · · ≤ βr− 1, by Step 3 , and γs > 0.
+Thus we can use the following generalization of Chebyshev’s sum inequ ality
+(22)
+( ∑
+s
+γsα s
+)( ∑
+s′
+γs′βs′
+)
+≤
+( ∑
+s′
+γs′
+)( ∑
+s
+α sβsγs
+)
+,
+which basically is the summation ∑
+s,s′
+γsγs′(α s − α s′)(βs − βs′) ≥ 0, see [Hardy-Littlewood-P´ olya, p. 43].
+
+6
+Hence:
+(23) |Kn,r|2 ·AvKn,r (X ∩ Y ) ≥
+( r− 1∑
+s′=0
+Ks′
+n,r
+) r− 1∑
+s=0
+|X ∩ K s
+n,r|
+|Ksn,r|
+  
+αs
+·|Y ∩ K s
+n,r|
+|Ksn,r|
+  
+βs
+· |Ks
+n,r|
+  
+γs
+≥
+≥
+( r− 1∑
+s=0
+|X ∩ K s
+n,r|
+)( r− 1∑
+s′=0
+|Y ∩ K s′
+n,r|
+)
+= |X ∩ K n,r| · |Y ∩ K n,r|.
+This ﬁnishes the proof.
+This theorem can be extended to the functions whose “pushforwa rds” are monotonic on Kn,r/ Ξr . Given f : Kn,r → R≥ 0
+deﬁne [ f ] : Kn,r/ Ξr → R≥ 0 by: [ f ]([x]) = AvΞr (x)f . (Note that this expression does not depend on the choice of the
+representative of [ x].)
+Corollary 3.3. Given functions f, g : Kn,r → R≥ 0. Suppose f is Ξr invariant and [f ], [g] : Kn,r/ Ξr → R≥ 0 are
+monotonic. Then AvKn,r (f ) ·AvKn,r (g) ≤ AvKn,r (f g), with equality iﬀ one of [f ], [g] is constant.
+To prove this, deﬁne ˜ g : Kn,r → R≥ 0 by ˜g(x) = AvΞr (x)(g). Then AvKn,r (g) = AvKn,r (˜g) and AvKn,r (f g) =
+AvKn,r (f ˜g). And by construction f , ˜g are monotonic on Kn,r. Now, apply the theorem.
+We can reformulate theorem 3.1 to compare the geometric average s.
+Corollary 3.4. Given two non-decreasing functions, f : Kn,r → R≥ 1 and g : Kn,r → R≥ 0. Suppose at least one of them
+is Ξr-invariant. Then (
+AvG
+Kn,r (f )
+) AvKn,r (g)
+≥ AvG
+Kn,r (f g).
+To prove this take the logarithm of both sides. Note that ln(AvG
+Kn,r (f )) = AvKn,r (ln(f )) where ln(f ) : Kn,r → R≥ 0
+is still a non-decreasing function. Similarly ln(AvG
+Kn,r (f g)) = AvKn,r (g ·ln(f )). Now, apply the theorem.
+4. An application to mixed (co-)volumes
+4.1. Newton polyhedra. Let f (x1, . . . , x N ) = ∑
+I
+aI xI be a power series over some ﬁeld /CZ . Consider the support of
+its monomials, Supp(f ) := {I ∈ ZN
+≥ 0| aI ̸= 0}. The Newton polyhedron is deﬁned as the convex hull,
+(24) Γ+ = Γ +
+f := Conv (Supp(f ) + RN
+≥ 0).
+It has compact faces and unbounded faces. The Newton polyhedr on is called convenient if Γ + intersects all the coordinate
+axes (i.e. f contains monomials of type xm1
+1 , . . . , x mN
+N ). We always assume Γ + to be convenient. (Though in the present
+note we do not study the analytic properties of the power series re lated with their Newton diagrams, by the above
+deﬁnition we wish to emphasize the main motivation supported by algeb raic geometry and complex analysis.)
+4.2. Mixed (co)volumes. Given several convex bodies A1, . . . , A r in RN , consider their scaled Minkowski sum, λ 1A1 +
+· · ·+ λ rAr. The mixed volumes are deﬁned as the coeﬃcients in the expansion:
+(25) V olN (λ 1A1 + · · ·+ λ rAr) =
+∑
+k
+∈K N,r
+( N
+k1, . . . , k r
+)
+V ol
+(
+(A1)k1 , . . . , (Ar)kr
+)
+(
+r∏
+i=1
+λ ki
+i ).
+Dually, given a convenient Newton polyhedron, Γ + ⊂ RN
+≥ 0, consider its covolume, i.e. the volume of the complement:
+coV ol(Γ+) := V olN (RN
+≥ 0 \Γ+). Given a collection of Newton polyhedra, {Γ+
+i }r
+i=1, consider their scaled Minkowski sum,
+λ 1Γ+
+1 + · · ·+ λ rΓ+
+r . The covolume of this sum is a polynomial in {λ i}, see e.g. [Kaveh-Khovanskii-2013-2, Theorem 10.4]:
+(26) coV ol(λ 1Γ+
+1 + · · ·+ λ rΓ+
+r ) =
+∑
+k
+∈K N,r
+( N
+k1, . . . , k r
+)
+coV ol
+(
+(Γ+
+1 )k1 , . . . , (Γ+
+r )kr
+)
+(
+r∏
+i=1
+λ ki
+i ).
+The mixed covolumes are the (positive) coeﬃcients coV ol
+(
+(Γ+
+1 )k1 , . . . , (Γ+
+r )kr
+)
+.
+Here coV ol
+(
+(Γ+
+1 )k1 , . . . , (Γ+
+r )kr
+)
+is a shorthand for coV ol
+(
+Γ+
+1 , . . . , Γ+
+1
+ 
+k1
+, . . . , Γ+
+r , . . . , Γ+
+r
+ 
+kr
+)
+, for k1+· · ·+kr = N , similarly
+to V ol
+(
+(A1)k1 , . . . , (Ar)kr
+)
+.
+We list some of the basic properties of the mixed (co)volumes, see e.g . [Kaveh-Khovanskii-2013-1, §2]:
+• They are symmetric and multilinear, e.g. coV ol(Γ+
+11+Γ+
+12, Γ+
+2 , . . . , Γ+
+N ) = coV ol(Γ+
+11, Γ+
+2 , . . . , Γ+
+N )+coV ol(Γ+
+12, Γ+
+2 , . . . , Γ+
+N ).
+
+7
+• If Γ +
+i = diΓ+ for any i = 1, . . . , r then
+(27)
+coV olN (
+∑
+i
+λ iΓ+
+i ) = coV olN (
+∑
+i
+λ idiΓ+) = (
+∑
+i
+λ idi)N coV olN (Γ+) =
+∑
+k
+∈K n,r
+( N
+k1, . . . , k r
+)
+(
+r∏
+i=1
+(λ idi)ki )coV olN (Γ+).
+A similar statement holds for the convex bodies: V olN (∑
+i
+λ iAi) = V olN (∑
+i
+λ idiA) = ( ∑
+i
+diλ i)N V olN (A).
+• The mixed volumes of the convex bodies in RN satisfy the Alexandrov-Fenchel inequality, [Alexandrov-1937], [Alexandrov-1938],
+[Fenchel-1936]:
+(28) V ol(A1, . . . , A N )2 ≥ V ol(A1, A1, A3 . . . , A N )V ol(A2, A2, A3 . . . , A N ).
+The dual property of the mixed covolumes of Newton polyhedra was proved in [Teissier1978], [Rees-Sharp-1978], [Katz1988],
+[Teissier2004, Appendix], [Kaveh-Khovanskii-2013-2, Theorem 10.5 ]:
+(29) coV ol(Γ+
+1 , Γ+
+2 , · · ·, Γ+
+N )2 ≤ coV ol(Γ+
+1 , Γ+
+1 , Γ+
+3 , · · ·, Γ+
+N )coV ol(Γ+
+2 , Γ+
+2 , Γ+
+3 , · · ·, Γ+
+N ).
+4.3. A generalization of the Alexandrov-F enchel-T eissier inequalities. The inequalities of equations (28) and
+(29) correspond to the triples of points on a segment in Kn,r: {k1 + 2, k2, k3, . . . , }, {k1 + 1, k2 + 1, k3, . . . }, {k1, k2 +
+2, k3, . . . }. One would ask for the general property, the Jensen-type inequ ality:
+Suppose a collection of lattice points k
+(1), k(2), . . . , k (s) ∈ K N,r , satisfy: k := k(1)+···+k(s)
+s ∈ K N,r (i.e. k deﬁned in this
+way is a lattice point too). Then coV ol
+(
+(Γ+)k) s
+≤
+s∏
+i=1
+coV ol
+(
+(Γ+)k(i) )
+and V ol
+(
+Ak) s
+≥
+s∏
+i=1
+V ol
+(
+Ak(i) )
+.
+In particular, Gromov in [Gromov90] asked whether this holds at leas t for points k(1), k(2), . . . , k (s) sitting inside a low
+dimensional linear subspace of Kn,r. As it was shown by Burda in [Burda-2012] such a property in genera l fails, e.g. he
+provided an example with
+(30) V ol3(A1, A2, A3)3 < V ol 3(A1, A1, A2)V ol3(A2, A2, A3)V ol3(A3, A3, A1).
+Yet, Theorem 3.1 and Corollary 3.4 allow us to establish the ‘corrected version’ of the above question (see Corollary 4.1).
+Given a pair (n′, r′) ﬁx some 1 ≤ r ≤ r′ and denote n := n′+r− r′. Fix some Newton polyhedra, Γ +
+1 , . . . , Γ+
+r , Γ+
+r+1, . . . , Γ+
+r′ ⊂
+Rn′
+. Deﬁne the function M ix.coV ol : Kn,r → R≥ 0 by k
+→ coV ol
+(
+(Γ+
+1 )k1 , . . . , (Γ+
+r )kr , Γ+
+r+1, . . . , Γ+
+r′
+)
+. Fix some convex
+bodies A1, . . . , A r, Ar+1, . . . , A r′ ⊂ Rn′
+and deﬁne the function
+(31) M ix.V ol : Kn,r → R≥ 0, k
+→ V ol
+(
+Ak1
+1 , . . . , A kr
+r , Ar+1, . . . , A r′
+)
+.
+These functions correspond to the particular embedding Kn,r֒K n′,r′ by ( k1, . . . , k r) → (k1, . . . , k r, 1, . . . , 1).
+Corollary 4.1. Let C : Kn,r → R≥ 0 be a non-decreasing Ξr-invariant function.
+1. AvKn,r (C) ·AvKn,r (M ix.coV ol ) ≤ AvKn,r (C ·M ix.coV ol ).
+2. Suppose all the values of M ix.coV ol and M ix.V ol are ≥ 1. Then
+(
+AvG
+Kn,r (M ix.coV ol )
+) AvKn,r (C)
+≤ AvG
+Kn,r (M ix.coV ol C)
+and
+(
+AvG
+Kn,r (M ix.V ol )
+) AvKn,r (C)
+≥ AvG
+Kn,r (M ix.V ol C ).
+Proof. Part 1.
+Step 1. First, using the inequality
+√
+ab ≤ a+b
+2 one gets from equation (29) the weaker convexity property:
+(32) coV ol(Γ+
+1 , Γ+
+2 , · · ·, Γ+
+N ) ≤ coV ol(Γ+
+1 , Γ+
+1 , Γ+
+3 , · · ·, Γ+
+N ) + coV ol(Γ+
+2 , Γ+
+2 , Γ+
+3 , · · ·, Γ+
+N )
+2 .
+The function M ic.coV ol is not Ξ r-invariant, for Ξ r acting on the ﬁrst r indices. Consider its symmetrization:
+(33) [ M ix.coV ol ] : Kn,r → R≥ 0, k → AvΞr (k)(M ix.coV ol ) =
+∑
+σ∈ Ξr
+coV ol
+(
+(Γ+
+σ(1))k1 , . . . , (Γ+
+σ(r))kr , Γ+
+r+1, . . . , Γ+
+r′
+)
+|Ξr(k)| .
+We prove that this symmetrization is a non-decreasing function, i.e. if k ⪰ k′ ∈ K n,r then [M ix.coV ol ](k) ≥ [M ix.coV ol ](k′).
+It is enough to check the inequality for elementary steps: if k1 + 1 ≤ k2 − 1 then [ M ix.coV ol ]([k1, k2, k3, . . . ]) ≥
+[M ix.coV ol ]([k1 + 1, k2 − 1, k3, . . . ]).
+
+8
+Suppose k1 + k2 = 2l ∈ 2Z . Then the convexity property of the mixed volumes reads:
+(34) [ M ix.coV ol ](l, l, k3, . . . ) =
+∑
+σ∈ Ξr
+coV ol
+(
+(Γ+
+σ(1))l, (Γ+
+σ(2))l, (Γ+
+σ(3))k3 . . . , (Γ+
+σ(r))kr , . . .
+)
+r!
+eq.(32)
+≤
+≤
+∑
+σ∈ Ξr
+coV ol
+(
+(Γ+
+σ(1))l− 1, (Γ+
+σ(2))l+1, (Γ+
+σ(3))k3 . . . , (Γ+
+σ(r))kr , . . .
+)
++ coV ol
+(
+(Γ+
+σ(1))l+1, (Γ+
+σ(2))l− 1, (Γ+
+σ(3))k3 . . . , (Γ+
+σ(r))kr , . . .
+)
+2r! =
+=
+∑
+σ∈ Ξr
+coV ol
+(
+(Γ+
+σ(1))l− 1, (Γ+
+σ(2))l+1, (Γ+
+σ(3))k3 . . . , (Γ+
+σ(r))kr , . . .
+)
+r! = [M ix.coV ol ](l − 1, l + 1, k3, . . . ).
+Similarly, [ M ix.coV ol ](l − 1, l + 1, k3, . . . ) ≤ [M ix.coV ol](l,l,k3,... )+[M ix.coV ol](l− 2,l+2,k3,... )
+2 . Combining with the previous
+one it gives [ M ix.coV ol ](l − 2, l + 2, k3, . . . ) ≥ [M ix.coV ol ](l − 1, l + 1, k3, . . . ). One continues in the same way.
+The case k1 + k2 = 2l + 1 ∈ 2Z + 1 is treated similarly.
+Step 2. Now we have two Ξ r-invariant, non-decreasing functions, then theorem 3.1 gives:
+(35) AvKn,r (C)AvKn,r ([M ix.coV ol ]) ≤ AvKn,r (C ·[M ix.coV ol ]).
+It remains to add that AvKn,r ([M ix.coV ol ]) = AvKn,r (M ix.coV ol ) and AvKn,r (C ·[M ix.coV ol ]) = AvKn,r (C ·M ix.coV ol ).
+Part 2. Deﬁne the function f : Kn,r → R≥ 0 by f (k) = ln
+(
+coV ol
+(
+Ak1
+1 , . . . , A kr
+r , Ar+1, . . . , A r′
+) )
+. Equation (29)
+implies: f (k1, k2, k3, . . . ) ≤ f (k1,k1,k3,... )+f (k2,k2,k3,... )
+2 . Then, repeat Part 1 for the functions f , C to get:
+(36) AvKn,r
+(
+ln
+(
+coV ol(. . . )AvKn,r (C)) )
+= AvKn,r (C)AvKn,r (f ) ≤ AvKn,r (C ·f ) = AvKn,r
+(
+ln
+(
+coV ol(. . . )C(... )) )
+.
+Now take the exponent.
+The proof of the inequality for mixed volumes is the same, it is based no w on equation (28).
+Example 4.2. • The case r = 1 is ‘empty’ as Kn,1 = {n}.
+• As the simplest case, suppose r = 2 ≤ r′, n = 2 ≤ n′. Then part 2 of the corollary states just the ordinary Alexandrov -
+Fenchel/Teissier inequalities.
+• An extremal case is r = r′, then n = n′. For n = r = 3 ﬁx the numbers C(3,0,0) = a ≥ C(2,1,0) = b ≥ C(1,1,1) = c ≥ 0.
+Extend this to the function C : K3,3 → R≥ 0 by Ξ 3-action. We get a Ξ 3-invariant non-decreasing function. Then Part 2
+of the proposition gives:
+(37) V ol(A1, A2, A3)3a+6b− 9c ≥
+( 3∏
+i=1
+V ol(Ai, Ai, Ai)
+) 7a− 6b− c( ∏
+j̸=i
+V ol(Ai, Ai, Aj)
+) 4b− 3a− c
+(This formula becomes equality in the simplest case {Ai = λ iA}. Then V ol3(Ai, Ai, Ai) = d3
+i V ol3(A), V ol3(Ai, Ai, Aj) =
+d2
+i djV ol3(A), V ol3(A1, A2, A3) = d1d2d3V ol3(A).)
+Example 4.3. One can get a bigger class of inequalities by multiplying the inequalities of part 2 of the corollary
+for diﬀerent embeddings Kn,r֒K n′,r′. (We do not know whether they contain/generate all the possible in equalities
+on mixed volumes.) For example, ﬁx r = 2 = n < r ′ = 3 = n′. Consider the embeddings ( k1, k2) → (k1, k2, 1),
+(k1, k2) → (1, k1, k2), ( k1, k2) → (k1, 1, k2). Each of them gives the ordinary Aleandrov-Fenchel inequality. T he product
+of these inequalities is:
+(38) V ol3(A1, A2, A3)6 ≥
+V ol3(A1, A1, A2)V ol3(A1, A2, A2)V ol3(A2, A2, A3)V ol3(A2, A3, A3)V ol3(A3, A3, A1)V ol3(A3, A1, A1).
+This can be considered as a ‘corrected’ version of equation (30).
+Example 4.4. In [Kerner-N´ emethi2014] we use this corollary in the particular cas e of C(k
+) =
+( n+r
+k1+1,...,kr +1
+)
+:=
+(n+r)!
+(k1+1)!···(kr +1)! . (Note that this expression is Ξ r-invariant and non-decreasing on Kn,r.) We claim that:
+(39)
+( ∑
+k∈K n,r
+( n + r
+k1 + 1, . . . , k r + 1
+) ) ∑
+k∈K n+r,r
+k1,...,kr≥ 1
+coV oln+r
+(
+(Γ+
+1 )k1 , . . . , (Γ+
+r )kr
+)
+≥
+≥
+( n + r − 1
+n
+) ∑
+k
+∈K n+r,r
+k1,...,kr ≥ 1
+( n + r
+k1 + 1, . . . , k r + 1
+)
+coV oln+r
+(
+(Γ+
+1 )k1 , . . . , (Γ+
+r )kr
+)
+
+9
+and equality occurs iﬀ Γ +
+1 = · · ·= Γ +
+r .
+Note that Kn+r,r ∩ { k1, . . . , k r ≥ 1} = K0
+n+r,r ∼− → K n,r in the notations of the proof of theorem 3.1. Therefore the in-
+equality is the comparison of averages of the numbers {coV oln+r
+(
+(Γ+
+1 )k1+1, . . . , (Γ+
+r )kr +1
+)
+}k
+∈K n,r and {
+( n+r
+k1+1,...,kr +1
+)
+}k∈K n,r .
+Note that {
+( n+r
+k1+1,...,kr+1
+)
+is symmetric under permutations of k and gives a non-increasing function on Kn,r/ Ξr .
+Thus, corollary 4.1 gives:
+(40) AvKn,r
+{( n + r
+k1 + 1, . . . , k r + 1
+) }
+AvKn,r
+{
+coV oln+r
+(
+(Γ+
+1 )k1 , . . . , (Γ+
+r )kr
+)}
+≥
+≥ AvKn,r
+{( n + r
+k1 + 1, . . . , k r + 1
+)
+coV oln+r
+(
+(Γ+
+1 )k1 , . . . , (Γ+
+r )kr
+)}
+which is precisely the inequality (39).
+Moreover, as
+( n+r
+k1+1,...,kr+1
+)
+is not constant on Kn,r/ Ξr , the equality occurs iﬀ the symmetrization of the function
+coV oln+r
+(
+(Γ+
+1 )k1 , . . . , (Γ+
+r )kr
+)
+is constant on Kn,r; which means Γ +
+1 = · · ·= Γ +
+r .
+References
+[Alexandrov-1937] A.D. Alexandrov, Zur Theorie der Gemischten Volumina von konvexen K¨ orpern I I; neue ungleichungen zwischen den
+gemischten Volumina und ihren Anwendungen . Math. Sbomik, NS, 2:1205–1238, 1937.
+[Alexandrov-1938] A.D. Alexandrov, Zur Theorie der Gemischten Volumina von konvexen K¨ orpern I V; die gemischten Diskriminanten und
+die gemischten Volumina. , Math. Sbomik, NS, 3:227–251, 1938.
+[Bollob´ as] B. Bollob´ as,Combinatorics. Set systems, hypergraphs, families of vect ors and combinatorial probability. Cambridge University
+Press, Cambridge, 1986. xii+177 pp. ISBN: 0-521-33059-9; 0 -521-33703-8
+[Brylawski] T. Brylawski, The lattice of integer partition s, Discrete Math. 6 (1973), 201–219.
+[Burda-2012] Y. Burda, On a problem of Gromov about generalizing the Alexandrov-Fe nchel inequality. C. R. Math. Acad. Sci. Soc. R. Can.
+34 (2012), no. 4, 101–104.
+[Cu.Gr.Sk] A. Cuttler, C. Greene, M. Skandera, Inequalities for symmetric means , European J. Combin. 32 (2011), no. 6, 745–761
+[Fenchel-1936] W. Fenchel, G´ en´ eralisations du th´ eor` eme de Brunn et Minkowski concernant les corps convexes. C. R. Acad. Sci. Paris,
+203:764–766, 1936.
+[FKG-1971] C.M. Fortuin, P.W. Kasteleyn, J. Ginibre, Correlation inequalities on some partially ordered sets. Comm. Math. Phys. 22 (1971),
+89–103
+[Gromov90] M. Gromov. Convex sets and K¨ ahler manifolds.Advances in Diﬀerential Geometry and Topology, ed. F. Trice rri, W orld Scientiﬁc,
+Singapore, pages 1–38, 1990.
+[Hardy-Littlewood-P´ olya] G.H. Hardy, J.E. Littlewood, G. P´ olya,Inequalities. Reprint of the 1952 edition. Cambridge Mathematical Libra ry.
+Cambridge University Press, Cambridge, 1988.
+[Jordan1965] Ch. Jordan, Calculus of ﬁnite diﬀerences . Third Edition. Introduction by Harry C. Carver Chelsea Pub lishing Co., New York
+1965 xxi+655 pp
+[Katz1988] D. Katz, Note on multiplicity. Proc. Amer. Math. Soc. 104 (1988), no. 4, 1021–1026
+[Kaveh-Khovanskii-2013-1] K. Kaveh, A.G. Khovanskii, Convex bodies and multiplicities of ideals , arXiv:1302.2676.
+[Kaveh-Khovanskii-2013-2] K. Kaveh, A.G. Khovanskii, On mixed multiplicities of ideals , arXiv:1310.7979.
+[Kerner-N´ emethi2013] D. Kerner, A. N´ emethi,The ’corrected Durfee’s inequality’ for homogeneous compl ete intersections , Mathematische
+Zeitschrift, Math. Z. 274 (2013), no. 3–4, pp.1385–1400
+[Kerner-N´ emethi2014] D. Kerner, A. N´ emethi,Durfee-type bound for some non-degenerate complete inters ection singularities, arXiv:1405.7494
+[Rees-Sharp-1978] D. Rees, R.Y. Sharp, On a theorem of B. Teissier on multiplicities of ideals in loc al rings. J. London Math. Soc. (2) 18
+(1978), no. 3, 449–463
+[Stanley] R. Stanley, Enumerative Combinatorics, vol. 2 , Cambridge University Press, Cambridge, 1999.
+[Teissier1978] B. Teissier, On a Minkowski-type inequality for multiplicities. II. C. P. Ramanujam - a tribute, pp. 347–361, Tata Inst. Fund.
+Res. Studies in Math., 8, Springer, Berlin-New York, 1978.
+[Teissier2004] B. Teissier, Monomial ideals, binomial ideals, polynomial ideals. Trends in commutative algebra, 211–246, Math. Sci. Res. Ins t.
+Publ., 51, Cambridge Univ. Press, Cambridge, 2004.
+Department of Mathematics, Ben Gurion University of the Negev , P.O.B. 653, Be’er Sheva 84105, Israel, dmitry.kerner@gma il.com,
+R´enyi Institute of Mathematics, Budapest, Re ´altanoda u. 13–15, 1053, Hungary, nemethi@renyi.hu.

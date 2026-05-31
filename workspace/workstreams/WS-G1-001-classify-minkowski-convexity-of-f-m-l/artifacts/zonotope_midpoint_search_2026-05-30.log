@@ -1,0 +1,7 @@
+Random seed: 20260531
+
+Random zonotope midpoint search:
+n=4, generators=5, trials=120, violation_found=False
+n=4, generators=7, trials=60, violation_found=False
+n=5, generators=6, trials=60, violation_found=False
+n=5, generators=7, trials=25, violation_found=False

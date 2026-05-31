@@ -1,0 +1,5 @@
+Random seed: 2026053003
+Shared-direction zonotope local Hessian search:
+n=4, generators=7, trials=2000, violation_found=False, best_min_eigenvalue=1.74263983648e-05, best_context=(919, 3, 0.08424626619063381)
+n=4, generators=9, trials=1000, violation_found=False, best_min_eigenvalue=8.35682384086e-06, best_context=(386, 3, 0.13168683446051346)
+n=5, generators=8, trials=500, violation_found=False, best_min_eigenvalue=1.31555415893e-05, best_context=(393, 4, 0.012068174965130893)

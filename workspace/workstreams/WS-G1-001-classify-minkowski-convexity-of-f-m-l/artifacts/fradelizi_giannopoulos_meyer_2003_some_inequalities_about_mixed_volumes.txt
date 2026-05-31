@@ -1,0 +1,731 @@
+ISRAEL JOURNAL OF MATHEMATICS 135 (2003), 157-179 
+SOME INEQUALITIES ABOUT MIXED VOLUMES 
+BY 
+Y[. FRADELIZI 
+Equipe d'Analyse et de Mathdmatiques Appliqudes 
+Universitd de Marne-ta-Valtde, Champs-sur-Marne, 77454 
+Marne-la-Vallde cedex 2, France 
+e-mail: fradeliz@math.univ-mlv.fr 
+AND 
+A. GIANNOPOULOS 
+Department of Mathematics, University of Crete 
+Iraklion, Crete, Greece 
+e-mail: giannop@fourier.math.uoc.gr 
+AND 
+M. MEYER 
+Equipe d'Analyse et de Mathdmatiques Appliqudes 
+Universitd de Marne-la- Vatlde, Champs-sur-Marne, 77454 
+Marne-la-Vallde cedex 2, France 
+e-mail: meyer@math.univ-mlv.fr 
+ABSTRACT 
+We prove inequalities about the quermassintegrals Vk(K) of a convex 
+body K in •n (here, Vk(I4) is the mixed volume V((K, k), (Bn, n- k)) 
+where Bn is the Euclidean unit ball). 
+(i) The inequality 
+Vk(Ix" + L) Vk(K) Vk(L) 
+Vk-I(K + L) Vk-I(K) Vk-I(L) 
+holds for every pair of convex bodies K and L in R n if and only if k -- 2 
+ork--1. 
+(ii) Let 0 < k < p <: n. Then, for every p-dimensional subspace E of• n, 
+Vn_k(K) 1 Vp-k(PEIx') 
+I ,1 - JP.AI ' 
+Received December 10, 2001 
+157 
+
+158 M. FRADELIZI, A. GIANNOPOULOS AND M. MEYER Isr. J. Math. 
+where PEN denotes the orthogonal projection of K onto E. The proof 
+is based on a sharp upper estimate for the volume ratio IK]/ILI in terms 
+of Vn-k(N)/Vn-k(L), whenever L and K are two convex bodies in IR n 
+such that IV C L. 
+1. Introduction 
+Let ](~n denote the class of all non-empty compact convex subsets of ~n. If 
+K C/~n has non-empty interior, we will say that K is a convex body. We denote 
+by IKI the volume of a convex body/i in R n. Generally there is no ambiguity, 
+but when A is a convex body in a p-dimensional subspace of R n , 1 _< p _< n - 1, 
+then IAI means its p-dimensional volume. 
+In this paper we prove some inequalities about mixed volumes of convex bod- 
+ies. Mixed volumes are introduced by a classical theorem of Minkowski which 
+describes the way volmne behaves with respect to the operations of addition 
+and multiplication of convex bodies by nonnegative reals: If K1 ..... /ira E )~n~ 
+m C 51, then the volume of tlK~ + ... + tmKm is a homogeneous polynomial of 
+degree n in ti >_ 0 (see [BZ], [Sell). That is, 
+.... 
+1<il ,...,i,~ <m 
+where the coefficients V(Kil,..., Ki~) are chosen to be invariant under permu- 
+tations of their arguments. The coefficient V(Kil ..... Ki.) is called the mixed 
+volume of the n-tuple (Kil,..., Kin). 
+Steiner's formula is a special case of Minkowski's theorem. Let Bn denote the 
+Euclidean unit ball in lI~ n . Then, the volume of K + tBn, t > 0, can be expanded 
+as a polynomial in t: 
+k=O 
+where Vn-a(K) := V((K, n - k), (Bn, k)) is the k-th querlnassintegral of K. 
+The Aleksandrov-Fenchel inequality states that if K, L,/i3, • • •,/in E ~n, then 
+V(/i, L,/i3,..., Kn) 2 >- V(/i, K,/i3 ..... /in)V(L, L,/i3,...,/in). 
+In particular, this implies that the sequence (Vo(K) .... , Vn(/i)) is log-concave. 
+A consequence of the Aleksandrov-Fenchel inequality is the Brunn Minkowski 
+inequality as well as the following generalization for the quermassintegrals: 
+(1) Vk(/i + L) 1/k >_ Vk(/i) '/k + Vk(L) 1/k, 
+
+Vol. 135, 2003 SOME INEQUALITIES ABOUT MIXED VOLUMES 159 
+for every k = 1,..., n. 
+There is a close relationship between inequalities about quermassintegrals of 
+convex bodies and inequalities about symmetric functions of positive reals or 
+determinants of symmetric matrices. For example, an inequality of Bergstrom 
+asserts that if A and B are symmetric positive definite matrices and Ai, Bi denote 
+the submatrices obtained by deleting the i-th row and column, then 
+det(A + B) det(A) det(B) 
+det(Ai + Bi) det(Ai) det(Bi)" 
+Milman asked if there is a version of Bergstrom's inequality in the theory of 
+mixed volumes. This question can be formulated as follows: For which values of 
+k is it true that 
+(2) vk(IC + L) > vk(I`.) V (L) 
+-- Jl- -- 
+Wk_i(I( + L) - Vk-l(I`.) Vk_l(L) 
+for every pair of convex bodies K and L in Rn? If true for all k = 1,..., n, this 
+would formally imply (1). 
+The same question (case k = n) was asked by Dembo, Cover and Thomas in 
+[DCT], where the inequality 
+[I`. + 51 II`.l ILl 
+Io(I, + L)I > + IoL---i 
+is proposed as the dual of the Fisher information inequality 
+J(X + y)-X >_ j(X)-I + j(y)-l. 
+Here, IOA[ denotes the surface area of A, while J(X) is the Fisher information 
+of the random vector X in R n. It is worth mentioning that (2) holds true for 
+every k when L = rBn (this is a simple consequence of the Aleksandrov-Fenchel 
+inequality; see [GHP]). As we shall see in Section 2, the answer to the above 
+question is negative in general. In fact, the only values of k for which (2) always 
+holds are k = 2 and k = 1. 
+THEOREM 1.1: Let 1 < k < n. Then, the inequality 
+Vk(I¢ + L) > Vk(N) Vk(L) 
+uk_l(I`. + L) - Uk_,(I/) 
+holds for every pair of convex bodies I( and L in ]R n if and only ilk = 2 or k = 1. 
+It is an interesting question to describe the class £ of compact convex subsets 
+L of R n for which (2) holds true for every convex body I(. In particular, if 
+
+160 M. FRADELIZI, A. GIANNOPOULOS AND M. MEYER Isr. J. Math. 
+line segments belonged to this class, then taking k = n and L = [-0, 0] where 
+C S n-1 we would have 
+(3) IO(P°" K)I < IOh'---JI 
+IPo~-KI IKI 
+for every convex body K in R n, where Po-~ denotes the orthogonal projection 
+onto 8 ±. In [GHP] it was conjectured that this inequality is correct. Moreover, 
+it was proved that 
+IO(PEK)I 2(rt- 1)lOZ¢l 
+(4) IPEK[ < ' - n lIx'l 
+for every convex body K and every (n - 1)-dimensional subspace E of R n. 
+In Section 4 we show that (3) is not true; this gives a negative answer to the 
+question of Dembo, Cover and Thomas (alternative to the one in Theorem 1.1). 
+In fact, the constant in (4) is optimal. Moreover, we present a generalization of 
+this last inequality to subspaces of arbitrary dimension and quermassintegrals of 
+any order. 
+THEOREM 1.2: Let K be a convex body in R n and let 0 < k < p <_ n. Then for 
+every p-dimensional subspace E of JR n , if PE K denotes the orthogonaI projection 
+of K onto E, we have 
+Vn-k(K) > 1 Vp-k(PEK) _ _ 1 Vp-k(PEK) 
+- n-p Ih'l (n-p+k) IPEKI k iP~i¢l rli_-l( 1+ , ) \n--p/ 
+We show by examples that the constants in Theorem 1.2 are sharp, although 
+there are no cases of equality. The proof of Theorem 1.2 is based on an inequality 
+which estimates the volume ratio IIq/ILI in terms of Vn-k(K)/Vn-k(L), when- 
+ever L and K are two convex bodies in ~n such that K C L. 
+THEOREM 1.3: Let L and K be two convex bodies in ]R n such that K C L. 
+Then, for 1 < k < n we have 
+II~'1 (Vn-k(I() ~ 
+IL--I < an,k Vn-k(L) ]' 
+where an,k: [0, 1] ~ [0, 1] is defined by 
+Oln,k(t) --~- (k) for (1--81/(n-k))kds. 
+The proof of Theorem 1.3, as well as examples showing that it is optimal, will 
+be given in Section 3. 
+
+Vol. 135, 2003 SOME INEQUALITIES ABOUT MIXED VOLUMES 161 
+Basic references on classical convexity and the theory of mixed volumes are the 
+books [BZ] and [Scl]. The reader may wish to consult [BB] for numerical and 
+matrix inequalities related to the questions discussed in this work. 
+2. Mixed volumes of Minkowski sums 
+In this section we prove Theorem 1.1. Our first lemma is a consequence of 
+the Aleksandrov-Fenchel inequality. Inequalities of this type may be found in 
+[Scl, Section 6.4], but we reproduce a proof for completeness (the argument below 
+is due to R. Schneider). 
+LEMMA 2.1: LetC = (K3,...,Kn) bean (n-2)-tupleofKj e ~n. IfA, B • ~n, 
+we denote V(A, B, C) by V(A, B). Then,/or all A, B, C •/Ca we have 
+(V(B, A)V(C, A) - V(B, C)V(m, A)) 2 
+<_ [V(B, A) 2 - Y(g, A)V(B, B)] x [V(C, A) 2 - V(A, A)V(C, C)]. 
+Proo~ By the Aleksandrov-Fenchel inequality, for all t, s _> 0 we have 
+V(B + tA, C + sA) 2 - V(B + tA, B + tA)V(C + sA, C + sA) >_ 0 
+and 
+V(sB + tC, A) 2 - V(sB + tC, sB + tC)V(A, A) > O. 
+Using the linearity of mixed volumes, from the first inequality we arrive at 
+0 <g(t, s) + t2(y(c, A) 2 - V(A, A)V(C, C)) 
++ s2(V(B, A) 2 - V(A, A)V(B, B)) 
++ 2ts(Y(B, C)V(A, A) - V(B, A)V(C, A)), 
+where g is a linear function of t and s. It follows that the quadratic term is non- 
+negative, and hence either V ( B, C) V ( A, A) > V ( B, A ) V ( C, A) or its discriminant 
+(V(B, A)V(C, A) - V(B, C)V(A, A)) 2 
+-[V(B, A) 2 - V(A, A)V(B, B)] ! [V(C, A) 2 - V(A, A)V(C, C)] 
+is non-positive. 
+Working in the same way with the second inequality, we arrive at 
+0 ~t2(V(C, A) 2 - V(A, A)V(C, C)) + s~(V(B, A) 2 - V(A, A)V(B, B)) 
++ 2ts(V(B, A)V(C, A) - V(B, C)V(A, A)). 
+
+162 M. FRADELIZI, A. GIANNOPOULOS AND M. MEYER Isr. J. Math. 
+This shows that if V(B, C)V(A, A) > V(B, A)V(C, A) then the discriminant of 
+this second quadratic form (which is the same as before) is non-positive. Thus, 
+the lemma is proved. | 
+From the previous lemma, we deduce the following inequality. 
+PROPOSITION 2.1: Let C = (I£3 ..... Kn) be an (n-2)-tuple of Kj E ]Cn. In the 
+notation of Lemma 2.1, for all A, B, C C ]~n we have 
+Proof." 
+V(B+C,B+C) V(B,B) v(c,c) >--+-- 
+V(B+ C,A) - V(B,A) V(C,A)" 
+From Lemma 2.1 and the arithmetic-geometric means inequality we get 
+V(B,A)V(C,A)- V(B,C)V(A,A) 
+~(V(B,A) 2- V(A,A)V(B,B))U2(V(C,A) 2- V(A,A)V(C,C)) 1/2 
+1 V(C,A) x __V(B,A----~(V(B'A)2- V(A,A)V(B,B)) 
+1 A)V(B, + ~ x~)) (V(C'A)2- V(A,A)V(C,C)). V(C, 
+Thus 
+V(C,A) V(B,A) 
+2V(B, C) >_ V(B, A) ! V(B, B) + V(C, d------~ ! V(C, C). 
+From this and the linearity of mixed volumes, we have 
+V(B + C, B + C) =V(B, B) + 2V(B, C) + V(C, C) 
+V(C,A) 
+>_V(B,B)(1 + V(B,A-----~) 
+V(B,A) + v(c,c)(, + 
+which is the inequality 
+V(8+C,B+C) 
+V(B + C, A) 
+V(B,B) V(C,C) 
+>- V(B,A~) + V(C,A------~" | 
+Setting B = K, C = L and A =/£3 ..... -/(n = B,, we immediately get the 
+following. 
+PROPOSITION 2.2: Let L and K be two convex bodies in R ~. Then, 
+V2(K + L) V2(K) V2(L) 
+VI(K + L) >- V~(K) + V~(L---~" 
+
+Vol, 135, 2003 SOME INEQUALITIES ABOUT MIXED VOLUMES 163 
+We will next show that if 3 < k < n, then the inequality 
+Vk(I( + L) Vk(K) Vk(L) 
+(*) Vk_,(If + L) ~ Vk_,(I(~) + Vk-I(L~ 
+is not true for all pairs of convex bodies L and K in R n . 
+Our proof will make use of tangential bodies. Let 0 < p _< n - 1. If K and M 
+are convex bodies in R ~ and M C K, then K is called a p-tangential body of M 
+if every (n-p- 1)-extreme support plane of K is a support plane of M (we refer 
+to [Scl, Section 2.2] for more details). It is easily seen that ifp < q <_ n - 1 then 
+every p-tangential body of M is a q-tangential body of M. Tangential bodies of 
+balls are closely related to the question of equality in the Aleksandrov Fenchel 
+inequalities for the quermassintegrals of convex bodies. A result which we will 
+need is the following ([Sc2], see also [Scl, Theorem 6.6.19]). 
+FACT: Let K be a centrally symmetric convex body in ]~n and let 1 < k < n - 1. 
+Then, we have 
+Vk(I() 2 = Vk+I(K)Vk-I(I() 
+if and only ilk is a ( k - 1)-tangential body of a ball. 
+We will also use the observation that for every 0 ~ p < n - 2 there exist 
+centrally symmetric (p + 1)-tangential bodies of a ball which are not p-tangential 
+bodies of a ball. One can easily construct such an example by taking the convex 
+hull of the ball and 2(p + 1) suitably chosen points outside the ball (see also the 
+characterization of p-tangential bodies in [Scl, Theorem 2.2.8]). 
+LEMMA 2.2: Let 1 < k < n. Assume that (,) holds true for all convex bodies K 
+and L in R n . Then, the function 
+Vk(I( + tL) 
+g(t) = Vk-l(I( + tL) 
+is concave on [0, +oo) for every K and L. In particular, if 3 <_ k <_ n, for every 
+convex body E in R '~ we have 
+kVk_2(I()(V:_l(I  ) - Vk(Ik 
+_> (k - - Vk_,(K)Vk_3(IC)). 
+
+164 M. FRADELIZI, A. GIANNOPOULOS AND M. MEYER Isr. J. Math. 
+Proof: We check that 
+.t + s, Vk((K + tL)/2 + (K + sn)/2) 
+g(---2--) =Vk-I((K + tL)/2 + (K + sL)/2) 
+> Vk((K + tL)/2) Vk((K + sL)/2) + 
+Vk-I((K + sL)/2) 
+1 Vk(K + sL) 
+2 Vk-l(g + sL) 
+- Vk-I((K + tL)/2) 
+1 Vk(K + tL) + 
+2 Vk-I(K + tL) 
+_g(t) + g(s) 
+2 
+For the second assertion, let K be a convex body in R n, n > 3. For every k <_ n 
+we set fk(t) = Vk(K + tBn). Then, 
+fk(t + ¢) = fk(t) + ¢kfk-l(t) + 0(~2), 
+and therefore 
+The derivative of the function 
+gk(t) - -- 
+fk(t) = kfk-l(t). 
+fk(t) Vk(K + tB,~) 
+fk-l(t) Vk-I(K + tBn) 
+is thus given by 
+g~k(t) = k- (k - 1) fk(t)fk-2(t) 
+ILl(t) 
+By the first part of the lemma, gk is concave. This implies that fkfk-2/fk-12 is 
+an increasing function, and differentiating again we see that 
+2 kfk_lfk_2 + (k - 2)fkfk-lfk-3 -- 2(k - 1)fkf~_22 >_ 0 
+on (0, +c~). This can be equivalently written in the form 
+k 2 _ - 2)fk(fk-2 -- fk-lfk-3). fk-2(f~-I fkfk-2) ~-- (k 2 
+Letting t --+ 0 +, we conclude the lemma. | 
+PROPOSITION 2.3: Let 3 < k < n. There exist convex bodies K and L in R n for 
+which (.) is not true. 
+Proof: Assume the contrary and let K be a centrally symmetric (k- 2)- 
+tangential body of a ball. Then, Vd_I(K ) - Vk(K)Vk-2(K) = 0 and Lemma 
+
+Vol. 135, 2003 SOME INEQUALITIES ABOUT MIXED VOLUMES 165 
+2.2 implies that V22(K) - Vk-I(K)Vk-3(K) = 0. This shows that K is a 
+(k - 3)-tangential body of a ball. 
+On the other hand, for every 0 _< p < n- 2 there exist (p+ 1)-tangential bodies 
+of a ball which are not p-tangential bodies of a ball. This leads to a contradiction. 
+| 
+Finally, we observe that when k --- 1, then (.) reduces to the inequality 111 (A + 
+B) _> V1 (A) + V1 (/3), which holds as an equality for every pair of convex bodies; 
+mean width is linear with respect to Minkowski addition. This remark and 
+Propositions 2.2 and 2.3 prove the following. 
+THEOREM 2.1: Let 1 < k < n. Then, the inequality 
+Vk(K + L) > Vk(K~_) + vk(n) 
+Vk_~(K + L) - V~_~(K) Vk_,(L) 
+is true [or every pair of convex bodies K and L in R n if and only if k = 2 or 
+k=l. 
+Remark: An interesting special case is when n = 3 and k = 2. If A and w 
+denote surface area and mean width respectively, we obtain the inequality 
+A(K + L) A(K) A(L) 
+w(K + L) > ~ + w(L----) 
+for all convex bodies K and L in R 3. 
+3. Comparison of the mixed volumes of K and L when K C_ L 
+Recall that, for every 1 < k < n, the function an,k: [0, 1] ~-~ [0, 1] is defined by 
+an,k(t) = (1 -- sl/(n-k))kds. 
+PROPOSITION 3.1: Let L and K be two convex bodies in R n such that K C L. 
+Let 1 < k < n and write P for the orthogonal projection onto an (n - k)- 
+dimensional subspace E of ~ n. Then, 
+I,'Cl r IPKI 
+ILl - ~"'kI, I-P-~l )" 
+Proo~ Let F be the orthogonal subspace of E in R n. For notational convenience 
+we may assume that R n = R "-k x R a = E x F. Let L1 and K1 be the Schwarz 
+symmetrals of L and K with respect to E. It is clear that [Lll = ILl IKli = IKI, 
+
+166 M. FRADELIZI, A. GIANNOPOULOS AND M. MEYER Isr. J. Math. 
+PL1 = PL and PK1 = PK. Moreover, there is a non-negative concave function 
+f: PL --+ ]R such that 
+L1 = {(x, y): x • PL, y • f(x)t~k} 
+where/3k denotes the Euclidean ball of volume 1 in Rk. Therefore, if we define 
+I(' = {(x, y): x • PI(, y •/(x)/~k}, 
+then it is clear that K1 C_ K' and thus 
+IKI = I/ql _< IIq. 
+For u • [0, max f], we define ¢(u) = I{f -> u}l. Then, ¢: [0, max f] ~ [0, IPLI] is 
+non-increasing and 
+(1) either there exists t • [0, max$] such that ¢(t) = IPI,'l, 
+(2) or ¢(u) > IPlil for all u • [0, max f]. 
+In case (1), by the definition oft we have 1PIiN{f < t}I = I(PL \ PI()N{f >_ t}l. 
+Therefore, 
+II~1 _< II~'1 = £K fk(x)dx 
+= ]PKn{f>t} fk(x)dx +/pKn{f<t} fk(x)dx 
+<_/p fk(x)dx + tklPZ( n {f < t}l 
+Kn{f>_t} 
+= fp fk(x)dx + tkl(PL \ PK) N {f _> t}l 
+Kn{f>_t} 
+-< £Kn:f>,> Sk(')ex + sk(x)e  ' 
+= f{f>_t} ff(x)dx. 
+It follows that if If" = {(x, y) : f(x) >_ t, y • $(x)/~k}, then 
+II~"1_ II<1, 
+Now, 
+ILl /p fk(x)dx=k/p /f(x) maxf = uk-ldudx = k f ¢(u)uk-ldu 
+L L JO JO 
+
+Vol. 135, 2003 SOME INEQUALITIES ABOUT MIXED VOLUMES 167 
+and 
+fo t /max f II("l =k¢(t) uk-ldu + k ¢(u)uk-ld'u 
+,It 
+~t max f =tk¢(t) + k ¢(u)uk-ldu. 
+By the Brunn-Minkowski inequality, ¢l/(n-k)(U) = I{f > U}] 1/(n-k) is concave 
+and non-increasing on [0, max f]. We set 
+(]PI~] "~ 1/(n-k) 
+and for every u > 0 we define 
+~/,(u) = ¢(0) 1~(n-k) max(1 - (1 - A)u/t, 0). 
+Then, ~/, is afline on [0, l_~t~] and satisfies 
+~J(O) : 0(0) u(n-~') = IPLI u('-k) 
+and 
+~/,(t) = A¢(O) u(~-k) = ]PIi{ ~/('~-k) = ¢(t) 1~(n-k). 
+Moreover, it is easy to see that ~,n-k < ¢ on [O,t], ~/,n-k >_ ¢ on It, max f] and 
+~/, >_ o on It, ~_~]. 
+Thus, we get 
+IL__ ! > IL~ _ k fon~xf uk-iO(u)d,u 
+IICl I/C"l tk¢(t) + k ft m~x I ,uk_l¢(u)du 
+k f~ uk-~¢(u)du + k r m~xl uk-l¢(u)du 
+__ Jt 
+tk¢(t) + k ft m~x I uk_l¢(u)du 
+k fo ~tk-l'~'n-k(u)d'tt -~- k f~naxf uk_10(,u)du 
+=1+ 
+tk¢(t) -~- k fmaxf Uk_I¢(u)d,u, Jt 
+k ft Uk_l~[,n_k(u)du _ tkO(t) 
+tkO(t) + k ;.,~x s uk_lO(u)du" 3t 
+Now, since ¢ is non-increasing, we have 
+fot fo k uk-l~/'n-k(u)du -- tk¢(t) = k uk-lg'n-k(u)du -- tk~/'n-k(t) >_ 0 
+
+168 M. FRADELIZI, A. GIANNOPOULOS AND M. MEYER Isr. J. Math. 
+and since ¢ < ¢,-k on [t, maxf] we get 
+ILl >1 + k ft uk_lcn_k(u)du_ tkcn_k(t) 
+[K"l - tkvn-k(t) + k f?~ Uk-lCn-k(u)du 
+kf +~ uk-'¢"-k(u)du 
+tk¢--k(t) + k ft +~ uk-l¢"-k(~)du" 
+It follows that 
+ILl > ILl k f~/('-x) (1- (1-t>')u)n-kuk-'du 
+IK---~- ~ > .-k tkAn-k--}-kf:/(1-3"}(I (ltA)u) ltk-ldu 
+1 D 
+1 A)kA n-k ' (k)(( - +kfl-)~(1--v)n-kvk-ldv) 
+1 
+Oln,k ( /~ n-k ) 
+In case (2), we have [{f = maxf}[ > [PK[. We consider a convex body A in R k 
+such that 
+A C {f = max f} and [AI-- IPKI, 
+and we define 
+If" = {(x, y): x • A, y • f(x)13k}. 
+Then [K'I < IK"l and we may apply the same method as in case (1). I 
+THEOREM 3.1: Let L and K be two convex bodies in R n such that K C L. 
+Then, for 1 <_ k < n we have 
+IKI r V.-k(K) 
+In particular, for every 1 < k < n, the following inequality holds: 
+Vn-k (K) 1 Vn-k(L) 
+IKI -> (~) ILl 
+Proof." Since an,k: [0, 1] ~+ [0, 1] is increasing,/3n,k = a -1 is increasing. Proposi- n,k 
+tion 3.1 shows that for every orthogonal projection P onto an (n-k)-dimensional 
+subspace of R n , we have 
+[IPKIx IKI 
+
+Vol. 135, 2003 SOME INEQUALITIES ABOUT MIXED VOLUMES 169 
+It follows that 
+that is 
+]Pn--~ >- fln,k , 
+IPI(I > I~n,k(~)IPLI. 
+By Kubota's integral formula (see [Scl, Section 5.3]), integration of this last in- 
+equality over the Grassman manifold Gn,n-k of all (n - k)-dimensional subspaces 
+of R n gives 
+Vn-k(l() > i3n,k(~)Vn-k(L). 
+Since an,k = /~n_~ we return to the desired result. On observing that actually 
+crn,k(t) _< (~)t for every t • [0, 1], we obtain the second inequality. II 
+CASES OF EQUALITY. We will show by examples that the estimates in 
+Proposition 3.1 and Theorem 3.1 are optimal. 
+1. The inequality of Proposition 3.1 is sharp. Fix 
+{ IPKI ~ 1/(n-k) A = ~ IPLI J c (0, 1). 
+The proof shows that there is equality in Proposition 3.1 if and only if ¢ = 
+¢l/(n-k) and K' = K1. This is satisfied if and only if: 
+(1) The Schwarz symmetral L1 of L with respect to E is the convex hull of PL 
+and Xo + aB for some Xo • PL and some a > 0, where B denotes the Euclidean 
+unit ball of E'. 
+(2) The Schwarz symmetral K1 of K with respect to E is 
+K1 = {x • L: Px C xo + )t(PL - x0)}. 
+For example, these conditions are satisfied in the following situation: Let G be 
+some (n - k)-dimensional subspace of R n such that R n = E ± • G and let Q be 
+the projection from ]t~ n onto G parallel to E ±. Let D and C be two convex bodies 
+in E ±  and G respectively. If L = conv(D U C) and K = {x C L : Qx E )~C}, 
+then (1) and (2) hold true. But this may happen in many other cases. In fact, 
+there does not seem to exist a complete characterization of those convex bodies 
+L which satisfy the following: for some k-dimensional subspace E of R n and for 
+some xo E PL, 
+(nk) 'L' = 'PEL" '(Ei + xo) N L', 
+where PE denotes the orthogonal projection onto E. 
+
+170 M. FRADELIZI, A. GIANNOPOULOS AND M. MEYER Isr. J. Math. 
+2. The inequalities of Theorem. 3.1 are sharp. We write R n = IR n-k x ]Rk and 
+denote the orthogonal projection onto R n-k by Pn-k and the Euclidean unit ball 
+of R k by Bk. Given b > 0, let 
+Lb = conv((Bn-k x {0}) U ({0} x bBk)). 
+For a fixed r C (0, 1), let 
+I(b = {x C Lb: Pn-kX C rBn-k}. 
+Then, for every b > 0, 
+IL d 1 
+]Kbl O~n,k(rn-k) 
+and, by Lemma 3.1 below, 
+lim Vn-k (Kb) 
+b +o Vn-k(Lb) 
+This shows that Theorem 3.1 is optimal. 
+_ rn-k. 
+LEMMA 3.1: Let M be a convex body in N n and let PE be the orthogonal 
+projection onto an (n - k )-dimensional subspace E. Let b > 0 and 
+Mb = {z + by: x E E,y e E ± , (x,y) E M}. 
+Then 
+lim Vn-k(Mb) : c,~,k[PEMI, 
+b--+O 
+where Cn,k depends only on n and k. 
+Proof: This follows from the continuity of mixed volumes and the fact that 
+MD --+ PEM in the sense of Hausdorff. | 
+Remarks: 
+1. When k = 1, Theorem 3.1 shows that for any two convex bodies t(, L in R n 
+such that K C_ L, 
+1oIc I I lOLl 
+1I(-7 > --- - n ILl 
+This was proved by Wills [W] as a consequence of the following fact: If hi is a 
+convex body in R n and r > 0 is the inradius of M, then 
+IOMI < 1 < IOMI 
+nlMI - r- IM1" 
+
+Vol. 135, 2003 SOME INEQUALITIES ABOUT MIXED VOLUMES 171 
+2. When k = n - 1, Proposition 3.1 shows that for K C L, 
+w(K, 0) (1 -- It([~ 1/n 
+1 w(L,O~ <- ILl ] 
+for every 0 E S ~-1, where w(M, 0) denotes the width of M in the direction of O. 
+If we assume that K and L are centrally symmetric, this implies that for K C_ L, 
+(1_(1 -ILl LGIC 
+a fact which appears already in [GMP]. 
+3. The results of Theorem 3.1 can be extended to mixed volulnes with zonoids, 
+instead of quermassintegrals. 
+4. Comparison of the mixed volumes of a convex b o d y  a n d  the mixed 
+volumes of its projections 
+We begin with two simple lemmas. 
+LEMMA 4.1: Let K be a convex body in R n and, for 1 <_ p < n - 1, let E be a 
+p-dimensional subspace ofR ~ and F = E ± . Let PF be the orthogonal projection 
+onto F, and for every y E PFK write 
+K y = {x c E:x+y ~ K}. 
+Then, for every 0 < k < p, the following holds: 
+Proo~ Let Bn be the Euclidean unit ball in R n and Bp(E) = Bn N E be the 
+Euclidean unit ball of E. Since mixed volumes are increasing, we have 
+vn_k(Ic) = v((IC, n - k), (Bn, t)) >_ V((IC, n - t), (Bp(E), k)). 
+Now, it easy to see that for t >_ 0 
+and hence 
+K + tBp(E) = {x' + y: y E PFK, z' E A "y + tBp(E)}, 
+[K + tBp(E)I = L [I(Y + tBp(E)ldY" 
+rK 
+
+172 M. FRADELIZI, A. GIANNOPOULOS AND M. MEYER 
+For every y E PFK we write 
+IKY +tBp(E)I=E V((KY,p-k),(Bp(E),k))t k 
+k----0 
+= E rp-k(IC ) tk" 
+k=0 
+Integrating, we get 
+Isr. J. Math. 
+and define ¢1 on [0, 1] by 
+¢1(t) = ~/(1 - tl/~) q. 
+" ) IIf+ tBp(E)I = E VP-k(KY)dY tk' 
+k----O K 
+and thus, for every integer k with 0 < k < p, we have 
+The next lemma is in the spirit of Berwald's inequality [Be]. 
+LEMMA 4.2: Let h be a concave function on [0, 1] such that h(O) = O. Let C be 
+a convex body in ll~q and ¢: C ~ N a non-negative function su& that ¢1/~ is 
+concave on C for some r > 0 and supc ¢ = 1. Then 
+<- fJc ,(y)dy. 
+Proof: We write 
+fc h(¢(y))dy= fc ( fo ~(y) h'(t)dt)dy= fo e ,{y E C; ¢(y) >_ t},h'(t)dt. 
+Let ¢(t) = I{Y • C; ¢(y) > t}l. Then ¢ is non-increasing on [0, 1], and since 
+¢1/r is concave, using the Brunn-Minkowski inequality in R q, we get that the 
+function g : [0, 1] ~ R defined by g(t) = ¢l/q(tr) is concave and non-increasing 
+on [0, 1]. Let 
+f3 ¢(t)dt 
+7 = fo1(1 _ tl/r)qdt 
+
+Vol. 135, 2003 
+Then 
+The function 
+satisfies 
+and 
+SOME INEQUALITIES ABOUT MIXED VOLUMES 173 
+, /o I 1 ot/,(t)dt = ¢l(t)dt = (1 - tUr)qdt. 
+// F(s) = (~,,(t) - ¢(t))dt 
+F(0) = F(1) =0 
+CLAIM: F(8) > 0 for every s > 0. 
+Proof of the Claim: For s _> 0, we define gl(s) -- ~/'~/q(sr). It is clear that gl is 
+affine. We have seen that g is concave and non-increasing, and this implies that 
+gl - g changes sign not more than once on [0, 1]. Since 0 = gl(1) < g(1) and 
+f01 fo' r (g~(u) - f(u))u"-ldu = (#'l(t) - ~,(t))dt = 0, 
+it is easy to see that there exists uo E [0, 1] such that gl _> g on [0, uo] and 
+gl _< g on [uo, 1]. It follows that ~/'1 _> ~' on [0, Uo] and ¢1 _< ~/' on [u0, 1]. Since 
+F' = ~1 - ~/' and F(0) = F(1) = 0, we conclude the proof of the claim. | 
+We now go back to the proof of the lemma: clearly, 
+f2(1-tl/r)qh'(t)dt fc¢(y)dy- /ch(¢(y))dy-- f (¢l(s)- ¢(s))h'(s)ds 
+fo 1 (1 - tl/r)qdt 
+= fo 1 F'(s)h'(s)ds. 
+Since h is concave, h' is non-increasing. Since F _> 0 and F(0) = F(1) = 0, we 
+conclude using the second mean value theorem. | 
+THEOREM 4.1: Let K be a convex body in R n and let 0 <_ k <_ p < n. Then for 
+every p-dimensional subspace E of JR n , we have 
+Vn-k(K) > 1 Vp-e(PEI() 
+IKI - (n-v+kx IPEKI xn-p] 
+
+174 M. FRADELIZI, A. GIANNOPOULOS AND M. MEYER Isr. J. Math. 
+where PEK denotes the orthogonal projection of K onto E. 
+Proo~ Since quermassintegrals decrease by Schwarz symmetrization, we may 
+replace K by its Schwarz symmetral with respect to E. In the notation of Lemma 
+4.1 we have 
+We define 0: Pgh" --+ R by 
+v,_k(m) 
+¢(Y)- V,_k(P~K)" 
+Then, SUPPFK ¢---- 1 and 
+By the Aleksandrov-Fenchel inequality, ¢l/(p-k) is concave on PFK. We apply 
+Lemma 4.2 with 
+C -~ PF[£ C R n-p , q = n - p, r = p - k 
+and 
+to get 
+(;)f0 
+h(t) = (%,k(t) = (1 - sl/(P-k))kds 
+PFK ap,k(¢(y))dy f1(1 - tUr)q°%k(t)dt 
+f <_ ¢(y)dy. 
+f~(1 - tI/r)qdt J.F~ 
+After some computations, this inequality takes the form 
+(n) 
+fPFK ~(y)dy > 
+If follows that 
+>_~Vp-k(PEIi ) fPFK ¢(v)dv 
+> _-~ (p___~)(p)Vp_k(PEK)fp, KC~p,k(¢(y))dy. 
+For every y C PFK, the convex bodies KY and PEK in E (-- Rp) clearly satisfy 
+K v c PEK. 
+
+Vol. 135, 2003 SOME INEQUALITIES ABOUT MIXED VOLUMES 175 
+Applying Theorem 3.1, we get 
+^ [ Vp-k(K y) "~ [I~Yl 
+~,,k(¢(y)) = ~,,k~,~)) >_ IPEI(---~I' 
+and hence 
+/PF Ctp.k(O(y))dy > lip ,i(Y,dy = ,It, K IPEI(------II ~,. IPEI(I" 
+It follows that 
+Vp-~(PEA') [I~'l Vn-k(I~) _> ( k IPEKl" 
+The case k = p follows from the fact that if F = E ±, then 
+IKI >_ ~lBpl 
+by Lemma 4.1, and the observation that [K[ _< IPEI~l ! IPFI~l and IB~l -- 
+Vo(PEK). Since the cases k = 0 and p = n are trivial, the proof is complete. 
+1 
+CASE OF EQUALITY IN THEOREM 4.1. 
+The constants are sharp but there is no case of equality in the inequalities of this 
+theorem. 
+To see this, we need to go back to the case of equality in Proposition 3.t and 
+Theorem 3.1, and see what happens in Lemmas 4.1 and 4.2 which were used in 
+the proof of Theorem 4.1. 
+(i) If R p = R k X R p-k, let C C R k and D C R p-k be two convex bodies with 
+0 ¢ C O D. Denote the orthogonal projections from R p onto R k and R p-k by 
+Pk and Pp-k. For every b > 0, we define the convex body L(b) in R p to be the 
+convex hull of bC := bC ! 0 and D := 0 ! D. Then 
+L(b) -- {Ax + (1- A)y : x c= bC. y E D. O < A < 1}. 
+For every t ¢ [0, 1], we also define 
+Kt(b) = {z e L(b); Pp-kZ E tD}. 
+It is clear that IPp_k(I(t(b))l = t~-klDI = tP-~lPp_k(L(b))l for every b > 0. 
+By the equality case in Proposition 3.1, 
+II,t(b) l _ ~,~(¢_~). 
+IL(b) l 
+
+176 M. FRADELIZI, A. GIANNOPOULOS AND M. MEYER Isr. J. Math. 
+Now, when b ~ 0, it is easy to see that 
+Vp_k(Kt(b)) IPp-k(Kt(b))l -- tP-k 
+Vp-k(L(b)) IPp-k(L(b)) I 
+uniformly in t C [0, 1]. It follows that when b --+ 0, 
+fL(b) f f~ tn_p_lvp_k(Kl_t(b))d t fl tn_p_ , Vp_k(K,_,(b))vp_k(L(b)) ~'l' 
+Vp_k(L(b)) fl ° tn-p-'l Ihl_t(b) ldt f~ tn-P-'ap,k((1 -- t)p-k)dt 
+fo 1 t'-P-l(1 _ t)P-kdt --.+ 
+f~ tn-P-lap,k((1 - t)p-k)dt" 
+This means that 
+f~ tn-p-lVp-k(IX'l-t(b) )dt 
+fl tn_p_ 1 ii(l_t(b ) id t 
+and a short calculation gives 
+f~ tn-p-lVp-k(Kl-t(b)) dt 
+f~ t ~-p-1 IKl-t(b) ldt 
+So given c > O, we may choose b0 small enough so that 
+fl t,~_p_l Vp_k( Kl_t(bo) )d t 
+fl tn_p_ 1 ii(l_t (bo)Idt 
+Vp_k(L(b)) f~ tn-P-'(1 - t)P-kdt 
+~b-*O IL(b)l f~ t.-P-lap,k((1 - t)p-k)dt 
+(n-p+k) Vp_k(L(b)) 
+~'~b--+O p n-k (k)(p-k) IL(b)l 
+(n-pq-k) Yp-k(L(bo) ) 
+< n-k - (p-k) IL(b0)l 
+(ii) Let now A be a convex body in ~n-p containing 0 in its interior, and 
+consider the Minkowski functional 
+IIwlIA = inf{tt ~ O:w c pA}, w e R n-p. 
+Following the notation of (i), we define a body M in R n = ~n-p x ~P by 
+M = {w+z: w e A,z e KI_IIwlIA (b0)}. 
+Then M is convex. Indeed, we have 
+M = conv(A x Pp-k(L(bo)), 0 x L(bo)). 
+Now, for a > 0, we define a new convex body M(a) in R n by 
+M(a) = {aw + z: w E R n-p,z C R p,w + z E M}. 
+
+Vol. 135, 2003 SOME INEQUALITIES ABOUT MIXED VOLUMES 177 
+Let Ta: R n ~ R n be the linear mapping defined by Ta(w) = aw if w E R n-p ! 0 
+and T,~z = z for z E 0 ! R p. Then M(a) = Ta(M) so that 
+Vn-k(M(a)) V((Ta(M), n - k), (Bn, k))) 
+IM(a)[ ITa(M)[ 
+= V((M, n - k), (Ta'(Bn), k))) 
+IMI 
+If Bp denotes the Euclidean ball of R p, 
+Ta'(Bn ) --+ Bp 
+in the sense of Hausdorff as a --+ +c~. prom the continuity of mixed volumes, we 
+get 
+From Lemma 4.1 and the definition of M we actually get 
+M(a) fA II('-M~(bo)l dw 
+=(k) f~ Vp-k(IQ-t(bo))tn-p-Sdt 
+f2 ItQ-t(bo)Itn-P-'dt 
+Now if Pp is the canonical projection from l~ n = R n-p ! R p to R p, we have 
+so that 
+Pp(M(a)) = L(bo), 
+Vp_k(Pp(M(a))) _ Vp-k(L(bo)) 
+]P~(M(a))I IL(bo)l 
+For a big enough, the estimate that we got in (i) shows that 
+Vn-k(M(a)) (p) fl Vp_k(iQ_t(bo))tn_p_ldt 
+IM(a)l <-~ (~) -- f~ Ih'l-t(bo)ltn-p-ldt 
+(~) (n-p+k) (1 ' 'VP-k(PP(M(a))) 
+_ (1 + ¢) Vp-k(Pp(M(a))) 
+n+k-p ( k ) [Pp(M(a))] 
+(iii) The above discussion indicates that if the estimate of Theorem 4.1 is sharp, 
+then the limiting bodies are degenerated in two different directions. 
+
+178 M. FRADELIZI, A. GIANNOPOULOS AND M. MEYER Isr. J. Math. 
+Remarks: 
+1. When p = n - 1, Theorem 4.1 gives 
+Vn-k(I() > 1 Vn_l_k(PH[~) 
+Ih'[ - k + 1 IPHI,2} 
+for every convex body K in N: n and every (n - 1)-dimensional subspace H. For 
+k = 1 this was proved in [GHP]. From this and Steiner's formula we have 
+I/el k:o I/el 
+n--1 
+IPHKI k + 1 k=O 
+= ~" IPHK] skds" 
+k=0 
+Using (k) ~ (n;1) we get 
+IK + tBI > lI¢ + tBl _ ltBI [t lPH(K + sB)l ds" 
+II~'1 - IlCl ~ Jo IPHI~I 
+2. Let E~_i, 1 < i < n - 1, be a decreasing sequence of (n -/)-dimensional 
+subspaces of R n . Write Pn-i for the orthogonal projection onto En-i. The results 
+from [GHP] show that 
+V,~_I(K) > 1 Vn-2(Pn-IK) 
+II¢1 - 2 IP~-,KI ' 
+Vn_2(Pn_lI~.) > 1 Vn_3(Pn_2I~) 
+IP,,_IKI - 2 IP~-2Iil 
+Therefore, for all 1 _< q _< n - 2, we have 
+Vn-l(I() > 1 Vn_l_q(Pn_qI( ) 
+[KI - 2q IPn_qKI 
+Applying Theorem 4.1 directly, we get 
+Wm-l(I~) > 
+II~l - 
+1 Vn_l_q(Pn_qI~ ) 
+q + 1 IPn_qKI ' 
+which is a better estimate. 
+
+Vol. 135, 2003 SOME INEQUALITIES ABOUT MIXED VOLUMES 179 
+3. It might be possible to generalize Theorem 4.1 as follows: Let 0 < l < k < p 
+and let PE be the orthogonal projection onto a p-dimensional subspace E of R n . 
+Then 
+V,~-k(I() > 1 VB-k(PEK) 
+Vn-I(I'?) - (n-p+k-t) Vp-I(PEK)" 
+\ rt--p / 
+Theorem 4.1 corresponds to the case l = 0, while the case p = n - 1 and I = k - 1 
+was established in [GHP]. 
+References 
+[Be] 
+[BB] 
+[BZ] 
+[DCT] 
+[CHP] 
+[GMP] 
+[Scl] 
+[Sc2] 
+[w] 
+L. Berwald, Verallgemeinerung eines Mittelswertsatzes von 3. Favard, ffir 
+positive konkave Functionen, Acta Mathematica 79 (1947), 17 37. 
+E. F. Beckenbach and R. Bellman, Inequalities, Springer-Verlag, Berlin, 1971. 
+Y. D. Burago and V. A. Zalgaller, Geometric Inequalities, Springer Series in 
+Soviet Mathematics, Springer-Verlag, Berlin-New York, 1988. 
+A. Dembo, T. M. Cover and J. A. Thomas, Information theoretic inequalities, 
+IEEE Transactions on Information Theory 37 (1991), 1501 1518. 
+A. Giannopoulos, M. Hartzoulaki and G. Paonris, On a local version of the 
+Aleksandrov-Fenchel inequality for the quermassintegrals of a convex body, 
+Proceedings of the American Mathematical Society 130 (2002), 2403-2412. 
+E. D. Gluskin, M. Meyer and A. Pajor, Zeros of analytic functions and norms 
+of inverse matrices, Israel Journal of Mathematics 87 (1994), 225-242. 
+R. Schneider, Convex Bodies: The Brmm Minkowski Theory, Encyclopedia of 
+Mathematics and its Applications 44, Cambridge University Press, Cambridge, 
+1993. 
+R. Schneider, On the Aleksandrov-Fenchel inequality, in Discrete Geometry 
+and Convexity (3. E. Goodman, E. Lutwak, J. Malkevitch and R. Pollack, 
+eds.), Annals of the New York Academy of Sciences 440 (1985), 132-141. 
+J. M. Wills, Zum Verh~ltnis von Volumen zu Oberflgche bei konvexen K6rpern, 
+Archiv der Mathematik 21 (1970), 557 560. 

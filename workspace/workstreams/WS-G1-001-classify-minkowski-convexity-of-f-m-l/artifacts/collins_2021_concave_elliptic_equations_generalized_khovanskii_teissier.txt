@@ -1,0 +1,950 @@
+arXiv:1903.10898v1  [math.DG]  26 Mar 2019
+CONCA VE ELLIPTIC EQUA TIONS AND GENERALIZED
+KHOV ANSKII-TEISSIER INEQUALITIES
+TRISTAN C. COLLINS
+Dedicated to D.H. Phong with admiration on the occasion of hi s 65th birthday.
+Abstract. We explain a general construction through which concave
+elliptic operators on complex manifolds give rise to concav e functions
+on cohomology. In particular, this leads to generalized ver sions of the
+Khovanskii-Teissier inequalities.
+1. Introduction
+The purpose of this paper is to explain how concave elliptic e quations
+on compact complex manifolds give rise to concave functions on (certain
+subsets of) “cohomology”. For example, if ( X,ω ) is compact K¨ ahler, we
+obtain concave functions on (certain subsets) of H 1, 1(X, R). The prototype
+for the type function we consider is the volume function on K¨ ahler classes.
+Let K ⊂ H 1, 1(X, R) be the open convex cone consisting of all (1 , 1) classes
+admitting K¨ ahler representatives. For a K¨ ahler classα ∈ K deﬁne
+Vol(α ) =
+∫
+X
+α n
+Then the function α ↦→ Vol(α )1/n is concave on K [9, 18, 16, 29, 30, 31]. In
+particular, for any K¨ ahler classesα 0,α 1 we have
+(1.1) Vol( α 0 +α 1)1/n ⩾ Vol(α 0)1/n + Vol(α 1)1/n .
+Furthermore, if β ∈ H 1, 1(X, R) is any class (not necessarily K¨ ahler), then
+since K is open, α +tβ ∈ K for t suﬃciently close to zero. Diﬀerentiating
+the volume function yields
+( ∫
+X
+β 2 ∧ α n− 2
+) ( ∫
+X
+α n
+)
+⩽
+( ∫
+X
+β ∧ α n− 1
+) 2
+.
+This latter inequality, originally discovered by Kohvansk ii [18] and Teissier
+[30, 31], can be viewed as a generalization of the Hodge Index Theorem.
+Many parts of the preceding discussion have in fact been exte nded beyond
+the K¨ ahler cone, to the big cone where the deﬁnition of the vo lume function
+must be appropriately extended; see [1, 19, 13, 20].
+T.C.C is supported in part by NSF grant DMS-1810924 and an Alf red P. Sloan
+Fellowship.
+1
+
+2 T. C. COLLINS
+In this paper we will explain how the concavity of the volume f unction
+is a special case of a more general result which applies to a br oad class of
+concave elliptic PDEs on complex manifolds. For the time bei ng we will be
+deliberately vague about what kind of classes we are conside ring, as they
+will vary between applications. In any event, to motivate ou r discussion, let
+us recall Demailly’s proof of the Khovanskii-Teissier ineq ualities [9]. First,
+observe that for constant forms on a complex torus Cn\Λ, the concavity of
+the volume function is equivalent to the well-known concavi ty of the map
+Herm+(n) ∋ M ↦− → det(M )
+1
+n ∈ R
+where Herm +(n) denotes the set of positive deﬁnite, n × n Hermitian ma-
+trices. Next, we apply Yau’s solution of the Calabi conjectu re [38] to reduce
+the global inequality to the pointwise inequality. Namely, ﬁx a K¨ ahler form
+ω , and assume that
+∫
+Xω n = 1. By Yau’s theorem [38] we can ﬁnd a K¨ ahler
+forms ˜α i with [α i] = [ ˜α i] for i = 0, 1 satisfying
+(1.2) ˜ α n
+i =
+( [α i]n
+[ω ]n
+)
+ω n.
+Applying the point-wise concavity we clearly have
+( ( ˜α 0 + ˜α 1)n
+ω n
+) 1/n
+⩾
+( ˜α n
+0
+ω n
+) 1/n
++
+( ˜α n
+1
+ω n
+) 1/n
+at each point p ∈ X. Combining this with (1.2) yields
+( ˜α 0 + ˜α 1)n ⩾
+[ ( [α 0]n
+[ω ]n
+) 1/n
++
+( [α 1]n
+[ω ]n
+) 1/n ] n
+ω n.
+Integrating this inequality over X yields (1.1). They key idea here is that
+the concavity of the elliptic operator F (M ) = (det(M ))1/n yields the con-
+cavity of the associated function on cohomology on the set of classes where
+the equation F (M ) = c is globally soluble on ( X,ω ). There has recently
+been some interest in generalizing the Khovanskii-Teissie r inequalities using
+diﬀerent concave functions. For some recent work in this dire ction, using
+the σk operators, see [36, 37] and the references therein.
+2. Generalized Khovanskii-Teissier inequalities
+To begin with, we recall some of the basic deﬁnitions of the el liptic oper-
+ators we will study. Since our focus is on complex manifolds, some of our
+deﬁnitions will be suited to this particular case.
+To begin with, ﬁx an open, symmetric set Γ ⊂ Rn, and denote by Γ n = Rn
++
+the positive orthant. Suppose that f (λ 1,...,λ n) : Γ → R is a smooth,
+symmetric function (in fact, one only needs f to be C 2 for what follows, but
+we will not pursue this). We suppose in addition that
+(i) f is strictly increasing in each of its arguments. That is ∂f
+∂λ i
+> 0.
+(ii) f is concave.
+
+3
+By abuse of notation, denote by Γ ⊂ Herm(n) the set of Hermitian matrices
+whose eigenvalues lie in Γ ⊂ Rn. Then f induces an elliptic operator on Γ
+by
+F (M ) = f (λ 1(M ),...,λ n(M ))
+whereλ 1(M ),...,λ n(M ) are the eigenvalues of M . The function F : Γ → R
+is concave and elliptic, in the sense the F (M +P )>F (M ) for all P ∈ Γ n.
+In all of our examples the operator F will be deﬁned on all of Herm( n).
+Furthermore, in most (but not all examples) Γ will be a cone in Rn with
+vertex at the origin, containing Γ n. For our purposes we will always think
+of an elliptic operator as a pair ( f, Γ) of an operator, together with an
+admissible cone. We pause to discuss a variety of examples.
+Example 2.1 (Hessian Equations) . Let Γ k ⊂ Rn be
+Γ k = {(λ 1,...,λ n) : σℓ(λ 1,...,λ n)> 0 for all 1 ⩽ℓ ⩽k}
+where σℓ denotes the ℓ-th symmetric function on ( λ 1,...,λ n). Then it is
+well-known [14, 2] that on the cone Γ k, the function
+f (λ) =
+( ( n
+k
+) − 1
+σk(λ)
+) 1/k
+is concave, and increasing in each of its arguments. In fact, slightly more is
+true [14]; σ 1/k
+k is strictly concave in the following sense. Let M ∈ Γ k, and B
+any Hermitian matrix. Then
+d2
+dt2
+⏐
+⏐
+t=0σ 1/k
+k (M +tB) ⩽ 0
+with equality if and only if B =λM for some λ ∈ R.
+Example 2.2 (Hessian Quotient Equations) . One can also consider ratios
+of symmetric functions. For 1 ⩽ℓ<k ⩽n we consider the function
+f (λ) =
+( ( n
+k
+) − 1σk(λ)
+( n
+ℓ
+) − 1σℓ(λ)
+) 1
+k−ℓ
+This function is increasing in each of its arguments, and con cave [26]. Note
+that the case ℓ = n − 1,k = n is the operator corresponding to the J-
+equation, introduced by Donaldson [12] and Chen [3].
+Example 2.3 (The Lagrangian phase operator) . Consider the Lagrangian
+phase operator
+f (λ 1,...,λ n) = Θ( λ) :=
+n∑
+i=1
+arctan(λ i).
+This operator arises in the study of special Lagrangian subm anifolds of
+Calabi-Yau manifolds, and the deformed Hermitian-Yang-Mi lls equation in
+mirror symmetry. While Θ is increasing in all of its argument s on all of Rn
+it is well known that Θ is not globally concave on Rn. Instead, we have
+
+4 T. C. COLLINS
+(1) Θ is concave on the set {(λ 1,...,λ n) : Θ( λ) ⩾ (n − 1) π
+2 } [39]
+(2) For every δ >0 there is a constant A = A(δ) such that −e− AΘ is
+concave on the set {(λ 1,...,λ n) : Θ( λ) ⩾ (n − 2) π
+2 +δ} [5]
+Forn ⩾ 3, the operator Θ can fail to have even convex level sets in the range
+(− (n − 2) π
+2 +δ, (n − 2) π
+2 − δ).
+Example 2.4 (The (n − 1,n − 1) Hessian equations) . For (λ 1,...,λ n) ∈ Rn
+we deﬁne a map P : Rn → Rn, written as P (λ 1,...,λ n) = (µ 1,...,µ n), by
+µ i = 1
+n − 1
+∑
+j̸=i
+λ j.
+Then we deﬁne the ( n − 1,n − 1) k-Hessian operator to be
+f (λ 1,...,λ n) =
+( ( n
+k
+) − 1
+σk(P (λ))
+) 1/k
+.
+This operator is clearly elliptic, and concave on the set P − 1(Γ k).
+An elliptic operator in the above sense gives rise to an ellip tic operator
+on a complex manifold ( X,ω ) in the following way. Given a smooth (1 , 1)
+form α on X, we can associate to α a Hermitian endomorphism of T 1, 0X
+using the K¨ ahler metric. Namely, in local coordinates, deﬁ ne
+E(α )i
+j =ω i¯kα ¯kj.
+Since E(α ) is Hermitian, it has n real eigenvalues which we denote by
+λ 1(α ),...,λ n(α ). Note that, while we have suppressed the dependence,
+these eigenvalues depend on the choice of Hermitian metric ω . In order for
+our results to be broadly applicable, we make the following d eﬁnition.
+Deﬁnition 2.5. We deﬁne an ansatz to be a smooth, linear map W : Λ 1
+R →
+Λ 1, 1
+R . For a given ansatz W , and a smooth (1, 1) form α on X we deﬁne the
+W -class of α by
+[α ]W = {α i¯j +∂i∂¯jϕ +W (dϕ )i¯j :ϕ ∈ C ∞ (X, R)}
+Note that, sinceW is linear, it is easy to see that the set [α ]W ⊂ Λ 1, 1(X, R)
+is an equivalence class; hence the terminology. We endow the set of W -
+classes with the quotient topology induced by the C 4 norm on Λ 1, 1.
+Remark 2.6. Our primary interest is going to be the case when W = 0,
+and dα = 0. In this case [ α ]W = [α ]BC , the Bott-Chern class of α .
+Deﬁnition 2.7. Given an elliptic operator (f, Γ) we will say that a form α
+is admissible (with respect to ω ) if λ(α ) ∈ Γ . Furthermore, we will say that
+theW -class [α ]W is admissible if [α ]W contains an admissible representative.
+Note in particular that, since Γ is open and W is smooth, the set of
+admissible W -classes is open. Concretely, this means that, for any smoot h
+(1, 1) form β the class [α +εβ]W is admissible for ε suﬃciently small. With
+
+5
+this discussion in place, it makes sense to study the followi ng very general
+elliptic problem on ( X,ω ).
+Problem 2.8. Fix an elliptic operator ( f, Γ), and an ansatz W . For each
+admissible class [ α ]W , ﬁnd a constant c, and a smooth, admissible (1 , 1)
+form ˜α ∈ [α ]W such that
+(2.1) Fω ( ˜α ) = f (λ 1( ˜α ),...,λ n( ˜α )) = c
+Deﬁnition 2.9. Given an elliptic operator (f, Γ) and an ansatz W we will
+denote by Solω (f, Γ,W ) the set of admissible W -classes admitting a solution
+to Problem 2.8 for some constant c.
+We are now going to prove two elementary structural results a bout solu-
+tions of Problem 2.8. Our ﬁrst result is that, on the set Sol ω (f, Γ,W ), the
+constantc appearing in the statement of Problem 2.8 is unique in [ α ]W , and
+hence descends to a function
+Solω (f, Γ,W ) ∋ [α ]W ↦− → c(ω, [α ]W ).
+The second structural result is that the set Sol ω (f, Γ,W ) is either empty, or
+open in the set of W -classes.
+Lemma 2.10. Fix a compact Hermitian manifold (X,ω ), and a cohomology
+class [α ]. We consider an ansatz W , and an equation (f, Γ) , and ﬁx a
+(1, 1) form α ∈ [α ]W . Assume that there are two functions ϕ 0,ϕ 1 such that
+α i := α + √ − 1∂∂ϕ i +W (dϕ ) are admissible solutions of Fω (α i) = ci for
+i = 0, 1. Then c0 =c1. In particular, on Solω (f, Γ,W ) the function
+[α ]W ↦→ c(ω, [α ]W )
+is well-deﬁned.
+Proof. This is just an application of the maximum principle. Since X is com-
+pact, there are points pmin (resp. pmax )whereϕ 0 − ϕ 1 attains its minimum
+(resp. maximum). At pmin we have
+dϕ 0 =dϕ 1,
+√
+− 1∂∂ϕ 0 ⩾
+√
+− 1∂∂ϕ 1.
+It follows that α 0 ⩾ α 1. Since α i are both admissible, we can invoke the
+ellipticity of f to obtain
+c0 =F (α 0) ⩾F (α 1) = c1.
+Arguing similarly at the maximum implies c0 =c1. □
+Remark 2.11. Note that the above argument, together with the strong
+maximum principle, also implies uniqueness of solutions to Problem 2.8 in
+a given W -class.
+Lemma 2.12. Fix a compact complex manifold (X,ω ), and an ansatz W .
+Consider an equation (f, Γ) . Then, with notation as above, Solω (f, Γ,W ) is
+either empty, or open.
+
+6 T. C. COLLINS
+Proof. This is nothing but the implicit function theorem. Assume th at
+Solω (f, Γ,W ) is not empty. Let [ α ]W admit a smooth solution α of the
+equation Fω (α ) = c(ω, [α ]W ). Fix a (1 , 1) form β , and consider the map
+F(ϕ,t,a ) = Fω (α +tβ +
+√
+− 1∂∂ϕ +W (dϕ )) − c(ω, [α ]W ) − a
+Since Γ is open, there is small neighborhood U of (0, 0, 0) ∈ C k,α (R) × R × R
+such that F :U → C k− 2,α (R). Let
+F i¯j = ∂F
+∂m i¯j
+denote the derivative ofF atα , and note that, since F is elliptic,F i¯j deﬁnes a
+Hermitian metric on X. Let ∆ F =F i¯j∂i∂¯j denote the associated Laplacian.
+The operator
+v ↦→ Lv := ∆ Fv +F i¯jWi¯j(dv)
+is homotopic to ∆ ω and therefore has index zero, regarded as a map from
+C k,α → C k− 2,α . By the maximum principle, the kernel of L consists of
+the constant functions. Thus, the cokernel of L has dimension 1. Another
+application of the maximum principle shows that the cokerne l of L contains
+the constants. It follows that the map
+C k,α × R ∋ (v,a ) ↦− → Lv − a ∈ C k− 2,α
+is surjective. On the other hand, the linearization of F is
+DF(v,β,a ) = Lv +F i¯jβi¯j − a.
+Thus, by the implicit function theorem, for all t suﬃciently small we can
+ﬁnd a function ϕ t ∈ C k,α and a constant at ∈ R such that
+F (α +tβ +
+√
+− 1∂∂ϕ t) = c(ω, [α ]) +at.
+Fixing k ≫ 2, the Schauder theory implies that ϕ t ∈ C ∞ (X, R), and the
+result follows. □
+We will now give the proof of our main theorem, and then spend t he re-
+mainder of the paper discussing applications. Suppose ( X,ω ) is a compact
+complex manifold with a Hermitian metric, and ﬁx a concave el liptic opera-
+tor (f, Γ), and an ansatz W . Suppose that Sol ω (f, Γ,W ) is not empty, and
+hence by Lemma 2.12 it is open. By Lemma 2.10 we get a function
+Solω (f, Γ,W ) ∋ [α ]W − → c(ω, [α ]W ).
+Theorem 2.13. With notation as above, the function
+Solω (f, Γ,W ) ∋ [α ]W − → c(ω, [α ]W )
+is concave with respect to the natural linear structure on re al (1, 1) forms.
+Furthermore, in case W ≡ 0, assume that there is a smooth (1, 1) form β
+for which we have d2
+dt2
+⏐
+⏐
+t=0c(ω, [α +tβ ]0) = 0 . If α denotes the solution of
+F (α ) = c(ω, [α ]0), then there is a function ψ so that
+D2F (α )(β +
+√
+− 1∂∂ψ,β +
+√
+− 1∂∂ψ ) ≡ 0
+
+7
+where we regard D2F (α ) as a negative semi-deﬁnite bilinear form on Λ 1, 1.
+Proof. Before beginning, we recall a result of Gauduchon [15]. Let hi¯j be
+any Hermitian metric on X, and let η be the associated (1 , 1) form. Then
+there is a function σ :X → R so that
+√
+− 1∂∂(eση)n− 1 = 0
+That is, we can conformally rescale h to a Gauduchon metric. Fix [ α ]W ∈
+Solω (f, Γ,W ), and let α denote the solution of Fω (α ) = c(ω, [α ]W ). Let β
+be a smooth (1 , 1) form. By Lemma 2.12, for all t suﬃciently small there is
+a smooth function ϕ t so that
+Fω (α +tβ +
+√
+− 1∂∂ϕ t +W (dϕ t)) = c(ω [α +tβ ]W ) = c(t)
+Diﬀerentiating this equation in t yields
+(2.2)
+˙c =F i¯j (
+βi¯j +∂i∂¯j ˙ϕ +Wi¯j(d ˙ϕ t)
+)
+¨c =F i¯j∂i∂¯j ¨ϕ +F i¯jWi¯j(d ¨ϕ t)
++F i¯j,k ¯ℓ (
+βi¯j +∂i∂¯j ˙ϕ +Wi¯j(d ˙ϕ t)
+)
+(βk¯ℓ +∂k∂ ¯ℓ ˙ϕ +Wk¯ℓ(d ˙ϕ t)).
+Where F i¯j,k ¯ℓ denotes the hessian of F . Evaluating at t = 0 and using the
+concavity of F on Γ, we have
+(2.3) ¨ c(0) ⩽F i¯j∂i∂¯j ¨ϕ +F i¯jWi¯j(d ¨ϕ t).
+Crucially, this equation holds at every point of X. In particular, it holds at
+the maximum point of ¨ϕ . Applying the maximum principle, we obtain
+¨c(0) ⩽ 0
+which is the desired result.
+Let us give another proof, which applies only in the case that W = 0,
+but which yields a slightly stronger result. Suppose that W = 0. By the
+ellipticity of F , F i¯j induces a Hermitian metric hF on X, with associated
+(1, 1) form ηF . Hence we can apply Gauduchon’s theorem to ﬁnd σ so that
+eσηF is Gauduchon. Furthermore, after possibly adding a constan t to σ , we
+can assume that
+∫
+Xe(n− 1)σηn
+F = 1. Write
+F i¯j∂i∂¯j ¨ϕ =nηn− 1
+F ∧ √ − 1∂∂ ¨ϕ
+ηn
+F
+.
+Multiply both sides of (2.3) by e(n− 1)σηn
+F and integrate over X to get
+¨c(0) = ¨c(0)
+∫
+X
+e(n− 1)σηn
+F ⩽n
+∫
+X
+√
+− 1∂∂ ¨ϕ ∧ (eσηF )n− 1.
+Integrating by parts, and using that eσηF is Gauduchon, we obtain ¨c(0) ⩽ 0
+which proves the result. Note, that if
+¨c(0) = 0
+
+8 T. C. COLLINS
+then we must have equality throughout. In particular, we hav e that
+F i¯j,k ¯ℓ (
+βi¯j +∂i∂¯j ˙ϕ
+)
+(βk¯ℓ +∂k∂ ¯ℓ ˙ϕ ) ≡ 0
+and henceβ +√ − 1∂∂ ˙ϕ lies in the kernel of the negative semi-deﬁnite bilinear
+form D2F : Λ 1, 1 × Λ 1, 1 → C. □
+Remark 2.14. The proof implies a type of “ellipticity” for the function c
+on the solvable set when W = 0. Namely, assuming W = 0, suppose that
+there is a L1 function ψ so that β + √ − 1∂∂ψ ⩾ 0 in the sense of currents.
+Then, using (2.2) and the above notation we have
+˙c(0) = ˙c(0)
+∫
+X
+e(n− 1)σηn
+F =n
+∫
+X
+(β +
+√
+− 1∂∂ ˙ϕ ) ∧ (eσηF )n− 1
+=n
+∫
+X
+β ∧ (eσηF )n− 1
+=n
+∫
+X
+(β +
+√
+− 1∂∂ψ ) ∧ (eσηF )n− 1
+⩾ 0
+where in the third and fourth inequalities we used that eσηF is Gauduchon.
+For example, when [ β ]0 is the Bott-Chern class of an eﬀective divisor, the
+inequality
+d
+dt
+⏐
+⏐
+t=0c(ω, [a +tβ ]0) ⩾ 0
+can be regarded as a sort of algebraic obstruction for the exi stence of solu-
+tions to Problem 2.8. In all the examples we have considered, the obstruc-
+tions produced via this observation are clear “by inspectio n”. Nevertheless,
+we hope this observation may be of some use in other settings.
+From Theorem 2.13 we obtain generalized Khovanskii-Teissi er type in-
+equalities of the following form; ﬁx a complex manifold ( X,ω ) and an ansatz
+W , then for each [ α ]W ∈ Solvω (f, Γ,W ), and every β ∈ Λ 1, 1 we have
+d2
+dt2c(ω, [α ]W +t[β ]W ) ⩽ 0.
+The most useful applications of this result come from situat ions in which
+the ansatz W = 0, and the constant c(ω, [α ]W ), as well as the solvability of
+the equation (f, Γ,W ), depend only on the algebraic structure of X. That
+is, in situations where c(ω, [α ]W ) = c([ω ], [α ]W ), and Sol ω (f, Γ,W ) depends
+only on [ω ], [α ]W , and can be determined by the algebraic properties of X,
+such as the intersection pairing on cohomology, and Poincar ´ e duality. This
+is the case for the Monge-Amp` ere equation, thanks to Yau’s t heorem [38],
+which says that on a compact K¨ ahler manifold X, with W =0, we have
+Solω (σ 1/n
+n , Γ n) ∩ H 1, 1(X, R) = K,
+
+9
+and on this set we have
+c(ω, [α ]) =
+( ∫
+Xα n
+∫
+Xω n
+) 1
+n
+.
+Furthermore, by the result of Demailly-P˘ aun [10], the K¨ ah ler cone K can
+be determined purely algebraically. All together, these re sults imply restric-
+tions on the intersection theory of a general K¨ ahler manifo ld.
+Even in the simplest case, when the ansatz W = 0, producing algebraic
+conditions determining the solvability of an equation ( f, Γ) is a hard prob-
+lem, and the subject of current research [21, 6, 27, 8]. On the other hand, we
+can at least attempt to give a structural condition under whi ch the constant
+c(ω, [α ]) can be shown to depend only on [ ω ], [α ] (and Γ!). The remainder of
+this paper will be spent discussing explicit examples of equ ations to which
+Theorem 2.13 applies. This will motivate the introduction o f the structural
+condition alluded to above, which appears at the end of the pa per. We will
+use the following notation; for (1 , 1) forms α i, 1 ⩽i ⩽n we denote
+α 1.α 2 · · ·α n− 1.α n =
+∫
+X
+α 1 ∧ α 2 · · · ∧α n− 1 ∧ α n
+Example 2.15 (Hessian Equations). Let (X,ω ) be a compact K¨ ahler man-
+ifold, and α be a closed, real (1 , 1) form on X, and W = 0. Then an exercise
+in linear algebra shows that
+(2.4) σk(λ(α )) =
+( n
+k
+) ω n− k ∧ α k
+ω n .
+If (
+( n
+k
+) − 1σk(λ(α ))
+1
+k = c, and α is k-positive then, multiplying (2.4) by ω n
+and integrating over X we must have
+ck =
+∫
+Xω n− k ∧ α k
+∫
+Xω n .
+When k is odd, c is uniquely speciﬁed, and when k is even, c is the pos-
+itive root of the cohomological quantity appearing above. I n particular,
+given that α is k-positive, there is unique constant c, determined only by
+[α ], [ω ] ∈ H 1, 1(X, R), for which Problem 2.8 can possibly admit a solution.
+Furthermore, by work of Dinew-Kolodziej [11] (see also Sz´ e kelyhidi [27]), if
+[α ] admits a k-positive representative, then the complex Hessian equati on
+(
+( n
+k
+) − 1σk(λ(α ))
+1
+k = c admits a smooth solution in the class [ α ]. Thus, we
+conclude
+Corollary 2.16. Let KΓk,ω ⊂ H 1, 1(X, R) denote the cone of classes admit-
+ting k-positive representatives with respect to ω . Then the function
+H 1, 1(X, R) ∋ [α ] ↦− →
+( ω n− k.α k
+ω n
+) 1
+k
+
+10 T. C. COLLINS
+is concave on KΓk,ω . In particular, for any [β ] ∈ H 1, 1(X, R) we have the
+generalized Khovanskii-Teissier type inequality
+(2.5)
+(
+ω n− k.α k− 2.β 2
+) (
+ω n− k.α k
+)
+⩽
+(
+α k− 1.β.ω n− k
+) 2
+,
+with equality if and only if [β ] = λ[α ] for some λ ∈ R.
+Remark 2.17. In fact, it is not hard to see that the concavity, and hence the
+generalized Khovanskii-Teissier type inequality, hold on the a priori larger
+set of classes [ α ] admitting a k-positive representative with respect to some
+K¨ ahler metric in the class [ω ].
+Corollary 2.16 was known to Tosatti-Weinkove [32] who obser ved that
+it followed from Dinew-Ko/suppress lodziej’s work [11], and Demailly’s technique [9].
+It was also proved independently by Xiao [36], who also prove s polarized
+versions of (2.5).
+Remark 2.18. Applying the discussion of Remark 2.14 to the class of an
+eﬀective divisor [E] on X yields that, for any class [ α ] admitting a k-positive
+representative with respect to ω , we have
+∫
+E
+ω n− k ∧ α k− 1 ⩾ 0.
+Note that this result, with strict inequality, follows from linear algebra.
+Example 2.19 (Hessian Quotient Equations) . Let (X,ω ) be a compact
+K¨ ahler manifold, andα be a closed, real (1 , 1) form on X, and W = 0. The
+considerations of Example 2.15 hold for the Hessian quotien t equations of
+Example 2.2. Using (2.4) we obtain
+c =
+( ∫
+Xω n− k ∧ α k
+∫
+Xω n− ℓ ∧ α ℓ
+) 1
+k−ℓ
+and hence there is a unique constant, depending only on [ α ], [ω ] ∈ H 1, 1(X, R)
+such that the Hessian quotient equation on ( X,ω ), in the k-positive class
+[α ] can admit a solution. Applying Theorem 2.13 we obtain
+Corollary 2.20. Let Solω ( k
+ℓ, Γ k) ⊂ K Γk,ω denote the set of classes [α ] ad-
+mitting a k-positive representative solving the Hessian quotient equ ation
+( ( n
+k
+) − 1σk(α )
+( n
+ℓ
+) − 1σℓ(α )
+) 1/ (k− ℓ)
+=c.
+Then on Solω ( k
+ℓ, Γ k), the function
+H 1, 1(X, R) ∋ [α ] ↦− →
+( ω n− k.α k
+ω n− ℓ.α ℓ
+) 1
+k−ℓ
+is concave.
+
+11
+The concavity implies a Khovanskii-Teissier type inequali ty, which is not
+diﬃcult to compute, but rather long to write down. For simpli city, we make
+the following observation; if g is a positive, concave function, and a ⩾ 1,
+then g− a is convex. We conclude that
+H 1, 1(X, R) ∋ [α ] ↦− → ω n− ℓ.α ℓ
+ω n− k.α k
+is convex on Solv ω ( k
+ℓ, Γ k); in particular, for every [ β ] ∈ H 1, 1(X, R) we have
+ℓ(ℓ − 1)(ω n− ℓ.α ℓ− 2.β 2)(ω n− k.α k) − k(k − 1)(ω n− k.α k− 2.β 2)(ω n− ℓ.α ℓ)
+⩾ 2k
+(
+ℓ(ω n− ℓ.α ℓ− 1.β ) − k(ω n− k.α k− 1.β ) (ω n− ℓ.α ℓ)
+(ω n− k.α k)
+)
+(ω n− k.α k− 1.β )
+Remark 2.21. Sz´ ekelyhidi [27], and Lejmi-Sz´ ekelyhidi [21] have made con-
+jectures concerning necessary and suﬃciently algebraic co nditions for the
+Hessian quotient equations to be solvable. For eﬀective divi sors, the obstruc-
+tions appearing in [27, 21] are precisely those obtained fro m Remark 2.14.
+When k = n and ℓ = n − 1, and ( X,ω ) is toric, this conjecture has been
+proved by the author and Sz´ ekelyhidi [6]. Combining this wo rk with Corol-
+lary 2.20 we obtain constraints on the intersection theory o f toric varieties.
+Example 2.22 (Lagrangian Phase Operator) . Again we consider ( X,ω )
+compact K¨ ahler manifold,α a closed, and real (1, 1) form on X, and W = 0.
+The Lagrangian phase operator considered in Example 2.3 sat isﬁes a slightly
+more complicated version of the principle discussed in the p revious two
+examples. Consider the volume form
+Ω(ω,α ) =
+
+
+
+√
+( n∏
+i=1
+1 +λ i(α )2
+)
+ω n.
+It is straightforward to show that
+− (−
+√
+− 1)n
+∫
+X
+e
+√ − 1Θω (α )Ω(ω,α ) = −
+∫
+X
+e(√ − 1ω +α ).
+For simplicity, let us denote Z([α ], [ω ]) = −
+∫
+Xe(√ − 1ω +α ). If Θ ω (α ) = c on
+X, then we clearly have
+−
+∫
+X
+(
+√
+− 1ω +α )n ∈ R>0e
+√ − 1c− (n− 2) π
+2
+and so, in particular, the constant c appearing on the right-hand side of the
+Lagrangian phase equation is determined modulo 2 π by the classes [α ], [ω ] ∈
+H 1, 1(X, R) on the solvable set. Furthermore, if α solves the Lagrangian
+phase equation with c ⩾ (n − 2) π
+2 , then we have
+c = (n − 2)π
+2 + Argp.v (Z([α ], [ω ]))
+
+12 T. C. COLLINS
+where Arg p.v. denotes the principal value of argument. For each angle c ∈
+(−n π
+2,n π
+2 ), let
+Γ ⩾c = {(λ 1,...,λ n) ∈ Rn :
+n∑
+i=1
+arctan(λ i) ⩾c}.
+With this discussion, Theorem 2.13 implies
+Corollary 2.23. Let Solω (Θ, Γ (n− 1) π
+2
+) ⊂ K Γ(n−1) π
+2
+,ω denote the set of classes
+[α ] ∈ H 1, 1(X, R) admitting solutions of the Lagrangian phase equation Θ(α ) =
+c with c ⩾ (n − 1) π
+2 . Then, on this set
+Argp.v (Z([α ], [ω ]))
+deﬁnes a concave map into [ π
+2,π ). Furthermore, for every δ ∈ (0, π
+2 ), there
+is a constant C =C(δ)> 0, such that
+− exp[−CArgp.v (Z([α ], [ω ]))]
+is concave on Solω (Θ, Γ (n− 2) π
+2 +δ).
+Remark 2.24. The Lagrangian phase equation, also called the deformed
+Hermitian-Yang-Mills (dHYM) equation, has recently seen a great deal of
+interest, owing to its importance in mirror symmetry [23, 22 , 7, 4, 17]. In
+particular, the author, with Jacob and Yau [4], and the autho r and Yau [8]
+have formulated conjectures relating algebraic geometry a nd the solvability
+of the dHYM which would, in principle, determine the set Sol ω (Θ, Γ (n− 1) π
+2
+)
+in terms of algebraic data.
+So far, our discussion has focused on K¨ ahler examples. We no w turn to
+some non-K¨ ahler applications.
+Example 2.25. Let (X,ω ) be a compact complex manifold with dim CX =
+n ⩾ 2. Recall that the ( n− 1,n − 1) Aeppli cohomology group of X is deﬁned
+by
+H n− 1,n − 1
+A (X, R) = {∂
+∂-closed, real (n − 1,n − 1) forms }
+{∂γ +∂γ :γ ∈ Λ n− 2,n − 1}
+Note that every Gauduchon metric α on X induces a class [ α n− 1]A ∈
+H n− 1,n − 1
+A (X, R). We have the following
+Theorem 2.26 (Sz´ ekelyhidi-Tosatti-Weinkove [28]). Let (X,ω ) be a com-
+pact complex manifold with a ﬁxed Gauduchon metric ω . Let α 0 be any
+Gauduchon metric. Then there exists a unique function ϕ : X → R, with
+supXϕ = 0 , and a unique constant c ∈ R>0, and Gauduchon metric α ϕ ,
+satisfying
+(2.6) α n− 1
+ϕ =α n− 1
+0 +
+√
+− 1∂∂ϕ ∧ ω n− 2 + Re(
+√
+− 1∂ϕ ∧ ∂(ω n− 2))
+and solving
+(2.7) α n
+ϕ =cω n.
+
+13
+Observe that, in the above theorem, we clearly have [ α n− 1
+0 ]A = [α n− 1]A.
+A few words are in order about how this theorem is proved. In [3 4, 25] it
+is shown that, under the ansatz (2.6), equation (2.7) can be r educed to the
+equation
+f (λ) = ((n − 1)c)
+1
+n
+where f is the ( n − 1,n − 1) Monge-Amp` ere equation discussed in Exam-
+ple 2.4, andλ are the eigenvalues of a certain related Hermitian (1, 1) form. It
+will be important for us how this particular Hermitian form i s constructed.
+We say that a real ( n − 1,n − 1) form Ω is Gauduchon if Ω is positive,
+and √ − 1∂∂Ω = 0. By a theorem of Michelsohn [24] every Gauduchon
+(n − 1,n − 1) form Ω satisﬁes Ω = α n− 1 for a unique Gauduchon metric α .
+Let G denote the set of Gauduchon ( n − 1,n − 1) forms, which is a convex
+cone in the space of real ( n − 1,n − 1) forms on X. Following [34], to each
+Ω we associate a smooth, not necessarily positive, (1 , 1) form α Ω by
+(α Ω)i¯j = Trω
+( 1
+(n − 1)! ∗ω Ω
+)
+ω i¯j −
+( 1
+(n − 2)! ∗ω Ω
+)
+.
+Then, imposing (2.6), and solving (2.7) is equivalent to sol ving the ( n −
+1,n − 1) Monge-Amp` ere equation in Example 2.4 with (1 , 1) form
+(α Ω)i¯j +ϕ i¯j +Wi¯j(dϕ )
+whereW is a certain anstaz in the sense of Deﬁnition 2.5. The corresponding
+Gauduchon metric is obtained by applying the Pω operator described in
+Example 2.4, which acts on (1 , 1)-forms by
+Pω (β ) = 1
+n − 1 [(Trωβ )ω − β ].
+A straightforward computation shows that
+(2.8) α ϕ = 1
+(n − 1)! ∗ω Ω + 1
+n − 1
+(
+∆ ωϕ −
+√
+− 1∂∂ϕ
+)
++Pω (Wi¯j(dϕ ))
+Observe that the linear structure on Gauduchon ( n − 1,n − 1) forms is
+mapped to the linear structure on (1 , 1) forms by this construction. Namely,
+if Ω i are Gauduchon (n− 1,n − 1) forms, for i = 0, 1, and Ω t = (1 −t)Ω 0+tΩ 1,
+then applying the above construction yields
+α Ωt = (1 − t)α Ω0 +tα Ω1.
+Thus, by Theorem 2.13 we obtain
+Corollary 2.27. Let (X,ω ) be a compact Hermitian manifold, and let G
+denote the space of Gauduchon (n − 1,n − 1) forms. For each Ω , let α Ω,CY
+be the Gauduchon metric produced by Theorem 2.26, and deﬁne
+Vol1/n (Ω) =
+( ∫
+Xα n
+Ω,CY
+∫
+Xω n
+) 1/n
+.
+Then Vol1/n deﬁnes a concave function on the space G.
+
+14 T. C. COLLINS
+Remark 2.28. Observe that Corollary 2.27 also holds if we consider only
+Gauduchon (n − 1,n − 1) forms with ﬁxed Aeppli cohomology class. In par-
+ticular, it would be interesting to know if Vol 1/n achieves a ﬁnite maximum
+on Gauduchon forms in a ﬁxed class, as this could be interpret ed as an in-
+variant of the Aeppli cohomology class. It would furthermor e be interesting
+to understand whether this maximum (provided it exists) is u nique.
+Remark 2.29. As pointed out in [28], Theorem 2.26 also holds for the
+(n − 1,n − 1) − σk equations, and hence the above construction can be
+extended to deﬁne mixed volume functions on G, which are also concave, in
+complete analogy with Example 2.19
+Example 2.30. Let (X,ω ) be a Hermitian manifold, and let α be any
+smooth Hermitian metric. Then a result of Tosatti-Weinkove [35] says that
+there exists a unique function ϕ :X → R such that α ϕ :α + √
+− 1∂∂ϕ solves
+the Monge-Amp` ere equation
+α n
+ϕ =ebω n
+for some constant b = b(α,ω ). Applying Theorem 2.13 we conclude that
+the map α ↦→ eb/n , deﬁned on √
+− 1∂∂-equivalence classes of Hermitian met-
+rics, is concave. This result may have applications to the st udy of compact
+complex manifolds admitting big and nef (1 , 1) classes; see [33].
+Inspired by examples 2.15, 2.19 and 2.22 we make the followin g deﬁnition.
+Deﬁnition 2.31. We say that an elliptic operator (f, Γ) is of cohomological
+type if it has the following property:
+(1) There is a ﬁnite-to-one map ϕ f : R → R such that ϕ f :f (Γ) → [0,π ]
+is injective.
+(2) There is a map ˆZ : R → C∗ such that
+ˆZ(x) ∈ R>0e
+√ − 1ϕ f (x).
+(3) For each admissible α ∈ [α ] there is a volume form Ω(ω,α ) such that
+∫
+X
+ˆZ(Fω (α ))Ω(ω,α ) =: ZF ([α ], [ω ]) ∈ C
+depends only on the classes [α ], [ω ].
+It is not hard to see that all of the elliptic operators in exam ples 2.15, 2.19
+and 2.22 can be ﬁt into this framework. For example, for the He ssian equa-
+tion f (λ) = σ 1/k
+k , we can deﬁne
+ˆZk(x) = (1 +
+√
+− 1xk) ∈ C∗.
+In particular, we can take ϕ (x) = arctan( xk). We deﬁne the volume form
+to be Ω k(α,ω ) = ω n. Then we have
+∫
+X
+ˆZk(σ 1/k
+k (α ))ω n =
+∫
+X
+ω n +
+√
+− 1ω n− k ∧ α k =Zk([α ], [ω ]).
+
+15
+The Hessian quotient equations of Example 2.19 can be treate d similarly, and
+we have essentially already described how the Lagrangian ph ase operator can
+be ﬁt into this framework. The trivial observation is that wh en (f, Γ) is a
+cohomological type, the function c(ω, [α ]) can be determined by cohomology
+(together with Γ).
+Lemma 2.32. Suppose (f, Γ) is of cohomological type. Then, on the set
+of classes KΓ,ω ⊂ H 1, 1(X, R) admitting Γ -admissible representatives, the
+constantc depends only depends only on [α ], [ω ], and is determined by
+ZF ([α ], [ω ]) ∈ R>0e
+√
+− 1ϕ f (c)
+Proof. By assumption, for any class [ α ] admitting a Γ-admissible represen-
+tative we have
+ZF ([α ], [ω ]) =
+∫
+X
+ˆZ(Fω (α ))Ω(ω,α )
+On the other hand, if [ α ] admits a Γ-admissible solution of F = c then we
+have ˆZ(Fω (α )) ∈ R>0e
+√ − 1ϕ f (c). Thus,
+ZF ([α ], [ω ]) ∈ R>0e
+√ − 1ϕ F (c).
+On the other hand, combining the assumption that ϕ f : f (Γ) → [0,π ] is
+injective, with that fact that c ∈ f (Γ), it follows that c is uniquely speciﬁed
+byϕ f (c). □
+Combining this simple lemma with Theorem 2.13 we make the fol lowing
+conclusion. Let ( X,ω ) be a K¨ ahler manifold. Any concave elliptic operator
+(f, Γ) of cohomological type induces a concave function on the su bset of
+H 1, 1(X, R) consisting of classes containing admissible solutions of f =c for
+some K¨ ahler metric in the class [ω ].
+References
+[1] S. Boucksom, On the volume of a line bundle , Internat. J. Math. 13 (2002), no. 10,
+1043–1063.
+[2] L. Caﬀarelli, L. Nirenberg, and J. Spruck The Dirichlet problem for nonlinear second
+order elliptic equations, III: Functions of the eigenvalue s of the Hessian , Acta Math.
+155 (1985), 261–301.
+[3] X.-X. Chen A new parabolic ﬂow in K¨ ahler manifoldsComm. Anal. Geom. 12 (2004),
+no. 4, 837–852.
+[4] T. C. Collins, A. Jacob, and S.-T. Yau (1 , 1) forms with speciﬁed Lagrangian phase:
+A priori estimates and algebraic obstructions , arXiv:1508.01934
+[5] T. C. Collins, S. Picard, and X. Wu Concavity of the Lagrangian phase operator and
+applications, Calc. Var. Partial Diﬀerential Equations 56 (2017), no. 4, Art. 89
+[6] T. C. Collins, and G. Sz´ ekelyhidi Convergence of the J-ﬂow on toric manifolds J.
+Diﬀerential Geom. 107 (2017), no. 1, 81–109.
+[7] T. C. Collins, D. Xie, and S.-T. Yau The deformed Hermitian-Yang-Mills equation in
+Geometry and Physics , in Geometry and Physics: Volume I: A Festschrift in honour
+of Nigel Hitchin, Oxford University Press, 2018
+[8] T. C. Collins, and S.-T. Yau Moment maps, nonlinear PDE, and stability in mirror
+symmetry, arXiv:1811.04824
+
+16 T. C. COLLINS
+[9] J.-P. Demailly, A numerical criterion for very ample line bundles , J. Diﬀerential
+Geom. 37 (1993), no. 2, 323–374
+[10] J.-P. Demailly, and M. P˘ aun, Numerical characterization of the K¨ ahler cone of a
+compact K¨ ahler manifold, Ann. of Math. (2) 159 (2004), no. 3, 1247–1274.
+[11] S. Dinew, and S. Ko/suppress lodziejLiouville and Calabi-Yau type theorems for complex Hes-
+sian equations , Amer. J. Math. 139 (2017), no. 2, 403–415.
+[12] S.K. Donaldson, Moment maps in diﬀerential geometry , Surveys in diﬀerential ge-
+ometry, Vol. VIII (Boston, MA, 2002), 171–189, Surv. Diﬀer. Geom., 8, Int. Press,
+Somerville, MA, 2003.
+[13] L. Ein, R. Lazarsfeld, M. Mustat ¸˘ a, M. Nakamaye, and M.Popa Asymptotic invariants
+of line bundles , Pure Appl. Math. 1 (2005), 379–403.
+[14] L. G ˚ ardingAn inequality for hyperbolic polynomials , J. Math. Mech. 8 (1959), 957–
+965.
+[15] P. Gauduchon, Le th´ eor` eme de l’excentricit´ e nulle, C. R. Acad. Sci. Paris S´ er. A-B,
+285 (1977), A387–A390.
+[16] M Gromov, Convex sets and K¨ ahler manifolds , Advances in Diﬀerential Geometry
+and Topology, 1–38, World Sci. Publ., Teaneck, NJ, 1990.
+[17] A. Jacob, and S.-T. Yau A special Lagrangian type equation for holomorphic line
+bundles, Math. Ann. 369 (2017), no.1–2, 869–898
+[18] A. G. Khovanski ˘i, Analogues of Alexandrov-Fenchel inequalities for hyperbo lic forms
+Dokl. Aka. Nauk SSSR 276 (1984), no. 6, 1332–1334.
+[19] R. Lazarsfeld Positivity in Algebraic Geometry. I&II , Ergebnisse Math. Grenzg. 49
+& 49 , Springer, 2004.
+[20] R. Lazarsfeld, and M. Mustat ¸˘ aConvex bodies assoiciated to linear series , Ann. Sci.
+´Ec. Norm. Sup´ er. (4)42 (2009), no. 5, 783–835.
+[21] M. Lejmi, and G. Sz´ ekelyhidi The J-ﬂow and stability , Adv. Math. 274 (2015), 404–
+431.
+[22] N. C. Leung, S.-T. Yau, and E. Zaslow From special Lagrangian to Hermitian-Yang-
+Mills via Fourier-Mukai , Adv. Theor. Math. Phys. 4 (2000), no. 6, 1319–1341
+[23] M. Mari˜ no, R. Minasian, G. Moore, and A. Strominger Nonlinear instantons from
+supersymmetric p-branes, J. High Energy Phys. (2000), no. 1
+[24] M. L. Michelsohn, On the existence of special metrics in complex geometry Acta
+Math., 149 (1982), 261–295.
+[25] D. Popovici Aeppli cohomology classes associated with Gauduchon metri cs on compact
+complex manifolds , Bull. Soc. Math. France 143 (2015), 763–800.
+[26] J. Spruck Geometric aspects of the theory of fully nonlinear elliptic equations, in
+Global theory of minimal surfaces, vol. 2, Amer. Math. Soc., Providence, RI, 2005,
+283–309
+[27] G. Sz´ ekelyhidi,Fully non-linear elliptic equations on compact Hermitian m anifolds J.
+Diﬀerential Geom. 109 (2018), no. 1, 81–109.
+[28] G. Sz´ ekelyhidi, V. Tosatti, and B. Weinkove Gauduchon metrics with prescribed vol-
+ume form , Acta Math. 219 (2017), no. 1, 181–211
+[29] B. Teissier, Sur une in´ egalit´ e ` a la Minkowski pour les multiplciti´ es, Ann. of Math. (2)
+106 (1977), no. 1, 19–44.
+[30] B. Teissier, Bonnesen-type inequalities in algebraic geometry. I. Intr oduction to the
+problem, Seminar on Diﬀerential Geometry, pp. 85–105, Ann. of Math. Stud., 102,
+Princeton Univ. Press, Princeton, NJ, 1982.
+[31] B. Teissier, Du th´ eor` eme de l’index de Hodge aux in´ egalit´ es isop´ erim´ etriques, C. R.
+Acad. Sci. Paris S´ er. A-B 288 (1979), no. 4, A287–A289.
+[32] V. Tosatti, personal communication
+[33] V. Tosatti, The Calabi-Yau theorem and K¨ ahler currents, Adv. Theor. Math. Phys.
+20 (2016), no. 2, 381–404.
+
+17
+[34] V. Tosatti, and B. Weinkove Hermitian metrics, (n − 1, n − 1) forms, and Monge-
+Amp` ere equations, to appear in J. Reine Angew. Math.
+[35] V. Tosatti, and B. Weinkove The complex Monge-Amp` ere equation on compact Her-
+mitian manifolds , J. Amer. Math. Soc. 23 (2010), no. 4, 1187–1195.
+[36] J. Xiao, Hodge-Index type inequalities, hyperbolic polynomials an d complex hessian
+equations, preprint, 2018, arXiv:1910.04662v1
+[37] J. Xiao, Mixed Hodge-Riemann bilinear relations and m-positivity, preprint, 2018,
+arXiv:1811.05865v1
+[38] S.-T. Yau On the Ricci curvature of a compact K¨ ahler manifolds and the complex
+Monge-Amp` ere equation, I, Comm. Pure. Appl. Math 31 (1978), no. 3, 339-411.
+[39] Y. Yuan Global solutions to special Lagrangian equations Proc. Amer. Math. Soc. 134
+(2006), no. 5, 1355–1358.
+E-mail address : tristanc@mit.edu
+Department of Mathematics, Massachusetts Institute of Tec hnology, 77
+Massachusetts A venue, Cambridge, MA 02139

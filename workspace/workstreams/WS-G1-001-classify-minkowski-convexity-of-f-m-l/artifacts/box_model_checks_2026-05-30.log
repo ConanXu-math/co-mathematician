@@ -1,0 +1,16 @@
+Random seed: 20260530
+
+Explicit m=0 violations with R=2:
+n=2: F(midpoint)=1.500000000000, endpoint average=1.333333333333, violation=True
+n=3: F(midpoint)=1.285714285714, endpoint average=1.200000000000, violation=True
+n=4: F(midpoint)=1.200000000000, endpoint average=1.142857142857, violation=True
+n=5: F(midpoint)=1.153846153846, endpoint average=1.111111111111, violation=True
+n=6: F(midpoint)=1.125000000000, endpoint average=1.090909090909, violation=True
+n=7: F(midpoint)=1.105263157895, endpoint average=1.076923076923, violation=True
+
+Random box midpoint search:
+n=2: [(0, True), (1, False), (2, False)]
+n=3: [(0, True), (1, False), (2, False), (3, False)]
+n=4: [(0, True), (1, False), (2, False), (3, False), (4, False)]
+n=5: [(0, True), (1, False), (2, False), (3, False), (4, False), (5, False)]
+n=6: [(0, True), (1, False), (2, False), (3, False), (4, False), (5, False), (6, False)]

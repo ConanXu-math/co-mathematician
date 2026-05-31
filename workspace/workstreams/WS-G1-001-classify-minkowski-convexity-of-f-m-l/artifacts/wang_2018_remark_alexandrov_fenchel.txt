@@ -1,0 +1,1209 @@
+arXiv:1705.09933v2  [math.CV]  5 Feb 2018
+A REMARK ON THE ALEXANDROV-FENCHEL INEQUALITY
+XU W ANG
+ABSTRACT . In this article, we give a complex-geometric proof of the Al exandrov-Fenchel in-
+equality without using toric compactiﬁcations. The idea is to use the Legendre transform and
+develop the Brascamp-Lieb proof of the Prékopa theorem. New ingredients in our proof include
+an integration of Timorin’s mixed Hodge-Riemann bilinear r elation and a mixed norm version of
+Hörmander’s L2-estimate, which also implies a non-compact version of the K hovanski˘i-Teissier
+inequality.
+MATHEMATICS SUBJECT CLASSIFICATION (2010): 32A25, 53C55.
+KEYWORDS : Brunn-Minkowski inequality, Alexandrov-Fenchel inequality, Brascamp-Lieb proof,
+Khovanski˘i-Teissier inequality, Hodge theory, complete Kähler manifold.
+1. I NTRODUCTION
+The classical Brunn-Minkowski inequality is an inequality on the volumes of convex bodies in
+Rn. It plays an important role in many branches of mathematics, to quote from Gardner’s survey
+article [20]: "In a sea of mathematics, the Brunn-Minkowski inequality appears like an octopus,
+tentacles reaching far and wide...". A far reaching general ization of it is the Alexandrov-Fenchel
+inequality, which has many different proofs (see section 20.3 in [12]). In 1936, Alexandrov found
+a combinatorial proof and an analytic proof. The later is a ge neralization of Hilbert’s 1910 proof
+("Minkowskis Theorie von V olumen und Oberﬂäche") of the Bru nn-Minkowski inequality. A
+simple algebraic proof (see [26] and [27]) based on the Berns tein-Kushnirenko theorem and the
+intersection theory on quasi-projective variety was given by Kaveh and Khovanski˘i around 2008.
+For other interesting proofs and related results, see [22], [30], [18] and [13], to cite only a few.
+The Brunn-Minkowski inequality also has a functional versi on, i.e. the Prékopa theorem [31] for
+convex functions, which was found by Prékopa in 1973. In 1976 [11], Brascamp and Lieb gave
+another proof of the Prékopa theorem, the main idea is to use t he Brascamp-Lieb lemma (see
+Lemma 4.2) to reduce the Prékopa theorem to a weighted L2-estimate of Hörmander type [23]
+(so called the Brascamp-Lieb inequality) for the minimal so lutionu of
+du =v.
+In 1998, by a magic way of using Hörmander’s ∂-L2 estimate [23], Berndtsson [3] proved a com-
+plex version of the Prékopa theorem for plurisubharmonic fu nctions. In 2005, inspired by [1],
+Cordero-Erausquin [15] discovered the relation between Be rndtsson’s work and the Brascamp-
+Lieb proof. Shortly after that, a very general and useful the ory (so called the complex Brunn-
+Minkowski theory) [6, 5] behind the Brascamp-Lieb proof and Maitani-Y amaguchi’s result [29]
+Date: February 6, 2018.
+1
+2 XU W ANG
+was established by Berndtsson. The main result in that theor y is a deep and beautiful curvature
+formula for a certain direct image bundle, which has found ma ny highly non-trivial applications
+in Kähler geometry and algebraic geometry, see [6, 9, 8, 7, 4] and references therein. Inspired
+by [34] and Berndtsson’s theory, in this paper we obtain a new complex-geometric proof of the
+Alexandrov-Fenchel inequality. The main idea is that the Br ascamp-Lieb lemma (see Lemma
+4.2) reduces the Alexandrov-Fenchel inequality to an L2-estimate ||u|| ≤ ||θ||on Rn × (Rn/ Zn)
+for the minimal solution of
+du = (dc)∗θ, dc :=i∂ − i∂,
+with respect to Timorin’s mixed norm (see [33] and [35]). The main advantage of this approach is
+that we can prove theL2-estimate ||u|| ≤ ||θ||directly, without using the compactiﬁcation theory.
+In fact, by Hörmander’s L2-theory [24, 17], it is enough to construct a special complet e Kähler
+metric on Rn × (Rn/ Zn) (Lemma 7.1). Another advantage is that the L2-estimate ||u|| ≤ ||θ||
+is true on a large class of non-compact manifolds, not only on Rn × (Rn/ Zn). In [21] (p 21),
+Gromov suggested to study non-compact generalizations of t he Khovanski˘i-Teissier inequality.
+Our approach generalizes the Khovanski ˘i-Teissier inequality to the following:
+Theorem 1.1. Let (X, ˆω ) be an n-dimensional complete Kähler manifold with ﬁnite volume.
+Letα 1, · · ·,α n be smooth d-closed semi-positive (1, 1)-forms such that α j ≤ ˆω onX for every
+1 ≤ j ≤ n. Assume that n ≥ 2. Put
+T :=α 3 ∧ · · · ∧α n, T := 1, ifn = 2.
+Then ( ∫
+X
+α 1 ∧ α 2 ∧ T
+) 2
+≥
+( ∫
+X
+α 2
+1 ∧ T
+) ( ∫
+X
+α 2
+2 ∧ T
+)
+.
+Remark: The above theorem can be seen as a special case of our main res ult (Theorem 3.1).
+Recall that a Hermitian manifold (X, ˆω ) is said to be complete if there exists a smooth function,
+say
+ρ :X → [0, ∞ ),
+such thatρ− 1([0,c ]) is compact for every c> 0 and
+|dρ|ˆω (x) ≤ 1, ∀x ∈ X.
+In order to deduce the classical Alexandrov-Fenchel inequa lity from Theorem 1.1, we construct
+a special complete Kähler metric on Rn × (Rn/ Zn) in Lemma 7.1. The whole paper is organized
+as follows.
+CONTENTS
+1. Introduction 1
+2. Preliminaries 3
+2.1. Basic notions in convex geometry 3
+2.2. Alexandrov-Fenchel inequality 6
+2.3. Khovanski ˘i-Teissier inequality 7
+3. Main theorem 9
+ALEXANDROV-FENCHEL INEQUALITY 3
+4. Brascamp-Lieb lemma 10
+4.1. Brascamp-Lieb proof of the Prékopa theorem 10
+4.2. Proof of Lemma 3.2 12
+5. Timorin’s T -Hodge theory 12
+5.1. Brunn-Minkowski inequality 12
+5.2. T -Hodge theory 13
+5.3. Proof of Lemma 3.3 15
+6. Hörmander L2-estimate inT -Hodge theory 16
+6.1. Proof of Lemma 3.4 18
+7. Proof of the Alexandrov-Fenchel inequality 18
+7.1. Proof of Theorem 2.10 19
+8. Appendix 19
+8.1. Compare the T -Hodge theory norm with the usual norm 19
+8.2. Proof of estimate (6.9) 21
+References 22
+Acknowledgement: The author would like to thank Professor Bo Berndtsson for m any inspir-
+ing discussions on the Alexandrov-Fenchel inequality and r elated topics. Thanks are also given
+to Professor Bo-Y ong Chen and Professor Qing-Chun Ji for the ir constant support and encour-
+agement. Last but not least, thanks are due to the referee for many helpful suggestions. The
+author was partially supported by the Knut and Alice Wallenb erg Foundation and the Onsager
+fellowship.
+2. P RELIMINARIES
+2.1. Basic notions in convex geometry.
+(1) A set Ω in Rn is said to be convex if the line segment between any two points in Ω lies in
+Ω.
+(2) We call a compact convex set, say A, with non-empty interior , say A◦, in Rn a convex
+body.
+LetA0,A1 be two convex bodies in Rn. We call
+A0 +A1 := {a0 +a1 ∈ Rn :a0 ∈ A0, a1 ∈ A1},
+the Minkowski sum ofA0 andA1. The Brunn-Minkowski theorem (see [20] for a nice survey)
+reads as follows:
+Theorem 2.1 (Brunn-Minkowski inequality). |A0 +A1|1/n ≥ |A0|1/n + |A1|1/n , where the ab-
+solute value of a convex body means its volume (Lebesgue meas ure).
+Remark: The Brunn-Minkowski inequality is also true for compact non-convex sets with
+non-empty interior, see [28].
+We will also need the following notion in convex geometry.
+4 XU W ANG
+Deﬁnition 2.1 (Legendre transform) . LetA be a convex body. Let ψ be a smooth real-valued
+function on A◦. ψ is said to be strictly convex if the Hessian matrix (ψ jk) is positive deﬁnite at
+every point in A◦. We call
+ψ ∗(y) := sup
+x∈ A◦
+x ·y − ψ (x), x ·y :=
+n∑
+j=1
+xjyj,
+the Legendre transform ofψ (with respect toA◦).
+Proposition 2.2. Letψ be a smooth strictly convex function that tends to inﬁnity at the boundary
+of a convex body A. Then its Legendre transform ψ ∗ is also smooth, strictly convex, moreover
+the gradient map of ψ ∗
+(2.1) ∇ ψ ∗ :y ↦→ x = ∇ ψ ∗(y) := (∂ψ ∗/∂x 1, · · ·,∂ψ ∗/∂x n),
+deﬁnes a diffeomorphism from Rn ontoA◦.
+Proof. It is enough to prove that the gradient map of ψ deﬁnes a diffeomorphism from A◦ to Rn,
+ψ ∗ is smooth and ∇ ψ ∗ is the inverse of ∇ ψ .
+Step 1: ∇ ψ is a diffeomorphism from A◦ to Rn. Sinceψ is smooth and strictly convex, we
+know that ∇ ψ is a local diffeomorphism.
+1. ∇ ψ is injective: assume that ∇ ψ (x1) = ∇ ψ (x2) = y0, consider
+(2.2) ψ y0(x) := ψ (x) − y0 ·x,
+we know that ψ y0 is smooth, strictly convex and
+(2.3) ∇ ψ y0(x1) = ∇ ψ y0(x2) = 0.
+Consider the restriction, say g, ofψ y0 to the line determined by x1 andx2, theng is convex with
+critical pointsx1 andx2. Thus g is a constant on the line segment from x1 tox2, moreover, strict
+convexity ofg impliesx1 =x2. Thus ∇ ψ is injective.
+2. ∇ ψ (A0) = Rn: ﬁx y ∈ Rn, sinceψ y tends to inﬁnity at the boundary of A, strict convexity
+ofψ implies thatψ y has a unique minimum point, say x ∈ A◦. Thus
+0 = ∇ ψ y(x) = ∇ ψ (x) − y.
+Step 2: ψ ∗ is smooth. Notice that
+(2.4) ψ ∗(∇ ψ (x)) = ∇ ψ (x) ·x − ψ (x).
+Thusψ ∗ ◦ ∇ ψ is a smooth, which implies that ψ ∗ is smooth on Rn.
+Step 3: ∇ ψ ∗ is the inverse of ∇ ψ . Apply the differential to (2.4), we get that
+(2.5) (∇ ψ ∗ ◦ ∇ ψ (x)) ·(ψ jk ) = x ·(ψ jk ), ∀x ∈ A◦.
+Since (ψ jk ) is an invertible matrix function, the above formula gives ∇ ψ ∗ ◦ ∇ ψ =Id. □
+ALEXANDROV-FENCHEL INEQUALITY 5
+Remark: Put φ = ψ ∗. We know from the above proposition that ∇ φ is a diffeomorphism
+from Rn onto the interior of A, thus
+(2.6) |A|=
+∫
+A
+dy =
+∫
+Rn
+MA(φ)dx, dx :=dx1 ∧ · · · ∧dxn, dy :=dy1 ∧ · · · ∧dyn.
+whereMA(φ) := det(φ jk) denotes the determinant of the Hessian of φ. In case A is the convex
+hull of a ﬁnite set, say {pj}1≤ j≤ N ⊂ Rn, one may choose
+φ(x) = log
+( N∑
+j=1
+epj·x
+)
+.
+For more results on convex function of the above type, see [36 ] and [21], see also [2] and [16]
+for the canonical choice of such φ.
+The following proposition is a generalization of (2.6).
+Proposition 2.3. Let φ 1, · · ·,φ N be smooth strictly convex functions such that each ∇ φ j is a
+diffeomorphism from Rn onto the interior of a convex body Aj. Then we have
+(2.7) |t1A1 + · · ·+tNAN |=
+∫
+Rn
+MA(t1φ 1 + · · ·+tNφ N )dx, tj > 0, ∀ 1 ≤ j ≤ N.
+Proof. By induction on N, it sufﬁces to show that
+(2.8) ∇ (φ 1 +φ 2)(Rn) = A◦
+1 +A◦
+2,
+whereA◦ denotes the interior of A. Obviously we have ∇ (φ 1 +φ 2)(Rn) ⊂ A◦
+1 +A◦
+2. Thus it
+is enough to show that for every y1 ∈ A◦
+1 and every y2 ∈ A◦
+2, there exists x0 ∈ Rn such that
+∇ (φ 1 +φ 2)(x0) = y1 +y2. Consider φ
+yj
+j instead of φ j, one may assume that y1 = y2 = 0 .
+Choosex1 andx2 such that
+(2.9) ∇ φ 1(x1) = ∇ φ 2(x2) = 0.
+Sinceφ j is convex, we know that each xj is the minimum point of φ j. Thus strict convexity of
+φ j implies that
+(2.10) φ j(x) → ∞ , as |x| → ∞ ,
+i.e. each φ j is proper. Thus φ 1 +φ 2 is also proper. Hence there exists a unique minimum point,
+sayx0, ofφ 1 +φ 2. Thus ∇ (φ 1 +φ 2)(x0) = 0 . The proof is complete. □
+Remark: The above proposition implies that
+(2.11) p(t) := |t1A1 + · · ·+tnAn|,
+is a polynomial of degree n. We call the coefﬁcient of t1 · · ·tn in the polynomial p(t), i.e.
+V (A1, · · ·,A n) := ∂n|t1A1 + · · ·+tnAn|
+∂t1 · · ·∂tn
+,
+the mixed volume ofA1, · · ·,A n.
+6 XU W ANG
+2.2. Alexandrov-Fenchel inequality.
+Theorem 2.4 (Alexandrov-Fenchel inequality). LetA1, · · ·,A n be convex bodies in Rn. Assume
+thatn ≥ 2. Then
+V (A1, · · ·,A n)2 ≥ V (A1,A 1,A 3, · · ·,A n)V (A2,A 2,A 3, · · ·,A n).
+The following lemma can be used to ﬁnd equivalent forms of the Alexandrov-Fenchel inequal-
+ity.
+Lemma 2.5. Letf be a positive smooth function on an open convex cone, say K, in RN . Assume
+thatf is 1-homogeneous, i.e.
+f (tx) ≡ tf (x), ∀t> 0, x ∈ K.
+Then the following statements are equivalent:
+A1:f (x +y) ≥ f (x) +f (y), ∀x,y ∈ K ;
+A2: −f is convex;
+A3: − logf is convex;
+A4: F or everyx′,y ′ ∈ K ,t ↦→ − logf (tx′ + (1 − t)y′) is convex on (0, 1).
+Proof. Sincef is 1-homogeneous,A1 implies
+(2.12) f (tx + (1 − t)y) ≥ tf (x) + (1 − t)f (y).
+ThusA1 ⇒ A2. Since
+(2.13) (− logf )ξξ = −fξξ
+f + (fξ)2
+f 2 , fξ =
+∑
+ξjfxj,
+we know A2 ⇒ A3. Since A3 ⇒ A4 is trivial, it is enough to show A4 ⇒ A1: notice that A4
+implies
+(2.14) f (tx′ + (1 − t)y′) ≥ f (x′)tf (y′)1− t.
+Take
+(2.15) x′ = x
+f (x), y ′ = y
+f (y), t = f (x)
+f (x) +f (y),
+we getA1. The proof is complete. □
+Apply the above lemma to the following function
+(2.16) f (x) = V (Ax,A x,A 3, · · ·,A n)1/ 2, Ax :=x1A1 +x2A2,
+on K := R2
++. Notice that the square of
+(2.17) f (x +y) ≥ f (x) +f (y),
+is equivalent to
+V (Ax,A y,A 3, · · ·,A n)2 ≥ V (Ax,A x,A 3, · · ·,A n)V (Ay,A y,A 3, · · ·,A n).
+By the above lemma, we have
+ALEXANDROV-FENCHEL INEQUALITY 7
+Proposition 2.6. The Alexandrov-Fenchel inequality is equivalent to the con vexity of
+t ↦→ − logV (At,A t,A 3, · · ·,A n), At :=tA1 + (1 − t)A2,
+on (0, 1).
+A generalized form of the Alexandrov-Fenchel inequality is also true.
+Theorem 2.7. Let A1,A 2,A m+1, · · ·,A n, 2 ≤ m ≤ n, be convex bodies in Rn. Then the
+following function is convex on (0, 1)
+t ↦→ − logV (At, · · ·,A t  
+m
+,A m+1, · · ·,A n), At :=tA1 + (1 − t)A2.
+The above theorem is in fact equivalent to the Alexandrov-Fe nchel inequality (see Theorem
+7.4.5 in [32]).
+2.3. Khovanski˘i-Teissier inequality. We will use the following complex geometry interpreta-
+tion of the volume function in Proposition 2.3.
+Lemma 2.8. Letφ 1, · · ·,φ N be smooth strictly convex functions such that each ∇ φ j is a diffeo-
+morphism from Rn onto the interior of a convex body Aj. Let us look at
+φ :=
+N∑
+j=1
+tjφ j,
+as a function on
+Rn × Tn = Cn/i Zn, T := R/ Z, i :=
+√
+− 1,
+i.e.φ(x +iy) := ∑N
+j=1tjφ j(x). Then we have
+∫
+Rn
+MA(φ)dx =
+∫
+Rn× Tn
+(ddcφ)n
+n! , dc :=i∂ − i∂.
+Proof. Since
+ddcφ = 2i∂∂φ = i
+2
+n∑
+j,k =1
+φ jkdzj ∧ d¯zk, z j :=xj +iyj,
+whereφ jk :=∂2φ/∂x j∂xk, we have
+(ddcφ)n
+n! = det(φ jk) (dx1 ∧ dy1) ∧ · · · ∧(dxn ∧ dyn),
+thus the lemma follows from the Fubini theorem and
+∫
+Tndy = 1. □
+The above lemma implies
+Lemma 2.9. Letφ 1, · · ·,φ n be smooth strictly convex functions such that each ∇ φ j is a diffeo-
+morphism from Rn onto the interior of a convex body Aj. Then we have the following mixed
+volume formula
+V (A1, · · ·,A n) =
+∫
+Rn× Tn
+ddcφ 1 ∧ · · · ∧ddcφ n.
+8 XU W ANG
+Proof. The previous lemma gives
+|
+n∑
+j=1
+tjAj|=
+∫
+Rn× Tn
+(ddcφ)n
+n! , tj > 0, ∀ 1 ≤ j ≤ n.
+Notice that
+(ddcφ)n
+n! =
+∑
+α 1+···+α n=n
+tα 1
+1 · · ·tα n
+n
+α 1! · · ·α n! (ddcφ 1)α 1 ∧ · · · ∧(ddcφ n)α n,
+and each term (ddcφ 1)α 1 ∧ · · · ∧(ddcφ n)α n is a positive (n,n )-form, thus
+|
+n∑
+j=1
+tjAj|< ∞ ⇒
+∫
+Rn× Tn
+(ddcφ 1)α 1 ∧ · · · ∧(ddcφ n)α n < ∞ .
+Now we have
+|
+n∑
+j=1
+tjAj|=
+∑
+α 1+···+α n=n
+tα 1
+1 · · ·tα n
+n
+α 1! · · ·α n!
+∫
+Rn× Tn
+(ddcφ 1)α 1 ∧ · · · ∧(ddcφ n)α n,
+and the lemma follows. □
+By the above lemma, we know that Theorem 2.7 is equivalent to t he following:
+Theorem 2.10. Letφ 1,φ 2, φm+1, · · ·,φ n, 2 ≤ m ≤ n, be smooth strictly convex functions such
+that each ∇ φ j is a diffeomorphism from Rn onto the interior of a convex body Aj. Then the
+following function is convex on (0, 1)
+t ↦→ − log
+∫
+Rn× Tn
+ω m
+m! ∧ T,
+where
+ω :=tddcφ 1 + (1 − t)ddcφ 2, T :=ddcφ m+1 ∧ · · · ∧ddcφ n.
+Let us recall the following Khovanski ˘i-Teissier theorem.
+Theorem 2.11 (Khovanski˘i-Teissier inequality). Letω 1, · · ·,ω n be Kähler forms on a compact
+Kähler manifoldX. Assume that n ≥ 2. Put
+T :=ω 3 ∧ · · · ∧ω n, T := 1, ifn = 2.
+Then ( ∫
+X
+ω 1 ∧ ω 2 ∧ T
+) 2
+≥
+( ∫
+X
+ω 2
+1 ∧ T
+) ( ∫
+X
+ω 2
+2 ∧ T
+)
+.
+By Lemma 2.5, we know that the Khovanski ˘i-Teissier inequality is equivalent to the ( m = 2
+case) convexity of
+t ↦→ − log
+∫
+X
+ω m
+m! ∧ T, ω :=tω 1 + (1 − t)ω 2, T :=ω m+1 ∧ · · · ∧ω n.
+Thus Theorem 2.10 can be seen as a Khovanski ˘i-Teissier inequality for Rn × Tn.
+ALEXANDROV-FENCHEL INEQUALITY 9
+Remark: The above equivalent description of the Khovanski ˘i-Teissier inequality was ﬁrst
+used by Graham in his proof of the convexity of the interpolat ing function, see [19]. There are
+also other descriptions of the Khovanski ˘i-Teissier inequality. A very nice intersection theory
+description of its algebraic version can be found in [25] and [26]. In the Hodge theory descrip-
+tion, the Khovanski ˘i-Teissier inequality is a direct application of the mixed generalization of
+the classical Hodge-Riemann bilinear relation (MHRR) for (1, 1)-forms. MHRR for general
+(p,q )-forms on a compact Kähler manifold was ﬁrst proved by Dinh-N guyên in [18] based on
+Timorin’s result [33] for the torus case, see also [13] for an other approach that applies to general
+polarized Hodge-Lefschetz modules.
+3. M AIN THEOREM
+Theorem 3.1. Let (X, ˆω ) be ann-dimensional complete Kähler manifold with ﬁnite volume. L et
+α 1,α 2,α m, · · ·,α n, 2 ≤ m ≤ n, be smooth d-closed semi-positive (1, 1)-forms such that each
+α j ≤ ˆω onX. Then the following function is convex on (0, 1)
+t ↦→ − log
+∫
+X
+ω m
+m! ∧ T, ω :=tα 1 + (1 − t)α 2,
+whereT :=α m+1 ∧ · · · ∧α n, T := 1, ifn =m.
+By Lemma 2.5, in case m = 2 , our main theorem is equivalent to Theorem 1.1, which is a
+non-compact generalization of the Khovanski ˘i-Teissier inequality.
+About the proof of the main theorem . Put
+f (t) = − log
+∫
+X
+ω m
+m! ∧ T.
+Considerα j +ǫˆω instead ofα j and denote by f ǫ the associated function. Then we have
+f = lim
+ǫ→ 0
+f ǫ.
+Thus it sufﬁces to show that each f ǫ is convex on (0, 1), i.e. one may assume that
+(3.1) ˆω
+C ≤ α j ≤ C ˆω,
+for everyj in Theorem 3.1, whereC is a ﬁxed positive constant. Then Theorem 3.1 follows from
+the following three lemmas.
+Lemma 3.2. Assume that (3.1) is true. Deﬁne G onX such that
+d
+dt
+( ω m
+m! ∧ T
+)
+= −Gω m
+m! ∧ T.
+Then
+ftt := d2f
+dt2 =
+∫
+X
+(
+Gt − (G − Eµ (G))2)
+dµ,
+where
+dµ :=
+ω m
+m! ∧ T∫
+X
+ω m
+m! ∧ T, Eµ (G) :=
+∫
+X
+Gdµ.
+10 XU W ANG
+Lemma 3.3. Assume that (3.1) is true. Then
+(3.2)
+∫
+X
+Gtdµ =ef ||θ||2
+T,ω , θ := d
+dtω =α 1 − α 2,
+and
+(3.3)
+∫
+X
+(G − Eµ (G))2dµ =ef ||G − Eµ (G)||2
+T,ω ,
+where || · ||T,ω denotes theT -Hodge theory norm (see Deﬁnition 5.6). Moreover ,
+(3.4) T ∧ G = − Λ(T ∧ θ),
+where Λ denotes the adjoint of ω ∧ · inT -Hodge theory.
+Lemma 3.4. Assume that (3.1) is true. Then T ∧ (Eµ (G) − G) is theL2-minimal solution of
+d(·) = (dc)∗(T ∧ θ),
+with respect to the T -Hodge theory norm and
+||G − Eµ (G)||T,ω ≤ ||θ||T,ω .
+4. B RASCAMP -L IEB LEMMA
+We shall use the Brascamp-Lieb lemma to prove Lemma 3.2.
+4.1. Brascamp-Lieb proof of the Prékopa theorem. The following Prékopa theorem was
+found by Prékopa around 1973.
+Theorem 4.1 (Prékopa’s theorem [31]) . Letφ be a smooth, strictly convex function of (t,x ) in
+Rn+1. Then
+(4.1) t ↦→ − log
+∫
+A
+e− φ (t,x )dλ(x),
+is strictly convex on R, where A is a ﬁxed convex body in Rn anddλ(x) denotes the Lebesgue
+measure.
+The Brascamp-Lieb proof in [11] contains three steps.
+Step 1: The second order derivative of function (4.1) can be writte n as
+(4.2)
+∫
+A
+φ tt − (φ t − Eν (φ t))2dν,
+where
+(4.3) dν := e− φ (t,x )dλ(x)
+∫
+Ae− φ (t,x )dλ(x), Eν (φ t) :=
+∫
+A
+φ tdν.
+Step 2: Prove the following Brascamp-Lieb inequality:
+∫
+Rn
+(φ t − Eν(φ t))2dν ≤
+∫
+Rn
+n∑
+j,k =1
+φ tjφ jkφ tkdν,
+ALEXANDROV-FENCHEL INEQUALITY 11
+where (φ jk) denotes the inverse matrix of (φ jk).
+Step 3: Use strict convexity of φ to proveφ tt > ∑n
+j,k =1φ tjφ jkφ tk.
+Remark: The ﬁrst step follows from the following lemma (take dV =e− φdλ). Since
+φ t − Eν(φ t)
+is the (weighted) L2-minimal solution of d(·) = d(φ t), an Hörmander type L2-estimate gives
+step 2, see also [11] for a direct proof. For step 3, let Dt,x be the determinant of the full hessian
+matrix ofφ, letDx be the determinant of the hessian matrix of φ as a function of x, then
+Dt,x
+Dx
+=φ tt −
+n∑
+j,k =1
+φ tjφ jkφ tk.
+Strict convexity ofφ impliesDt,x > 0 andDx > 0. Thus Step 3 follows.
+Lemma 4.2 (Brascamp-Lieb lemma). LetA be a relatively compact open set in a smooth mani-
+foldX. Let {dV (t)}t∈ R be a smooth family of smooth volume forms on X. Let us deﬁne G such
+that
+d
+dtdV (t) = −G(t,x )dV (t), (t,x ) ∈ R × X.
+Then
+d2
+dt2
+(
+− log
+∫
+A
+dV (t)
+)
+=
+∫
+A
+(
+Gt − (G − Eµ (G))2)
+dµ,
+where
+dµ := dV∫
+AdV, E µ (G) :=
+∫
+A
+Gdµ.
+Proof. SinceA is relatively compact, we have
+d
+dt
+(
+− log
+∫
+A
+dV (t)
+)
+=
+∫
+A
+Gdµ.
+Apply the differential again, we get
+d2
+dt2
+(
+− log
+∫
+A
+dV (t)
+)
+=
+∫
+A
+Gtdµ +Gd
+dtdµ.
+A direct computation gives
+d
+dtdµ = −Gdµ +Eµ (G)dµ,
+which implies
+∫
+AG d
+dtdµ = −
+∫
+A(G − Eµ (G))2dµ. Thus the lemma follows. □
+Remark: In [6], Berndtsson proved that the Brascamp-Lieb lemma is e ssentially a subbundle
+curvature formula associated to a certain direct image bund le. Our main theorem can also be
+proved along this line, see [35, 34]. Other interesting form ulas for the second order derivative of
+− log
+∫
+dV can be found in [1].
+12 XU W ANG
+4.2. Proof of Lemma 3.2. Notice that the Brascamp-Lieb lemma gives Lemma 3.2 if X is
+compact. In case X is non-compact we can not directly apply the Brascamp-Lieb l emma. In our
+case the main point is that
+e− f =
+∫
+X
+ω m
+m! ∧ T,
+is a polynomial of degree m. The reason is that we can write
+ω m
+m! ∧ T =
+m∑
+j=1
+tjΩj.
+Then (3.1) implies that each
+∫
+X Ωj is ﬁnite and
+e− f =
+m∑
+j=1
+( ∫
+X
+Ωj
+)
+tj.
+Thus in our case,
+∫
+X commutes with d
+dt and the Brascamp-Lieb lemma applies.
+5. T IMORIN ’ S T -HODGE THEORY
+We shall use Timorin’s T -Hodge theory to prove Lemma 3.3. The motivation comes from t he
+Brunn-Minkowski case, i.e. T = 1 andX = Rn × Tn (recall T := R/ Z).
+5.1. Brunn-Minkowski inequality. By Lemma 2.5, we know that the Brunn-Minkowski in-
+equality is equivalent to the convexity of
+f :t ↦→ − log |At|, At :=tA1 + (1 − t)A2,
+on (0, 1). Let φ 1 andφ 2 be smooth strictly convex functions that tend to inﬁnity at t he boundary
+ofA1 andA2 respectively. Put
+ψ 1 :=φ ∗
+1, ψ 2 :=φ ∗
+2.
+Proposition 2.2 gives
+∇ ψ 1(Rn) = A◦
+1, ∇ ψ 2(Rn) = A◦
+2.
+Thus by Proposition 2.3 we have
+|At|=
+∫
+Rn
+det(φ jk)dx, φ :=tψ 1 + (1 − t)ψ 2.
+Apply the Brascamp-Lieb lemma to
+dV = det(φ jk)dx,
+we get
+(5.1) ftt =
+∫
+Rn
+Gt − (G − Eµ (G))2dµ,
+where
+dµ := det(φ jk)dλ(x)
+∫
+Rn det(φ jk)dλ(x), Eµ (G) :=
+∫
+Rn
+Gdµ.
+Lemma 5.1. G = − ∑n
+j,k =1φ tjkφ jk.
+ALEXANDROV-FENCHEL INEQUALITY 13
+Proof. We use the fact that if M(t) is a smooth family of positive deﬁnite matrices then
+(log detM)t = Trace(M − 1Mt).
+ConsiderM = (φ jk) thenG = − Trace(M − 1Mt) and the lemma follows. □
+Lemma 5.2. Gt = ∑n
+j,k,l,m =1φ tjkφ tlmφ jlφ km.
+Proof. IfM(t) is a smooth family of positive deﬁnite matrices then
+(M − 1)t = −M − 1MtM − 1.
+Apply the above fact, we get
+(φ jk)t = −
+n∑
+l,m =1
+φ tlmφ jlφ km.
+Moreover, Lemma 5.1 implies Gt = − ∑n
+j,k =1φ tjk(φ jk)t, thus the lemma follows. □
+By Lemma 2.8, we have
+f = − log
+∫
+Rn× Tn
+(ddcφ)n
+n! .
+Considerω =ddcφ. The above two lemmas give
+G = − Λθ, Gt = |θ|2
+ω,
+thus Lemma 3.3 is true in case T = 1 andX = Rn × Tn.
+5.2. T -Hodge theory. In this subsection, we will introduce the T -Hodge theory behind the
+proof of Lemma 3.3. The T -Hodge theory is an integration of Timorin’s work in [33], se e the
+author’s notes [35] for a systematic study of the T -Hodge theory.
+Denote by V p,q the space of smooth (p,q )-forms on an n-dimensional complex manifold X.
+Put
+V := ⊕ 0≤ p,q ≤ nV p,q, V k := ⊕ p+q=kV p,q.
+Deﬁnition 5.1. Let
+T =α m+1 ∧ · · · ∧α n,
+be a ﬁnite wedge product of smooth positive (1, 1)-forms on X. We call the Hodge theory on
+VT := {T ∧ u :u ∈ V } theT -Hodge theory.
+For bidegree reason, we have
+VT = ⊕ 0≤ p,q ≤ mV p,q
+T ,
+whereV p,q
+T denotes the space of forms that can be written as T ∧ u, where u is a smooth (p,q )-
+form onX. Fix a smooth positive (1, 1)-formω onX. The L operator
+L :T ∧ u ↦→ ω ∧ T ∧ u,
+is well deﬁned and maps V p,q
+T toV p+1,q +1
+T .
+14 XU W ANG
+Theorem 5.3 (Timorin’s mixed hard-Lefschetz theorem) . PutV k
+T = ⊕ p+q=kV p,q
+T then
+Lm− k :T ∧ u ↦→ T ∧ u ∧ ω m− k, 0 ≤ k ≤ m,
+deﬁnes an isomorphism from V k
+T toV 2m− k
+T .
+Proof. By Theorem 4.2 in [35], we know that
+A :u ↦→ T ∧ u ∧ ω m− k,
+deﬁnes an isomorphism from V k toV 2n− k. Hence V 2n− k =V 2m− k
+T and the following map
+fT :u ↦→ T ∧ u, u ∈ V k,
+is injective. Thus fT deﬁnes an isomorphism from V k to V k
+T . Hence Lm− k = A ◦f − 1
+T is an
+isomorphism fromV k
+T toV 2m− k
+T . □
+Deﬁnition 5.2. We callT ∧ u ∈ V k
+T a primitivek-form ifk ≤ m andLm− k+1(T ∧ u) = 0 .
+Theorem 5.3 implies:
+Theorem 5.4. EveryT ∧ u ∈ V k
+T has an Lefschetz decomposition as follows:
+(5.2) T ∧ u =
+j∑
+r=0
+Lr(T ∧ ur), for some 0 ≤ j ≤ m,
+where eachT ∧ ur is zero or primitive in V k− 2r
+T . If T ∧ u = 0 thenT ∧ ur = 0 for everyr.
+Proof. By the isomorphism in Theorem 5.3, one may assume that 0 ≤ k ≤ m. Notice that all
+forms in V 0
+T andV 1
+T are primitive. Assume that 2 ≤ k ≤ m, Theorem 5.3 gives ˆu ∈ V k− 2 such
+that
+Lm− k+2(T ∧ ˆu) = Lm− k+1(T ∧ u).
+Putu0 =u − Lˆu, thenT ∧ u0 is primitive and
+T ∧ u =T ∧ u0 +L(T ∧ ˆu).
+Consider ˆu instead u, the Lefschetz decomposition of T ∧ u follows by repeating the above
+argument. If T ∧ u = ∑j
+r=0Lr(T ∧ ur) = 0 then primitivity of T ∧ ur for 0 ≤ r<j implies
+0 = Lm− k+j(
+j∑
+r=0
+Lr(T ∧ ur)) = Lm− k+2j(T ∧ uj),
+which givesT ∧ uj = 0 by Theorem 5.3. By induction on j, we get T ∧ ur = 0 for everyr. □
+Deﬁnition 5.3. IfT ∧ u ∈ V k
+T is primitive then we deﬁne
+∗s(Lr(T ∧ u)) := ( − 1)[k]Lm− r− k(T ∧ u),
+where
+Lp := Lp
+p!, [k] := 1 + · · ·+k = k(k + 1)
+2 .
+∗s extends to a C-linear map ∗s :VT → VT , we call it the Lefschetz star operator on VT .
+ALEXANDROV-FENCHEL INEQUALITY 15
+The Lefschetz star operator above is a generalization of the symplectic star operator, see [35]
+for the background.
+Deﬁnition 5.4. Put Λ = ∗− 1
+s L∗s,B := [L, Λ]. We call (L, Λ,B ) thesl2-triple onVT .
+Deﬁnition 5.5. We call ∗ := ∗s ◦J the Hodge star operator on VT , whereJ is the Weil-operator
+deﬁned byJu =ip− qu ifu ∈ V p,q
+T .
+Timorin’s mixed Hodge-Riemann bilinear relation [33] give s:
+Theorem 5.5. F or every non-zerou ∈ V k, 0 ≤ k ≤ m,∫
+X
+u ∧
+∗(T ∧ u)> 0,
+where ∗ denotes the Hodge star operator on VT .
+Proof. LetT ∧u = ∑j
+r=0Lr(T ∧ur) be the Lefschetz decomposition ofT ∧u. By our assumption,
+the degree of u is no bigger than m, thus Theorem 4.2 in [35] implies
+u =
+j∑
+r=0
+Lrur.
+Now primitivity ofT ∧ ur gives
+u ∧
+∗(T ∧ u) =
+j∑
+r=0
+(− 1)[k− 2r]LrLm+r− k(T ∧ ur) ∧ J(ur).
+By Theorem 4.1 in [35], if ur is not zero then
+(− 1)[k− 2r]LrLm+r− k(T ∧ ur) ∧ J(ur)> 0,
+as a positive (n,n )-form. Thus the theorem follows. □
+Let us deﬁne
+||T ∧ u||2 := ||u||2
+T,ω :=
+∫
+X
+u ∧
+∗(T ∧ u), u ∈ V k, 0 ≤ k ≤ m.
+Deﬁnition 5.6. We call ||T ∧ u||= ||u||T,ω theT -Hodge theory norm on V k
+T .
+5.3. Proof of Lemma 3.3. (3.3) follows directly from the deﬁnition of the T -Hodge theory
+norm. For (3.2), notice that
+d
+dt
+( ω m
+m! ∧ T
+)
+=θ ∧ ω m− 1
+(m − 1)! ∧ T,
+gives
+(5.3) (θ +Gω
+m) ∧ ω m− 1
+(m − 1)! ∧ T = 0.
+Deﬁnition 5.7. θ0 :=θ +G ω
+m, θ1 := − G
+m, θ′ := −θ0 ∧ ω m− 2
+(m− 2)! +θ1 ∧ ω m− 1
+(m− 1)! .
+16 XU W ANG
+We haveθ =θ0 +θ1ω . (5.3) implies that T ∧ θ0 is primitive. Thus we have
+(5.4) T ∧ θ′ = ∗(T ∧ θ) = ∗(T ∧ θ).
+Apply the derivative of (5.3) with respect to t, we get
+(Gt
+ω
+m +Gθ
+m) ∧ ω m− 1
+(m − 1)! ∧ T +θ0 ∧ θ ∧ ω m− 2
+(m − 2)! ∧ T = 0,
+thus
+Gt
+ω m
+m! ∧ T = θ1θ ∧ ω m− 1
+(m − 1)! ∧ T − θ0 ∧ θ ∧ ω m− 2
+(m − 2)! ∧ T
+= θ ∧ θ′ ∧ T =θ ∧ ∗(T ∧ θ),
+which gives (3.2). Now it sufﬁces to prove (3.4). Notice that Deﬁnition 5.4 gives
+Λ(T ∧ θ) = ∗− 1
+s (ω ∧ T ∧ θ′) = T ∧ mθ1 = −T ∧ G.
+Thus (3.4) is true.
+6. H ÖRMANDER L2-ESTIMATE IN T -HODGE THEORY
+Notation: In this paper,d∗ and (dc)∗ denote the adjoint ofd anddc with respect to theT -Hodge
+theory norm.
+Theorem 6.1. Let (X, ˆω ) be ann-dimensional complete Kähler manifold. Let
+T :=α m+1 ∧ · · · ∧α n, 2 ≤ m ≤ n,
+be a ﬁnite wedge product of Kähler forms onX such that (3.1) is true. Letθ be a smoothd-closed
+2-form onX. Assume that the T -Hodge theory norm ||T ∧θ||is ﬁnite. Then there exists a smooth
+solution of
+d(T ∧ u) = (dc)∗(T ∧ θ)
+such that ||T ∧ u|| ≤ ||T ∧ θ||.
+Proof. The proof contains two steps.
+Step 1: "A prior estimate"
+(6.1) |(T ∧ α, (dc)∗(T ∧ θ))|2 ≤ ||T ∧ θ||2Q(α,α ),
+for every smooth 1-formα with compact support in X, where
+Q(α,α ) := ||d(T ∧ α )||2 + ||d∗(T ∧ α )||2.
+Proof of Step 1 : Since
+(T ∧ α, (dc)∗(T ∧ θ)) = (dc(T ∧ α ),T ∧ θ),
+it sufﬁces to show the following T -geometry version of the Bochner-Kodaira-Nakano identity
+||d(T ∧ α )||2 + ||d∗(T ∧ α )||2 = ||dc(T ∧ α )||2 + ||(dc)∗(T ∧ α )||2,
+which is a special case of Theorem 4.8 in [35].
+ALEXANDROV-FENCHEL INEQUALITY 17
+Step 2: By Step 1, we know that
+F :α ↦→ (T ∧ α, (dc)∗(T ∧ θ)),
+isQ-bounded by ||T ∧ θ||. Thus F extends to a bounded linear functional on the Q-completion,
+say H, of the space of smooth 1-forms with compact support in X. The Riesz representation
+theorem givesβ ∈ H with
+(6.2) Q(β,β ) ≤ ||T ∧ θ||2,
+such that
+(6.3) Q(α,β ) = F (α ) = (T ∧ α, (dc)∗(T ∧ θ)),
+for every smooth 1-formα with compact support in X, where
+(6.4) Q(α,β ) = (d(T ∧ α ),d (T ∧ β )) + (d∗(T ∧ α ),d ∗(T ∧ β )).
+SinceH is a subspace of the space of currents, we have
+(6.5) Q(α,β ) = (T ∧ α, (dd∗ +d∗d)(T ∧ β )).
+Thus (6.3) and (6.5) together give
+(dd∗ +d∗d)(T ∧ β ) = (dc)∗(T ∧ θ),
+in the sense of current. Let us deﬁne u such thatT ∧ u =d∗(T ∧ β ). Since dd∗ +d∗d is elliptic,
+we know that β is smooth. Thus u is smooth. Notice that (6.2) gives
+||T ∧ u|| ≤ ||T ∧ θ||,
+Thus it sufﬁces to prove the following identity. □
+Lemma 6.2. d∗d(T ∧ β ) ≡ 0.
+Proof. TheT -Kähler identity (dc)∗ = [d, Λ] (see section 4 in [35]) implies that
+d(dc)∗ + (dc)∗d = 0.
+Thus
+d(dc)∗(T ∧ θ) = − (dc)∗d(T ∧ θ) = 0.
+Now we have
+dd∗d(T ∧ β ) ≡ 0.
+Since ˆω is complete, there exists a smooth exhaustion function, say ρ, onX such that
+(6.6) |dρ|ˆω ≤ 1.
+Let 0 ≤ χ ≤ 1 be a smooth function on R such that χ ≡ 1 on (−∞ , 1) andχ ≡ 0 on (2, ∞ ).
+Then for each ε> 0,χ (ερ) is a smooth function with compact support. Since
+(6.7) (χ 2(εb)dd∗d(T ∧ β ),d (T ∧ β )) = 0,
+and
+χ 2(εb)dd∗d(T ∧ β ) = d(χ 2(εb)d∗d(T ∧ β )) − 2d(χ (εb)) ∧ χ (εb)d∗d(T ∧ β ),
+we have
+(6.8) ||χ (εb)d∗d(T ∧ β )||2 = 2(d(χ (εb)) ∧ χ (εb)d∗d(T ∧ β ),d (T ∧ β )).
+18 XU W ANG
+Thus Lemma 6.2 follows from the following estimate
+(6.9) lim
+ε→ 0
+||d(χ (εb)) ∧ χ (εb)d∗d(T ∧ β )||= 0.
+The above estimate is easily seen to be true in case T = 1 , see [14]. The general case will be
+proved in the appendix. □
+6.1. Proof of Lemma 3.4. By Lemma 3.3, we have
+d (T ∧ (Eµ (G) − G)) = dΛ(T ∧ θ) = [d, Λ](T ∧ θ),
+By the Kähler identity in T -Hodge theory (section 4 in [35]), we have [d, Λ] = ( dc)∗, thus
+T ∧ (Eµ (G) − G) is a solution of
+d(·) = (dc)∗(T ∧ θ).
+Notice that T ∧ (Eµ (G) − G) is perpendicular to kerd, thus it is also the L2-minimal solution.
+By (3.1), for every ﬁxed 0<t< 1,ω =tα 1 + (1 − t)α 2 is complete. Apply Theorem 6.1 to the
+case ˆω =ω , Lemma 3.4 follows.
+7. P ROOF OF THE ALEXANDROV -F ENCHEL INEQUALITY
+Lemma 7.1. Put
+ψ (x) =
+n∑
+j=1
+log 1
+1 + (xj)2 +C log(1 +exj
+), C := 4(1 + e
+√
+3)2e
+√
+3.
+Thenψ is strictly convex on Rn and ∇ ψ (Rn) ⊂ (− 1,C + 1)n. Moreover , if we look at ψ as a
+function on Rn × Tn thenddcψ is complete Kähler on Rn × Tn.
+Proof. A direct computation gives
+(7.1)
+(
+log 1
+1 + (xj)2
+)
+xj
+= − 2xj
+1 + (xj)2,
+and
+(7.2)
+(
+log 1
+1 + (xj)2
+)
+xjxj
+= 2(xj)2 − 2
+(1 + (xj)2)2 ≥ 1
+1 + (xj)2, if (xj)2 ≥ 3.
+Since log(1 +ex) is convex, the above inequality gives
+ψ xj xj ≥ 1
+1 + (xj)2 if (xj)2 ≥ 3.
+We also have
+(7.3)
+(
+log(1 +exj
+)
+)
+xjxj
+= exj
+(1 +exj
+)2 ≥ e−
+√
+3
+(1 +e
+√
+3)2, if (xj)2 ≤ 3.
+Thus
+(7.4) C
+(
+log(1 +exj
+)
+)
+xjxj
+≥ 4 ≥ 4
+1 + (xj)2, if (xj)2 ≤ 3,
+ALEXANDROV-FENCHEL INEQUALITY 19
+which gives
+ψ xj xj ≥ 4
+1 + (xj)2 + 2(xj)2 − 2
+(1 + (xj)2)2 ≥ 2
+1 + (xj)2 if (xj)2 ≤ 3.
+Notice thatψ xj xk = 0 ifj ̸=k. Thus ψ is strictly convex and
+ddcψ ≥
+n∑
+j=1
+1
+1 + (xj)2dxj ∧ dyj,
+on Rn × Tn. Denote by g the associated Riemannian metric of ddcψ , then we have
+g ≥ g0 :=
+n∑
+j=1
+1
+1 + (xj)2 (dxj ⊗ dxj +dyj ⊗ dyj).
+Thus
+|dxj|g ≤ |dxj|g0 =
+√
+1 + (xj)2.
+Sinced log(1 + |x|2) = ∑n
+j=1
+2xj dxj
+1+|x|2 , we have
+|d log(1 + |x|2)|g ≤
+n∑
+j=1
+2|xj|
+1 + |x|2 |dxj|g ≤
+n∑
+j=1
+2|xj|
+1 + |x|2
+√
+1 + (xj)2 ≤ n.
+Notice that log(1 + |x|2) is an exhaustion function on Rn × Tn, the above inequality implies that
+ddcψ is complete Kähler. ∇ ψ (Rn) ⊂ (− 1,C + 1)n follows from
+ψ xj = − 2xj
+1 + (xj)2 +C exj
+1 +exj, 2|xj| ≤ 1 + (xj)2, 0< exj
+1 +exj < 1.
+The proof is complete. □
+We shall use our main theorem and the above lemma to prove Theo rem 2.10, which implies
+the Alexandrov-Fenchel inequality.
+7.1. Proof of Theorem 2.10. Put
+˜φ =ψ +φ 1 +φ 2 +φ m+1 + · · ·+φ n.
+The above lemma implies that ˆω := ddc ˜φ is complete on Rn × Tn andddcφ j ≤ ˆω for each j.
+Moreover, by the above lemma, ∇ ψ (Rn) is bounded, thus ∇ ˜φ(Rn) is bounded and (X, ˆω ) has
+ﬁnite volume. We know that Theorem 2.10 follows from Theorem 3.1.
+8. A PPENDIX
+8.1. Compare the T -Hodge theory norm with the usual norm. For every smooth k-formu,
+0 ≤ k ≤ m, onX, let us deﬁne |u|2
+T,ω such that
+u ∧
+∗(T ∧ u) = |u|2
+T,ω
+ω m
+m! ∧ T.
+where ∗ denotes the Hodge star operator on VT , see Deﬁnition 5.5.
+Deﬁnition 8.1. We call |u|T,ω the pointwiseT -norm ofu.
+20 XU W ANG
+Lemma 8.1. Let |T ∧ u|ω be the usual pointwise norm of T ∧ u with respect to ω . If T =ω n− m
+then
+n!(n − m)!)
+m! |u|2
+T,ω ≤ |T ∧ u|2
+ω ≤ (n!)2
+(m!)2 |u|2
+T,ω .
+Proof. By Deﬁnition 5.2, if T =ω n− m then a form T ∧ v ∈ V k
+T is primitive in T -Hodge theory
+if and only if v is primitive with respect to ω in the usual sense. Let
+T ∧ u :=
+j∑
+r=0
+Lr(T ∧ ur) =
+j∑
+r=0
+Ln− m+ru′
+r, u′
+r := (n − m +r)!
+r! ur,
+be the Lefschetz decomposition of T ∧ u. Then Deﬁnition 5.5 gives
+∗(T ∧ u) =
+j∑
+r=0
+(− 1)[k− 2r]Lm− k+r(T ∧ Ju r).
+Moreover,
+⋆(T ∧ u) =
+j∑
+r=0
+(− 1)[k− 2r]Lm− k+r(Ju ′
+r),
+where⋆ denotes the usual Hodge star operator. Recall that
+T ∧ u ∧
+⋆(T ∧ u) = |T ∧ u|2
+ω
+ω n
+n!.
+Thus the lemma follows. □
+For generalT =α m+1 ∧ · · · ∧α n, we have:
+Lemma 8.2. Assume that (3.1) is true. Then there exists a constant C1 that only depends on
+C,n,m such that
+C − 1
+1 |u|T, ˆω ≤ |T ∧ u|ˆω ≤ C1|u|T, ˆω.
+Proof. By Lemma 8.1, it sufﬁces to compare |u|2
+T, ˆω with |u|2
+T0, ˆω , where T0 := ˆω n− m. Fix an
+arbitrary point, say z0, inX, let us choose local coordinates, say {zj}, nearz0 such that
+ˆω (z0) = i
+n∑
+j=1
+dzj ∧ d¯zj.
+With respect to the local coordinates {zj}, we can identify the space of positive (1, 1)-forms at
+z0 with the space of positive deﬁnite n byn Hermitian matrices. We know that every positive
+deﬁniten byn Hermitian matrix can be written as
+A =OBO ∗, OO ∗ =In,
+where O∗ denotes the conjugate transpose of O, In is the identity matrix and B is a diagonal
+matrix with positive eigenvalues. Moreover,
+ω (z0)
+C ≤ ˆω (z0) ≤ Cω (z0)
+ALEXANDROV-FENCHEL INEQUALITY 21
+if and only if each eigenvalue of the associated matrix of ω (z0) lies in [1/C,C ]. Consider
+V :=U(n) × [1/C,C ]n,
+whereU(n) := {O :OO ∗ =In} is the unitary group. Every element, say v = (O,λ 1, · · ·,λ n),
+inV represents a positive (1, 1)-form, sayω v, atz0 whose associated matrix is
+ODiag{λ 1, · · ·,λ n}O∗.
+Consider the following map, say F , from
+V n− m :=V × · · · ×V  
+n− m
+to the space of Hermitian norms on ∧ k(C ⊗ T ∗
+z0X), 0 ≤ k ≤ m, deﬁned by
+(vm+1, · · ·,v n) ↦→ | · |T, ˆω (z0), T :=ω vm+1
+∧ · · · ∧ω vn
+.
+The lemma follows since V n− m is compact and connected. □
+8.2. Proof of estimate (6.9). Let us write d∗d(T ∧ β ) asT ∧ σ, whereσ is a one-form. Then
+||d(χ (ερ)) ∧ χ (ερ)d∗d(T ∧ β )||2 =
+∫
+X
+|d(χ (ερ)) ∧ χ (ερ)σ|2
+T, ˆω
+ˆω m
+m! ∧ T.
+By Lemma 8.2, we have
+|d(χ (ερ)) ∧ χ (ερ)σ|T, ˆω ≤ C1|d(χ (ερ)) ∧ χ (ερ)d∗d(T ∧ β )|ˆω.
+Since |dρ|ˆω ≤ 1, we have
+|d(χ (ερ)) ∧ χ (ερ)d∗d(β ∧ T )|ˆω ≤ (ε sup |χ ′|) |χ (ερ)d∗d(T ∧ β )|ˆω.
+Use Lemma 8.2 again, we get
+|d(χ (ερ)) ∧ χ (ερ)σ|T, ˆω ≤
+(
+εC2
+1 sup |χ ′|
+)
+|χ (ερ)σ|T, ˆω,
+which gives
+||d(χ (ερ)) ∧ χ (ερ)d∗d(T ∧ β )|| ≤
+(
+εC2
+1 sup |χ ′|
+)
+||χ (ερ)d∗d(T ∧ β )||.
+By (6.8), then we have
+||χ (ερ)d∗d(T ∧ β )||2 ≤ 2
+(
+εC2
+1 sup |χ ′|
+)
+||χ (ερ)d∗d(T ∧ β )|| · ||T ∧ θ||,
+hence
+||χ (ερ)d∗d(T ∧ β )|| ≤
+(
+2εC2
+1 sup |χ ′|
+)
+||T ∧ θ||,
+which gives
+||d(χ (ερ)) ∧ χ (ερ)d∗d(T ∧ β )|| ≤ 2(εC2
+1 sup |χ ′|)2||T ∧ θ||,
+thus (6.9) follows.
+22 XU W ANG
+REFERENCES
+[1] K. Ball, F. Barthe and A. Naor, Entropy jumps in the presence of a spectral gap , Duke Math. J. 119, 41–63.
+[2] R. J. Berman and B. Berndtsson, Real Monge-Ampère equations and Kähler-Ricci solitons on t oric log Fano
+varieties, Annales de la faculté des sciences de Toulouse Mathématiqu es, 22 (2013), 649–711.
+[3] B. Berndtsson, Prékopa’s theorem and Kiselman’s minimum principle for plu risubharmonic functions, Math.
+Ann. 312 (1998), 785–792.
+[4] B. Berndtsson, Notes on complex and convex geometry , in www.math.chalmers.se/∼ bob/3notes.pdf
+[5] B. Berndtsson, Subharmonicity properties of the Bergman kernel and some ot her functions associated to pseu-
+doconvex domains, Ann. Inst. Fourier (Grenoble), 56 (2006), 1633–1662.
+[6] B. Berndtsson, Curvature of vector bundles associated to holomorphic ﬁbra tions, Ann. Math. 169 (2009),
+531–560.
+[7] B. Berndtsson, Convexity on the space of Kähler metrics . Ann. Fac. Sci. Toulouse Math. 22 (2013), 713–746.
+[8] B. Berndtsson, Real and complex Brunn-Minkowski theory . Analysis and geometry in several complex vari-
+ables, 1–27, Contemp. Math., 681, Amer. Math. Soc., Provide nce, RI, 2017.
+[9] B. Berndtsson, M. P ˘aun and X. Wang, Algebraic ﬁber spaces and curvature of higher direct images ,
+arXiv:1704.02279.
+[10] B. Berndtsson and N. Sibony, The ∂-equation on a positive current , Invent. Math. 147 (2002), 371–428.
+[11] H. J. Brascamp and E. H. Lieb, On extensions of the Brunn-Minkowski and Prékopa-Leindler theorems, in-
+cluding inequalities for log concave functions, and with an application to the diffusion equation , Journal of
+Functional Analysis, 22 (1976), 366–389.
+[12] Y . D. Burago and V . A. Zalgaller, Geometric inequalities , translated from the Russian by A. B. Sosinski ˘i.
+Grundlehren der Mathematischen Wissenschaften, 285. Spri nger Series in Soviet Mathematics (1988).
+[13] E. Cattani, Mixed Lefschetz theorems and Hodge-Riemann bilinear relat ions, International Mathematics Re-
+search, V ol. 2008, no. 10, Article ID rnn025, 20 pages.
+[14] B. Y . Chen, J. J. Wu and X. Wang, Ohsawa-T akegoshi type theorem and extension of plurisubharmonic func-
+tions. Math. Ann. 362 (2015), 305–319.
+[15] D. Cordero-Erausquin, On Berndtsson’s generalization of Prékopa’s theorem , Math. Z. 249 (2005), 401–410.
+[16] D. Cordero-Erausquin and B. Klartag, Moment measures, Journal of Functional Analysis, 268 (2015), 3834–
+3866.
+[17] J.-P . Demailly, Estimations L2 pour l’opérateur ¯∂ d’un ﬁbré vectoriel holomorphe semi-positif au-dessus d’u ne
+variété kählérienne complète , Ann. Sci. École Norm. Sup. 15 (1982), 457–511.
+[18] T. C. Dinh, V . A. Nguyên, The mixed Hodge-Riemann bilinear relations for compact Käh ler manifolds, Geo-
+metric and Functional Analysis 16 (2006), 838–849.
+[19] W . Graham, Logarithmic convexity of push-forward measures, Invent. math. 123 (1996), 315–322.
+[20] R. Gardner, The Brunn-Minkowski inequality , Bulletin of the American Mathematical Society, 39 (2002),
+355–405.
+[21] M. Gromov, Convex sets and Kähler manifolds, Advances in differential geometry and topology, (1990), 1–38.
+[22] P . Guan, X. N. Ma, N. Trudinger and X. Zhu, A form of Alexandrov-Fenchel inequality , Pure and Applied
+Mathematics Quarterly, 6 (2010), 999–1012.
+[23] L. Hörmander, L2-estimates and existence theorems for the ∂-operator, Acta Math. 113 (1965), 89–152.
+[24] L. Hörmander, An introduction to complex analysis in several variables , V an Nostrand, Princeton, 1966.
+[25] A. G. Khovanski ˘i, Algebra and mixed volumes , In Geometric Inequalities, edited by D. Y u. Burago and V . A.
+Zalgaller. Grundlehren der Mathematischen Wissenschafte n 285. Berlin: Springer, 1988.
+[26] K. Kaveh and A. G. Khovanski ˘i, Newton-Okounkov bodies, semigroups of integral points, gr aded algebras
+and intersection theory, Ann. of Math. 176 (2012), 925–978.
+[27] K. Kaveh and A. G. Khovanski ˘i, Algebraic equations and convex bodies , Perspectives in analysis, geometry,
+and topology. Birkhäuser Boston, 2012, 263–282.
+[28] L. Lusternik, Die Brunn-Minkowskische Ungleichung für beliebige messba re Mengen, C. R. Acad. Sci. URSS
+8 (1935), 55–58.
+ALEXANDROV-FENCHEL INEQUALITY 23
+[29] F. Maitani, H. Y amaguchi, V ariation of Bergman metrics on Riemann surfaces, Math. Ann. 330 (2004), 477–
+489.
+[30] V . Milman and L. Rotem, Mixed integrals and related inequalities, Journal of Functional Analysis, 264 (2013),
+570–604.
+[31] A. Prékopa, On logarithmic concave measures and functions , Acad. Sci. Math. (Szeged) 34 (1973), 335–343.
+[32] R. Schneider, Convex bodies: the Brunn-Minkowski theory , Cambridge University press, 2013.
+[33] V . A. Timorin, Mixed Hodge-Riemann bilinear relations in a linear context , Funktsional. Anal i Prilozhen 32
+(1998), 63–68, 96.
+[34] X. Wang, A ﬂat Higgs bundle structure on the complexiﬁed Kähler cone , arXiv:1612.02182
+[35] X. Wang, Notes on variation of Lefschetz star operator and T-Hodge th eory, arXiv:1708.07332
+[36] D. Witt Nyström, Canonical growth conditions associated to ample line bundl es, arXiv:1510.00510
+DEPARTMENT OF MATHEMATICAL SCIENCES, NORWEGIAN UNIVERSIT Y OF SCIENCE AND
+TECHNOLOGY, NO-7491 TRONDHEIM, NORWAY
+E-mail address: xu.wang@ntnu.no

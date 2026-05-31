@@ -1,0 +1,338 @@
+
+
+--- page 1 ---
+Zhao and Cheung Journal of Inequalities and Applications 2013, 2013:264
+http://www.journaloﬁnequalitiesandapplications.com/content/2013/1/264
+R E S E A R C H Open Access
+On the quermassintegrals of convex bodies
+Chang Jian Zhao1* and Wing Sum Cheung2
+* Correspondence:
+chjzhao@163.com;
+chjzhao@yahoo.com.cn
+1 Department of Mathematics, China
+Jiliang University, Hangzhou,
+310018, P .R. China
+Full list of author information is
+available at the end of the article
+Abstract
+The well-known question for quermassintegrals is the following: For which values of
+i ∈ N and every pair of convex bodies K and L,i si tt r u et h a t
+Wi(K + L)
+Wi+1(K + L) ≥ Wi(K)
+˜Wi+1(K)
++ Wi(L)
+Wi+1(L) ?
+In 2003, the inequality was proved if and only if i = n –1o r i = n – 2. Following the
+problem, in the paper, we prove some interrelated results for the quermassintegrals of
+a convex body.
+MSC: 26D15; 52A30
+Keywords: symmetric function; convex body; quermassintegral
+1 Introduction
+The origin of this work is an interesting inequality of Marcus and Lopes []. We write
+Ei(x),≤ i ≤ n,forthe ithelementarysymmetricfunctionofan n-tuple x=( x,..., xn)o f
+positiverealnumbers.Thisisdeﬁnedby E(x)=and
+Ei(x)=
+∑
+≤j<···<ji≤n
+xjxj··· xji, ≤ i ≤ n.
+Inparticular, E(x)= x+ ··· + xn, E(x)= ∑
+i̸=j xixj,..., En(x)= xx··· xn.
+TheMarcus-Lopesinequality(seealso[ ,p. ])sta t est ha t
+Ei(x+ y)
+Ei–(x+ y) ≥ Ei(x)
+Ei–(x) + Ei(y)
+Ei–(y) (.)
+foreverypairofpositive n-tuples xand y.Thisisareﬁnementofafurtherresultconcern-
+ingthesymmetric functions,namely
+[
+Ei(x+ y)
+]/i
+≥
+[
+Ei(x)
+]/i
++
+[
+Ei(y)
+]/i
+.(  .  )
+Adiscussionofthecasesofequalityiscontainedinthereference[ ].
+Amatrixanalogueof( .)isthefollowingresultofBergstrom[ ](seealsothearticle[ ]
+and [, p.] for an interesting proof): IfK and L are positive deﬁnite matrices, and ifKi
+and Li denotethesubmatricesobtained bydeleting their ith row and column,then
+det(K + L)
+det(Ki + Li) ≥ det(K)
+det(Ki) + det(L)
+det(Li).(  .  )
+© 2013 Zhao and Cheung; licensee Springer. This is an Open Access article distributed under the terms of the Creative Commons
+Attribution License ( http://creativecommons.org/licenses/by/2.0), which permits unrestricted use, distribution, and reproduction
+in any medium, provided the original work is properly cited.
+
+
+--- page 2 ---
+Zhao and Cheung Journal of Inequalities and Applications 2013, 2013:264 Page 2 of 5
+http://www.journaloﬁnequalitiesandapplications.com/content/2013/1/264
+Thefollowinggeneralizationof( .)wasesta blis hedbyK yF an[]:
+( det(K + L)
+det(Ki + Li)
+) /k
+≥
+( det(K)
+det(Ki)
+) /k
++
+( det(L)
+det(Li)
+) /k
+.(  .  )
+Theproofisbasedonaminimumprinciple;seealsoKyFan[ ]andMirs ky[].
+There is a remarkable similarity between inequalities about symmetric functions (or
+determinantsofsymmetricmatrices)andinequalitiesaboutthemixedvolumesofconvex
+bodies. Forexample,theanalogueof( .)intheBrunn-Minkowskitheoryisasfollows.
+If K and Lareconvexbodiesin Rn andif ≤ i ≤ n–,then
+Wi(K + L)/(n–i) ≥ Wi(K)/(n–i) + Wi(L)/(n–i),(  .  )
+withequalityifandonlyif K and Larehomothetic,where Wi(K)ist he ithquermassinte-
+gralof K (seeSection ).
+In view of this analogue, Milman asked if there exists a version of (.)o r(.)i nt h e
+theoryofmixedvolumes(see[ ,]).
+Question For which values of ≤ i ≤ n–,i ∈ N,i si tt ru et h a t,f o rev e rypa i ro fc o n v e x
+bodies K and Lin Rn,onehas
+Wi(K + L)
+Wi+(K + L) ≥ Wi(K)
+Wi+(K) + Wi(L)
+Wi+(L)?(  .  )
+In , the special casei=wass t a t eda ls oi n[]a sa no p e nq u e s t i o n .I nt h es a m e
+paper it was also mentioned that (.) follows directly from the Aleksandrov-Fenchel in-
+equalitywhen i=and Lisaball.
+In,itwasprovedin[]tha t(.)istrueforall i=,..., n–inthecasewhere Lis
+aball.
+TheoremA If K is a convex body and B is a ball in Rn, then for ≤ i ≤ n–,i ∈ N,
+Wi(K + B)
+Wi+(K + B) ≥ Wi(K)
+Wi+(K) + Wi(B)
+Wi+(B).(  .  )
+In ,it was provedin []t ha t(.)holdstrueforevery pairofconvexbodies K and
+Lin Rn ifandonlyif i= n–ori= n–.
+TheoremB Let≤ i ≤ n–,then
+Wi(K + L)
+Wi+(K + L) ≥ Wi(K)
+Wi+(K) + Wi(L)
+Wi+(L) (.)
+is true for every pair of convex bodies K and L in Rn if and only if i = n–or i = n–.
+Inthispaper,followingtheaboveresults,weprovethefollowinginterestresults.
+Theorem.Let≤ i ≤ n–and for every convex body K and L in Rn. Then the function
+g(t)= Wi(K + tL)
+Wi+(K + tL) (.)
+is a convex function on t ∈[,+∞ ) if and only if i = n–or i = n–.
+
+
+--- page 3 ---
+Zhao and Cheung Journal of Inequalities and Applications 2013, 2013:264 Page 3 of 5
+http://www.journaloﬁnequalitiesandapplications.com/content/2013/1/264
+Theorem.Let≤ i ≤ n–and for every convex body K and L in Rn. Then
+(n–i)Wi+(K)
+(
+Wi+(K)–Wi(K)Wi+(K)
+)
+≥ (n–i–)Wi(K)
+(
+W
+i+(K)–Wi+(K)Wi+(K)
+)
+(.)
+if and only if i = n–or i = n–.
+2 Notations and preliminaries
+The setting for this paper is ann-dimensional Euclidean spaceRn.L e tKn denote the set
+of convex bodies (compact, convex subsets with non-empty interiors) inRn.W er e s e rv e
+the letteru for unit vectors, and the letterB for the unit ball centered at the origin. The
+surfaceof Bis Sn–.T hevolumeoft heunit n-ballisdenotedby ω n.
+We useV(K)f o rt h en-dimensional volume of a convex bodyK.L e th(K,·): Sn–→ R
+denotethesupportfunctionof K ∈ Kn; i.e.,f oru ∈ Sn–,
+h(K, u)= Max{u · x: x ∈ K},
+where u · xdenotestheusualinnerproduct uand xin Rn.
+Let δdenotetheHausdorﬀmetricon Kn, i.e.,for K, L ∈ Kn, δ(K, L)= |hK –hL|∞ ,where
+|·| ∞ denotesthesup-normonthespaceofcontinuousfunctions C(Sn–).
+Associated with a compact subsetK of Rn, which is star-shaped with respect to the
+origin,isitsradialfunction ρ(K,·): Sn–→ R,deﬁnedf oru ∈ Sn–by
+ρ(K, u)= Max{λ ≥ :λu ∈ K}.
+If ρ(K,·) is positive and continuous,K will be called a star body. LetSn denote the set of
+star bodies inRn.L e t˜δdenote the radial Hausdorﬀ metric, as follows, ifK, L ∈ Sn,t h e n
+˜δ(K, L)= |ρK –ρL|∞ .
+If Ki ∈ Kn (i=,,...,r)and λi (i=,,...,r)arenonnegativerealnumbers,thenoffun-
+damentalimportanceisthefactthatthevolumeof ∑r
+i=λiKi isahomogeneouspolynomial
+inthe λi givenby(see, e.g.,[]or[ ])
+V(λK+ ··· + λnKn)=
+∑
+i,...,in
+λi··· λin Vi,...,in,(  .  )
+wherethesumistakenoverall n-tuples( i,..., in)ofpositiveintegersnotexceeding r.The
+coeﬃcient Vi,...,in depends only on the bodiesKi,..., Kin and is uniquely determined by
+(.).I tiscalledthemixedvolumeof Ki,..., Kin,andiswrittenas V(Ki,..., Kin).Let K=
+··· = Kn–i = K and Kn–i+= ··· = Kn = L, then the mixed volumeV(K,..., Kn)i sw r i t t e n
+as Vi(K, L).If K= ··· = Kn–i = K, Kn–i+= ··· = Kn = B, then the mixed volumeVi(K, B)i s
+writtenas Wi(K) andiscalledthequermassintegralofaconvexbody K.
+It isconvenient to write relation(.)int hef orm(see[,p. ])
+V(λK+ ··· + λsKs)
+=
+∑
+p+···+pr=n
+∑
+≤i<···<ir≤s
+n!
+p!··· pr! λp
+i··· λpr
+ir V(Ki,..., Ki  
+p
+,..., Kir,..., Kir  
+pr
+). (.)
+
+
+--- page 4 ---
+Zhao and Cheung Journal of Inequalities and Applications 2013, 2013:264 Page 4 of 5
+http://www.journaloﬁnequalitiesandapplications.com/content/2013/1/264
+Let s=,λ=,K= K, K= B,weha ve
+V(K + λB)=
+n∑
+i=
+(n
+i
+)
+λiWi(K),
+knownasformula‘Steinerdecomposition’.
+Ontheotherhand,forconvexbodies K and L,(.)canshowthefollowingspecialcase:
+Wi(K + λL)=
+n–i∑
+j=
+( n–i
+j
+)
+λjV(K,..., K  
+n–i–j
+, B,..., B  
+i
+, L,..., L  
+j
+). (.)
+3 Proof of main results
+Proof of Theorem .If s, t ∈[,∞ ),from( .),ifandonlyif i= n–ori= n–,wehave
+g
+( t+ s
+
+)
+= Wi(K + t+s
+L)
+Wi+(K + t+s
+L)
+= Wi( K+tL
+ + K+sL
+ )
+Wi+( K+tL
+ + K+sL
+ )
+≥ Wi( K+tL
+ )
+Wi+( K+tL
+ ) + Wi( K+sL
+ )
+Wi+( K+sL
+ )
+= 
+
+Wi(K + tL)
+Wi+(K + tL) + 
+
+Wi(K + sL)
+Wi+(K + sL)
+= 
+
+(
+g(t)+ g(s)
+)
+.(  .  )
+Hencethefunction g(t)isaconvexfunctionon[,+ ∞ )foreverystarbody K and Lifand
+onlyif i= n–ori= n–. □
+Proof of Theorem .Let K beac on ve xbodyinRn.F orevery i ≥ ,weset
+fi(t)= Wi(K + tB),
+then from (.)
+fi(t+ ε)= Wi
+(
+(K + tB)+ εB
+)
+=
+n–i∑
+j=
+( n–i
+j
+)
+εjWi+j(K + tB)
+= fi(t)+ ε(n–i)fi+(t)+ O
+(
+ε)
+.
+Therefore
+f ′
+i (t)=( n–i)fi+(t).
+Thederivative ofthefunction
+gi(t)= fi(t)
+fi+(t) = Wi(K + tB)
+Wi+(K + tB)
+
+
+--- page 5 ---
+Zhao and Cheung Journal of Inequalities and Applications 2013, 2013:264 Page 5 of 5
+http://www.journaloﬁnequalitiesandapplications.com/content/2013/1/264
+isthusgivenby
+g′
+i(t)=( n–i)–(n–i–)fi(t)fi+(t)
+f
+i+(t) .(  .  )
+Since gi(x) isaconvexfunctionif andonlyif i= n–ori= n–,hence by diﬀerentiating
+theboth sides of(.),weobtainfor t ∈(,+∞ )
+(n–i)fi+(t)f
+i+(t)+( n–i–)fi(t)fi+(t)fi+(t)–(n–i–)fi(t)f
+i+(t) ≥ 
+ifandonlyif i= n–ori= n–.
+Thiscanbeequivalentlywritten intheform
+(n–i)fi+(t)
+(
+f
+i+(t)–fi(t)fi+(t)
+)
+≥ (n–i–)fi(t)
+(
+f
+i+(t)–fi+(t)fi+(t)
+)
+ifandonlyif i= n–ori= n–.
+Letting t → +,weconcludeTheorem .. □
+Competing interests
+The authors declare that they have no competing interests.
+Authors’ contributions
+CJZ and WSC jointly contributed to the main results Theorems 1.1-1.2. All authors read and approved the ﬁnal manuscript.
+Author details
+1 Department of Mathematics, China Jiliang University, Hangzhou, 310018, P .R. China. 2 Department of Mathematics, The
+University of Hong Kong, Pokfulam Road, Hong Kong, P .R. China.
+Acknowledgements
+First author is supported by the National Natural Science Foundation of China (10971205). Second author is partially
+supported by a HKU URG grant.
+Received: 18 March 2013 Accepted: 9 May 2013 Published: 27 May 2013
+References
+1. Marcus, M, Lopes, I: Inequalities for symmetric functions and Hermitian matrices. Can. J. Math. 8, 524-531 (1956)
+2. Bechenbach, EF , Bellman, R: Inequalities. Springer, Berlin (1961)
+3. Bergstrom, H: A triangle inequality for matrices. In: Den Elfte Skandinaviski Matematiker-kongress, Trondheim, 1949.
+John Grundt Tanums Forlag, Oslo (1952)
+4. Bellman, R: Notes on matrix theory - IV: an inequality due to Bergstrom. Am. Math. Mon. 62, 172-173 (1955)
+5. Fan, K: Some inequalities concerning positive-deﬁnite Hermitian matrices. Proc. Camb. Philos. Soc. 51, 414-421 (1955)
+6. Fan, K: Problem 4786. Am. Math. Mon. 65, 289 (1958)
+7. Mirsky, L: Maximum principles in matrix theory. Proc. Glasg. Math. Assoc. 4, 34-37 (1958)
+8. Fradelizi, M, Giannopoulos, A, Meyer, M: Some inequalities about mixed volumes. Isr. J. Math. 135, 157-179 (2003)
+9. Giannopoulos, A, Hartzoulaki, M, Paouris, G: On a local version of the Aleksandrov-Fenchel inequality for the
+quermassintegrals of a convex body. Proc. Am. Math. Soc. 130, 2403-2412 (2002)
+10. Dembo, A, Cover, TM, Thomas, JA: Information theoretic inequalities. IEEE Trans. Inf. Theory 37, 1501-1518 (1991)
+11. Schneider, R: Convex Bodies: The Brunn-Minkowski Theory. Cambridge University Press, Cambridge (1993)
+12. Burago, YD, Zalgaller, VA: Geometric Inequalities. Springer, Berlin (1988)
+doi:10.1186/1029-242X-2013-264
+Cite this article as: Zhao and Cheung: On the quermassintegrals of convex bodies. Journal of Inequalities and
+Applications 2013 2013:264.

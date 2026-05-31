@@ -1,0 +1,16 @@
+{
+  "approved": true,
+  "severity": "info",
+  "issue_type": "citation",
+  "reviewer": "citation_checker_followup_2026-05-30",
+  "comment": "Provenance alignment is now sufficient for the revised classification as written. The positive cases are now source-supported: `m=1` is self-contained, `m=n` is adequately grounded by Wang's Lemma 2.5 plus Theorem 2.7 in `artifacts/wang_2018_remark_alexandrov_fenchel.txt:224-266`, and the exceptional case `(n,m)=(3,2)` is adequately grounded by the direct proof artifact together with Branden-Leake Lemma 2.3 and Corollary 6.6 in `artifacts/branden_leake_2023_lorentzian_polynomials_on_cones.txt:235-269` and `:1452-1462`. The negative chain is also sufficiently aligned: the bivariate step is supported by Branden-Huh's bivariate Lorentzian characterization (`artifacts/branden_huh_2020_lorentzian_polynomials.txt:1593-1601`) together with the recorded Shephard realization statement (`:3257-3264`), while the Hessian-sign computations and product-lifting step are supplied as internal proof artifacts rather than unsupported literature claims. I did not find a remaining blocking source-to-claim mismatch in the final classification.",
+  "suggested_fix": "",
+  "checked_artifacts": [
+    "/Users/conanxu/math autoreasearch/workspace/workstreams/WS-G1-001-classify-minkowski-convexity-of-f-m-l/report.md",
+    "/Users/conanxu/math autoreasearch/workspace/workstreams/WS-G1-001-classify-minkowski-convexity-of-f-m-l/artifacts/n3_m2_lorentzian_bilinear_proof.md",
+    "/Users/conanxu/math autoreasearch/workspace/workstreams/WS-G1-001-classify-minkowski-convexity-of-f-m-l/artifacts/bivariate_volume_polynomial_counterexamples.md",
+    "/Users/conanxu/math autoreasearch/workspace/workstreams/WS-G1-001-classify-minkowski-convexity-of-f-m-l/artifacts/wang_2018_remark_alexandrov_fenchel.txt",
+    "/Users/conanxu/math autoreasearch/workspace/workstreams/WS-G1-001-classify-minkowski-convexity-of-f-m-l/artifacts/branden_leake_2023_lorentzian_polynomials_on_cones.txt",
+    "/Users/conanxu/math autoreasearch/workspace/workstreams/WS-G1-001-classify-minkowski-convexity-of-f-m-l/artifacts/branden_huh_2020_lorentzian_polynomials.txt"
+  ]
+}

@@ -1,0 +1,2274 @@
+
+
+--- page 1 ---
+LORENTZIAN POLYNOMIALS ON CONES
+PETTER BR ¨AND´EN AND JONATHAN LEAKE
+Abstract.Inspired by the theory of hyperbolic polynomials and Hodge
+theory, we develop the theory of Lorentzian polynomials on cones. This
+notion captures the Hodge-Riemann relations of degree zero and one.
+Motivated by fundamental properties of volume polynomials of Chow
+rings of simplicial fans, we define a class of multivariate polynomials
+which we call hereditary polynomials. We give a complete and easily
+checkable characterization of hereditary Lorentzian polynomials. This
+characterization is used to give elementary and simple proofs of the
+Heron-Rota-Welsh conjecture for the characteristic polynomial of a ma-
+troid, and the Alexandrov-Fenchel inequalities for convex bodies.
+We then characterize Chow rings of simplicial fans which satisfy the
+Hodge-Riemann relations of degree zero and one, and we prove that this
+property only depends on the support of the fan.
+Several different characterizations of Lorentzian polynomials on cones
+are provided.
+Contents
+1. Introduction 2
+2. Lorentzian polynomials on cones 3
+3. Hereditary polynomials 9
+4. Volume polynomials of matroids 16
+4.1. Heron-Rota-Welsh conjecture 18
+5. Stellar subdivisions of hereditary polynomials 21
+6. Volume polynomials of simple polytopes 25
+7. Chow rings of simplicial fans 27
+7.1. A support theorem for Lorentzian functionals on fans 31
+8. Characterizations of Lorentzian polynomials on cones 33
+9. Topology of spaces ofK-Lorentzian polynomials 39
+References 41
+2020Mathematics Subject Classification.05A20, 52A40, 52B20, 52A39, 05E14.
+PB is a Wallenberg Academy Scholar supported by the Knut and Alice Wallenberg
+Foundation, and the G¨ oran Gustafsson Foundation. JL acknowledges the support of
+the Natural Sciences and Engineering Research Council of Canada (NSERC), [funding
+reference number RGPIN-2023-03726]. Cette recherche a ´ et´ e partiellement financ´ ee par le
+Conseil de recherches en sciences naturelles et en g´ enie du Canada (CRSNG), [num´ ero de
+r´ ef´ erence RGPIN-2023-03726].
+arXiv:2304.13203v2  [math.CO]  9 Dec 2025
+
+
+--- page 2 ---
+2 P. BR ¨AND´EN AND J. LEAKE
+1.Introduction
+Over the past 15 years, methods originating in algebraic geometry have
+been developed to solve long-standing conjectures on unimodality and log-
+concavity in matroid theory [1, 4, 5, 12, 14, 21, 22]. In the influential paper
+[1], a Hodge theory of matroids was developed by Adiprasito, Huh and
+Katz to prove the Heron-Rota-Welsh conjecture on the log-concavity of the
+characteristic polynomial of a matroid. This paper has generated a surge of
+research activities at the interface of Hodge theory and combinatorics, and
+has led to the resolution of long-standing conjectures in matroid theory, see
+[16, 23].
+Another successful approach to log-concavity problems originates in the
+works of Choe, Oxley, Sokal, Wagner, Gurvits and the first author, see [32].
+This approach uses convexity properties of multivariate stable and hyper-
+bolic polynomials rather than Hodge theory. Recently efforts to combine
+the two approaches were made by Huh and the first author [14], and by
+Anari, Liu, Oveis Gharan and Vinzant [3, 4]. The theory of Lorentzian
+polynomials was developed in [4, 14, 19], and used in [4, 14] to prove the
+strongest of Mason’s conjectures on the (ultra) log-concavity of the number
+of independent sets of a matroid.
+In this paper we study a natural generalization of Lorentzian polynomi-
+als to convex cones. The notion is motivated by hyperbolic polynomials
+[6, 20] and Hodge theory [9, 16, 23]. Indeed, any hyperbolic polynomial
+is Lorentzian with respect to its hyperbolicity cone, and if a graded vector
+spaceAsatisfies the so called K¨ ahler package, then the volume polynomial
+associated toAis Lorentzian with respect to a convex coneK(see Ex-
+ample 2.2). In fact, the notion ofK-Lorentzian polynomials captures the
+Hodge-Riemann relations of degree zero and one. We have made an effort
+to make this paper self-contained, based on convexity properties of polyno-
+mials. Specifically, many of our results follow from basic facts in classical
+convexity theory and linear algebra.
+Outline.In Section 2 we prove fundamental properties of Lorentzian poly-
+nomials on cones, which are used in subsequent sections. These include
+sufficient conditions for a polynomial to beK-Lorentzian which are suitable
+for recursive proofs, see Theorem 2.10. In Section 3 we define a class of
+multivariate homogeneous polynomials which we callhereditary polynomi-
+als, Definition 3.1. The definition is inspired by fundamental properties of
+volume polynomials of Chow rings of simplicial fans. We define a natu-
+ral notion of the Lorentzian property for hereditary polynomials, and give
+a complete and easily checkable characterization of hereditary Lorentzian
+polynomials, Theorem 3.10. In Section 4 we apply this characterization to
+give a self-contained and elementary proof of the Lorentzian property for
+the volume polynomial of the Chow ring of a matroid, Theorem 4.3. This is
+equivalent to the Hodge-Riemann relations of degree zero and one for this
+
+
+--- page 3 ---
+LORENTZIAN POLYNOMIALS ON CONES 3
+Chow ring, which were first proved by Adiprasito, Huh and Katz in [1]. We
+use this to derive a new proof of the Heron-Rota-Welsh conjecture for the
+characteristic polynomial of a matroid in Section 4.1, first proved in [1].
+In Section 5 we define stellar subdivisions of hereditary polynomials. We
+show that the stellar subdivision of a polynomialfwith respect to a face
+S, is achieved by a canonical bijective linear operator sub c
+S. In Theorem 5.8
+we prove that the hereditary Lorentzian property is invariant under subdi-
+visions.
+In Section 6 we apply the results in Sections 3 and 5 to give a new proof of
+the Lorentzian property of volume polynomials of simple polytopes [2, 24]. A
+consequence is a simple and self-contained proof of the Alexandrov-Fenchel
+inequalities for convex bodies [2].
+In Section 7 we give a complete and easily checkable characterization of
+Chow rings of simplicial fans which are hereditary Lorentzian, Theorem 7.11.
+More generally, we characterize hereditary Lorentzian functionals on Chow
+rings of simplicial fans, Theorem 7.10. In Section 7.1 we prove that the
+hereditary Lorentzian property only depends on the support of the fan. The
+corresponding property for Lefschetz fans was recently proved by Ardila,
+Denham and Huh in [5].
+In Section 8 we provide various characterizations ofK-Lorentzian poly-
+nomials and M-convex sets, and in Section 9 we prove that the projective
+space ofK-Lorentzian polynomials of fixed degree and number variables is
+compact and contractible to a point in its interior.
+Related work.The manuscript [15] by the authors, which is not intended
+for publication, contains a short and self-contained proof (based on the same
+methods used in this paper) of the Hodge-Riemann relations of degree zero
+and one for the Chow ring of a matroid and the Heron-Rota-Welsh conjec-
+ture, first proved by Adiprasito, Huh and Katz in [1]. We decided to instead
+include the work in [15] in the more general setting of this paper.
+While completing this paper, we became aware that Dustin Ross had
+independently proved the characterization of Chow rings of simplicial fans
+satisfying the Hodge-Riemann relations of degree zero and one, as well as
+that this property only depends on the support of the fan. Our papers are
+written from two different perspectives, which we believe to be mutually ben-
+eficial: The paper of Ross is from the perspective of Lorentzian fans, while
+our paper is from the perspective of (hereditary) polynomials. Therefore we
+decided to post our two papers simultaneously.
+2.Lorentzian polynomials on cones
+Inspired by Hodge theory, matroid theory and the theory of stable poly-
+nomials, Lorentzian polynomials were introduced by June Huh and the first
+author in [14]. In this section we extend the notion of Lorentzian poly-
+nomials to open convex cones. To motivate this definition, we recall the
+
+
+--- page 4 ---
+4 P. BR ¨AND´EN AND J. LEAKE
+Hodge-Riemann relations for the case of graded rings, see [23] for a detailed
+and more general exposition. Suppose
+A=R[x 1, . . . , xn]/I=
+dM
+k=0
+Ak
+is a graded ring (with standard grading given by polynomial degree), where
+Ad is one dimensional. Let deg :A d − →Rbe a linear isomorphism. Suppose
+further thatKis an open convex cone 1 in the real vector spaceA 1. For
+0≤k≤d/2, the (mixed)Hodge-Riemann relationsof degreeksay that
+given any elementsℓ 0, ℓ1, . . . , ℓd−2k inK, the bilinear form
+Ak ×A k − →R,(x, y)7− →(−1) k deg(xyℓ1ℓ2 · · ·ℓ d−2k) (2.1)
+is positive definite on{x∈A k :ℓ 0ℓ1 · · ·ℓ d−2kx= 0}.
+Notice thatA 0 is isomorphic toRand thatℓ 0ℓ1 · · ·ℓ d = 0 inA. It follows
+that fork= 0, the Hodge-Riemann relations simply say that deg(ℓ 1ℓ2 · · ·ℓ d)>
+0 for anyℓ 1, . . . , ℓd ∈K. Given this, the Hodge-Riemann relations of degree
+one say that for anyℓ 1, . . . , ℓd−2 ∈K, the bilinear form
+(x, y)7− →deg(xyℓ 1ℓ2 · · ·ℓ d−2)
+has theLorentz signature(+,−,−, . . . ,−), i.e., it is non-singular and has
+exactly one positive eigenvalue. This reformulation follows from Cauchy’s
+interlacing theorem.
+The Hodge-Riemann relations of degree zero and one may be rephrased
+in terms of polynomials as follows. Thevolume polynomialofAis the
+polynomial inR[t 1, . . . , tn] defined by
+volA(t) = 1
+d! deg
+
+
+ nX
+i=1
+tixi
+!d
+ .
+Let∂ i (or∂ ti) denote the partial derivative with respect tot i, and foru=
+(u1, . . . , un)∈R n letD u =u 1∂1 +· · ·+u n∂n. Forℓ = (a1, . . . , an)∈R n, let
+ℓ=a 1x1 +· · ·+a nxn ∈A 1. Then for anyℓ 1, . . . , ℓd ∈A 1,
+deg(ℓ1ℓ2 · · ·ℓ d) =D ℓ1Dℓ2 · · ·D ℓd volA .
+The above discussion motivates the following definition, which encapsu-
+lates the Hodge-Riemann relations of degree zero and one.
+Definition 2.1.LetKbe an open convex cone inR n. A homogeneous
+polynomialf∈R[t 1, . . . , tn] of degreed≥2 is calledK-Lorentzianif for all
+v1, . . . ,vd ∈K,
+(P)D v1 · · ·D vdf >0, and
+1In this paper, anopen convex coneis an open subsetKof the ambient vector space
+for whichλu+µv∈Kwheneveru,v∈Kandλ, µare positive real numbers.
+
+
+--- page 5 ---
+LORENTZIAN POLYNOMIALS ON CONES 5
+(HR) the bilinear form onR n,
+(x,y)7− →D xDyDv3 · · ·D vdf
+has exactly one positive eigenvalue.
+We further define theK-Lorentzian polynomials of degree at most 0 to
+be the nonnegative constant polynomials, and we define theK-Lorentzian
+polynomials of degree 1 to be the linear polynomials satisfying (P).
+By definition,D vfisK-Lorentzian wheneverv∈KandfisK-Lorentzian
+of degree at least one.
+We will prove in Proposition 8.2 that a polynomial isR n
+>0-Lorentzian if
+and only if it is Lorentzian as defined in [14].
+Example 2.2.By construction, volume polynomials of graded rings that
+satisfy the Hodge-Riemann relations (of degrees 0 and 1) areK-Lorentzian.
+This provides an important set of examples from projective geometry, ma-
+troid theory and convex geometry, see [23].
+Another important class ofK-Lorentzian polynomials arehyperbolic poly-
+nomials, which originate in PDE-theory [6, 20]. A homogeneous polynomial
+f∈R[t 1, . . . , tn] is hyperbolic with respect to a vectore∈R n if
+•f(e)>0, and
+•for eachx∈R n, all zeros of the univariate polynomialt7− →f(te−x)
+are real.
+For example the determinant det(x), considered as a polynomial on the
+space of real symmetric matrices, is hyperbolic with respect to the identity
+matrix.
+The openhyperbolicity coneof a hyperbolic polynomialfwith respect
+toeis the setK(f,e) of allxfor which all zeros off(te−x) are positive.
+The hyperbolicity cone is convex, and ifv∈K(f,e), thenD vfis hyperbolic
+with respect toeandK(f,e)⊆K(D vf,e), see [20]. Hence to prove thatf
+isK(f,e)-Lorentzian, it suffices to prove that quadratic hyperbolic polyno-
+mials satisfy (HR). In fact, a quadratic polynomial isK-Lorentzian if and
+only if it is hyperbolic with hyperbolicity cone containingK, see Lemma 2.3
+below.
+We also note that hyperbolic polynomials with hyperbolicity cone con-
+tainingR n
+>0 are calledreal stablein the literature. HenceK-Lorentzian
+polynomials generalize hyperbolic polynomials with hyperbolicity cone con-
+tainingKin the same way that Lorentzian polynomials generalize real stable
+polynomials.
+Notice that (P) is equivalent to the condition that all coefficients of the
+polynomial
+f(s 1v1 +s 2v2 +· · ·+s dvd)∈R[s 1, . . . , sd]
+are positive.
+
+
+--- page 6 ---
+6 P. BR ¨AND´EN AND J. LEAKE
+Lemma 2.3.LetKbe a non-empty open convex cone inR n, and let(x,y)7− →
+P(x,y)be a symmetric bilinear form onR n such thatP(v,v)>0for all
+v∈K. Then the following are equivalent:
+(AF)P(v,w) 2 ≥P(v,v)P(w,w)for allv,w∈K,
+(AF2)P(v,x) 2 ≥P(v,v)P(x,x)for allv∈Kandx∈R n,
+(Hyp)the polynomialf(x) =P(x,x)is hyperbolic with hyperbolicity cone
+containingK,
+(Lor)the polynomialf(x) =P(x,x)isK-Lorentzian,
+(H)Phas exactly one positive eigenvalue.
+Proof.SupposePsatisfies (AF), and letv∈Kandx∈R n. SinceKis an
+open cone,w=x+tv∈Kfor allt >0 sufficiently large. Applying (AF)
+tov,wyields (AF2) after a simple calculation.
+Assume (AF2), and letv∈Kandx∈R n. Then
+f(tv−x) =t 2 ·P(v,v)−2t·P(v,x) +P(x,x),(2.2)
+which is real-rooted by nonnegativity of the discriminant. Thusfis hy-
+perbolic with hyperbolicity cone containingK. Note in fact that (AF2)
+and (Hyp) are equivalent, since the discriminant condition is equivalent to
+real-rootedness.
+Assume (Hyp), and letv∈K. Since (Hyp) implies (AF2), we have that
+Pis negative semidefinite on the hyperplane{x:P(v,x) = 0}. By Cauchy
+interlacing and Sylvester’s law of inertia,Phas at most one positive eigen-
+value. SinceP(v,v)>0,Phas exactly one positive eigenvalue. Suppose
+x∈K. ThenD vDxf= 2·P(v,x)>0, since the quadratic (2.2) has two
+negative zeros. Hencef(x) satisfies (P). The fact that (Lor) implies (H) is
+immediate from Definition 2.1.
+Assume (H), and letv,w∈K. Ifvandware parallel, then (AF) holds.
+Otherwise extendv,wto a basis ofR n. In this basis, the top-left 2×2
+matrix reads 
+P(v,v)P(v,w)
+P(v,w)P(w,w)
+
+.
+SinceP(v,v)>0, Cauchy interlacing and Sylvester’s law of inertia implies
+that this matrix has exactly one positive eigenvalue. The condition (AF)
+now follows since the determinant of this matrix is nonpositive.□
+Remark2.4.From Lemma 2.3 it follows that we may replace (HR) in Defi-
+nition 2.1 by the following equivalent condition. Let Kbe the closure ofK
+in the Euclidean topology onR n.
+(AF) For allv 1, . . . ,vd ∈ K,
+(Dv1Dv2Dv3 · · ·D vdf) 2 ≥(D v1Dv1Dv3 · · ·D vdf)·(D v2Dv2Dv3 · · ·D vdf).
+In particular, iffisK-Lorentzian andu,v∈ K, then the sequencea k =
+Dk
+uDd−k
+v f, 0≤k≤d, islog-concave, i.e.,
+a2
+k ≥a k−1ak+1,0≤k≤d.(2.3)
+
+
+--- page 7 ---
+LORENTZIAN POLYNOMIALS ON CONES 7
+It is no coincidence that (AF) is reminiscent of theAlexandrov-Fenchel in-
+equalitiesfor convex bodies [2].
+The following remark proves that the space ofK-Lorentzian polynomials
+is closed in the linear space of alld-homogeneous polynomials inR[t 1, . . . , tn].
+Remark2.5.We may replace (P) with the seemingly weaker condition
+(N)D v1 · · ·D vdf≥0, for allv 1, . . . ,vd ∈ K.
+Indeed, assume (N) and thatD v1 · · ·D vdf= 0 for somev 1, . . . ,vd ∈K. Let
+u1 ∈K. SinceKis open, there isϵ >0 such that
+Dv1+tu1Dv2 · · ·D vdf=tD u1Dv2 · · ·D vdf≥0,
+for all|t|< ϵ. HenceD u1Dv2 · · ·D vdf= 0 for allu 1 ∈K. By applying the
+same argument tov 2, . . . ,vd,D u1Du2 · · ·D udf= 0 for allu 1, . . . ,ud ∈K.
+Hencef≡0, sinceKis open.
+The following is a generalization of [14, Thm. 2.10] and [4, Lem. 2.2]
+from Lorentzian toK-Lorentzian polynomials.
+Proposition 2.6.LetA:R m →R n be a linear map. Iff∈R[t 1, . . . , tn]
+isK-Lorentzian, then the polynomialgdefined byg(x) =f(Ax)isA −1(K)-
+Lorentzian.
+Proof.Given a coneK, Remark 2.4 implies that a polynomial isK-Lorentzian
+if and only if it satisfies (P) and (AF) with respect toK. Notice that
+Dv1Dv2 · · ·D vdg=D Av1DAv2 · · ·D Avdf.(2.4)
+Thus (P) and (AF) forgfollow directly from (P) and (AF) forf.□
+Recall that thelineality spaceof an open convex coneKinR n isL K =
+K∩ − K, i.e., the largest linear space contained in the closure ofK. Given
+a homogeneous polynomialf∈R[t 1, . . . , tn], we define thelineality space of
+f, denotedL f, to be the set of allv∈R n for whichD vf≡0, i.e., the set
+of allvfor which
+f(t+v) =f(t),for allt∈R n.
+Proposition 2.7.LetKbe an open convex cone inR n. Iffsatisfies (P),
+thenL K ⊆L f.
+Proof.Ifv∈Kandw∈L K, then
+Dwf(v) = DwDd−1
+v f
+(d−1)! ≥0 and−D wf(v) = D−wDd−1
+v f
+(d−1)! ≥0.
+HenceD wf(v) = 0 for allv∈K. SinceD wfis a polynomial which is 0 on
+the open setK, we have thatD wf≡0 as desired.□
+A matrixA= (a ij)n
+i,j=1 with nonnegative off-diagonal entries is called
+irreducibleif for all distincti, jthere is a sequencei=i 0, i1, i2, . . . , iℓ =j
+such thati k−1 ̸=i k for all 1≤k≤ℓ, anda i0i1ai1i2 · · ·a iℓ−1iℓ >0.By
+translating such a matrix by a positive multiple of the identity matrix, the
+
+
+--- page 8 ---
+8 P. BR ¨AND´EN AND J. LEAKE
+Perron-Frobenius theory [10, Chapter 1] guarantees thatAhas a unique
+eigenvector (up to multiplication by positive scalars) whose entries are all
+positive. Moreover the corresponding eigenvalue is simple and is the largest
+eigenvalue ofA.
+IfAandBare symmetric matrices of the same size, we writeA⪯B
+ifB−Ais positive semidefinite. Recall that theHessianoffatxis the
+matrix∇ 2f(x) = (∂ i∂jf(x)) n
+i,j=1.
+The following lemma is, in essence, taken from [17, Prop. 3].
+Lemma 2.8.Letf∈R[t 1, . . . , tn]be a homogeneous polynomial of degree
+d≥3, and letx∈R n
+>0. If
+(1)∂ if(x)>0for alli, and
+(2)the Hessian of∂ ifatxhas exactly one positive eigenvalue for alli,
+and
+(3)the Hessian offatxhas nonnegative off-diagonal entries and is
+irreducible,
+then the Hessian offatxhas exactly one positive eigenvalue.
+Proof.Ifgis ad-homogeneous polynomial andg(x)>0, then the following
+three statements are equivalent
+(a) the Hessian ofgatxhas exactly one positive eigenvalue,
+(b) the Hessian ofg 1/d is negative semidefinite atx,
+(c) the matrixd·g· ∇ 2g−(d−1)· ∇g(∇g) T is negative semidefinite at
+x,
+see e.g. [14, Prop. 2.33].
+Supposexandfare as in the hypotheses of the lemma. Then, by (c),
+(d−1)·∂ if· ∇ 2∂if⪯(d−2)· ∇∂ if(∇∂ if) T .
+Euler’s identity,d·f(x) = Pn
+i=1 xi ·∂ if(x),yields
+(d−2)· ∇ 2f=
+nX
+i=1
+xi∇2∂if⪯
+nX
+i=1
+xi
+∂if
+(d−2)
+(d−1) ∇∂if(∇∂ if) T .
+Rewrite the above inequality as (d−1)· ∇ 2f⪯(∇ 2f)Λ(∇ 2f),where Λ
+is the diagonal matrix diag(x 1/∂1f , . . . , xn/∂nf). For the matrixB=
+Λ1/2(∇2f)Λ 1/2, this impliesB 2 −(d−1)B⪰0.Hence no eigenvalue of
+Blies in the open interval (0, d−1). The matrixBis irreducible and has
+nonnegative off-diagonal entries, so the Perron-Frobenius theorem applies to
+B. Notice that Λ −1/2xis a positive eigenvector ofB, and the correspond-
+ing eigenvalue isd−1. Henced−1 is the unique largest eigenvalue ofB
+afforded by the Perron-Frobenius theorem. We conclude thatB, and thus
+also∇ 2f(x), has exactly one positive eigenvalue.□
+We say that an open convex coneKinR n iseffectiveifK=K∩R n
+>0+LK.
+
+
+--- page 9 ---
+LORENTZIAN POLYNOMIALS ON CONES 9
+Example 2.9.Any open convex cone contained in the positive orthant
+is trivially effective. LetKbe an open half-plane inR 2 whose boundary
+contains the origin. ThenKis effective if and only ifK∩R 2
+>0 ̸= 0.
+The following theorem provides sufficient conditions on a polynomial to
+be Lorentzian with respect to an effective cone.
+Theorem 2.10.Letf∈R[t 1, . . . , tn]be a homogeneous polynomial of degree
+d≥3, and letKbe an open, convex and effective cone inR n. If
+(1)D v1 · · ·D vdf >0for allv 1, . . . ,vd ∈K, and
+(2)the Hessian ofD v1 · · ·D vd−2fis irreducible and its off-diagonal en-
+tries are nonnegative for allv 1, . . . ,vd−2 ∈K, and
+(3)∂ ifisK-Lorentzian for alli,
+thenfisK-Lorentzian.
+Proof.Letv 1, . . . ,vd−3 ∈K, and consider the cubicg=D v1 · · ·D vd−3f.
+Since∂ ifisK-Lorentzian, it follows from Definition 2.1 that so is∂ ig. By
+choosingv d−2 =x∈K, it follows from (2) that the Hessian∇ 2g(x) is
+irreducible and its off-diagonal entries are nonnegative.
+By (1) and Proposition 2.7,g(x+w) =g(x) for allx∈R n andw∈L K.
+SinceKis effective, we may assumex∈K∩R n
+>0. Lemma 2.8 then implies
+that the Hessian ofgatxhas exactly one positive eigenvalue.
+The theorem now follows since the Hessian ofD v1 · · ·D vd−3fatxis equal
+to the Hessian ofD v1 · · ·D vd−3Dxf.□
+3.Hereditary polynomials
+In this section we introducehereditary polynomials 2. These capture fun-
+damental properties of volume polynomials of Chow rings of simplicial fans.
+We characterize hereditary Lorentzian polynomials, which in Section 7 will
+lead to a characterization of Chow rings that satisfy the Hodge-Riemann
+relations of degree zero and one.
+Let ∆ be an abstract simplicial complex on a finite setV, and letLbe a
+linear subspace ofR V . ForS∈∆, letV S be the set of vertices of thelink,
+lk∆(S) ={T∈∆ :T∩S=∅andS∪T∈∆},
+ofSin ∆. Theskeleton,τ∆, of ∆ is the simplical complex obtained by
+removing all facets from ∆. If
+{(ℓi)i∈T :ℓ∈L}=R T ,for allT∈∆,(3.1)
+we say the pair (∆, L) ishereditary. That is, (∆, L) is hereditary if for every
+T∈∆, the coordinate projection ofLontoR T ⊆R V (defined by deleting
+coordinates indexed byV\T) is surjective. Further, we say the pair (∆, L)
+isweakly hereditaryif (τ∆, L) is hereditary.
+2The definition of hereditary polynomial has slightly changed since a previous version
+of this paper. See Definition 3.1.
+
+
+--- page 10 ---
+10 P. BR ¨AND´EN AND J. LEAKE
+Given a homogeneous polynomialf∈R[t i :i∈V] of degreed≥1, we
+define a simplicial complex
+∆f ={S⊆V:∂ Sf̸≡0}.
+Definition 3.1.Let ∆ be a simplicial complex onV, letLbe a linear
+subspace ofR V . We defineP k(∆, L) to be the linear subspace ofR[t i :i∈V]
+consisting of all polynomialsfof degreekfor whichL⊆L f and ∆ f ⊆∆.
+If (∆, L) is (weakly) hereditary then the polynomials inP k(∆, L) are called
+(weakly) hereditary.
+Equivalently, a polynomialfis(weakly) hereditaryif (∆ f , Lf) is (weakly)
+hereditary.
+Example 3.2.Letf= (v 1t1 +· · ·+v ntn)n, where each entry ofv=
+(v1, . . . , vd) is a nonzero real number. Then ∆ f is a simplex andL f is the
+orthogonal complement ofRv. It follows thatfis weakly hereditary since
+for each facetF={1, . . . , n} \ {i}ofτ∆ f, and given real numbersx j,j∈F,
+the vector (x1, . . . , xn), where
+xi =− 1
+vi
+X
+j̸=i
+vjxj
+lies inL f. Notice thatfis weakly hereditary but not hereditary.
+Lemma 3.3.Supposeg∈R[∂ 1, . . . , ∂n]is homogeneous of degreek≥1, and
+thatf∈R[t 1, . . . , tn]is a weakly hereditary polynomial. Then the polynomial
+h(t) =g(∂)f(t)is hereditary.
+Proof.ClearlyL f ⊆L h and ∆h ⊆τ∆ f. Hencehis hereditary.□
+Iff∈R[t 1, . . . , tn] andS⊆ {1, . . . , n}, define
+f S =∂ Sf
+
+ti=0,i∈S.
+Note that ∆ f S = lk∆f (S) andL f S ⊇L S where we define
+LS ={(ℓ i)i∈VS :ℓ∈Landℓ i = 0,∀i∈S}.
+Lemma 3.4.Iffis (weakly) hereditary andS∈∆ f, thenf S is (weakly)
+hereditary.
+Given weakly hereditary (∆, L), fixT∈τ∆ andS∈lk τ∆(T). For all
+i∈S, letℓ (i) ∈L T ⊆R VT be such thatℓ (i)
+i = 1 andℓ (i)
+j = 0 for all
+j∈S\ {i}. We define a linear mapπ T
+S :R VT →R VT∪S by
+πT
+S
+ 
+(xi)i∈VT
+
+= (yj)i∈VT∪S ,where (y j)j∈VT = (xj)j∈VT −
+X
+i∈S
+xiℓ(i).(3.2)
+That is,y∈R VT is defined viay=x− P
+i∈S xiℓ(i), and thenπ T
+S (x) is defined
+to be the coordinate projection ofyontoR VT∪S . Hence forf∈P d(∆, L) we
+have
+∂Sf T (t) =f T∪S (πT
+S (t)),for eachS∈τ∆ f T (3.3)
+
+
+--- page 11 ---
+LORENTZIAN POLYNOMIALS ON CONES 11
+sinceℓ (i) ∈L ∂S f T for alli∈S. We will often use the simpler notation
+πS =π ∅
+S .
+Lemma 3.5.Iffis a weakly hereditary polynomial of degreed, then∆ f is
+pure of dimensiond−1.
+Proof.IfS∈∆ f has fewer thandelements, then∂ Sf̸≡0 so that
+0̸≡∂ Sf(t) =f S(πS(t)),
+by (3.3). But thenf S ̸≡0 is a weakly hereditary polynomial in a set of
+variablest j such thatj /∈S. Ift j is such a variable, then
+0̸≡∂ jf T =∂ S∪{j} f
+
+ti=0,i∈S.
+HenceSis not maximal in ∆ f.□
+There is a canonically defined open convex cone associated to any weakly
+hereditary polynomial.
+Definition 3.6.Letf∈R[t i :i∈V] be a weakly hereditary polynomial.
+Define an open (possibly empty) convex coneKf inR V recursively as follows.
+(1) Iffis linear, thenK f ={v∈R V :f(v)>0}.
+(2) If deg(f)>1, then
+Kf = (RV
+>0 +L f)∩ {v∈R V :π {i}(v)∈K f {i} for alli∈V}.
+It is straightforward to see that Definition 3.6 does not depend on the
+choices of the projectionsπ {i}. By definition,K f is effective wheneverd >1.
+Also, by construction,
+πT
+S (Kf T )⊆K f T∪S andπ T
+S (Lf T )⊆L f T∪S ,(3.4)
+for allT∈∆ f andS∈τ∆ f T .
+Definition 3.7.We say that a weakly hereditary polynomialfispositive
+iff F >0 for all facetsFof ∆ f. (Notice thatf F is a constant polynomial
+wheneverFis a facet of ∆ f.)
+Notice that iffis positive, then we may replace (1) Here ref X wants to
+replace (1) by (2), but I don’t agree in Definition 3.6 withK f =R V
+>0 +L f
+for linearf.
+Definition 3.8.A weakly hereditary polynomialfishereditary Lorentzian
+if for eachS∈τ∆ f, the polynomialf S isK f S-Lorentzian.
+Definition 3.9.We say that a pure (d−1)-dimensional simplicial complex
+∆ isH-connected(orhereditary connected) if lk ∆(S) is connected for each
+S∈∆ of size at mostd−2. Any zero-dimensional simplicial complex is
+considered to be H-connected.
+The next theorem is the main theorem of this section, and it can be
+thought of as a generalization of [14, Thm. 2.25] or [4, Thm. 3.2]. It
+characterizes weakly hereditary Lorentzian polynomials into two conditions
+that are simple to check.
+
+
+--- page 12 ---
+12 P. BR ¨AND´EN AND J. LEAKE
+Theorem 3.10.Supposef∈R[t i :i∈V]is a weakly hereditary polynomial
+of degreed≥2, and thatK f ̸=∅. Thenfis hereditary Lorentzian if and
+only if
+(C)τ∆ f is H-connected,3 and
+(Q)for eachS∈∆ f with|S|=d−2, the Hessian of the polynomialf S
+has at most one positive eigenvalue.
+Proof.We start by proving sufficiency of (C) and (Q) by induction over
+d≥2. Supposed= 2, and leti∈V. Then∂ if(v) =f {i}(π{i}(v))>0 for
+allv∈K f, sinceπ {i}(v)∈K f {i}. Hencef {i} isK f {i}-Lorentzian. Also
+f(v) = 1
+2
+X
+i∈V
+vi ·∂ if(v)>0,
+sinceK f is effective. By Lemma 2.3 and (Q),fisK f-Lorentzian.
+Supposed≥3. Thenf S satisfies (C) and (Q) for all nonemptyS∈τ∆ f.
+By induction,f S isK f S-Lorentzian for all nonemptyS∈τ∆ f. It remains to
+prove thatfisK f-Lorentzian. To do this we apply Theorem 2.10. To verify
+(1) of Theorem 2.10, we prove that for allv 1, . . . ,vd inK f the polynomial
+f(s 1v1 +· · ·+s dvd) has positive coefficients. SinceK f is effective we may
+assumev 1, . . . ,vd ∈K f ∩R n
+>0. Lety=s 1v1 +· · ·+s dvd. By Euler’s
+formula,
+d·f(y) =
+X
+i∈V
+yi ·f {i} 
+s1π{i}(v1) +· · ·+s dπ{i}(vd)
+
+.
+By assumption all coefficients ofy i are positive for eachi∈V, and by
+induction all coefficients off {i} 
+s1π{i}(v1) +· · ·+s dπ{i}(vd)
+
+are positive
+sinceπ {i}(vj)∈K f {i} for allj. This proves the claim.
+Next we claim that for each{i, j} ∈τ∆ f and allv 1, . . . ,vd−2 inK f, the
+polynomial
+(∂i∂jf)(s 1v1 +· · ·+s d−2vd−2) =f {i,j} 
+s1π{i,j}(v1) +· · ·+s d−2π{i,j}(vd−2)
+
+has positive coefficients. The claim will prove the nonnegativity of the off-
+diagonal entries of the Hessian in Theorem 2.10 (2). The claim follows by
+induction as above, sinceπ {i,j}(vk)∈K f {i,j} for eachk. By H-connectivity of
+τ∆ f, the Hessian ofD v1 · · ·D vd−2fis irreducible. Condition (3) of Theorem
+2.10 follows by induction since∂ if(t) =f {i}(π{i}(t)) isK f-Lorentzian for
+eachi∈Vby Proposition 2.6 and (3.4). Hence sufficiency follows from
+Theorem 2.10.
+For the converse, we need to prove that for a weakly hereditary Lorentzian
+polynomialf,τ∆ f is H-connected. Ford= 2, (C) is obvious, sinceτ∆ f is
+zero-dimensional. Supposed≥3. It suffices to prove thatτ∆ f is connected.
+3The reason we only need this forτ∆ f instead of ∆ f is because condition (Q) already
+gives us all we need in the case thatd= 2 (condition (C) is vacuous in this case). Condition
+(C) is then used in the induction ford≥3, and only connectivity forτ∆ f is needed. (See
+also Remark 3.12.)
+
+
+--- page 13 ---
+LORENTZIAN POLYNOMIALS ON CONES 13
+Letv∈K f. Theng=D d−2
+v fis aK f-Lorentzian polynomial. Moreover if
+{i, j} ∈τ∆ f, then
+∂i∂jg=D d−2
+v ∂i∂jf= (d−2)!f {i,j}(π{i,j}(v))>0,
+sincef {i,j} isπ {i,j}(Kf)-Lorentzian. Ifτ∆ f is not connected, then we may
+write the Hessian ofgas a block matrixA⊕Bwith nonnegative off-diagonal
+entries, whereAhas exactly one positive eigenvalue andB= (b ij) is a
+negative semidefinite irreducible matrix for whichb ij >0 for some{i, j} ∈
+τ∆ f. By Perron-Frobenius the largest eigenvalue ofBis simple. Hence the
+kernel ofBhas dimension at most one. Since{i, j} ∈τ∆ f andfis weakly
+hereditary, for each (x, y)∈R 2 there existsℓ∈L f ⊆L g such thatℓ i =x
+andℓ j =y. Hence the kernel ofBis at least two-dimensional. Henceτ∆ f
+is connected.□
+Remark3.11.Iffis positive, then we may replace (C) in Theorem 3.10
+with the condition that ∆ f is H-connected.
+Remark3.12.We may reformulate Theorem 3.10 as follows. Letfbe a
+weakly hereditary polynomial of degreed≥2 and supposeK f is nonempty.
+Thenfis hereditary Lorentzian if and only if
+•d= 2 and the Hessian offhas at most one positive eigenvalue, or
+•d≥3 and ∆ f is connected andf {i} is hereditary Lorentzian for each
+i∈V.
+Proposition 3.13.Supposef∈R[t i :i∈V]is a weakly hereditary polyno-
+mial of degreed≥2. IfKis a nonempty open convex cone such thatπ S(K)
+is effective andf S isπ S(K)-Lorentzian for allS∈τ∆ f, thenK⊆K f and
+fis hereditary Lorentzian.
+Proof.IfKsatisfies the hypothesis in the statement, then so doesK+L f.
+Hence we may assumeL f ⊆ K. Sincefis weakly hereditary andKis open
+and nonempty,π S(K) is nonempty for allS∈τ∆ f. By induction we deduce
+πS(K)⊆K f S for all nonemptyS∈τ∆ f. Ifv∈K, thenv∈R V
+>0 +L f,
+sinceKis effective. Moreoverπ {i}(v)∈π {i}(K)⊆K f {i}. Hencev∈K f
+by the definition ofK f. As in the proof of Theorem 3.10, (C) follows from
+thatf S isπ S(K)-Lorentzian. Also (Q) holds since the quadratics areπ S(K)-
+Lorentzian. Hence the theorem follows from Theorem 3.10.□
+By Euler’s formula we have the following recursive formula for weakly
+hereditary polynomials.
+(d− |S|)·f S(t) =
+X
+i∈VS
+ti ·f S∪{i}(πS
+{i}(t)), S∈∆ f .(3.5)
+Hence a weakly hereditary polynomial is uniquely determined by the num-
+bersw(S):=∂ Sf,|S|=d. For each facetFofτ∆ f,
+f F (t) =
+X
+i̸∈F
+w(F∪ {i})t i,
+
+
+--- page 14 ---
+14 P. BR ¨AND´EN AND J. LEAKE
+and by construction this linear form is identically zero onπ F (Lf). Theo-
+rem 3.15 below shows that this exactly determines when the numbersw(S)
+determine a (unique) weakly hereditary polynomial.
+Lemma 3.14.Supposef∈R[t 1, . . . , tn]is a homogeneous polynomial of
+degreed, and thatd f= Pn
+i=1 tiQi,whereQ 1, . . . , Qn are homogeneous poly-
+nomials of degreed−1for which∂ iQj =∂ jQi, for alli, j. ThenQ i =∂ if,
+for alli.
+Proof.By Euler’s identity,
+d∂jf=∂ j(tjQj)−t j∂jQj +
+nX
+i=1
+ti∂jQi
+=Q j +
+nX
+i=1
+ti∂iQj =Q j + (d−1)Q j =dQ j.
+□
+The next theorem is analogous toMinkowski weightsand thebalancing
+conditionfor Chow rings of simplicial fans, see [1, Section 5].
+Theorem 3.15.Let∆be a pure(d−1)-dimensional simplicial complex on
+V, letLbe a subspace ofR V such that(∆, L)is weakly hereditary, and let
+wbe a real-valued function on thed-element subsets ofVwhich is non-zero
+precisely on the facets of∆. Then there is at most one weakly hereditary
+polynomialffor which
+∂Sf=w(S),for all|S|=d,
+∆f = ∆, andL⊆L f.
+Moreover, this polynomial exists if and only if for each facetFofτ∆, the
+linear form X
+i̸∈F
+w(F∪ {i})t i
+is identically zero onL F . If further(∆, L)is hereditary, thenfis hereditary.
+Proof.That there is at most one weakly hereditary polynomial with these
+properties follows from the above discussion, since a weakly hereditary poly-
+nomialfis determined by∂ Sffor allS⊂Vfor which|S|=d. Further, if
+such a weakly hereditary polynomialfexists, then for each facetFofτ∆,
+f F (t) =
+X
+i̸∈F
+w(F∪ {i})t i
+is identically zero onπ F (Lf)⊇π F (L) =L F .
+It remains to prove that the condition on linear forms is enough to guar-
+antee the existence of the weakly hereditary polynomialf. To this end, we
+define a family of polynomialsg S ∈R[t i :i∈V S] recursively by
+(d− |S|)·g S(t) =
+X
+i∈VS
+ti ·g S∪{i}(πS
+{i}(t)), S∈∆,(3.6)
+
+
+--- page 15 ---
+LORENTZIAN POLYNOMIALS ON CONES 15
+whereg F =w(F) for each facetFof ∆.
+We prove by induction overd− |S|thatg S is weakly hereditary and
+thatL S ⊆L gS. The case when|S|=d−1 is clear since thenL S⊆LgS
+by hypothesis. SupposeS∈∆ with|S|< d−1, and thatg T is weakly
+hereditary withL gT ⊇L T for allT∈∆ of size greater than|S|. We claim
+∂igS(t) =g S∪{i}(πS
+{i}(t)) for eachi∈V S. By Lemma 3.14 and Euler’s
+formula this holds if and only if
+∂j
+
+gS∪{i}(πS
+{i}(t))
+
+=∂ i
+
+gS∪{j}(πS
+{j}(t))
+
+for each{i, j} ∈∆ S. For|S|=d−2 this is true by hypothesis. For
+|S|< d−2, we get by induction
+∂j
+
+gS∪{i}(πS
+{i}(t))
+
+=g S∪{i,j}(πS∪{i}
+{j} πS
+{i}(t)).
+By the induction hypothesis it follows thatg S∪{i}(πS
+{i}(t)) does not depend
+on the choice of the vectorℓ(i) in the definition ofπ S
+{i}. Hence we may assume
+ℓ(i)
+j = 0. Thenπ S∪{i}
+{j} πS
+{i} =π S
+{i,j}, and again by induction,g S∪{i,j}(πS
+{i,j}(t))
+does not depend on the particular choice of vectors in the definition ofπ S
+{i,j}.
+Hence
+∂j
+
+gS∪{i}(πS
+{i}(t))
+
+=∂ i
+
+gS∪{j}(πS
+{j}(t))
+
+=g S∪{i,j}(πS
+{i,j}(t)),
+which proves the claim.
+Next we proveL S ⊆L gS. Lety∈L S andi∈V S. Since∂ igS(t) =
+gS∪{i}(πS
+{i}(t)) for alli∈V S, it follows by induction, (3.4), and Euler’s
+formula that
+∂αgS(y) = 1
+d− |S| − |α|
+X
+i∈VS
+ti ·∂ αgS∪{i}(πS
+{i}(y)) = 0
+unless|α|=d− |S|. By Taylor expandingg S(t+y),
+gS(t+y) =
+X
+α
+∂αgS(y)
+α! tα,
+we see thatg S(t+y) =g S(t) as claimed. This finishes the proof of the
+theorem for the weakly hereditary case by induction. Finally, sinceL⊆L f,
+if (∆, L) is hereditary, thenfis hereditary.□
+Lemma 3.16.Let∆ 1 and∆ 2 be pure simplicial complexes on disjoint sets.
+Supposef 1 is the unique weakly hereditary polynomial corresponding to(∆ 1,
+L1,w 1), andf 2 is the unique weakly hereditary polynomial corresponding to
+(∆2,L 2,w 2) (given by Theorem 3.15). Iff 1, f2 are hereditary, thenf 1f2
+is the unique hereditary polynomial corresponding to(∆ 1 ×∆ 2,L 1 ⊕L 2,
+w1w2).
+
+
+--- page 16 ---
+16 P. BR ¨AND´EN AND J. LEAKE
+Proof.The fact thatf 1f2 is hereditary follows from ∆ f1f2 = ∆1 ×∆ 2 and
+L1 ⊕L 2 ⊆L f1f2. Further,∂ S1∪S2(f1f2) =∂ S1f1∂S2f2 =w 1(S1)w2(S2) for
+all facetsS 1 ∈∆ 1 andS 2 ∈∆ 2 (and equals 0 otherwise), which shows that
+f1f2 is a weakly hereditary polynomial corresponding to ∆ 1 ×∆ 2,L 1 ⊕L 2
+andw 1w2. The uniqueness then follows from Theorem 3.15.□
+Proposition 3.17.Supposefandgare hereditary polynomials on disjoint
+sets of variables. Iffandgare positive and hereditary Lorentzian, then so
+isf g.
+Proof.We apply Theorem 3.10. Clearly ∆ f g = ∆ f ×∆ g,L f g =L f ⊕L g
+andK f g =K f ×K g. Hencef gis hereditary andK f g is non-empty.
+The Cartesian product of two non-empty simplicial complexes is automat-
+ically connected. Hence, the H-connectedness of ∆ f g follows from the H-
+connectedness of ∆ f and ∆g. This verifies (C).
+The quadratics off gappearing in (Q) are either products of two linear
+polynomials with positive coefficients, or are positive constants times the
+quadratics appearing in (Q) forforg. This verifies (Q) forf g.□
+4.Volume polynomials of matroids
+In [1], Adiprasito, Huh and Katz proved that the Chow ring of a matroid
+satisfies the K¨ ahler package. As a consequence the volume polynomial of
+a matroid is Lorentzian with respect to the cone of strictly submodular
+elements. A simplified proof of this consequence using Hodge theory and
+Lorentzian polynomials was proved in [8]. We will now give a self contained
+proof of this fact based on the theory developed in Section 3. This leads to
+an elementary proof of the Heron-Rota-Welsh conjecture first proved in [1].
+LetLbe the lattice of flats of a matroid of rankr(L) on a finite setE,
+i.e.,Lis a collection of subsets ofE, ordered by inclusion, satisfying
+•ifF, G∈L, thenF∩G∈L, and
+•for eachFinL,{G\F} F≺G partitionsE\F. 4
+Theorder complex, ∆(L), ofLis the simplicial complex of all chains
+(totally ordered subsets) ofL =L\ {K, E}, whereKdenotes the smallest
+element inL, i.e., the set of loops of the matroid. Let furtherL(L) be the
+linear subspace ofR L consisting of allmodular(y F )F∈L , i.e., there exists
+real numbersc i,i∈E\K, such that for eachF∈L ,
+yF =
+X
+i∈F\K
+ci and
+X
+i∈E\K
+ci = 0.
+We shall apply Theorem 3.15 with ∆(L),L(L) andw(F) = 1 for all facets
+Fof ∆(L), to construct a hereditary polynomial pol L ∈R[t G :G∈L ]. To
+this end, we first show that (∆(L), L(L)) is hereditary. Given a chain of
+flats
+K=F 0 < F1 < F2 <· · ·< F m < F m+1 =E,
+4HereF≺GmeansGcoversFinL.
+
+
+--- page 17 ---
+LORENTZIAN POLYNOMIALS ON CONES 17
+and a vector (x j)m
+j=1 ∈R m, we want to find a vector (c i)i∈E\K such that
+xj =
+X
+i∈Fj \F0
+ci,1≤j≤m,and
+X
+i∈E\K
+ci = 0.
+Clearly this can be done sinceF 0 ⊂F 1 ⊂F 2 ⊂ · · · ⊂F m ⊂F m+1.
+Next definew(S) = 1 for all facetsS∈∆(L). LetS={F 1, . . . , Fm}
+be a facet ofτ∆(L), i.e.,F j ≺F j+1 for alljexcept for exactly one value
+0≤k≤m. Then
+X
+G̸∈S
+w(S∪ {G})t G =
+X
+Fk≺G≺Fk+1
+tG.
+Since the interval [F k, Fk+1] is the lattice of flats of a rank-2 matroid, we
+have thatV S ={G:F k ≺G≺F k+1}partitionsF k+1 \F k. Thus for any
+y∈L(L) S,
+X
+Fk≺G≺Fk+1
+yG =
+X
+i∈Fk+1\Fk
+ci =
+X
+i∈Fk+1
+ci −
+X
+i∈Fk
+ci = 0,
+by the definition ofL(L) S. Therefore Theorem 3.15 applies, so that there
+is a unique hereditary polynomial pol L of degreed(L) =r(L)−1 satisfying
+∆polL = ∆(L),L(L)⊆L polL, and∂ S polL = 1 for all facetsSof ∆(L).
+Notice that pol L is positive.
+Further, for allS={F 1, . . . , Fm} ∈∆(L),
+∆polS
+L
+= lk∆(L)(S) =
+mY
+i=0
+∆([Fi, Fi+1]) and pol S
+L(t) =
+mY
+i=0
+pol[Fi,Fi+1](t),
+(4.1)
+by Lemma 3.16.
+Example 4.1.Whend(L) =r(L)−1 = 1, it is clear from Theorem 3.15
+that
+polL(t) =
+X
+F∈L
+tF .
+Whend(L) = 2, we claim that
+2·pol L(t) =
+ X
+F
+tF
+!2
+−
+X
+G
+ 
+tG −
+X
+F <G
+tF
+!2
+,
+whereFdenotes the flats of rank one, andGdenotes the flats of rank two.
+Since the set of rank one flats partitionsE\K, it follows thatL(L) is
+contained in the lineality space of the polynomial,f, on the right hand side.
+Moreover ∆f = ∆(L). Also the coefficients in front of the linear termst F tG
+offare all equal to two. Hence the claim follows from Theorem 3.15.
+Given a matroid onEwith lattice of flatsL, a vector (y S)K⊆S⊆E of real
+numbers is calledstrictly submodularify K =y E = 0 and
+yS +y T > y S∩T +y S∪T
+
+
+--- page 18 ---
+18 P. BR ¨AND´EN AND J. LEAKE
+for all incomparable setsSandT. Notice thatSin (y S)K⊆S⊆E runs over
+all subsets ofEwhich containK, not just flats. We denote byS L the open
+convex cone inR L obtained by restricting strictly submodular vectors to the
+entries which are labelled by flats inL , i.e., (y F )F∈L . Notice thatL(L) is
+the lineality space ofS L.
+Lemma 4.2.S L ⊆K polL.
+Proof.We first prove thatS L is effective. Notice thatv= (|F\K| · |E\
+F|) K<F <E is a vector inS L with positive entries. Supposey∈S L. Then
+z:=y−ϵv∈S L forϵ >0 sufficiently small. By e.g. [25, Prop. 4.4], there
+existsw∈L(L) such thatz+w∈R L
+≥0. Thusy+w=z+w+ϵv∈R L
+>0
+as desired.
+We now proveS L ⊆K polL by induction on the degree of pol L, where
+L= [K, E]. First, the inclusion is clear when pol L is linear. To complete
+the proof, we need to prove
+π{F} (y)∈K pol{F}
+L
+,
+for allF∈L andy∈S L. Recall that pol {F}
+L = pol[K,F] ·pol [F,E]. Further,
+π{F} (y)∈S [K,F] ⊕S [F,E] by the definition ofπ {F} , since the vectors inL(L)
+are modular. Thus by inductionπ {F} (y)∈S [K,F] ⊕S [F,E] ⊆K pol[K,F] ⊕
+Kpol[F,E] =K pol{F}
+L
+, as desired.□
+Theorem 4.3.IfLis the lattice of flats of a matroid, then the polynomial
+polL is hereditary Lorentzian.
+Proof.By Lemma 4.2,K polL is nonempty. By Remark 3.12, Proposition
+3.17, (4.1) and induction on the rank ofL, it suffices to prove that ∆(L) is
+connected for anyL, and that the Hessian of polL(t) has at most one positive
+eigenvalue whenever the rank ofLis three. The latter follows immediately
+from Example 4.1.
+Recall that lattices of flats of matroids are graded and semimodular, see
+[26, Chapter 1.7]. Also, by [30, Prop. 3.3.2] a finite latticeLis semimodular
+if and only if for alla, b∈L,
+ifaandbcovera∧b, thena∨bcoversaandb.
+Connectedness of ∆(L) now follows from semimodularity.□
+4.1.Heron-Rota-Welsh conjecture.Thecharacteristic polynomialof a
+matroid M with lattice of flatsL= [K, E] is
+χM(t) =
+X
+F∈L
+µ(K, F)t r([F,E]) ,(4.2)
+whereµis the M¨ obius function ofL, see [30, Section 3.7]. If M has rank at
+least one, thenχ M(t) is divisible byt−1, see [33, Section 7]. Thereduced
+characteristic polynomialof a matroid M is then χM(t) =χ M(t)/(t−1).
+The next theorem, which was first proved by Adiprasito, Huh and Katz [1],
+
+
+--- page 19 ---
+LORENTZIAN POLYNOMIALS ON CONES 19
+solved the Heron-Rota-Welsh conjecture. For completeness we provide an
+alternative proof below based on our approach.
+Theorem 4.4([1]).The absolute values of the coefficients of the reduced
+characteristic polynomial of a matroid form a log-concave sequence.
+Consider the following two elements in the closure ofS L
+αL =
+ |F\K|
+|E\K|
+
+K<F <E
+andβ L =
+ |E\F|
+|E\K|
+
+K<F <E
+.
+For those familiar with the techniques of [1], we point out that the poly-
+nomial pol L is the volume polynomial of the Chow ring of the matroid
+associated to the geometric latticeL(see [15, Sec. 5]), and the elementsα L
+andβ L of the closure ofS L correspond to the classesαandβas defined in
+[1].
+Throughout this section we fix an elementi∈E\K, and letα L,i =
+(aF )K<F <E andβ L,i = (b F )K<F <E be the 0/1-valued vectors defined by
+aF = 1 if and only ifi∈Fandb F = 1 if and only ifi̸∈F. Then
+αL −α L,i ∈L(L) andβ L −β L,i ∈L(L),(4.3)
+for alli∈E\K.
+The elementsα L andβ L behave well under the projectionsπ S. We leave
+the proof to the reader.
+Lemma 4.5.IfL= [K, E]andK < F < E, then
+π{F} (αL) = (0, α[F,E])andπ {F} (βL) = (β[K,F] ,0).
+Recall thatd(L) denotes the degree of the polynomial pol L andr(L)
+denotes the rank ofL, so thatd(L) =r(L)−1.
+Lemma 4.6.IfL= [K, E]is the lattice of flats of a matroid, then
+polL(αL) = 1
+d(L)! .
+Proof.Since{A\K} K≺A≤E partitionsE\K, there is a uniqueH∈L
+containingifor whichK≺H < E. By Euler’s formula and (4.3),
+d(L)·pol L(αL) =d(L)·pol L(αL,i) =
+X
+H≤F <E
+∂tF polL(αL,i).
+By (4.3) and (3.3) the latter sum may be written as
+X
+H≤F <E
+pol{F}
+L (π{F} (αL)),
+and by (4.1) and Lemma 4.5, this sum may be expressed as
+X
+H≤F <E
+pol[K,F] (0)·pol [F,E](α[F,E]) = pol[H,E](α[H,E]),
+since pol [K,F] (0) = 0 unlessFis an atom, and then pol [K,F] (0) = 1. The
+lemma now follows by induction overd(L).□
+
+
+--- page 20 ---
+20 P. BR ¨AND´EN AND J. LEAKE
+The next theorem is usually stated as a consequence of Weisner’s theorem,
+see [30, p. 277].
+Theorem 4.7(Weisner’s theorem).Ifx≺a≤yare elements in a semi-
+modular latticeL, thenµ(x, y) =− P
+b µ(x, b)where the sum is over all
+b∈Lfor whichx≤b≺yanda̸≤b.
+A consequence of Weisner’s theorem is that the M¨ obius function of a
+semimodular latticeLalternates in sign, i.e., (−1) ρ(b)−ρ(a)µ(a, b)≥0, where
+ρis the rank function ofL.
+Lemma 4.8.IfL= [K, E]is the lattice of flats of a matroid, then
+polL(βL) = |µ(K, E)|
+d(L)! .
+Proof.By (4.1), (4.3), and Lemma 4.5,
+d(L)·polL(βL) =
+X
+K<F <E
+bF ·pol[K,F] (β[K,F] )·pol[F,E](0) =
+X
+K<F≺E
+F̸∋i
+pol[K,F] (β[K,F] ).
+The lemma then follows by induction and Weisner’s theorem.□
+Theorem 4.9.SupposeL= [K, E]is the lattice of flats of a matroid. Then
+d(L)!·pol L(sαL +tβ L) =
+X
+K≤F <E
+i̸∈F
+ d(L)
+r([K, F])
+
+· |µ(K, F)| ·t r([K,F]) sd([F,E]) .
+Proof.Letf(t) = pol L(sαL +tβ L). Then
+f ′(t) =D βL polL(sαL +tβ L) =
+X
+K<F <E
+i̸∈F
+polL(sπ{F} (αL) +tπ {F} (βL)).
+Hence by Lemma 4.5 and (4.3),
+f ′(t) =
+X
+K<F <E
+i̸∈F
+pol[K,F] (β[K,F] )·pol [F,E](α[F,E])·t d([K,F]) sd([F,E]) .
+By Lemmas 4.6 and 4.8,
+f ′(t) =
+X
+K<F <E
+i̸∈F
+|µ(K, F)| · td([K,F])
+d([K, F])! · sd([F,E])
+d([F, E])! .
+The lemma follows sincef(0) =s d(L)/d(L)!, by Lemma 4.6.□
+Lemma 4.10(Cor. 7.27, [33]).SupposeL= [K, E]is the lattice of flats of
+a matroidM. Then
+χM(t) =
+X
+F̸∋i
+µ(K, F)t d([F,E]) .(4.4)
+
+
+--- page 21 ---
+LORENTZIAN POLYNOMIALS ON CONES 21
+Proof of Theorem 4.4.Ifα=α L,β=β L andd=d(L), then
+d!·pol L(sαL +tβ L) = (sDα +tD β)d polL =
+dX
+k=0
+d
+k
+
+·(D k
+αDd−k
+β polL)·s ktd−k.
+Hence by Theorem 4.9 and Lemma 4.10, the coefficient in front oft k in
+the reduced characteristic polynomial of M is equal toD k
+αDd−k
+β polL. The
+theorem now follows from Theorem 4.3 and Remark 2.4.□
+5.Stellar subdivisions of hereditary polynomials
+In this section we study stellar subdivisions of hereditary polynomials.
+These are linear operators which for volume polynomials of Chow rings of
+simplicial fans correspond to stellar subdivisions of the fans. The main result
+of this section is Theorem 5.8, that subdivisions and their inverses preserve
+the hereditary Lorentzian property. This is analogous to [5, Thm. 1.6] on
+the K¨ ahler package of Chow rings of simplicial fans.
+LetS∈∆, where|S| ≥1. Thestellar subdivision, ∆ S, of ∆ onSis the
+simplicial complex onV∪ {0}, where 0/∈V, obtained by
+•removing all faces containingS, and
+•adding all facesR∪ {0}, whereS̸⊆RandR∪S∈∆.
+For positive real numbersc= (c i)i∈S, let
+Lc =
+(
+(ℓ0, ℓ)∈R×R V :ℓ∈Landℓ 0 =
+X
+i∈S
+ciℓi
+)
+.
+Lemma 5.1.If(∆, L)is hereditary, then so is(∆ S, Lc)for everySandc.
+Proof.It suffices to prove (3.1) for facetsFof ∆ S.
+If 0̸∈F, thenF∈∆ so that (3.1) for (∆ S, Lc) follows from (3.1) for
+(∆, L). Otherwise 0∈F, and thenFcontains all but one element ofS,
+and (F\ {0})∪S∈∆. In this case (3.1) forFfollows from (3.1) for
+(F\ {0})∪S∈∆.□
+Lemma 5.2.Suppose(∆, L)is hereditary, where∆has dimensiond−1.
+IfS∈∆andg∈P d(∆S, Lc), then
+∂k
+0 ∂T ∂ig/ci =∂ k
+0 ∂T ∂jg/cj =−∂ k+1
+0 ∂T g
+for allT⊆Vsuch that|T|=d−k−1,k >0, andi, j∈S\T.
+Proof.The lemma is trivially true ifT∪ {0}/∈∆ S. SupposeT∪ {0} ∈∆ S.
+The polynomial∂ k
+0 gT is hereditary by Lemma 3.3. Hence
+∂k+1
+0 ∂T g·t 0 +
+X
+i∈S\T
+∂k
+0 ∂T ∂ig·t i = 0,
+for allt∈R S∪{0} such thatt 0 =P
+i∈S\T citi. The lemma follows.□
+
+
+--- page 22 ---
+22 P. BR ¨AND´EN AND J. LEAKE
+Define a linear operator weld c
+S :R[t i :i∈V∪ {0}]− →R[t i :i∈V] by
+weldc
+S(g) =g
+
+t0=P
+i∈S citi
+.
+Lemma 5.3.Suppose(∆, L)is hereditary where∆has dimensiond−1,
+and thatS∈∆. Then
+weldc
+S :P d(∆S, Lc)− →P d(∆, L),
+is injective.
+Moreover ifTis a facet of∆andf= weld c
+S(g), then
+∂T f=c j∂0∂T\{j} g,ifj∈S⊆T, and(5.1)
+∂T f=∂ T g,otherwise.(5.2)
+Proof.Letg∈P d(∆S, Lc) andf= weld c
+S(g). ThenL⊆L f. Suppose
+T /∈∆. IfS∩T=∅, then∂ T f≡0. IfT=S 0 ∪R, whereS 0 =T∩S̸=∅,
+then{0} ∪R /∈∆ S. By the chain rule,∂ T f≡0. Hencef∈P d(∆, L).
+LetT=S ′ ∪R, whereS ′ =T∩S, be a facet of ∆. Then, by the chain
+rule,
+∂T f=
+Y
+i∈S′
+(ci∂0 +∂ i)∂Rg.
+If|S ′|= 0, then∂ T f=∂ T g. If|S ′|>0, then by using Lemma 5.2,
+∂T f=
+Y
+i∈S′
+(ci∂0 +∂ i)∂Rg= (c j∂0 +∂ j)∂S′\{j}∂Rg,
+wherej∈S ′. IfS ′ =S, then∂ T f=c j∂0∂T\{j} g. IfS ′ ̸=S, then∂ T f=
+∂T g. This proves (5.1) and (5.2).
+From Theorem 3.15 and (5.1), (5.2) it follows that weld c
+S is injective.□
+The next theorem introduces thestellar subdivision operator 5 subc
+S. No-
+tice that sub c
+S is universal in the sense that the definition only depends on
+Sandc, and not on ∆ andL.
+Theorem 5.4.Suppose(∆, L)is hereditary where∆has dimensiond−1,
+and thatS∈∆. Thenweld c
+S :P d(∆S, Lc)− →P d(∆, L)is bijective, and
+its inverse is given by the linear operatorsub c
+S :P d(∆, L)− →P d(∆S, Lc)
+defined by
+subc
+S(f) =f−(−1) s
+∞X
+n=s
+zn
+n! ·h n−s(¯∂) ¯∂Sf,wheres=|S|,
+and whereh k(¯∂)is the complete homogeneous symmetric polynomial of de-
+greekin the variables ¯∂i =∂ i/ci,i∈S, andz=t 0 −P
+i∈S citi.
+Moreover,fis positive if and only ifsub c
+S(f)is positive.
+5Thanks to Chris Eur for asking if subdivisions may be generalized beyond fans.
+
+
+--- page 23 ---
+LORENTZIAN POLYNOMIALS ON CONES 23
+Proof.We first prove sub c
+S :P d(∆, L)− →P d(∆S, Lc). Letf∈P d(∆, L),
+and letg= sub c
+S(f). It is straightforward to see thatL c ⊆L g. We claim
+∆g ⊆∆ S. By the definition of ∆ S, for anyT⊆V∪ {0},
+(S∪T)\ {0} ∈∆ =⇒T∈∆ S orS⊆T.
+AssumeT /∈∆ S andS̸⊆T. Then (S∪T)\ {0}/∈∆, so that∂ S∪T f≡0,
+from which it follows∂ T g=∂ T f. If 0∈T, then∂ T f≡0. If 0/∈T, then
+T /∈∆ so that∂ T f≡0. HenceT̸∈∆ g. To prove the claim it remains to
+prove∂ Sg≡0. Ife j(¯∂) denotes the elementary symmetric polynomial of
+degreejin the variables ¯∂i,i∈S, then
+¯∂Sg= ¯∂Sf−(−1) s
+∞X
+n=s
+sX
+j=0
+(−1)s−j zn−s+j
+(n−s+j)! ·e j(¯∂)h n−s(¯∂) ¯∂Sf
+= ¯∂Sf−
+∞X
+n=0
+zn
+n!
+
+
+nX
+j=0
+(−1)jej(¯∂)h n−j(¯∂)
+
+ ¯∂Sf= 0,
+sincePn
+j=0(−1)jej hn−j =δ 0n.
+Since (weld c
+S ◦sub c
+S)(f) =ffor allfby definition, sub c
+S is a bijection.
+The final statement follows from Lemma 5.3.□
+We now observe various basic connections between a hereditary poly-
+nomial and its stellar subdivisions, including descriptions of links and H-
+connectivity.
+Lemma 5.5.Letf∈P d(∆, L)andS∈∆. Fori∈V,
+subc
+S(f) {i} = subc
+S(f {i}),ifi̸∈S
+subc
+S(f) {i} = subc′
+S\{i}(f {i}),ifi∈S
+wherec ′ is equal tocrestricted toS\ {i}. Further ifS={i}, then
+subc
+S(f) =f| ti=t0/ci .
+Proof.The case wheni̸∈Sfollows immediately from the definition of sub c
+S.
+The case whenS={i}follows from the fact that weld S is the inverse of
+subS and that{i} ̸∈∆ S. For the case ofi∈S, we compute
+¯∂i subc
+S(f) = ¯∂if−(−1) s−1
+∞X
+n=s−1
+zn
+n!
+
+hn+1−s(¯∂)−h n−s(¯∂) ¯∂i
+ ¯∂Sf
+= ¯∂if−(−1) s−1
+∞X
+n=s−1
+zn
+n! ·h n−(s−1)
+ 
+(¯∂j)j∈S\{i}
+ ¯∂S\{i} ¯∂if
+whereh −1 = 0. The result then follows by scaling byc i and settingt i =
+0.□
+The following lemma contains standard facts, but also follows as a corol-
+lary of Lemma 5.5.
+
+
+--- page 24 ---
+24 P. BR ¨AND´EN AND J. LEAKE
+Lemma 5.6.Let∆be a simplicial complex onV, and letS∈∆. Fori∈V
+we have
+lk∆S({i}) = (lk∆({i}))S,ifi̸∈S,
+lk∆S({i}) = (lk∆({i}))S\{i},ifi∈S,
+lk∆S({0}) ={R⊆V:S̸⊆RandR∪S∈∆}.
+Lemma 5.7.Given a simplicial complex∆andS∈∆,∆is H-connected
+if and only if∆ S is H-connected.
+Proof.We may assume that|S| ≥2. It is straightforward to see that
+lk∆S({0}) is always connected.
+By Lemma 5.6 and induction on the dimension of ∆, we now only need to
+show that ∆ is connected if and only if ∆ S is connected, which is standard
+and clear by definition.□
+Define an equivalence relation on positive hereditary polynomials byf∼g
+if there exists a finite sequence of hereditary polynomials
+f=f 0, f1, . . . , fm =g
+such that for each 1≤k≤m, either
+subc
+S(fk−1) =f k or sub c
+S(fk) =f k−1,
+for some positive real numberscandS∈∆ fk−1 orS∈∆ fk.
+Theorem 5.8.Supposef∼g, and thatK f andK g are nonempty. Thenf
+is hereditary Lorentzian if and only ifgis hereditary Lorentzian.
+Proof.Consider the property (Q) restricted to positive hereditary polyno-
+mialsfof degreed:
+(Q) The Hessian off T has at most one positive eigenvalue for eachT∈
+∆f of sized−2.
+Letg= sub c
+S(f). We prove by induction overdthatfsatisfies (Q) if and
+only ifgsatisfies (Q). Ifs= 1, then this follows from Lemma 5.5, and if
+d < s, then this follows from the fact thatg=f. Assume 2≤s≤d.
+Ifd= 2, theng=f−z 2 ¯∂Sf /2. Iffsatisfies (Q), then so doesgby the
+Cauchy interlacing theorem, since ¯∂Sf >0. Ifgsatisfies (Q), then so does
+f= weld c
+S(g) by Sylvester’s law of inertia and Cauchy interlacing. This
+verifies the statement ford= 2.
+Ifd= 3, theng {0} is either identically zero or the product of two linearly
+independent linear polynomials. Henceg {0} has at most one positive eigen-
+value. The statement ford= 3 follows from Lemma 5.5 forT={i},i̸= 0,
+by induction.
+Finally ifd≥4, then the statement follows from Lemma 5.5 by induction.
+Supposef∼g, and thatK f andK g are nonempty. By Lemma 5.7, ∆ f
+is H-connected if and only if ∆ g is H-connected. Also,fsatisfies (Q) if and
+only ifgsatisfies (Q). The theorem now follows from Theorem 3.10.□
+
+
+--- page 25 ---
+LORENTZIAN POLYNOMIALS ON CONES 25
+The following proposition may be proven by induction.
+Proposition 5.9.Letf∈R[t i :i∈V]be a positive hereditary polynomial,
+and supposeS∈∆ f. Ifv∈K f, then
+ P
+i∈S civi −ϵ,v
+
+∈K subc
+S(f) for all
+sufficiently smallϵ >0.
+Hence ifK f is nonempty, thenfis hereditary Lorentzian if and only if
+subS(f) is hereditary Lorentzian.
+6.Volume polynomials of simple polytopes
+We now turn to the classical topic of volume polynomials associated to
+simple polytopes and convex bodies. These polynomials are known to be
+K-Lorentzian by e.g. Hodge theory or convex geometry [2, 24, 29, 31]. We
+prove that such polynomials are Lorentzian using the theory developed in
+Section 3. This leads to a self-contained and new proof of the Alexandrov-
+Fenchel inequalities [2].
+We refer to [28, 31] for undefined terminology. In this sectionPwill
+denote a full dimensional simple polytope of dimensiondin a Euclidean
+space (V,⟨·,·⟩). Letρ 1, . . . , ρn be the (outward) unit normals of the facets
+ofP. Let furtherK P be the set of all simple polytopes inVthat have
+the same normals asP. A polytopeQ∈K P is uniquely determined by its
+support numbers
+ti(Q) = max
+q∈Q
+⟨ρi, q⟩,1≤i≤n.
+If the origin is in the interior ofQ, thent i(Q) is the distance to the sup-
+porting hyperplane in directionρ i. Since the Minkowski sumλQ+µRlies
+inK P wheneverQ, R∈K P andλ, µ >0, and
+ti(λQ+µR) =λt i(Q) +µt i(R), λ, µ >0,
+we may identifyK P with an open convex cone inR n. The volume onK P
+defines a polynomial int i(Q), 1≤i≤n, i.e.,
+Vol(Q) = polP (t1(Q), . . . , tn(Q)),for allQ∈K P ,
+for a unique polynomial pol P ∈R[t 1, . . . , tn].
+Consider the linear space
+LP =
+n
+⟨ρ1,y⟩, . . . ,⟨ρ n,y⟩
+
+:y∈ V
+o
+⊆R n.
+Then pol P (t+w) = pol P (x), for allw∈L P ,t∈K P . SinceK P is open,
+LP is contained in the lineality space of pol P .
+Let ∆P be the simplicial complex whose simplices are{i∈[n] :F⊆P i},
+whereFis any face ofP, andP i is the facet ofPwith normalρ i.
+For details of the proof of the next proposition we refer to [28, 31].
+Proposition 6.1.LetPbe a simple polytope, and letP i be the facet of
+Pwith normalρ i (translated to the orthogonal complementV i ofρ i inV).
+
+
+--- page 26 ---
+26 P. BR ¨AND´EN AND J. LEAKE
+Then
+∂i polP (t) = polPi
+  tj −t i cos(θij)
+sin(θij)
+
+j
+!
+,
+whereθ ij is the angle betweenρ i andρ j.
+Proof.Lett∈K P be the support numbers of a polytopeQwhich contains
+the origin in its interior, and is such that the ray alongρ i intersects the
+relative interior of the facetQ i. It is straightforward that∂ i polP (t) =
+vol(Qi). The polytopeQ ′ =Q−t iρi contains the origin in the relative
+interior ofQ ′
+i. The support numbers ofQ ′ are then
+t′
+j =t j −t i⟨ρi, ρj⟩=t j −t i cos(θij).
+SupposeP j is adjacent toP i. The projection of the unit normal vectorρ j
+ontoV i is given by sin(θ ij)·ρ ′
+j, whereρ ′
+j ∈ V i is the corresponding unit
+normal vector ofP i. This implies the 1/sin(θ ij) factors.□
+Lemma 6.2.LetPbe a simple polytope. Then(∆ P , LP )is hereditary, and
+KP ⊆K polP .
+Proof.IfS∈∆ P , thenρ i, i∈Sare linearly independent since the dual ofP
+is simplicial. Hence (∆ P , LP ) is hereditary. LetS∈∆ P andQ∈K P , and
+letFbe the face ofQcorresponding toS. Then we may translate byy∈ V
+so that the origin is in the relative interior ofF. Thent i(Q+y) = 0 for all
+i∈Sandt j(Q+y)>0 for alljin the link ofS. HenceQ∈K polP .□
+From Proposition 6.1 we deduce
+Corollary 6.3.LetPbe a simpled-dimensional polytope. Thenpol P ∈
+Pd(∆P , LP )is hereditary, and∆ polP = ∆P . Moreoverpol P is positive.
+Lemma 6.4.IfPis ad-dimensional simplex containing0in its interior,
+thenP d(∆P , LP )is one-dimensional and contains a nonzero polynomial of
+the form
+f(t) = (v 1t1 +· · ·+v d+1td+1)d
+for some positive constantsv 1, . . . , vd+1.
+Proof.SincePis a simplex, there is a (unique up to positive scalar)v∈R d+1
+>0
+such thatv 1ρ1 +· · ·+v d+1ρd+1 = 0. Clearlyf(t) for thisvis inP d(∆P , LP ).
+On the other hand ifg∈P d(∆P , LP ), thenL g contains{t∈R d+1 :v 1t1 +
+· · ·+v d+1td+1 = 0}, from which it follows thatgis a constant multiple of
+f.□
+Theorem 6.5.IfPis a simple polytope, thenpol P is hereditary Lorentzian.
+Proof.The coneK volP is nonempty by Lemma 6.2. Moreover ∆ P is H-
+connected. By Proposition 6.1, it remains to prove that vol P has at most
+one positive eigenvalue ford= 2. By performing suitable edge subdivisions
+and inverse edge subdivisions to vol P , it follows that vol P ∼ffor some
+polynomialfsuch that ∆ f = ∆ Q andL Q ⊆L f, whereQis a triangle.
+
+
+--- page 27 ---
+LORENTZIAN POLYNOMIALS ON CONES 27
+SinceP 2(∆Q, LQ) is one-dimensional by Lemma 6.4, it follows thatfis a
+positive constant multiple of vol Q. The theorem now follows from Lemma
+6.4 and Theorem 5.8.□
+As a corollary of Theorem 6.5, we obtain the Alexandrov-Fenchel inequal-
+ities for convex bodies. Themixed volumeof convex bodiesK 1, K2, . . . , Kn
+inR n may be defined by
+V(K 1, K2, . . . , Kn) =∂ 1∂2 · · ·∂ n Vol(t1K1 +t 2K2 +· · ·+t nKn).
+Corollary 6.6(Alexandrov-Fenchel inequalities [2]).LetK 1, K2, . . . , Kn be
+convex bodies inR n. Then
+V(K 1, K2, K3, . . . , Kn)2 ≥V(K 1, K1, K3, . . . , Kn)·V(K 2, K2, K3, . . . , Kn).
+Proof.IfK 1, . . . , Kn are simple polytopes inK P , then using Proposition 2.6,
+the Alexandrov-Fenchel inequalities follow directly from Theorem 6.5 and
+Remark 2.4. By a simple approximation argument, the general case reduces
+to this case, see [28, Theorem 2.4.15].□
+The same proof also reproves a recent result of Huh and the first author
+[14], namely that the polynomial
+Vol(t1K1 +t 2K2 +· · ·+t nKn)
+isR n
+>0-Lorentzian, wheneverK 1, K2, . . . , Kn are convex bodies inR n.
+7.Chow rings of simplicial fans
+We will now apply the theory developed so far to Chow rings of simpli-
+cial fans. The methods apply to more general rings which are intimately
+connected to hereditary polynomials.
+Let ∆ be a simplicial complex onV, and letLbe a linear subspace of
+RV . Define a gradedR-algebra by
+A(∆, L) =
+M
+k≥0
+Ak(∆, L) = R[xi :i∈V]
+I(∆) +J(L) ,
+where
+•I(∆) is the Stanley-Reisner ideal of ∆, i.e., the ideal inR[x i :i∈V]
+generated by all monomialsxS :=xs1 · · ·x sk, for whichS={s 1, . . . , sk}
+is not an face of ∆, and
+•J(L) is the ideal generated by P
+i∈V ℓixi, for allℓ∈L.
+Let Σ be a simplicial fan in a finite dimensional real vector spaceVwith
+specified ray vectorsρ i,i∈V, which generate the one-dimensional cones of
+Σ. LetL(Σ) be the linear subspace ofR V defined by
+L(Σ) = (λ(ρi) :λ∈ V ∗)i∈V ,
+and let ∆(Σ) be the simplicial complex onVdefined by
+∆(Σ) ={S⊆V:{ρ i :i∈S}generates a cone in Σ}.
+
+
+--- page 28 ---
+28 P. BR ¨AND´EN AND J. LEAKE
+Definition 7.1.TheChow ringof a simplicial fan Σ is the gradedR-algebra
+A(Σ) =A(∆(Σ), L(Σ)).
+Notice that we don’t require that Σ is rational, as is commonly required.
+Lemma 7.2.IfΣis a simplicial fan, then(∆(Σ), L(Σ))is hereditary.
+Proof.Follows from the fact that anyk-dimensional cone in Σ is spanned
+byklinearly independent ray vectors.□
+Forα∈A k(∆, L)∗, let ˆαbe the polynomial inR[t i :i∈V] defined by
+ˆα(t) =1
+k! α
+
+
+ X
+i∈V
+tixi
+!k
+ .
+Then
+∂j ˆα(t) = 1
+(k−1)! α
+
+xj
+ X
+i∈V
+tixi
+!k−1
+ ,(7.1)
+from which it follows that ˆα(t)∈P k(∆, L).
+Proposition 7.3.The linear mapA k(∆, L)∗ − →Pk(∆, L)defined byα7− →
+ˆα(t)is bijective.
+Proof.Ifa∈I(∆) +J(L) andf∈P k(∆, L), thena(∂)f= 0. Hence the
+linear mapϕ:P k(∆, L)→A k(∆, L)∗ is well-defined byϕ(f)(a) =a(∂)f.
+The inverse ofϕis given byα7− →ˆα.□
+Lemma 7.4.Suppose∆is a simplicial complex onV, and thatLis a linear
+subspace ofR V . IfS∈∆, then
+a7− →x Sa,
+defines a linear mapϕ S :A k(lk∆(S), LS)− →A k+|S|(∆, L), where
+LS ={(ℓ i)i∈VS : (ℓi)i∈V ∈Landℓ j = 0for allj∈S}.
+Moreover, ifα∈A k+|S|(∆, L)∗, then
+\α◦ϕ S = ˆαS.(7.2)
+Proof.Ifx T ∈I(lk ∆(S)), thenx SxT ∈I(∆). If (ℓ i)i∈VS ∈L S, then
+xSX
+i∈VS
+ℓixi =x SX
+i∈V
+ℓixi −
+X
+j:S∪{j}/∈∆
+ℓjxjxS ∈I(∆) +J(∆).
+Henceϕ S is well-defined. Moreover, (7.2) follows from (7.1).□
+Letσbe a cone in the simplicial fan Σ, corresponding to the faceS∈
+∆(Σ). Thestarofσin Σ is the fan inV/span(σ) with cones
+stΣ(σ) ={τ+ span(σ) :τ∈Σ containsσ}.
+It is straightforward to see that
+∆(stΣ(σ)) = lk∆(Σ)(S) andL(st Σ(σ)) =L(Σ) S.
+
+
+--- page 29 ---
+LORENTZIAN POLYNOMIALS ON CONES 29
+Hence Lemma 7.4 identifies a canonical mapAd(Σ)∗ − →Ad−dim(σ)(stΣ(σ))∗.
+Lemma 7.5.Suppose(∆, L)is hereditary. Anya∈A(∆, L)may be written
+as
+a=
+X
+S∈∆
+µ(S)
+Y
+i∈S
+xi, µ(S)∈R.
+In particular,A m(∆, L) = (0)for allm > d, whered−1is the dimension
+of∆.
+Proof.Suppose
+xα1
+i1 · · ·x αs
+is ∈A k(∆, L)\ {0},
+whereα j >0 for all 1≤j≤s. ThenS={i 1, . . . , is} ∈∆. Ifs=kwe have
+nothing to prove. Hence we may assumeα j >1 for somej. Without loss of
+generality we may assumej= 1 andi 1 = 1. There is an elementℓ∈Lsuch
+thatℓ 1 = 1 andℓ i = 0 for alli∈S\ {1}. Then
+xα1
+i1 · · ·x αs
+is =
+ 
+x1 −
+X
+i∈V
+ℓixi
+!
+xα1−1
+i1 xα2
+i2 · · ·x αs
+is .
+By induction over Ps
+j=1(αj −1) this proves the lemma.□
+The following convex cone is the one commonly used for fans, called the
+ample coneor the cone ofstrictly convex elements.
+Definition 7.6.Let ∆ be a (d−1)-dimensional simplicial complex onV,
+and letLbe a linear subspace ofR V . Suppose (∆, L) is weakly hereditary.
+Define an open convex coneK(∆, L) recursively as follows.
+(1) Ifd= 1, thenK(∆, L) =R V
+>0 +L,
+(2) Ifd >1, then
+K(∆, L) = (RV
+>0 +L)∩ {v∈R V :π {i}(v)∈K(lk ∆({i}), L{i}) for alli∈V}.
+If Σ is a simplicial fan we defineK(Σ) =K(∆(Σ), L(Σ)).
+Lemma 7.7.If(∆, L)is weakly hereditary and∆ ′ ⊆∆andL⊆L ′, then
+(∆′, L′)is weakly hereditary andK(∆, L)⊆K(∆ ′, L′).
+Proof.Both statements follow from the fact that (∆′, L′) being weakly hered-
+itary is weaker than (∆, L) being weakly hereditary.□
+Corollary 7.8.LetΣbe a simplicial fan and supposeK(Σ)is nonempty.
+ThenK(Σ ′)is nonempty for any subfanΣ ′ ofΣ.
+We say that a functionalα∈A d(∆, L)∗ is hereditary Lorentzian if ˆα
+is hereditary Lorentzian. Moreoverαis calledpositiveifα(x F )≥0 for all
+facetsFof ∆. It follows that ifαis positive and (∆, L) is weakly hereditary,
+thenK(∆, L)⊆K ˆα.
+
+
+--- page 30 ---
+30 P. BR ¨AND´EN AND J. LEAKE
+Example 7.9.Letf θ(t) = (t1+t2+t3)2 −θ(t1+t2 −t0)2. This polynomial is
+hereditary for allθ∈R, hereditary Lorentzian forθ >0, and has a negative
+linear coefficient forθ >1. Further,f θ is not a fan polynomial for 0< θ <1.
+To see this, fix 0< θ <1 and suppose Σ is a quadratic fan with ray vectors
+ρ0, ρ1, ρ2, ρ3 ∈ Vfor whichf θ = ˆαfor someα∈A 2(Σ)∗. ThenL(Σ)⊆L fθ
+is at least two-dimensional, and thus
+L(Σ) =L fθ ={(ℓ i)3
+i=0 ∈R 4 :ℓ 1 +ℓ 2 +ℓ 3 = 0 andℓ 1 +ℓ 2 −ℓ 0 = 0}.
+The conditionℓ 1 +ℓ 2 −ℓ 0 = 0 impliesρ 0 =ρ 1 +ρ 2, and thusρ 0 lies in the
+relative interior of the cone generated byρ 1 andρ 2. However{1,2} ∈∆ fθ ⊆
+∆(Σ), which contradicts that Σ is a fan.
+The following direct consequence of Theorem 3.10 gives a characterization
+of hereditary Lorentzian functionals on Chow rings of fans.
+Theorem 7.10.LetΣbe a simplicial fan, and letα∈A k(Σ)∗,1≤k≤d.
+IfK ˆαis nonempty, thenαis hereditary Lorentzian if and only if
+(C)τ∆ ˆαis H-connected, and
+(Q)for allS∈∆ ˆαwith|S|=k−2, the Hessian ofˆα S has at most one
+positive eigenvalue.
+We also formulate a version ford-dimensional fans for whichA d(Σ) is one-
+dimensional. Thevolume polynomialof Σ is then defined (up to a constant)
+as volΣ = ˆα, whereα∈A d(Σ)∗ is chosen so thatα(x F )>0 for some facet
+Fof ∆(Σ). We say that Σ ispositiveif ˆαis positive. We say that Σ is
+hereditary Lorentzianif vol Σ is hereditary Lorentzian.
+Theorem 7.11.LetΣbe a positived-dimensional simplicial fan. IfK(Σ)
+is nonempty, thenΣis hereditary Lorentzian if and only if
+(C) ∆(Σ)is H-connected, and
+(Q)for allS∈∆(Σ)with|S|=d−2, the Hessian ofvol S
+Σ has at most
+one positive eigenvalue.
+Remark7.12.IfA 2(stΣ(σ)) is one-dimensional for all conesσof dimension
+d−2, then (Q) is equivalent to the statement that st Σ(σ) is (hereditary)
+Lorentzian for all conesσof dimensiond−2.
+Remark7.13.In Section 5 of [7], Babaee and Huh constructed a two-
+dimensional positive simplicial fan inR 4 for which the Hessian of its volume
+polynomial has more than one positive eigenvalue. Hence this fan fails to be
+hereditary Lorentzian. We thank June Huh for pointing out this example.
+Theproductof two fans Σ 1 and Σ2 onV 1 andV 2, respectively is the fan
+Σ1 ×Σ 2 onV 1 ⊕ V2 with conesσ 1 ×σ 2, whereσ 1 ∈Σ 1 andσ 2 ∈Σ 2. The
+following theorem is a direct consequence of Lemma 3.16.
+Theorem 7.14.SupposeΣ = Σ 1 ×Σ 2 is the product of two simplicial fans
+of dimensionspandq, respectively. Ifα∈A p(Σ1)∗ andβ∈A q(Σ2)∗ are
+positive hereditary Lorentzian, then so isα×β∈A p+q(Σ)∗.
+
+
+--- page 31 ---
+LORENTZIAN POLYNOMIALS ON CONES 31
+7.1.A support theorem for Lorentzian functionals on fans.Recall
+that the support|Σ|of a fan Σ is the union of its cones. We will prove
+here that the Lorentzian property only depends on the support of the fan.
+More precisely, if Σ and Σ ′ ared-dimensional simplicial fans with the same
+support, then there is a canonical bijectionA d(Σ)∗ − →Ad(Σ′)∗,α7− →α ′,
+such that
+αis hereditary Lorentzian if and only ifα ′ is hereditary Lorentzian,
+provided thatK ˆαandK ˆα′ are nonempty. The corresponding property for
+Lefschetz fans was recently proved by Ardila, Denham and Huh in [5].
+Let Σ be a simplicial fan, and letρ 0 be a vector in the relative interior of a
+coneσ∈Σ. Thestellar subdivisionof Σ with respect toρ 0 is the simplicial
+fan subρ0(Σ) obtained from Σ by
+•removing all cones containingσ, and
+•adding all cones generated byτandρ 0, whereσ̸⊆τ∈Σ is such
+that the cone generated byτandσis in Σ.
+IfS={i∈V:ρ i ∈σ} ∈∆(Σ), then
+ρ0 =
+X
+i∈S
+ciρi
+for some positive real numbersc= (c i)i∈S. It follows that ∆(sub ρ0(Σ)) =
+∆(Σ)S andL(sub ρ0(Σ)) =L(Σ) c, and thusA(sub ρ0(Σ)) =A(∆(Σ) S, L(Σ)c).
+Hence by Theorem 5.4 and Proposition 7.3, sub ρ0 defines a linear bijection
+subρ0 :A d(Σ)∗ − →Ad(subρ0(Σ))∗.
+Moreover subρ0 preserves positivity. Clearly|Σ|=|sub ρ0(Σ)|, and the con-
+verse is also true 6.
+Theorem 7.15(Theorem A in [34]).LetΣandΣ ′ be simplicial fans inV.
+Then|Σ|=|Σ ′|if and only if there exists a finite sequence of simplicial fans
+Σ = Σ0,Σ 1, . . . ,Σm = Σ′
+such that for each1≤k≤m, either
+subρ(Σk−1) = Σk orsub ρ(Σk) = Σk−1,
+for someρin|Σ k−1|=|Σ k|.
+Although the sequence of subdivisions and welds (inverse subdivisions)
+described above may not be unique, we now show that the associated bijec-
+tionϕ Σ,Σ′ :A d(Σ)∗ − →Ad(Σ′)∗ is.
+Theorem 7.16.LetΣandΣ ′ bed-dimensional simplicial fans with the
+same support. There is a canonical bijectionϕ Σ,Σ′ :A d(Σ)∗ − →Ad(Σ′)∗,
+given by any valid sequence of subdivisions and welds.
+6Theorem A in [34] is formulated for rational fans. However it is true also for fans in
+Rn, see the comment after Theorem 8.1 in [34].
+
+
+--- page 32 ---
+32 P. BR ¨AND´EN AND J. LEAKE
+Proof.There exists a bijectionϕ:A d(Σ)∗ − →A d(Σ′)∗ given by a finite
+sequence of subdivisions and welds, by Theorems 5.4 and 7.15. It remains
+to prove that this bijection does not depend on the specific sequence.
+Fix a Euclidean norm onV. For a coneσin a simplicial fan, letV(σ) de-
+note the (relative) volume of the parallelotope spanned by the ray vectors of
+σ. Suppose Σ ′ = stρ0(Σ), and letα∈A d(Σ)∗ andα ′ = subρ0(α)∈A d(Σ′)∗.
+Let furtherσandσ ′ be two maximal cones in Σ and Σ ′, respectively, such
+thatσ∩σ ′ has nonempty interior. IfFandF ′ are the faces corresponding
+toσandσ ′, then
+V(σ)α(x F ) =V(σ ′)α′(xF ′
+),
+follows from Lemma 5.3.
+Now letϕ:A d(Σ)∗ − →Ad(Σ′)∗ be any linear bijection given by a finite
+sequence of subdivisions and welds, and letα∈A d(Σ)∗ andα ′ =ϕ(α)∈
+Ad(Σ′)∗. If the intersection ofσandσ ′ has nonempty relative interior, it
+follows from iterating the argument above thatV(σ)α(x F ) =V(σ ′)α′(xF ′
+).
+Since bα′ is hereditary,α ′ is determined by the values onx F , whereFranges
+over all facets of ∆(Σ ′), by Theorem 3.15. Henceϕdoes not depend on the
+choices of subdivisions and welds.□
+As a corollary of Theorems 5.4 and 5.8, we deduce that the hereditary
+Lorentzian property only depends on the support of fans.
+Theorem 7.17.LetΣandΣ ′ bed-dimensional simplicial fans with the
+same support. Let furtherα∈A d(Σ)∗ andα ′ ∈A d(Σ′)∗ be related by
+α′ =ϕ Σ,Σ′(α). IfK ˆαandK ˆα′ are nonempty, thenαis hereditary Lorentzian
+if and only ifα ′ is hereditary Lorentzian.
+Example 7.18(The normal fan of a simple polytope).Recall the nota-
+tion from Section 6. LetPbe a full dimensional simple polytope in a
+d-dimensional Euclidean space (V,⟨·,·⟩), and letρ 1, . . . , ρn be the (outward)
+unit normals of the facets ofP. Thenormal fanΣ P ofPmay be defined
+as the simplicial fan inVwith cones generated by{ρ i}i∈S for allS∈∆ P .
+HenceA(Σ P ) =A(Σ P , LP ).
+The fan Σ P is complete, which means|Σ P |=V, and thus|Σ P |=|Σ Q|
+for any full dimensional simple polytopeQinV. WhenQis a simplex,
+Lemma 6.4 impliesA d(ΣQ)∗ is one-dimensional and is spanned by a single
+hereditary Lorentzian functional. By Theorem 7.16,A d(ΣP )∗ is thus defined
+by a single hereditary functional corresponding to pol P , which is hereditary
+Lorentzian by Theorem 6.5.
+Example 7.19(The Bergman fan of a matroid).Recall the notation from
+Section 4. LetL= [K, E] be the lattice of flats of a rankd+ 1 matroid.
+For each proper flatF∈L =L\ {K, E}, define the vectorρ F ∈R E\K /R1,
+where1is the all ones vector, via
+ρF =
+X
+i∈F\K
+ei +R1
+
+
+--- page 33 ---
+LORENTZIAN POLYNOMIALS ON CONES 33
+wheree i is a standard basis vector. TheBergman fanΣ L is the subfan of
+the normal fan of the permutohedron with cones generated by{ρ F }F∈S for
+allSin the order complex ∆(L) (see e.g. [8, Section 2.2]). It follows that
+L(ΣL) =L(L).
+Since the permutohedron is a simple polytope,K(Σ L) is nonempty by
+Corollary 7.8. Further,α∈(A d(ΣL))∗ is uniquely defined up to scalar via
+α(xS) = 1 for every maximal chainS∈∆(L) by [1, Prop. 5.2]. Hence
+volΣL = pol L, and Σ L is positive. H-connectedness of ∆(L) then follows
+from semimodularity ofLas in the proof of Theorem 4.3, and the Hessian
+of volS
+ΣL has at most one positive eigenvalue for allS∈∆(L) with|S|=d−2,
+by Example 4.1. Thus Theorem 7.11 implies Σ L is hereditary Lorentzian.
+Example 7.20(The conormal fan of a matroid).In [5] the authors de-
+fine theconormal fanof a matroid M, which they denote by Σ M,M⊥. They
+prove that ΣM,M⊥ is Lefschetz (see [5, Def. 1.5]), which implies the Hodge-
+Riemann relations for ΣM,M⊥. From the Hodge-Riemann relations of degree
+0 and 1, they then derive a number of long-standing conjectures regarding
+properties of M. Their proof that Σ M,M⊥ is Lefschetz uses [5, Thm. 1.6],
+which is a support theorem analogous to Theorem 7.17 for Lefschetz fans.
+Here we will use a similar proof strategy to prove the Hodge-Riemann re-
+lations of degree 0 and 1 for Σ M,M⊥ directly, by showing that Σ M,M⊥ is
+hereditary Lorentzian.
+First, ΣM,M⊥ is a subfan of the normal fan of a simple polytope called the
+bipermutohedron, by [5, Props. 2.18 and 2.20]. ThusK(Σ M,M⊥) is nonempty
+by Corollary 7.8. Further, Σ M,M⊥ has the same support as a product of
+Bergman fans of matroids by [5, Section 3.4]. Products of Bergman fans are
+hereditary Lorentzian by Example 7.19 and Proposition 3.17, and therefore
+ΣM,M⊥ is hereditary Lorentzian by Theorem 7.17.
+8.Characterizations of Lorentzian polynomials on cones
+In this section we provide various characterizations of Lorentzian polyno-
+mials on cones. We shall see how the Theorem 3.10 yields the characteri-
+zation of Lorentzian polynomials proved by June Huh and the first author
+in [14]. We first show that the notion of Lorentzian polynomials on cones
+extends the notion of Lorentzian polynomials in [14].
+Definition 8.1.A homogeneous polynomialf∈R[t 1, . . . , tn] of degree
+d≥2 is calledstrictly Lorentzianif for all 1≤i 1, . . . , id ≤n,
+(P1)∂ i1 · · ·∂ idf >0, and
+(H1) the symmetric bilinear form
+(x,y)7− →D xDy∂i3 · · ·∂ idf
+is non-singular and has exactly one positive eigenvalue.
+Any positive constant or linear form with positive coefficients is strictly
+Lorentzian. Limits (in the Euclidean space of homogeneous degreedpoly-
+nomials) of strictly Lorentzian polynomials are calledLorentzian.
+
+
+--- page 34 ---
+34 P. BR ¨AND´EN AND J. LEAKE
+Proposition 8.2.Letf∈R[t 1, . . . , tn]be a homogeneous polynomial of
+degreed≥0. ThenfisR n
+>0-Lorentzian if and only iffis Lorentzian.
+Proof.Notice first that theR n
+>0-Lorentzian and the Lorentzian property are
+closed properties, by Remark 2.5 and definition of Lorentzian above.
+We prove by induction ond≥2 that any strictly Lorentzian polynomial
+isR n
+>0-Lorentzian, the case whend <2 being trivial. Supposefis strictly
+Lorentzian and of degree at least 3. Then∂ ifis strictly Lorentzian for each
+i. By induction,∂ ifisR n
+>0-Lorentzian for eachi. Theorem 2.10, for the
+case whenL K ={0}, now implies thatfisR n
+>0-Lorentzian.
+Supposefis in the interior of the space ofR n
+>0-Lorentzian polynomials.
+Thenfhas positive coefficients and (H1) is satisfied, so thatfis strictly
+Lorentzian.□
+We now associate to any homogeneous polynomialf, thepolarization
+Π(f), which is a hereditary polynomial that reduces tofby a change of
+variables. This polarization is different from the one considered in e.g. [11,
+14]. Supposef∈R[t 1, . . . , tn] is ad-homogeneous polynomial of degreeκ i
+int i for each 1≤i≤n. LetV κ ={v ij : 1≤i≤nand 0≤j≤κ i}, and
+define Π(f)∈R[t ij :v ij ∈V κ] by
+Π(f) =f(y 1, . . . , yn),wherey i =
+κiX
+j=0
+tij.
+ForS⊆V κ, let
+α(S) =
+ 
+|S∩ {v 1j : 0≤j≤κ 1}|, . . . ,|S∩ {v nj : 0≤j≤κ n}|
+
+.
+ThenSis a facet of ∆ Π(f) if and only ifα(S)∈supp(f), where
+supp(f) ={α∈N n :α 1 +· · ·+α n =dand∂ αf̸= 0}.
+Clearly 
+
+t∈R Vκ :
+κiX
+j=0
+tij = 0 for all 1≤i≤n
+
+
+ ⊆L Π(f) ,
+from which it follows that Π(f) is hereditary.
+Proposition 8.3.Letf∈R[t 1, . . . , tn]be a homogeneous polynomial with
+nonnegative coefficients. Thenfis Lorentzian if and only ifΠ(f)is hered-
+itary Lorentzian.
+Proof.Suppose Π(f) is hereditary Lorentzian. LetP:R Vκ − →RV be the
+linear projection defined by
+P(t) =
+
+
+κiX
+j=0
+tij
+
+
+n
+i=1
+.
+LetK=P −1(Rn
+>0). ThenR Vκ
+>0 ⊆K⊆K Π(f). Hence Π(f) isR Vκ
+>0-
+Lorentzian. Hencefis Lorentzian by Propositions 8.2 and 2.6.
+
+
+--- page 35 ---
+LORENTZIAN POLYNOMIALS ON CONES 35
+Supposefis Lorentzian. Then Π(f) isK-Lorentzian by Proposition 2.6.
+Likewise Π(f) S isπ S(K)-Lorentzian for eachS∈τ∆ Π(f). The theorem now
+follows from Proposition 3.13.□
+For any nonempty M⊂N n andβ∈N n, define
+∂βM ={α−β:α∈M andα−β∈N n}andτ(M) =
+[
+1≤j≤n
+∂j(M),
+where∂ i =∂ ei. We say that M hasconstant sumif there is a numberrsuch
+thatα 1 +· · ·+α n =rfor allα∈M. For M with constant sumr, we say
+that M isconnectedifr≥2 and there is no proper subsetAof [n] such that
+M ={α∈M :α i = 0 for alli∈A} ∪ {α∈M :α i = 0 for alli∈[n]\A}
+is a partition of M into two nonempty sets. If M has constant sumr≤1,
+we say that M is connected by convention. If M has constant sumr≥2,
+we say that M isH-connectedif∂ αM is connected for eachα∈N n with
+|α| ≤r−2.
+Theorem 8.4.Letf∈R[t 1, . . . , tn]be a homogeneous polynomial of degree
+d≥2with nonnegative coefficients. Thenfis Lorentzian if and only if
+(S2)τsupp(f)is H-connected, and
+(H1)for any1≤i 3, . . . , id ≤n, the symmetric bilinear form
+(x,y)7− →D xDy∂i3 · · ·∂ idf
+has at most one positive eigenvalue.
+Proof.We first note that (H1) holds forfif and only if (Q) holds for Π(f).
+Also, it is not hard to see thatτ∆ Π(f) is H-connected if and only ifτsupp(f)
+is H-connected. The theorem thus follows from Theorem 3.10 and Proposi-
+tion 8.3.□
+Let us recall the definition of an M-convex set.
+Definition 8.5.A finite subset M ofN n isM-convexif the followingex-
+change axiomholds
+(EA) Ifα, β∈M andα i > β i, then there is an indexjsuch thatβ j > α j
+and
+α−e i +e j ∈M,
+wheree i denotes theith standard basis vector ofR n.
+A subset M ofN n is M-convex if and only if it is the set of integer points
+of a generalized permutohedron, see [27]. Notice that if M is M-convex, then
+so isτ(M) and∂ i(M) for alli. Proposition 8.6 below is a converse to this.
+Proposition 8.6.SupposeM⊂N n has constant sumr≥3. IfMis
+connected and∂ i(M)are M-convex for alli, thenMis M-convex.
+
+
+--- page 36 ---
+36 P. BR ¨AND´EN AND J. LEAKE
+Proof.First we show the exchange graph of M is connected. If not, then
+let M =S 1 ⊔S 2 be a partition such thatS 1 andS 2 are disconnected in the
+exchange graph. By connectedness of M, there existα∈S 1,β∈S 2, andk
+such thatα k, βk >0. The M-convexity of∂ k(M) then impliesαandβare
+connected in the exchange graph, a contradiction. Therefore the exchange
+graph of M is connected.
+Givenα, β∈M andisuch thatα i > β i, we will now show (EA); that is,
+that there existsjsuch thatβ j > α j and
+α−e i +e j ∈M.(8.1)
+We prove (8.1) by induction on distance in the exchange graphd(α, β). The
+base case isd(α, β)< r. In this caseα kβk ̸= 0 for somek, and thus (8.1)
+follows from the M-convexity of∂ k(M).
+For the general case, letAandBbe the support ofαandβrespectively.
+IfA∩Bis non-empty, then (8.1) follows from the M-convexity of∂ k(M) as
+above. Otherwise fix a minimal-length path betweenαandβ, and letγ∈M
+be the element closest toαon the path with support which intersectsB.
+Since there is a (unique)ksuch thatγ kβk >0, we may use the M-convexity
+of∂ k(M) to deduce thatd(γ, β) =r−1. Thusd(α, γ) =d(α, β)−(r−1).
+By induction we apply (8.1) toγ (0) =γ,αand any indexk∈B c for which
+γk > α k, to obtainγ (1) ∈M. Iterating this process, we apply (8.1) by
+induction toγ (s),αand any indexk∈B c for whichγ (s)
+k > α k, to obtain
+γ(s+1) ∈M. We can do this fors < r−1 sinced(α, γ (s))≤d(α, γ) +sfor all
+s. Thusα ′ =γ (r−1) ∈M is such thatα ′
+k ≤α k for allk∈B c, which implies
+α′ =α−e k′ +e j1
+for somek ′ ∈Aandj 1 ∈B. Ifk ′ =i, then (8.1) is satisfied byα ′ ∈M.
+Otherwise, sinceα ′
+j1, βj1 >0, the M-convexity of∂ j1(M) implies there exists
+α′′ =α ′ −e i +e j2 ∈M
+wherej 2 ∈B. Thus
+α′′ =α−e k′ −e i +e j1 +e j2 ∈M.
+Sincer≥3, there exists someksuch thatα k, α′′
+k >0, and (8.1) follows from
+the M-convexity of∂ k(M) for somej∈ {j 1, j2}.□
+Lemma 8.7.SupposeM⊂N n has constant sumr≥3. ThenMis con-
+nected if and only if the truncationτMis connected.
+Proof.First, if M is disconnected via a proper subsetA⊂[n] thenτM is
+also disconnected viaA. On the other hand, if M is connected then for any
+proper subsetA⊂[n], there existsα∈M which has support intersecting
+bothAand [n]\A. Sincer≥3, this implies there is someα ′ ∈τM which has
+support intersecting bothAand [n]\A. ThereforeτM is also connected.□
+The following characterization of M-convex sets follows directly from
+Proposition 8.6 and Lemma 8.7 by induction.
+
+
+--- page 37 ---
+LORENTZIAN POLYNOMIALS ON CONES 37
+Proposition 8.8.SupposeMhas constant sumr≥3. ThenMis M-convex
+if and only if
+•τMis H-connected, and
+•∂ αMis M-convex for eachα∈N n with|α|=r−2.
+The next lemma is well-known, but we give a quick proof here for com-
+pleteness.
+Lemma 8.9.Iffis a Lorentzian quadratic, thensupp(f)is M-convex.
+Proof.LetH= (h ij)n
+i,j=1 be the Hessian off. Suppose there areα, β∈
+supp(f) for which (EA) fails. Writeα=e i +e j andβ=e k +e ℓ.Then{i, j}
+and{k, ℓ}are disjoint. Lett >0 andu=e i +te j andv=e k +e ℓ.Then
+uT Hv=h ik+hiℓ,u T Hu=h ii+t2hjj +2thij,andv T Hv=h kk+hℓℓ+2hkℓ,
+whereh ijhkℓ >0. Hence for larget, (u T Hv)2 <(u T Hu)(v T Hv),which
+contradicts (AF).□
+From Theorem 8.4, Lemma 8.9 and Proposition 8.8 we deduce the follow-
+ing characterization of Lorentzian polynomials, first proved in [14].
+Theorem 8.10.Letf∈R[t 1, . . . , tn]be a homogeneous polynomial of degree
+d≥2with nonnegative coefficients. Thenfis Lorentzian if and only if
+(S)the support offis M-convex, and
+(H1)for any1≤i 3, . . . , id ≤n, the symmetric bilinear form
+(x,y)7− →D xDy∂i3 · · ·∂ idf
+has at most one positive eigenvalue.
+The following proposition is a consequence of Propositions 8.2 and Re-
+mark 2.4.
+Proposition 8.11.Letf∈R[t 1, . . . , tn]be a homogeneous polynomial of
+degreed, andK⊂R n an open convex cone. ThenfisK-Lorentzian if and
+only if for allv 1, . . . ,vd ∈K, the polynomial
+f(s 1v1 +· · ·+s dvd)∈R[s 1, . . . , sd]
+is Lorentzian.
+Denote by Ln(K) the space of allK-Lorentzian polynomials inR[t 1, . . . , tn],
+and let L d
+n(K)⊂L n(K) be the space of all such polynomials of degreed.
+Given an open convex coneKinR n with lineality spaceL K, denote by Hd
+n(K)
+the linear subspace ofd-homogeneous polynomials inR[t 1, . . . , tn] for which
+LK is contained in the lineality space off. Hence L d
+n(K)⊆H d
+n(K). Further,
+denote byρ K :R n →R n/LK the standard linear projection, and letS K ⊂ K
+be a set of unit vectors for which the projected vectorsρ K(SK) generate the
+extreme rays of ρK(K)⊂R n/LK.
+The next theorem is a version of Theorem 8.10 forK-Lorentzian polyno-
+mials.
+
+
+--- page 38 ---
+38 P. BR ¨AND´EN AND J. LEAKE
+Theorem 8.12.LetKbe an open convex cone, letf∈H d
+n(K)be of degree
+d≥2, and letS K be defined as above. ThenfisK-Lorentzian if and only
+if
+•D u1Du2 · · ·D udf≥0for allu 1, . . . ,ud ∈S K, and
+•the set{α∈N 2d :α 1 +· · ·+α 2d =dandD α1
+u1 · · ·D α2d
+u2d f >0}is
+M-convex for allu 1, . . . ,u2d ∈S K, and
+•for allu 3, . . . ,ud ∈S K, the symmetric bilinear form
+(x,y)7− →D xDyDu3 · · ·D udf
+has at most one positive eigenvalue.
+Proof.Note that up to translation by some vector inL K, each vector ofK
+is a non-negative linear combination of vectors inS K. By Propositions 8.11
+and 2.6,fisK-Lorentzian if and only if for all vectorsu 1, . . . ,um ∈S K, the
+polynomialg=f(s 1u1+· · ·+s mum) is Lorentzian. Notice that it requires at
+most 2dvectors to verify that the support ofgis M-convex. The proof now
+follows from Proposition 8.8 (using Remark 2.5 for the first condition).□
+Corollary 8.13.Iff, g∈L n(K), thenf g∈L n(K).
+Proof.We will show thatf(x)g(z)∈L 2n(K⊕K), and the result then follows
+from Proposition 2.6 usingA:x7− →(x,x). First note thatD v(f g) = 0 for
+v∈L K⊕K =L K ⊕L K, so thatf g∈H 2n(K⊕K). Next note that vectors
+that generate extreme rays of ρK⊕K(K⊕K) are of the form (ρ K(v),0) or
+(0, ρK(v)) for some vectorvfor whichρ K(v) generates an extreme ray of
+ρK(K). Thusf(x)g(z)∈L 2n(K⊕K) follows from Theorem 8.12.□
+Theorem 8.14.LetKbe an open convex cone inR n with lineality space
+LK, and letf∈H d
+n(K)be of degreed≥2. Thenfis in the interior of
+Ld
+n(K)⊂H d
+n(K)if and only if for allv 1, . . . ,vd ∈ SK,
+(PC)D v1 · · ·D vdf >0, and
+(HC)the symmetric bilinear form
+(x,y)7− →D xDyDv3 · · ·D vdf
+has exactly one positive eigenvalue, and kernel equal toL K.
+Proof.LettingSdenote the set of polynomials satisfying (PC) and (HC),
+it is clear thatS⊆L d
+n(K) by Theorem 8.12. By compactness of SK and
+continuity, (PC) and (HC) are open conditions. HenceSis an open set
+contained in L d
+n(K).
+Finally, a standard perturbation argument shows that anything in the
+interior of Ld
+n(K) must be contained inS, and this completes the proof.□
+The M-convexity condition of Theorem 8.12 can also be replaced by an-
+other derivative condition as follows.
+
+
+--- page 39 ---
+LORENTZIAN POLYNOMIALS ON CONES 39
+Theorem 8.15.LetKbe an open convex cone, and letf∈H d
+n(K)be of
+degreed≥2. Given anyw∈K,fisK-Lorentzian if and only if for all
+u1, . . . ,ud−2 ∈S K and all0≤k≤d−2, the quadratic polynomial
+Du1 · · ·D uk Dd−2−k
+w f
+isK-Lorentzian.
+Proof.IffisK-Lorentzian, the fact that the space ofK-Lorentzian poly-
+nomials is closed implies thatD u1 · · ·D uk Dd−2−k
+w fisK-Lorentzian for all
+choices ofu 1, . . . ,ud−2 andk. For the other direction, we prove thatfis
+K-Lorentzian by induction ond, the case whend= 2 being immediate. For
+d≥3 fixv 1, . . . ,vd ∈K, and letu 1, . . . ,um ∈S K be such thatv 1, . . . ,vd
+andware contained in the relative interior of the convex hull ofu 1, . . . ,um,
+up to translation by vectors inL K. Consider the polynomial
+g(s) =f(s 1u1 +· · ·+s mum).
+Then∂ igis Lorentzian for alli∈[m] by induction and Propositions 2.6 and
+8.2. Further, there existsy∈R m
+≥0 such thatP
+i yiui =wup to translation
+by vectors inL K, and thusD ygis Lorentzian as well by the same argument.
+Letting M denote the support ofg, Theorem 8.10 then implies∂ i(M) and
+τM are M-convex. By Lemma 8.7 and Proposition 8.6, this implies M is
+M-convex. Thus by Theorem 8.10 again,gis Lorentzian. Sincev 1, . . . ,vd
+are contained in the convex hull ofu1, . . . ,um up to translation by vectors in
+LK, Propositions 2.6 and 8.2 then implyf(s 1v1 +· · ·+s dvd) is Lorentzian.
+Since this holds for all choices ofv 1, . . . ,vd ∈K, Proposition 8.11 impliesf
+isK-Lorentzian.□
+An immediate corollary is the following characterization of Lorentzian
+polynomials.
+Corollary 8.16.Letf∈R[t 1, . . . , tn]be a homogeneous polynomial of de-
+greed≥2. Thenfis Lorentzian if and only if for alli 1, . . . , id−2 ∈[n]and
+all0≤k≤d−2, the quadratic polynomial
+∂i1 · · ·∂ ik Dd−2−k
+1 f
+is Lorentzian.
+9.Topology of spaces ofK-Lorentzian polynomials
+Equip the linear space H d
+n(K) with a Euclidean topology. Fixv∈K, and
+let
+PLd
+n(K) ={f∈L d
+n(K) :f(v) = 1}.
+Since Ld
+n(K) is closed, by Remark 2.5, it follows thatPL d
+n(K) is compact in
+Hd
+n(K). We end by proving that the spacePL d
+n(K) is contractible, which
+generalizes [14, Theorem 2.28] to any coneK.
+
+
+--- page 40 ---
+40 P. BR ¨AND´EN AND J. LEAKE
+Theorem 9.1.LetKbe an open convex cone inR n. The spacePL d
+n(K)⊂
+Hd
+n(K)is the closure of its interior, and is contractible to a polynomial in
+its interior.
+Proof.We will construct a deformation retractF:PL d
+n(K)×[0,1]− →
+PLd
+n(K), such that for allf∈PL d
+n(K),
+(1)F(f, s) is in the interior ofPL d
+n(K) for all 0< s≤1, and
+(2)F(f,1) =g, for a specific polynomialgin the interior ofPL d
+n(K).
+We may assumeKis pointed by considering the quotient ofR n andKby
+LK. Choose linearly independent vectorsw 1, . . . ,wn in
+K∗ ={w∈R n :⟨w,u⟩>0 for allu∈ K∩S n−1},
+the interior of the dual cone of K. Fixv∈K, and letw=w 1 +· · ·+w n.
+Fors >0, let
+fs(t) =f(t+s⟨t,w⟩v)−Cs df(v)
+nX
+j=1
+⟨t,w j⟩d,
+where 0< C <1. We will prove thatf s lies in the interior of L d
+n(K). By
+Proposition 2.6,g s(t) =f(t+s⟨t,w⟩v) is in L d
+n(K). Moreover by (2.4),
+Du1 · · ·D udgs ≥s dDd
+vf
+dY
+i=1
+⟨ui,w⟩=d!s df(v)
+dY
+i=1
+⟨ui,w⟩,
+wheneveru i ∈ K∩S n−1 for alli. Also,
+d!
+dY
+i=1
+⟨ui,w⟩ ≥d!
+nX
+j=1
+dY
+i=1
+⟨ui,w j⟩=D u1 · · ·D ud
+nX
+j=1
+⟨t,w j⟩d.
+From this followsD u1 · · ·D udfs >0, wheneveru i ∈ K∩S n−1 for alli.
+Moreover
+Du3 · · ·D udfs =D u3 · · ·D udgs −q(t),
+whereq(t) is positive definite. Hence the Hessian ofD u3 · · ·D udfs has ex-
+actly one positive eigenvalue and (d−1) negative eigenvalues. By Theo-
+rem 8.14,f s is a polynomial in the interior of L d
+n(K) for alls >0.
+Now
+lim
+s→∞
+fs(t)
+fs(v) =
+⟨t,w⟩ d −C Pn
+j=1⟨t,w j⟩d
+⟨v,w⟩ d −C Pn
+j=1⟨v,w j⟩d ,
+is a polynomial in the interior ofPL d
+n(K). Hence
+F(f, s) = fs/(1−s)(t)
+fs/(1−s)(v) ,
+is a deformation retract satisfying the required properties.□
+It was proved in [13] thatPL d
+n(Rn
+>0) is homeomorphic to a Euclidean ball.
+
+
+--- page 41 ---
+LORENTZIAN POLYNOMIALS ON CONES 41
+Question 1.IsPL d
+n(K)homeomorphic to a Euclidean ball? What about if
+Kis a polyhedral cone?
+Acknowledgements.The authors would like to thank Weizhe Zheng for
+pointing out two errors in Section 8 in a previous version of this manuscript.
+The authors would also like to thank the anonymous referees for their careful
+reading and many comments, which improved the quality of the paper.
+References
+[1] K. Adiprasito, J. Huh, E. Katz,Hodge theory for combinatorial geometries. Ann. of
+Math. (2)188(2018), 381–452.
+[2] A. D. Aleksandrov,Zur Theorie der gemischten Volumina von konvexen K¨ orpern,II:
+Neue Ungleichungen zwischen den gemischten Volumina und ihre Anwendungen(in
+Russian). Mat. Sbornik N. S.2(1937), 1205–1238.
+[3] N. Anari, K. Liu, S. Oveis Gharan, C. Vinzant,Log-concave polynomials II: High-
+dimensional walks and an FPRAS for counting bases of a matroid, Ann. of Math. (2)
+199(2024), no. 1, 259–299.
+[4] N. Anari, K. Liu, S. Oveis Gharan, and C. Vinzant,Log-concave polynomials III:
+Mason’s ultra-log-concavity conjecture for independent sets of matroids, Proc. Amer.
+Math. Soc.152(2024), no. 5, 1969–1981.
+[5] F. Ardila, G. Denham, J. Huh,Lagrangian geometry of matroids, J. Amer. Math.
+Soc.36(2023), no. 3, 727–794.
+[6] M. F. Atiyah, R. Bott, L. G˚ arding,Lacunas for hyperbolic differential operators with
+constant coefficients I, Acta Math.124(1970), 109–189.
+[7] F. Babaee, J. Huh,A tropical approach to a generalized Hodge conjecture for positive
+currents, Duke Math. J.166(2017), 2749–2813.
+[8] S. Backman, C. Eur, C. Simpson,Simplicial generation of Chow rings of matroids,
+J. Eur. Math. Soc.26(2024), no. 11, 4491–4535.
+[9] M. Baker,Hodge theory in combinatorics, Bull. Amer. Math. Soc. (N.S.)55(2018),
+no. 1, 57–80.
+[10] A. Berman, R. J. Plemmons, Nonnegative Matrices in the Mathematical Sciences,
+Classics Appl. Math. 9, Society for Industrial and Applied Mathematics (SIAM),
+Philadelphia, PA, 1994.
+[11] J. Borcea, P. Br¨ and´ en,The Lee-Yang and P´ olya-Schur programs. I. Linear operators
+preserving stability,Invent. Math.177(2009), 541–569.
+[12] T. Braden, J. Huh, J. P. Matherne, N. Proudfoot, B. Wang,Singular Hodge theory
+for combinatorial geometries,arXiv:2010.06088.
+[13] P. Br¨ and´ en,Spaces of Lorentzian and real stable polynomials are Euclidean balls,
+Forum of Math. Sigma9(2021).
+[14] P. Br¨ and´ en, J. Huh,Lorentzian polynomials, Ann. of Math. (2)192(2020), 821–891.
+[15] P. Br¨ and´ en, J. Leake,Lorentzian polynomials on cones and the Heron-Rota-Welsh
+conjecture,arXiv:2110.00487.
+[16] C. Eur,Essence of independence: Hodge theory of matroids since June Huh, Bull.
+Amer. Math. Soc. (N.S.)61(2024), no. 1, 73–102.
+[17] D. Cordero-Erausquin, B. Klartag, Q. Merigot, F. Santambrogio,One more proof of
+the Alexandrov-Fenchel inequality, C. R. Math. Acad. Sci. Paris357(2019), 676–680.
+[18] E. M. Feichtner, S. Yuzvinsky,Chow rings of toric varieties defined by atomic lattices,
+Invent. Math.155(2004), 515–536.
+[19] L. Gurvits,On multivariate Newton-like inequalities, in Advances in Combinatorial
+Mathematics, Springer, Berlin, 2009, pp. 61–78.
+[20] L. G˚ arding,An inequality for hyperbolic polynomials, J. Math. Mech.8(1959), 957–
+965.
+
+
+--- page 42 ---
+42 P. BR ¨AND´EN AND J. LEAKE
+[21] J. Huh,Milnor numbers of projective hypersurfaces and the chromatic polynomial of
+graphs, J. Amer. Math. Soc.25(2012), no. 3, 907–927.
+[22] J. Huh, E. Katz,Log-concavity of characteristic polynomials and the Bergman fan of
+matroids, Math. Ann.354(2012), no. 3, 1103–1116.
+[23] J. Huh,Combinatorics and Hodge theory, Proc. Int. Cong. Math.1(2022).
+[24] P. McMullen,On simple polytopes, Invent. Math.113(1993), 419–444.
+[25] K. Murota, Discrete Convex Analysis, SIAM Monogr. Discrete Math. Appl., Philadel-
+phia, PA, 2003.
+[26] J. Oxley, Matroid theory, Second edition. Oxford Graduate Texts in Mathematics21.
+Oxford University Press, Oxford, 2011.
+[27] A. Postnikov,Permutohedra, associahedra, and beyond, Int. Math. Res. Not.6(2009),
+1026–1106.
+[28] R. Schneider, Convex bodies: The Brunn-Minkowski Theory, Encyclopedia of math-
+ematics and its applications, Cambridge University Press, 2014.
+[29] R. P. Stanley,The number of faces of a simplicial convex polytope, Adv. in Math.35
+(1980), 236–238.
+[30] R. P. Stanley, Enumerative combinatorics. Volume 1. Second edition. Cambridge
+Studies in Advanced Mathematics, 49. Cambridge University Press, Cambridge, 2012.
+[31] V. A. Timorin,An analogue of the Hodge-Riemann relations for simple convex poly-
+topes, Russ. Math. Surv.54(1999), 381–426.
+[32] D. G. Wagner,Multivariate stable polynomials: Theory and applications. Bull. Amer.
+Math. Soc. (N.S.)48, no. 1, (2011), 53–84.
+[33] N. White (ed), Combinatorial geometries, Encyclopedia of Mathematics and its Ap-
+plications, vol. 29, Cambridge University Press, Cambridge, 1987.
+[34] J. W lodarczyk,Decomposition of birational toric maps in blow-ups and blow-downs,
+Trans. Amer. Math. Soc.349(1997), 373–411.
+Department of Mathematics, KTH Royal Institute of Technology, SE-100
+44 Stockholm, Sweden
+Email address:pbranden@kth.se
+Department of Combinatorics and Optimization, University of W aterloo,
+Canada
+Email address:jonathan@jleake.com

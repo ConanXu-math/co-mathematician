@@ -1,0 +1,1468 @@
+´Epijournal de G´ eom´ etrie Alg´ ebrique
+epiga.episciences.org
+Volume 1 (2017), Article Nr. 6
+Correspondences between convex geometry and
+complex geometry
+Brian Lehmann and Jian Xiao
+Abstract. We present several analogies between convex geometry and the theory of holo-
+morphic line bundles on smooth projective varieties or K¨ ahler manifolds. We study the
+relation between positive products and mixed volumes. We deﬁne and study a Blaschke ad-
+dition for divisor classes and mixed divisor classes, and prove new geometric inequalities for
+divisor classes. We also reinterpret several classical convex geometry results in the context
+of algebraic geometry: the Alexandrov body construction is the convex geometry version
+of divisorial Zariski decomposition; Minkowski’s existence theorem is the convex geometry
+version of the duality between the pseudo-eﬀective cone of divisors and the movable cone of
+curves.
+Keywords. Alexandrov body; Convexity; Geometric inequalities; Mixed volume; Zariski
+decomposition; Positive product
+2010 Mathematics Subject Classiﬁcation. 14C20; 32Q15; 52A39
+[Fran¸ cais]
+Titre. Correspondances entre g´ eom´ etrie convexe et g´ eom´ etrie complexe
+R´ esum´ e.Nous pr´ esentons plusieurs analogies entre la g´ eom´ etrie convexe et la th´ eorie des
+ﬁbr´ es en droites sur les vari´ et´ es projectives lisses ou k¨ ahl´ eriennes. Nous ´ etudions les rela-
+tions entre produits positifs et volumes mixtes. Nous d´ eﬁnissons et ´ etudions une somme
+de Blaschke pour les classes de diviseurs (mixtes ou non), et nous ´ etablissons de nouvelles
+in´ egalit´ es g´ eom´ etriques pour les classes de diviseurs. Nous r´ einterpr´ etons ´ egalement plusieurs
+r´ esultats classiques de g´ eom´ etrie convexe en termes de g´ eom´ etrie alg´ ebrique : la construction
+du corps d’Alexandrov est la version g´ eom´ etrie convexe de la d´ ecomposition de Zariski divi-
+sorielle; de mˆ eme, le th´ eor` eme d’existence de Minkowski est le pendant en g´ eom´ etrie convexe
+de la dualit´ e entre cˆ one des diviseurs pseudo-eﬀectifs et celui des courbes mobiles.
+Received by the Editors on September 20, 2016, and in ﬁnal form on March 15, 2017.
+Accepted on June 19, 2017.
+Brian Lehmann
+Department of Mathematics, Boston College, Chestnut Hill, MA 02467, USA
+e-mail: lehmannb@bc.edu
+Jian Xiao
+Department of Mathematics, Northwestern University, Evanston, IL 60208, USA
+e-mail: jianxiao@math.northwestern.edu
+© by the author(s) This work is licensed under http://creativecommons.org/licenses/by-sa/4.0/
+arXiv:1607.06161v3  [math.AG]  7 Jul 2017
+2 1. Introduction2 1. Introduction
+Contents
+1. Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+2. Preliminaries . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+3. Positive products and mixed volumes . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+4. Alexandrov body and Zariski decompositions . . . . . . . . . . . . . . . . . . . . . . 10
+5. Morse type inequalities . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+6. Cone dualities and Minkowski’s existence theorem . . . . . . . . . . . . . . . . . . . 17
+7. Blaschke addition for (1,1)-classes and its applications . . . . . . . . . . . . . . . . . 20
+8. Projection volumes and the Brascamp-Lieb inequality . . . . . . . . . . . . . . . . . 25
+1. Introduction
+Many deep results concerning holomorphic line bundles in complex geometry are inspired by results
+in convex geometry. For example, the Khovanskii-Teissier inequalities for (1 , 1)-classes are inspired
+by the Alexandrov-Fenchel inequalities for convex bodies. Such results were ﬁrst explored in [Tei82]
+and [Kho89]; [Gro90] also contains many nice discussions on these relations.
+In this paper we extend the dictionary between the geometry of line bundles in complex geometry
+and the theory of convex bodies. First, we prove new results about divisors motivated by results in
+convex geometry. These results strengthen and clarify existing geometric inequalities in the literature.
+A key role is played by the reﬁned structure of the movable cone of curves we obtained in our previous
+work [LX16b]. Second, we reinterpret several classical convex geometry results in the context of
+algebraic geometry. Although these convex geometry results are well understood, we feel that complex
+geometers could beneﬁt from this discussion.
+The outline of this correspondence is as follows. On the complex geometry side, let X be a smooth
+projective variety (or compact K¨ ahler manifold) of dimensionn. We have the vector space H 1,1(X, R)
+whose integral points parameterize Chern classes of holomorphic line bundles. Inside of this space, we
+have cones Eﬀ
+1
+(X), Mov 1(X) which represent (1 , 1)-classes satisfying various positivity conditions.
+On the convex geometry side, we consider
+V := C0(Sn−1)/L(Sn−1)
+where Sn−1 is the ( n− 1)-dimensional sphere, C0(Sn−1) is the space of continuous functions and
+L(Sn−1) is the space of linear functions. We consider two positive cones in V :Cp is the cone generated
+by positive continuous functions andC is the cone generated by positive convex and homogeneous of
+degree one functions. We then study the following correspondences:
+B. Lehmann and J. Xiao, Correspondences between convex geometry and complex geometry 3B. Lehmann and J. Xiao, Correspondences between convex geometry and complex geometry 3
+Complex Geometry Convex Geometry
+Section 3 movable classes
+and the positive products C and the mixed volumes
+Section 4 pseudo-eﬀective classes and
+the divisorial Zariski decomposition
+Cp and
+the Alexandrov body construction
+Section 5 Morse inequality for ( Eﬀ
+1
+(X), vol) Morse inequality for (Cp, vol)
+Section 6 movable curve classes
+and duality of cones
+mixed area measures
+and Minkowski’s existence theorem
+Section 7 addition of movable curve classes Blaschke addition and
+the Kneser-S¨ uss inequality
+Section 8 ﬁbration and restricted volumes projection and projection volumes
+In this dictionary, convex bodies with non-empty interior correspond to big movable classes. We
+can phrase several classical convex geometry results due to Minkowski and Alexandrov in terms of
+algebraic geometry; for example, the divisorial Zariski decomposition is a variant of the Alexandrov
+body construction.
+We highlight a couple particular results. The following proposition 1 corresponds to the linearity
+of the ( n− 1)st mixed volume of polytopes.
+Proposition 1.1. Let X be a smooth projective variety of dimension n. Assume that L is pseudo-
+eﬀective and M is movable, then
+⟨Ln−1⟩· M =⟨Ln−1· M⟩.
+However, there exist projective manifolds such that ⟨L1· L2· ...· Ln−1⟩· M̸=⟨L1· L2· ...· Ln−1· M⟩
+if the pseudo-eﬀective classes Li are diﬀerent.
+We also discuss Brascamp-Lieb type inequalities on smooth projective varieties; for example, we
+prove the following Loomis-Whitney inequality for (1 , 1) classes.
+Theorem 1.2. (Theorem 8.1) Let X be a smooth projective variety of dimension n. Suppose that
+{fi : X99K Ci}n
+i=1 is a collection of dominant rational maps onto curves, and assume that the induced
+map X99K ∏n
+i=1 Ci is birational. Then for any big (1, 1) class L, we have
+(vol(L)/n!)n−1≤
+n∏
+i=1
+(volfi(L)/(n− 1)!) ,
+where volfi(L) is the restricted volume on a general ﬁber of fi (up to a resolution). Moreover, if
+all the fi are morphisms, then we obtain equality if and only if the positive part of L is numerically
+proportional to a sum of ﬁbers of the fi.
+While our discussion of the ﬁelds of complex and convex geometry will be purely by analogy, one
+can sometimes make the relationship between line bundles and polytopes quite explicit. There is a
+well-understood way to construct a polytope (up to translation) to a line bundle in the toric setting.
+More generally, one has an analogous construction for arbitrary varieties known as the Okounkov
+or Newton-Okounkov body (see e.g. [LM09], [KK12]). Unfortunately, certain geometric features of
+Okounkov bodies rely heavily on the choice of ﬂag. Thus it is not clear whether the dictionary we
+present here can be enriched to the polytope setting while still capturing the full strength of our
+results. In particular, it is interesting to ask the following question:
+1 ↑ The ﬁrst part of this proposition has been implicitly contained in [FL13] and [LX16b], and was also mentioned
+to the second author by S. Boucksom.
+4 2. Preliminaries4 2. Preliminaries
+Question 1.3. Let X be a compact K¨ ahler manifold (or smooth projective variety) of dimensionn.
+After possibly ﬁxing some data on X, is there a “canonical” injective linear map
+i : H 1,1(X, R)→ V := C0(Sn−1)/L(Sn−1),
+or equivalently, surjective linear map
+i∗ : V∗→ H n−1,n−1(X, R),
+such that the positive cones of (1, 1) classes are canonically embedded in the positive cones of functions,
+the map i preserves positivity and the pairing between H 1,1(X, R) and H n−1,n−1(X, R) is induced by
+the pairing between V and V∗ via the maps i, i∗?
+Acknowledgement
+We would like to thank J. P. Demailly, M. Jonsson and V. Tosatti for several comments and suggestions
+on this work, and R. Lazarsfeld, M. Mustat ¸˘ a, and B. Totaro for pointing out an error in an earlier
+version. The ﬁrst author was supported by an NSA Young Investigator Grant. The second author
+was supported in part by CSC fellowship and Institut Fourier.
+2. Preliminaries
+2.A. Positive classes
+Let X be a compact K¨ ahler manifold of dimension n. We will let H 1,1(X, R) denote the real Bott-
+Chern cohomology group of bidegree (1 , 1). Note that the Bott-Chern cohomology coincides with de
+Rham cohomology on a compact K¨ ahler manifold, due to the∂ ¯∂-lemma. A Bott-Chern class is called
+pseudo-eﬀective if it contains a d-closed positive current. A pseudo-eﬀective class L is called movable
+if for any irreducible divisor Y the Lelong number ν(L, y) (or minimal multiplicity as in [Bou04])
+vanishes at a very general point y∈ Y . We will be interested in the following cones in H 1,1(X, R):
+• Eﬀ
+1
+(X): the cone of pseudo-eﬀective (1 , 1)-classes;
+• Mov1(X): the cone of movable (1 , 1)-classes.
+Classes in the interior of Eﬀ
+1
+(X) are known as big classes; these are exactly the classes admitting a
+K¨ ahler current (i.e. strictly positive current), or equivalently, having strictly positive volumes. As a
+consequence of Demailly’s regularization theorem [Dem92], any big class contains a K¨ ahler current
+with analytic singularities. Let H n−1,n−1(X, R) denote the real Bott-Chern cohomology group of
+bidegree (n− 1, n− 1). We will be interested in the following cone in H n−1,n−1(X, R):
+• Mov1(X): the cone of movable ( n− 1, n− 1)-classes.
+Recall that Mov 1(X) is the closed cone generated by classes of the form µ∗( ˜A1· ...· ˜An−1), where µ
+is a modiﬁcation and the ˜Ai are K¨ ahler classes upstairs, see e.g. [BDPP13]. An irreducible curve C
+is called movable if it is a member of an algebraic family that covers X.
+Remark 2.1. Let ω be a ﬁxed K¨ ahler class onX and let L be a (1, 1) class. By [Bou04] the condition
+L∈ Mov1(X) is equivalent to requiring that for any δ > 0 there is a modiﬁcation µ : ˆX → X
+such that L + δω = µ∗ˆωδ, where ˆωδ is a K¨ ahler class on ˆX. In particular, when n = 2, we have
+Mov1(X) = Mov1(X).
+B. Lehmann and J. Xiao, Correspondences between convex geometry and complex geometry 5B. Lehmann and J. Xiao, Correspondences between convex geometry and complex geometry 5
+The most important conjecture concerning these cones is Demailly’s conjecture on the (weak)
+transcendental Morse inequality. This conjecture was recently proved for projective manifolds in
+[WN16]. When working with positive cones, it will at times be useful to restrict ourselves to this
+setting. In particular, by [BDPP13, WN16], for projective manifolds we have
+Eﬀ
+1
+(X)∗ = Mov1(X).
+Remark 2.2. By [Cut13] and [FL13, Section 2.2.2], the results of [BFJ09] can be extended to an
+arbitrary algebraically closed ﬁeld. Thus it is also possible to work in the purely algebraic setting,
+i.e. with smooth algebraic varieties over an arbitrary algebraically closed ﬁeld (see also [LX16a, Section
+2.3]). In this case one should replace H 1,1(X, R) by the space N 1(X) of R-Cartier divisors up to
+numerical equivalence. All our results hold equally well with this change.
+Remark 2.3. As already noted in our previous works [LX16a, LX16b], the main results of these
+papers extend to the transcendental situation whenever we have the (weak) transcendental Morse
+inequality. In particular, the transcendental versions hold on projective manifolds.
+2.B. Positive functions on the sphere
+Let Kn denote the set of convex bodies (compact convex subsets) with non-empty interior in Rn. For
+two convex bodies K, L, we have the Minkowski sum K + L :={x + y| x∈ K, y∈ L} and it is clear
+K + L∈ Kn. In this way, ( Kn, +) is a commutative semi-group. For λ≥ 0, the scaling operation is
+λK :={λx| x∈ K}.
+Associated with a convex body K is its support function, h(K,·), deﬁned on Rn by
+h(K, x) := max{x· y|y∈ K}.
+We shall write hK(·), rather than h(K,·), for the support function of K, and we will usually consider
+only the restriction of the support function to Sn−1. So hK is a continuous function on Sn−1. Let
+C0(Sn−1) denote the real valued continuous function space on the sphere. Then the support functions
+induce a map:
+Φ :Kn→ C0(Sn−1)
+K↦→ hK(·).
+Indeed, by the embedding theorem for spaces of convex sets (see e.g. [H¨ or55], [Sch14, Chapter
+1]), Φ is an isometrical isomorphism onto its image if we endow the spaces Kn and C0(Sn−1) with
+suitable metrics. Let dH denote the Hausdorﬀ metric on Kn, that is,
+dH(K, L) = min{ϵ > 0|K⊆ L + ϵB & L⊆ K + ϵB},
+where B is the unit n-ball. We endow C0(Sn−1) with maximal norm |·| ∞, so
+dH(K, L) =|hK− hL|∞.
+Thus Φ : ( Kn, dH)→ (Φ(Kn),|·| ∞) is an isometrical isomorphism. More importantly, by the above
+embedding Φ, we can identify Kn with its image Φ( Kn)⊂ C0(Sn−1). Thus we will freely pass back
+and forth between convex bodies and their support functions on the sphere.
+6 3. Positive products and mixed volumes6 3. Positive products and mixed volumes
+2.B.a. Quotient space
+By the embedding theorem for convex bodies, Kn can be seen as a convex cone in an inﬁnite dimen-
+sional Banach space. For a∈ Rn it is clear that hK+a = hK +la where la(x) = a·x is a linear function.
+Comparing the equality characterization of Brunn-Minkowski inequalities in convex geometry with
+the one in algebraic geometry (see Section 2.C), it is convenient to identify two convex bodies if they
+diﬀer by a translation. This leads to the quotient space of C0(Sn−1) by linear functions. We denote
+L(Sn−1) to be the vector space whose elements are the restriction of linear functions to Sn−1. It is
+obvious that dim L(Sn−1) = n. We consider the quotient space
+V := C0(Sn−1)/L(Sn−1).
+We endow V with the quotient norm, that is, for f∈ V we deﬁne
+||f|| = inf
+l∈L(Sn−1)
+|f− l|∞.
+It is a standard fact in functional analysis that ( V,||·|| ) is also an inﬁnite dimensional Banach space.
+Remark 2.4. Unlike the ﬁnite dimensional situation, the Banach space V is not reﬂexive. If we
+identify V with its canonical image in V∗∗, then V ⊊ V∗∗. This means that not every continuous
+linear functional on V∗ is given by a continuous function.
+2.B.b. Positive cones on V
+We will denote byC the image of Kn in V , so thatC is a convex cone in V . We will also let Cp⊂ V
+denote the convex cone generated by non negative continuous functions. Note thatC⊂C p. Motivated
+by the toric case, we are guided by the following analogies:
+Eﬀ
+1
+(X)↭Cp, Mov1(X)↭C.
+2.C. Volume and Brunn-Minkowski inequalities
+In convex geometry, we have the following fundamental geometric inequality (see e.g. [Sch14, Chapter
+7]).
+Theorem 2.5. Let K, L⊆ Rn be two convex bodies with non-empty interior, then
+vol(K + L)1/n≥ vol(K)1/n + vol(L)1/n
+with equality if and only if K, L are homothetic.
+In the complex geometry setting, the volume of a class L∈ Eﬀ
+1
+(X) is deﬁned to be
+vol(L) = sup
+T
+∫
+X
+T n
+ac
+for T ranging over the closed positive (1, 1)-currents in L, where Tac denotes the absolutely continuous
+part (as in [Bou02]). In particular, for divisor classes, this analytic deﬁnition coincides with the usual
+one.
+By extending a previous result of [BFJ09] from big nef classes to big movable classes, we proved
+in our previous work [LX16b]:
+Theorem 2.6. Let X be a smooth projective variety of dimension n. Assume that L, M are two big
+and movable (1, 1)-classes, then
+vol(L + M)1/n≥ vol(L)1/n + vol(M)1/n
+with equality if and if L, M are proportional.
+Remark 2.7. For non-projective K¨ ahler manifolds, by [FX14] we also have a Brunn-Minkowski in-
+equality and its equality characterization for big and nef (1 , 1) classes.
+B. Lehmann and J. Xiao, Correspondences between convex geometry and complex geometry 7B. Lehmann and J. Xiao, Correspondences between convex geometry and complex geometry 7
+3. Positive products and mixed volumes
+For toric varieties, a big movable divisor corresponds to a convex polytope (up to translation). The
+most important structure on the set of polytopes is the mixed volume. [BFJ09] shows how, in the
+toric setting, the mixed volume corresponds to the positive product construction deﬁned below (up
+to a constant factor).
+3.A. Mixed volumes and area measures
+In the convex geometry setting, let K1, ..., Kr∈ Kn be convex bodies. Then there is a polynomial
+relation
+vol(t1K1 + ... + trKr) =
+∑
+i1+...+ir=n
+n!
+i1!i2!...ir! V (Ki1
+1 , ..., Kir
+r )ti1
+1 . . . tir
+r ,
+where ti∈ R+ and the V (Ki1
+1 , ..., Kir
+r ) are coeﬃcients deﬁning the mixed volumes. In particular, if
+K1 = K2 = ... = Kr = K (up to translations), then the mixed volume is just vol( K).
+There is a variant of this construction that will frequently be useful for us. The area measure
+S(K, ..., K;·) of a convex body K is, roughly speaking, the pushforward of the ( n− 1) dimensional
+Hausdorﬀ measure on ∂K by its Gauss map (see [Sch14, Chapter 4] for the precise deﬁnition). Alter-
+natively, the (mixed) area measures can be deﬁned through mixed volumes and Riesz representation
+theorem in a very simple way. We follow the elegant discussion in [Lut88]. Suppose that K1, ..., Kn−1
+are ﬁxed convex bodies with non empty interior. Via the embedding map Φ, the function
+l(hL) := V (K1, ..., Kn−1, L)
+can be extended in a unique way to a continuous functional on C0(Sn−1). Here, V (K1, ..., Kn−1, L)
+is the mixed volume of convex bodies (see [Sch14, Chapter 5]). Thus there exists a Borel measure,
+denoted by S(K1, ..., Kn−1;·), such that
+l(hL) = V (K1, ..., Kn−1, L) =
+∫
+Sn−1
+hL(x)dS(K1, ..., Kn−1; x).
+The mixed area measure S(K1, ..., Kn−1;·) has the origin as its centroid and does not concentrate on
+any great subsphere.
+3.B. Positive products
+Let X be a compact K¨ ahler manifold of dimension n. Before going on, we ﬁrst recall the deﬁnition
+of positive currents with minimal singularities. Let {θ} be a pseudo-eﬀective (1 , 1) class, where θ is
+a smooth representative. Then a positive current T = θ + i∂ ¯∂ϕ has minimal singularities if for any
+u∈ PSH(X, θ) there exists some constant c such that u≤ ϕ+ c. Note that such a current Tmin always
+exists: let
+Vθ := sup{ϕ∈ PSH(X, θ)| ϕ≤ 0},
+then θ + ddcVθ is a positive current with minimal singularities. There may be many positive currents
+with minimal singularities in a class.
+Assume that L1, ..., Lr∈ H 1,1(X, R) are big classes, i.e. every class Li contains a K¨ ahler current.
+By the theory developed in [BEGZ10], we can associate to L1, ..., Lr a positive class in H r,r(X, R),
+denoted by⟨L1· ...· Lr⟩. It is deﬁned as the class of the non-pluripolar product of positive current
+with minimal singularities, that is,
+⟨L1· ...· Lr⟩ :={⟨T1,min∧ ...∧ Tr,min⟩}
+where⟨T1,min∧ ...∧ Tr,min⟩ is the non-pluripolar product. It is proved in [BEGZ10] that the positive
+product⟨L1· ...· Lr⟩ does not depend on the choices of currents with minimal singularities. Moreover,
+if the Li are nef, then⟨L1· ...· Lr⟩ = L1· ...· Lr is the usual cohomology intersection.
+8 3. Positive products and mixed volumes8 3. Positive products and mixed volumes
+Remark 3.1. As proved in [Pri13, Proposition 1.10], it is also not hard to see that the construction
+in [BDPP13, Theorem 3.5] and the construction in [BEGZ10] are the same. This follows directly from
+the maximal integration property of ⟨L1, ..., Lr⟩ against smooth positive closed ( n− r, n− r)-forms
+(see [BEGZ10, Proposition 1.18 and Proposition 1.20]).
+Remark 3.2. Let X be a smooth projective variety of dimension n, and assume that L1, ..., Lr are
+real big divisor classes. Then we can also deﬁne ⟨L1, ..., Lr⟩ by the algebraic construction in [BFJ09].
+Since the positive product constructions in [BFJ09] are deﬁned by taking limits in the space Nn−r(X)
+of R-cycles up to numerical equivalence (not in H r,r(X, R)), it might be diﬀerent from the analytic
+construction, depending on the validity of the Hodge Conjectures. However, the resulting positive
+products are the same for r = 1 and r = n− 1 because of the Lefschetz theorem on (1 , 1) and
+(n− 1, n− 1) classes. And the equality is obvious for r = n.
+In this section, we discuss the analogue between mixed volume (with Minkowski addition) and
+positive products (with addition of divisors). We show that in some ways this correspondence works
+well, but in other ways it fails. The next proposition corresponds to the fact that the function
+V (Kn−1,−) is linear on Kn.
+Proposition 3.3. Let X be a smooth projective variety of dimension n. Assume that L is pseudo-
+eﬀective and M is movable, then
+⟨Ln−1⟩· M =⟨Ln−1· M⟩.
+Proof. This is an application of [FL13, Lemma 6.21]. For completeness, we include some arguments
+here. Firstly, by [WN16] the results in [BFJ09] can extend to transcendental classes.
+By taking limits, we can assume that M = π∗A for some birational modiﬁcation π and K¨ ahler
+class A upstairs. We claim that π∗⟨Ln−1⟩ =⟨(π∗L)n−1⟩. Note that π∗⟨(π∗L)n−1⟩ =⟨Ln−1⟩, so we
+need to check that⟨(π∗L)n−1⟩· E = 0 for any irreducible π-exceptional divisor E. For any c > 0, the
+restriction π∗L + cE|E can not be pseudo-eﬀective, thus π∗L can not be E-big. By [BFJ09, Lemma
+4.10], we get that⟨(π∗L)n−1⟩· E = 0, concluding the proof of our claim. Since π∗(π∗A)⪰ A, by basic
+properties of positive products, we have
+⟨Ln−1· π∗A⟩ =⟨(π∗L)n−1· π∗(π∗A)⟩
+≥⟨ (π∗L)n−1· A⟩ =⟨(π∗L)n−1⟩· A
+= π∗⟨Ln−1⟩· A =⟨Ln−1⟩· π∗A
+On the other hand, we always have⟨Ln−1⟩·M≥⟨ Ln−1·M⟩. Thus we have the equality⟨Ln−1⟩·M =
+⟨Ln−1· M⟩. □
+Remark 3.4. In the above proof, the key ingredient is the equality π∗⟨Ln−1⟩ =⟨(π∗L)n−1⟩. An
+alternative way to see this equality is to use the function M studied in [Xia15a, LX16b]. For any big
+class N, we have
+π∗⟨Ln−1⟩· N
+vol(N)1/n ≥⟨Ln−1⟩· π∗N
+vol(π∗N)1/n .
+Thus the inﬁmum of LHS is obtained by some big class N satisfying π∗N = L, which implies that
+the inﬁmum of LHS is obtained by the positive part of π∗L. By [LX16b] we get that
+π∗⟨Ln−1⟩ =⟨P (π∗L)n−1⟩ =⟨(π∗L)n−1⟩.
+Corollary 3.5. Let X be a smooth projective variety of dimension n. Assume that L is pseudo-
+eﬀective and M1, M2 are movable, then
+⟨Ln−1· (M1 + M2)⟩ =⟨Ln−1· M1⟩ +⟨Ln−1· M2⟩.
+B. Lehmann and J. Xiao, Correspondences between convex geometry and complex geometry 9B. Lehmann and J. Xiao, Correspondences between convex geometry and complex geometry 9
+However, the more general statement ⟨L1· L2· ...· Ln−1⟩· M =⟨L1· L2· ...· Ln−1· M⟩ is false.
+Equivalently, it is not true that φ∗⟨L1· L2· ...· Ln−1⟩ =⟨φ∗L1· φ∗L2· ...· φ∗Ln−1⟩ for a birational
+map φ. If this property were true, it would easily imply that the volume function is polynomial (not
+just locally polynomial) everywhere in the interior of the movable cone. But this property fails in the
+following examples suggested by Lazarsfeld and Totaro.
+Example 3.6. (A ﬂop) Let X be the projective bundle (of quotients) over P1 deﬁned byO⊕O⊕
+O(−1). There are two natural divisor classes on X: the class f of the ﬁbers of the projective bundle
+and the class ξ of the sheaf OX/P1(1). Using for example [Ful11] and [FL13], one sees that f and ξ
+generate the algebraic cohomology classes with the relations f 2 = 0, ξ2f =−ξ3 = 1 and
+Eﬀ
+1
+(X) = Mov1(X) =⟨f, ξ⟩ Nef 1(X) =⟨f, ξ + f⟩
+and
+Eﬀ 1(X) =⟨ξf, ξ 2⟩ Nef 1(X) =⟨ξf, ξ 2 + ξf⟩.
+We can calculate volume by pushing forward. We have if b≥ a,
+H 0(X, aξ + bf) = H 0(P1, Syma(O⊕O⊕O (−1))⊗O (b))
+= (b + 1)(a + 1) + ba + (b− 1)(a− 1) + . . . + (b− a)(a− a)
+= ba2/2− a3/6 + 3ab/2 + b + 7a/6 + 1
+and if b≤ a,
+H 0(X, aξ + bf) = (b + 1)(a + 1) + ba + (b− 1)(a− 1) + . . . + (b− b)(a− b)
+= ab2/2− b3/6 + 3ba/2 + a + 7b/6 + 1
+So for b≥ a the volume is 3 ba2− a3, and for a≥ b it is 3 ab2− b3. Note that in a neighborhood
+of a = b the volume is not locally polynomial.
+Example 3.7. (Projective bundle over an abelian surface) In fact, the volume function can
+even be transcendental on certain regions of the big movable cone. [KLM13] gives an example of a
+P2-bundle over an abelian twofold whose volume function is transcendental on a region of the big cone
+of divisors. While this region only contains non-movable divisors, their computation also extends into
+the movable cone as follows.
+As in [KLM13, Section 3] let A be the self-product of an elliptic curve without CM and let f1, f2,
+and ∆ denote the ﬁbers of the two projection maps and the diagonal. Consider the projective bundle
+π : X→ A deﬁned as
+X = PA(O(f1 + f2 + ∆)⊕O (−f1)⊕O (−f2))
+and let L be a divisor representing OX/A(1).
+For positive real numbers c1, c2, c3 [KLM13, Section 3] computes the volume of L + π∗(c1f1 +
+c2f2 + c3∆) as an explicit integral over a region in the plane. This divisor is movable but not nef
+when c1 = 1
+2 + ϵ, c2 = 1
+2 + ϵ, c3 = 1 for ϵ suﬃciently small (for example, ϵ = 1/10 will work). Following
+the lengthy computation of [KLM13], we ﬁnd that for rational values of the ci in a neighborhood of
+the divisor L + 6
+10 π∗f1 + 6
+10 π∗f2 + π∗∆ the volume can be written as a (non-zero) quadratic irrational
+multiple of ln of a (non-constant) quadratic irrational, plus an algebraic number.
+Remark 3.8. In the algebraic setting, for any big and movable classes L1, . . . , Ln−1 the diﬀerence
+φ∗⟨L1· L2· ...· Ln−1⟩−⟨ φ∗L1· φ∗L2· ...· φ∗Ln−1⟩ is a pseudo-eﬀective φ-contracted curve class. This
+follows from the argument establishing negativity of contraction.
+10 4. Alexandrov body and Zariski decompositions10 4. Alexandrov body and Zariski decompositions
+4. Alexandrov body and Zariski decompositions
+In this section, we interpret a classical construction due to Alexandrov [Ale38] (an English translation
+is available in his selected works [Ale96]) as a Zariski decomposition structure in convex geometry.
+This is the convex geometry version of the σ-decomposition (or divisorial Zariski decomposition) of
+divisors in algebraic geometry.
+4.A. Zariski decomposition
+First we recall the notion of a σ-decomposition. Let X be a smooth projective variety of dimension
+n, and let L∈ Eﬀ
+1
+(X) be a big divisor class. As in the theories developed in [Bou04, Nak04, BFJ09,
+BDPP13], there exists a decomposition
+L = P (L) + N(L)
+where P (L) =⟨L⟩ and N(L) = L− P (L). This decomposition is known as the σ-decomposition; it
+should be interpreted as replacing a pseudo-eﬀective class L with a movable class P (L)≤ L with no
+“loss” of positivity. The key properties of this decomposition are the following:
+1. P (L)∈ Mov1(X) and N(L) is a rigidly embedded eﬀective divisor class 2.
+2. vol( L) = vol(P (L)).
+3. The orthogonality property: ⟨P (L)n−1⟩· N(L) = 0.
+The ﬁrst two properties characterize the σ-decomposition: if L = P + N is any decomposition such
+that P∈ Mov1(X), N∈ Eﬀ
+1
+(X) and vol( L) = vol(P ), then it is shown in [FL13, Section 5] that we
+must have P = P (L), N = N(L).
+In fact, [LX16b] shows a stronger property: the σ-decomposition exactly captures the failure of
+the volume function to be strictly log concave.
+Theorem 4.1. (see [LX16b] Theorem 1.6) Let X be a smooth projective variety of dimension n.
+Let L and D be big divisor classes on X. Then we have
+vol(L + D)1/n = vol(L)1/n + vol(D)1/n
+if and only if P (L), P(D) are proportional.
+4.B. Alexandrov body
+Let us recall the construction of the Alexandrov body (see e.g. [Sch14, Section 7.5]). Let Kn
+0⊆ Kn
+be the space of convex bodies with 0 as an interior point. Let f be a strictly positive continuous
+function. The Alexandrov body associated with f is deﬁned as the unique maximal element (denoted
+by K), with respect to set inclusion, of the set
+{Q∈ Kn
+0| hQ≤ f}.
+Equivalently, this means that the support function hK = sup ρ where the sup is taken over all 1-
+homogeneous convex functions less than or equal to f. The convex body K can also be characterized
+as follows:
+K =
+⋂
+y∈Sn−1
+{x∈ Rn| x· y≤ f(y)}.
+2↑ Here we use the terminology of [Bou04], “rigidly embedded” means that the class N(L) contains only one positive
+current.
+B. Lehmann and J. Xiao, Correspondences between convex geometry and complex geometry 11B. Lehmann and J. Xiao, Correspondences between convex geometry and complex geometry 11
+If we denote P (f) := hK, then we have
+P (f) = f, a.e. with respect to µK, (4.1)
+where µK := S(Kn−1;·) is the area measure of K. Equivalently, we get
+(f− P (f))· µK :=
+∫
+Sn−1
+(f− P (f))dµK = 0. (4.2)
+The volume of f is deﬁned to be
+vol(f) := vol(K). (4.3)
+For L∈ Kn
+0, it is clear that P (hL) = hL, vol(hL) = vol(L).
+4.B.a. Decomposition theory
+As an immediate consequence of the characterization of Alexandrov body, we have
+Lemma 4.2. Let f, g be two strictly positive continuous functions such that f = g + la for some
+linear function la, then we have P (f) = P (g) + la.
+This implies the decomposition of Cp:
+Theorem 4.3. (Decomposition of (Cp, vol) [Ale38]) Assume that f∈C p is represented by a strictly
+positive continuous function. Then there exists a decomposition
+f = P (f) + N(f)
+satisfying:
+• P (f)∈C and N(f) = f− P (f)∈C p;
+• vol(f) = vol(P (f));
+• if we assume P (f) is represented by a convex body K and denote⟨P (f)n−1⟩ := S(Kn−1;·), then
+the orthogonality estimate holds in the sense that ⟨P (f)n−1⟩· N(f) = 0.
+We can rephrase this result to look exactly analogous to the characterization of theσ-decomposition
+described above; by the Brunn-Minkowski theorem we obtain
+Proposition 4.4. Suppose that f, g∈C p are represented by strictly positive continuous functions.
+Then we have
+vol(f + g)1/n = vol(f)1/n + vol(g)1/n
+if and only if P (f), P(g) are proportional. In particular, if f = P + N is a decomposition such that
+P∈C , N∈C p and vol(P ) = vol(f), then we must have P = P (f), N = N(f).
+Proof. The proof is similar to the complex geometry setting. We only need to prove the second point.
+Integrating f = P + N against with the area measure ⟨P (f)n−1⟩ implies
+vol(f) = P·⟨ P (f)n−1⟩ + N·⟨ P (f)n−1⟩
+≥ P·⟨ P (f)n−1⟩≥ vol(P )1/n vol(P (f))n−1/n
+= vol(f),
+where the ﬁrst inequality follows from N ∈ Cp, the second inequality follows from the Brunn-
+Minkowski inequality and the last equality follows from the assumption vol( P ) = vol( f). Thus
+we get equality everywhere, in particular, P·⟨ P (f)n−1⟩ = vol( P )1/n vol(P (f))n−1/n. Note that
+P·⟨ P (f)n−1⟩ is just the mixed volume computed by the convex bodies representing P and P (f). By
+Brunn-Minkowski theory, up to some translation these two convex bodies are equal, which in turn
+implies P = P (f). □
+12 5. Morse type inequalities12 5. Morse type inequalities
+Remark 4.5. Theorem 4.3 can also be seen as some kind of inﬁnite dimensional extension of the
+theory developed in [LX16a] when applied to this particular setting.
+Remark 4.6. One should compare the Alexandrov body construction with the Berman-Boucksom
+orthogonality estimate in complex pluripotential theory (see [BB10]), where the authors apply a com-
+plex envelope construction analogous to the construction ofP (f). This complex envelope construction
+admits similar orthogonality properties as the Zariski decomposition, and has played an important
+role in the variational approach to solve complex Monge-Amp` ere equations (see [BBGZ13]). Indeed,
+by the theory developed in [BFJ15] on non-Archimedean Monge-Amp` ere equations, the orthogonal-
+ity in the divisorial Zariski decomposition is closely related to non-Archimedean Berman-Boucksom
+orthogonality.
+5. Morse type inequalities
+Let X be a compact K¨ ahler manifold of dimension n, and let A, B ∈ H 1,1(X, R) be nef classes.
+Demailly’s conjecture on the (weak) transcendental Morse inequality says that
+vol(A− B)≥ An− nAn−1· B.
+This important conjecture was recently proved for projective manifolds in [WN16]. For non-projective
+K¨ ahler manifolds, it is proved in [Pop16] that An− nAn−1· B > 0 implies A− B is big (see also
+[Xia15b] for a weaker result).
+As an easy corollary of the main result of [WN16], we have
+Proposition 5.1. Let X be a smooth projective variety of dimension n. If L, M∈ H 1,1(X, R) are
+movable classes, then
+vol(L− M)≥ vol(L)− n⟨Ln−1⟩· M.
+Proof. For reader’s convenience, we repeat some arguments from [Xia14]. Without loss of generality,
+we can assume that L is big and that M = µ∗ˆω for a birational modiﬁcation µ and for some K¨ ahler
+class ˆω upstairs. Take a suitable sequence of Fujita approximations, π∗
+m(µ∗L) = ωm + [Em], such that
+vol(µ∗L) = lim
+m→∞
+ωn
+m, ⟨(µ∗L)n−1⟩· ˆω = lim
+m→∞
+ωn−1
+m · π∗
+mˆω.
+By [WN16], we always have vol( ωm− π∗
+mˆω)≥ ωn
+m− nωn−1
+m · π∗
+mˆω, which implies that
+vol(µ∗L− ˆω) = vol(π∗
+m(µ∗L− ˆω))
+≥ vol(ωm− π∗
+mˆω)
+≥ ωn
+m− nωn−1
+m · π∗
+mˆω.
+Let m tend to inﬁnity, we get vol( µ∗L− ˆω)≥ vol(L)− n⟨(µ∗L)n−1⟩· ˆω. This implies the desired
+inequality
+vol(L− µ∗ˆω)≥ vol(L)− n⟨Ln−1⟩· µ∗ˆω.
+□
+5.A. Convex geometry analogue
+Due to the importance of the Morse inequality in complex geometry, it is interesting to ask for an
+analogue for convex bodies. More precisely, let K, L∈ Kn and let hK, hL ∈ Cbe their support
+functions, one may wonder if
+vol(hK− hL)≥ vol(K)− nV (Kn−1, L)
+B. Lehmann and J. Xiao, Correspondences between convex geometry and complex geometry 13B. Lehmann and J. Xiao, Correspondences between convex geometry and complex geometry 13
+holds, and in particular, hK− hL could be represented by a strictly positive function if vol( K)−
+nV (Kn−1, L) > 0.
+Note that we can assume vol( K)− nV (Kn−1, L) > 0, since the inequality is trivial otherwise. It
+is also easy to see that the inequality holds if K, L are proportional up to some translation, so we
+may assume otherwise.
+We ﬁrst verify that when vol(K)− nV (Kn−1, L) > 0, the function hK− hL can be represented by
+a strictly positive continuous function. This can be accomplished by applying the Diskant inequality
+(see [Sch14, Section 7.2]). Recall that the inradius of K relative to L is deﬁned by:
+r(K, L) := max{λ > 0|λL + t⊂ K for some t∈ Rn}.
+Applying the Diskant inequality to K, L, we get
+r(K, L)≥ V (Kn−1, L)1/n−1−
+(
+V (Kn−1, L)n/n−1− vol(K) vol(L)1/n−1)1/n
+vol(L)1/n−1 .
+The generalized binomial formula yields
+V (Kn−1, L)1/n−1−
+(
+V (Kn−1, L)n/n−1− vol(K) vol(L)1/n−1
+)1/n
+=
+∞∑
+k=1
+( 1/n
+k
+)
+(−1)k+1 vol(K)k vol(L)k/n−1V (Kn−1, L)
+1−kn
+n−1
+= 1
+n vol(K) vol(L)1/n−1V (Kn−1, L)−1 +
+∞∑
+k=2
+...
+≥ 1
+n vol(K) vol(L)1/n−1V (Kn−1, L)−1,
+because every term in the sum ∑∞
+k=2 ... is non negative. Substituting, we obtain
+r(K, L)≥ vol(K)
+nV (Kn−1, L) .
+Now the assumption vol( K)− nV (Kn−1, L) > 0 implies that, up to a translation, K⊃ (1 + δ)L
+for some δ > 0. In particular, up to a linear function, we have hK− hL≥ δhL. This implies that the
+class{hK− hL}∈C p can be represented by a strictly positive continuous function.
+Remark 5.2. It is of course not true in general that hK−hL can be represented by a strictly positive
+convex continuous function. For example, this necessarily fails whenK is indecomposable as discussed
+in Section 5.A.a.
+Now the Morse inequality for convex bodies follows from the following result due to [Ale38] (see
+also [Sch14, Section 7.5]).
+Lemma 5.3. Let f∈C p be a strictly positive continuous function with its Alexandrov body given by
+P (f) = hQ. For any continuous function g∈ V we have
+d
+dt
+⏐⏐⏐⏐
+t=0
+vol(f + tg) = n⟨P (f)n−1⟩· g.
+Applying this result to our original set-up, we see that for t∈ [0, 1]
+vol(hK− hL)− vol(K) =
+∫ 1
+0
+d
+dt vol(hK− thL)dt
+=
+∫ 1
+0
+−n⟨P (hK− thL)n−1⟩· hLdt
+≥− nV (Kn−1, L),
+14 5. Morse type inequalities14 5. Morse type inequalities
+where the last inequality follows from the monotone property of mixed volumes.
+Summarizing the discussions above, we get
+Theorem 5.4. (Morse inequality for convex bodies) Let hK, hL∈C . If
+vol(K)− nV (Kn−1, L) > 0,
+then hK−hL∈C◦
+p which means that it can be represented by some strictly positive continuous function.
+Moreover, we have vol(hK− hL)≥ vol(K)− nV (Kn−1, L).
+For convex bodies, we also have the “reverse” Khovanskii-Teissier inequality (see [LX16a, Remark
+4.18] for this terminology).
+Proposition 5.5. Fix three convex bodies K, L, M∈ Kn, then
+nV (L, Kn−1)V (K, M n−1)≥ vol(K)V (L, M n−1).
+Proof. By taking limits, we can assume the convex bodies have non-empty interior. After scaling, we
+can assume V (K, M n−1) = V (L, M n−1). Under this assumption, we need to show nV (L, Kn−1)≥
+vol(K). Otherwise we would have hK− hL∈C◦
+p by Theorem 5.4. Thus
+∫
+Sn−1
+(hK− hL)dS(M n−1) = V (K, M n−1)− V (L, M n−1) > 0,
+a contradiction. □
+5.A.a. Indecomposability
+It is interesting to ask when a big movable (1 , 1)-class lies on the boundary (or extremal ray) of the
+movable cone. The analogue in the convex geometry setting is the notion of indecomposability. Recall
+that K is decomposable if there exist convex bodies M, D not homothetic to K such that K = M + D.
+Otherwise, we call that K is indecomposable. In particular, the existence of indecomposable convex
+bodies implies that, in the above Morse type inequality for convex bodies, in general hK− hL cannot
+be represented by a support function. We refer the readers to [Sch14, Chapter 3] for decomposable
+and indecomposable convex bodies.
+Example 5.6. Suppose that X is a toric variety deﬁned by a fan Σ. Suppose that P is an inde-
+composable polytope whose normal fan is reﬁned by Σ. Then P induces a big movable divisor on
+the boundary of the movable cone. The converse is false – however, if one focuses only on integer
+multiples of lattice polytopes, there is a good converse statement as in [CLS11, Proposition 6.2.13].
+For example, the only two-dimensional indecomposable convex bodies are triangles. In the toric
+setting, a triangle represents the pullback under a birational contraction of an ample generator of
+a ( Q-factorial) toric surface of Picard rank 1. Such a divisor is necessarily on the boundary of the
+movable cone.
+5.B. Reverse Khovanskii-Teissier inequality
+In the algebraic setting, an important step in the analysis of the Morse type bigness criterion is the
+“reverse” Khovanskii-Teissier inequality for big and nef divisors A, B, and a movable curve class β:
+n(A· Bn−1)(B· β)≥ Bn(A· β).
+We prove a more general statement on “reverse” Khovanskii-Teissier inequalities in the analytic
+setting3.
+3 ↑ Indeed, this kind of generalization has already been noted in [Xia15b, Remark 3.1], and it was also noted that
+the constant k!(n − k)!/4n! there could be improved by combining with the technique of [Pop16]. Some related work
+has also appeared independently in the recent preprint [Pop15].
+B. Lehmann and J. Xiao, Correspondences between convex geometry and complex geometry 15B. Lehmann and J. Xiao, Correspondences between convex geometry and complex geometry 15
+Theorem 5.7. Let X be a compact K¨ ahler manifold of dimension n. Let ω, β, γ be three nef (1, 1)
+classes on X. Then we have
+(βk· αn−k)· (αk· γn−k)≥ k!(n− k)!
+n! αn· (βk· γn−k).
+Proof. The proof depends on solving Monge-Amp` ere equations and the method of [Pop16]. Without
+loss of generality, we can assume that γ is normalised such that βk· γn−k = 1. Then we need to show
+(βk· αn−k)· (αk· γn−k)≥ k!(n− k)!
+n! αn. (5.4)
+We ﬁrst assume α, β, γ are all K¨ ahler classes. We will use the same symbols to denote the K¨ ahler
+metrics in corresponding K¨ ahler classes. By the Calabi-Yau theorem [Yau78], we can solve the
+following Monge-Amp` ere equation:
+(α + i∂ ¯∂ψ)n =
+(∫
+αn
+)
+βk∧ γn−k. (5.5)
+Denote by αψ the K¨ ahler metricα + i∂ ¯∂ψ. Then we have
+(βk· αn−k)· (αk· γn−k) =
+∫
+βk∧ αn−k
+ψ ·
+∫
+αk
+ψ∧ γn−k
+=
+∫ βk∧ αn−k
+ψ
+αn
+ψ
+αn
+ψ·
+∫ αk
+ψ∧ γn−k
+αn
+ψ
+αn
+ψ
+≥
+
+
+∫ (
+βk∧ αn−k
+ψ
+αn
+ψ
+·
+αk
+ψ∧ γn−k
+αn
+ψ
+)1/2
+αn
+ψ
+
+
+2
+.
+The last line follows because of the Cauchy-Schwarz inequality. We claim that the following
+pointwise inequality holds:
+βk∧ αn−k
+ψ
+αn
+ψ
+·
+αk
+ψ∧ γn−k
+βk∧ γn−k ≥ k!(n− k)!
+n! . (5.6)
+Then by (5.5) it is clear that the above pointwise inequality implies the desired inequality (5.4). Now
+we prove the claim. For any ﬁxed point p∈ X, we can choose some coordinates such that at the
+point p:
+αψ = i
+n∑
+j=1
+dzj∧ d¯zj, β = i
+n∑
+j=1
+µjdzj∧ d¯zj,
+and
+γn−k = in−k ∑
+|I|=|J|=n−k
+ΓIJ dzI∧ d¯zJ .
+Denote by µJ the product µj1...µjk with index J = (j1 < ... < j k) and denote by J c the complement
+index of J. Then it is easy to see at the point p we have
+βk∧ αn−k
+ψ
+αn
+ψ
+·
+αk
+ψ∧ γn−k
+βk∧ γn−k = k!(n− k)!
+n!
+(∑
+J µJ)(∑
+K ΓKK )∑
+J µJΓJ cJ c
+≥ k!(n− k)!
+n! .
+This then ﬁnishes the proof of the case when α, β, γ are all K¨ ahler classes. If they are just nef classes,
+by taking limits, then we get the desired inequality. □
+16 5. Morse type inequalities16 5. Morse type inequalities
+By taking suitable Fujita approximations, we immediately get
+Corollary 5.8. Let X be a compact K¨ ahler manifold of dimension n. Let α, β, γ be three pseudo-
+eﬀective (1, 1) classes on X. Then we have
+⟨βk· αn−k⟩·⟨ αk· γn−k⟩≥ k!(n− k)!
+n! vol(α)⟨βk· γn−k⟩.
+Proof. By the continuity of positive products, we can assume that the classes are big. We may take
+a sequence of Fujita approximations µm : Xm→ X such that
+µ∗
+mα = αm + [Em], µ ∗
+mβ = βm + [Fm], µ ∗
+mγ = γm + [Gm],
+where αm, βm, γm are K¨ ahler andEm, Fm, Gm are eﬀective. Moreover, the positive products are the
+limits of intersections of K¨ ahler classes upstairs, for instance,
+⟨βk· αn−k⟩ = lim
+m→∞
+βk
+m· αn−k
+m .
+Then the inequality follows from Theorem 5.7 by taking limits. □
+In the convex geometry setting, it is natural to ask whether an analogue holds for convex bodies.
+As the generalization of Proposition 5.5, we get the following result.
+Theorem 5.9. Assume that K, L, M are three convex bodies in Rn. Then
+V (Kk, Ln−k)V (Lk, M n−k)≥ k!(n− k)!
+n! vol(L)V (Kk, M n−k).
+Since we did not ﬁnd a similar statement in the literature, we provide a brief proof below. The
+proof is inspired by [ADM99], where the authors reproved some of the Alexandov-Fenchel inequalities
+by using mass transport (or Brenier maps). In our setting, instead of using complex Monge-Amp` ere
+equations for (1, 1) classes as in Theorem 5.7, we apply mass transport (real Monge-Amp` ere equations)
+to convex bodies. Then we reduce the inequality to an inequality for mixed discriminants, which is
+easy to prove.
+Proof. By the continuity of mixed volumes and taking a limit, it suﬃces to consider the case when
+K, L, M have non-empty interior. We can also assume that the convex bodies are open. Without loss
+of generality, we can assume vol( L) = 1.
+By [Gro90], for K, M, we can take two C2 strictly convex functions fK, fM : Rn→ R such that
+Image(∇fK) = K, Image(∇fM) = M
+where∇ is the gradient operator. In the following, we denote the Hessian operator by ∇2.
+For n× n positive matrices M1, ..., Mr, the discriminant D(M k1
+1 , ..., Mkr
+r ) is given by the following
+expansion:
+det(
+r∑
+k=1
+tkMk) =
+∑
+k1+...+kr=n
+n!
+k1!...kr! D(M k1
+1 , ..., Mkr
+r )tk1
+1 ...tkr
+r .
+Let
+c =
+∫
+Rn
+D((∇2fK)k, (∇2fM)n−k)dx.
+The measure ρdx = c−1D((∇2fK)k, (∇2fM)n−k)dx is a probability measure on Rn. Note that by the
+argument in [ADM99] we have
+V (Kk, M n−k) = c.
+B. Lehmann and J. Xiao, Correspondences between convex geometry and complex geometry 17B. Lehmann and J. Xiao, Correspondences between convex geometry and complex geometry 17
+By [Bre91] or [McC95], we can take a convex function FL satisfying Image(∇FL) = L and
+det(∇2FL) = ρ. As the argument in [ADM99] again, we have
+V (Kk, Ln−k) =
+∫
+Rn
+D((∇2fK)k, (∇2FL)n−k)dx,
+V (Lk, M n−k) =
+∫
+Rn
+D((∇2FL)k, (∇2fM)n−k)dx.
+As in the proof of Theorem 5.7, by Cauchy-Schwarz inequality we get
+V (Kk, Ln−k)V (Lk, M n−k) =
+∫
+Rn
+D((∇2fK)k, (∇2FL)n−k)dx
+∫
+Rn
+D((∇2FL)k, (∇2fM)n−k)dx
+≥
+(∫
+Rn
+(D((∇2fK)k, (∇2FL)n−k)D((∇2FL)k, (∇2fM)n−k))1/2dx
+)2
+.
+Similar to the pointwise inequality (5.6), for the mixed discriminants we have
+D((∇2fK)k, (∇2FL)n−k)D((∇2FL)k, (∇2fM)n−k)≥ k!(n− k)!
+n! det(∇2FL)D((∇2fK)k, (∇2fM)n−k).
+This implies that
+V (Kk, Ln−k)V (Lk, M n−k)≥
+(∫
+Rn
+( k!(n− k)!
+n! c−1D((∇2fK)k, (∇2fM)n−k)2)1/2dx
+)2
+= k!(n− k)!
+n! V (Kk, M n−k)
+= k!(n− k)!
+n! vol(L)V (Kk, M n−k),
+where the last equality follows because we assume vol( L) = 1. This ﬁnishes the proof of the desired
+inequality. □
+6. Cone dualities and Minkowski’s existence theorem
+In this section, we discuss the convex geometry analogue of the duality of positive cones in [BDPP13].
+6.A. The dual cone C∗
+p
+For a projective manifold X, the movable cone Mov 1(X) has the following characterization:
+Theorem 6.1. (see [LX16b]) Let X be a smooth projective variety of dimension n. Then Mov1(X)
+is the closure of the set S ={⟨Ln−1⟩| L big and movable class}. Moreover, the set S is convex.
+In summary, by [BDPP13] and [LX16b]:
+Mov1(X) = the closed cone genererated by{⟨L1· ...· Ln−1⟩| Li big (1,1)-class⟩} by [BDPP13, WN16]
+= the closure of the set {⟨Ln−1⟩| L big and movable class} by [LX16b].
+Motivated by the correspondence Cp↭ Eﬀ
+1
+(X), we will consider the dual C∗
+p by analogue with
+the duality of cones Eﬀ
+1
+(X)∗ = Mov1(X).
+The dual space of C0(Sn−1) is the space of Borel measures on Sn−1. Thus a continuous linear
+functional on V is a Borel measure that vanishes on L(Sn−1). Indeed, we have
+18 6. Cone dualities and Minkowski’s existence theorem18 6. Cone dualities and Minkowski’s existence theorem
+Lemma 6.2. A continuous linear functional ν belongs to V∗ if and only if ν is a Borel measure that
+has the origin as its center of mass, that is,
+∫
+Sn−1
+xdν(x) = 0.
+The Borel measures in the dual ofCp are precisely the set of nonnegative measures with barycenter
+0. Alexandrov’s version of Minkowski’s existence theorem yields an alternative description closer to
+the complex geometric version above.
+To get a feeling for this theorem, let us ﬁrst recall the original result for polytopes due to
+Minkowski: let u1, ..., uN be pairwise distinct unit vectors linearly spanning Rn, and let f1, ..., fN
+be positive real numbers, then there exists a polytope P (unique up to translation) having precisely
+u1, ..., uN as its outer normal vectors and having f1, ..., fN as its corresponded face areas if and only
+if
+N∑
+i=1
+fiui = 0.
+In particular, if we consider ui as the Dirac measure δui on the sphere, then ∑N
+i=1 fiδui is a Borel
+measure on the sphere with the origin as its center of mass and does not concentrate on any great
+subsphere. In the general case, we have the following result due to Alexandrov [Ale38] (see also
+[Ale96, Chapter V], [Sch14, Chapter 8]).
+Theorem 6.3. (Minkowski’s existence theorem) Assume µ is a positive Borel measure on Sn−1,
+which is not concentrated on any great subsphere and satisﬁes
+∫
+Sn−1
+xdµ(x) = 0.
+Then there exists a convex body K∈ Kn, unique up to translation, such that µ = S(K, ..., K;·).
+Now we can give the description ofC∗
+p, which corresponds exactly to the structure of the movable
+cone Mov1(X), which follows easily from Minkowski’s existence theorem.
+Theorem 6.4. The dual cone C∗
+p⊆ V∗ can be characterized as follows:
+C∗
+p = the closed cone generated by{S(K1, ..., Kn−1;·)|Ki∈ Kn}
+= the closure of the set{S(Kn−1;·)|K∈ Kn}.
+Alternatively, by the embedding Φ, if we consider the mixed volume V (K1, ..., Kn−1,·) as a continuous
+linear functional on V , then
+C∗
+p = the closed cone generated by{V (K1, ..., Kn−1;·)|Ki∈ Kn}
+= the closure of the set{V (Kn−1;·)|K∈ Kn}.
+If we use the notation ⟨hn−1
+K ⟩ := S(Kn−1;·), then we have
+C∗
+p = the closure of the set{⟨P (f)n−1⟩|f∈C p}.
+Proof. It is obvious that the Borel measures on the right hand side are positive and are in the dual
+coneC∗
+p. We only need to verify that any element in C∗
+p can be written as a limit of a sequence of
+area measures S(K, ..., K;·) with K∈ Kn.
+We claim: let ν∈C∗
+p, then for any ϵ > 0 and L∈ Kn there exists a convex body Lϵ such that
+ν + ϵS(Ln−1;·) = S(Ln−1
+ϵ ;·).
+B. Lehmann and J. Xiao, Correspondences between convex geometry and complex geometry 19B. Lehmann and J. Xiao, Correspondences between convex geometry and complex geometry 19
+To this end, by Lemma 6.2 we know that ν has the origin as its centroid:
+∫
+Sn−1
+xdν(x) = 0.
+As ν is a positive measure, for any L∈ Kn and any ϵ > 0, ν + ϵS(Ln−1;·) does not concentrate
+on any great subsphere. Now the existence of Lϵ follows immediately from Minkowski’s existence
+theorem. □
+By Minkowski’s existence theorem, we have:
+Proposition 6.5. Assume K1, ..., Kn−1∈ Kn are ﬁxed convex bodies, then there exists a convex body
+K∈ Kn, unique up to translation, such that V (K1, ..., Kn−1,·) = V (Kn−1,·).
+Proof. We only need to consider the uniqueness, which is an direct corollary of Brunn-Minkowski
+theory. □
+Remark 6.6. Let X be a smooth projective variety of dimension n, and let Eﬀ
+1
+(X) be its pseudo-
+eﬀective cone of divisor classes. Thanks to the Newton-Okounkov body construction, if we ﬁx a
+ﬂag
+F = (X = H0⊃ H1⊃ ...⊃ Hn−1⊃ Hn ={p})
+where Hi is an irreducible smooth subvariety of codim = i, then we have a map ∆ : Eﬀ
+1
+(X)◦→ Kn.
+The map ∆ associates to every big divisor class L a convex body ∆( L) with non-empty interior
+satisfying vol(L) = vol(∆(L)). In particular, by the embedding theorem of convex sets, we get a map
+F : Eﬀ
+1
+(X)◦→C .
+Thus the big cone Eﬀ
+1
+(X)◦ can be realized as a ﬁnite dimensional convex subcone of C. But F is
+only concave. In general, for two big divisor classes L1, L2, we have ∆( L1 + L2)⊇ ∆(L1) + ∆(L2),
+which implies
+F (L1 + L2)⪰ F (L1) + F (L2).
+By relating mixed volumes and positive products of big divisors, it would be interesting to see
+whether Minkowski’s existence theorem could provide a new convex geometry proof of the cone
+duality Eﬀ
+1
+(X)∗ = Mov1(X).
+6.B. Legendre-Fenchel type transforms
+Now that we have the characterization ofC∗
+p, we can deﬁne a volume function for all strictly positive
+continuous functions using a Legendre-Fenchel type transform as in [LX16a] (see also [Xia15a] for
+similar volume characterization of divisors.). Assume that f∈C p is represented by a strictly positive
+continuous function. Deﬁne:
+˜vol(f) := inf
+K∈Kn
+(f· S(Kn−1;·)
+vol(K)n−1/n
+)n
+.
+where f· S(Kn−1;·) is the paring of two dual vector spaces. This is a homogenous version of the
+classical polar transform in convex geometry. Note that by the Brunn-Minkowski inequality, iff = hL
+for some L∈ Kn then ˜vol(hL) = vol(L).
+We claim that this deﬁnition coincides with the deﬁnition using the Alexandrov decomposition
+described in Section 4. Indeed, let f = P (f) + N(f) be the decomposition of a strictly positive
+continuous function. It is clear that
+˜vol(f)≥ ˜vol(P (f)) = vol(P (f)).
+20 7. Blaschke addition for (1,1)-classes and its applications20 7. Blaschke addition for (1,1)-classes and its applications
+Using the orthogonality of the decomposition, we also have
+˜vol(f)≤
+( f·⟨ P (f)n−1⟩
+vol(P (f))n−1/n
+)n
+= vol(P (f)).
+This establishes the equality.
+7. Blaschke addition for (1,1)-classes and its applications
+In this section, inspired by Blaschke addition for convex bodies, we introduce Blaschke addition for
+(1,1)-classes and give some applications. Throughout we work with projective varieties.
+We start with the convex geometry setting (see [Sch14, Chapter 8]). For convex bodies K, L∈ Kn,
+Minkowski’s existence theorem yields a convex body M∈ Kn, unique up to translation, such that
+S(M n−1;·) = S(Kn−1;·) + S(Ln−1;·).
+By the discussions in the previous sections, movable curve classes correspond to mixed area mea-
+sures. Let X be a smooth projective variety of dimension n. Assume that L, M are two big (1,1)-
+classes. As proved in [LX16b], there exists a unique big and movable (1,1)-class N such that
+⟨Ln−1⟩ +⟨M n−1⟩ =⟨N n−1⟩.
+Now we give the following deﬁnition.
+Deﬁnition 7.1. ( Blaschke addition) Let L, M be two big (1,1)-classes. The Blaschke addition of
+L, M, denoted by L#M, is deﬁned to be the unique big and movable (1,1)-class satisfying
+⟨(L#M)n−1⟩ =⟨Ln−1⟩ +⟨M n−1⟩.
+Remark 7.2. By the deﬁnition of positive products, we know that ⟨Ln−1⟩ = ⟨P (L)n−1⟩. Thus
+Blaschke addition of arbitrary big classes only depends on their positive parts. For example, for any
+big divisor class L we have L#L = 2
+1
+n−1 P (L).
+Remark 7.3. As pointed out to us by M. Jonsson, the Blaschke addition can also deﬁned on
+Riemann-Zariski spaces. More precisely, we can deﬁne the Blaschke addition of two Cartier big
+b-divisor classes as a Weil movable b-divisor class. Let X be a smooth projective variety of dimen-
+sion n and let X be the Riemann-Zariski space containing all the smooth birational models of X.
+Assume that L ={Lα}, M ={Mα} are big Cartier b-divisor classes on X. Let ϕαβ : Xα→ Xβ
+be a birational morphism. We claim that ϕαβ∗(Lα#Mα) = Lβ#Mβ, thus L#M is a Weil movable
+b-divisor class. To this end, note that by the proof of Proposition 3.3 and the deﬁnition of Cartier
+divisor class we have
+ϕ∗
+αβ(⟨Ln−1
+β ⟩ +⟨M n−1
+β ⟩) =⟨ϕ∗
+αβLn−1
+β ⟩ +⟨ϕ∗
+αβM n−1
+β ⟩
+=⟨Ln−1
+α ⟩ +⟨M n−1
+α ⟩
+=⟨(Lα#Mα)n−1⟩,
+which implies that ⟨(Lα#Mα)n−1⟩ =⟨ϕ∗
+αβ(Lβ#Mβ)n−1⟩. Then we get Lα#Mα =⟨ϕ∗
+αβ(Lβ#Mβ)⟩.
+Taking ϕαβ∗ of both sides yields ϕαβ∗(Lα#Mα) =⟨Lβ#Mβ⟩ = Lβ#Mβ (as Lβ#Mβ is movable).
+Following [Fir67, Lut86], we can deﬁne the mixed divisor class associated to ( n− 1) big (1 , 1)-
+classes.
+B. Lehmann and J. Xiao, Correspondences between convex geometry and complex geometry 21B. Lehmann and J. Xiao, Correspondences between convex geometry and complex geometry 21
+Deﬁnition 7.4. ( mixed divisor class ) Let L1, ..., Ln−1 be big (1,1)-classes on X. The mixed (1,1)-
+class, denoted by [ L1, ..., Ln−1], is deﬁned to be the unique big and movable (1,1)-class satisfying
+⟨[L1, ..., Ln−1]n−1⟩ =⟨L1· ...· Ln−1⟩.
+Before going on, we ﬁrst give the following generalized Teissier proportionality theorem for big
+and movable (1, 1)-classes.
+Theorem 7.5. Let X be a smooth projective variety of dimension n. Assume L1, ..., Ln are big and
+movable (1, 1)-classes on X, then
+⟨L1· ...· Ln⟩≥ vol(L1)1/n... vol(Ln)1/n
+where the equality holds if and only if all the Li are proportional.
+Proof. Firstly, by taking suitable Fujita approximations, it is easy to see that the inequality follows
+easily from the usual Khovanski-Teissier inequality for nef classes, hence we only need to characterize
+the equality situation. Without loss of generality, we can assume that vol( Li) = 1 for all Li, then we
+need to show that
+⟨L1· ...· Ln⟩ = 1 (7.7)
+if and only if L1 = L2 = ... = Ln. To this end, we claim that the equality (7.7) implies⟨L2
+1·L3...·Ln⟩ =
+1. Then by induction, we get that
+⟨Ln−1
+1 · Ln⟩ = 1.
+By the Teissier proportionality theorem proved in [LX16b], we conclude that L1 = Ln.
+The proof of our claim follows from the Hodge-Riemann bilinear relations. Consider the following
+quadratic form Q on H 1,1(X, R):
+Q(λ, µ) := λ· µ· A1· ...· An−2,
+where the Ai are K¨ ahler classes. According to the Hodge-Riemann bilinear relations (see e.g. [DN06,
+Theorem A and Theorem C]), Q is of signature (1 , dim H 1,1(X, R)− 1). For any two nef classes
+α, β, by considering the discriminant of the quadratic polynomial p(t) := Q(α + tβ, α + tβ) and the
+signature of Q, we get
+(α· β· A1· ...· An−2)2≥ (α2· A1· ...· An−2)· (β2· A1· ...· An−2). (7.8)
+Since α, β, A1, ..., An−2 are arbitrary, we ﬁnd by taking suitable Fujita approximations that
+⟨L1· ...· Ln⟩2≥⟨ L2
+1· L3...· Ln⟩·⟨ L2
+2· L3...· Ln⟩.
+Note that, in the above inequality,⟨L1· ...· Ln⟩ = 1 and⟨L2
+j· L3...· Ln⟩≥ 1 for j = 1, 2. Hence we
+must have equality everywhere, in particular, we must have ⟨L2
+1· L3...· Ln⟩ = 1. This then ﬁnishes
+the proof of our claim. □
+Remark 7.6. The above proof provides an alternative proof of a related result in [LX16a], where we
+applied complex Monge-Amp` ere equations in big classes and pointwise Brunn-Minkowski inequalities
+for positive (1 , 1)-forms.
+For Blaschke addition of big (1,1)-classes and mixed (1,1)-classes we obtain geometric inequalities
+similar to [Lut86].
+22 7. Blaschke addition for (1,1)-classes and its applications22 7. Blaschke addition for (1,1)-classes and its applications
+Proposition 7.7. Let X be a smooth projective variety of dimension n. Assume L1, ..., Ln−1 are big
+and movable (1, 1)-classes on X. Then the volume of the mixed (1,1)-class [L1, ..., Ln−1] satisﬁes
+vol([L1, ..., Ln−1])n−1≥ vol(L1)· ...· vol(Ln−1)
+where the equality holds if and only if L1, . . . , Ln−1 are proportional.
+Proof. This is a direct consequence of the Brunn-Minkowski inequality for (1,1)-classes. Note that
+we have vol([L1, ..., Ln−1]) =⟨[L1, ..., Ln−1]n−1⟩· [L1, ..., Ln−1], then
+vol([L1, ..., Ln−1]) =⟨L1· ...· Ln−1⟩· [L1, ..., Ln−1]
+≥⟨ L1· ...· Ln−1· [L1, ..., Ln−1]⟩
+≥ vol(L1)1/n· ...· vol(Ln−1)1/n· vol([L1, ..., Ln−1])1/n,
+which implies the desired inequality. The characterization of the equality follows from Theorem 7.5.□
+We use [L, M]i to denote the mixed (1,1)-class of ⟨Ln−1−i· M i⟩. It is clear that [ L, M]0 = L and
+[L, M]n−1 = M.
+Proposition 7.8. Let X be a smooth projective variety of dimension n. Assume that L, M are big
+and nef (1,1)-classes. Then the sequence {vol([L, M]i)}i=n−1
+i=0 is log-concave, that is,
+vol([L, M]k)2≥ vol([L, M]k−1) vol([L, M]k+1) for any k = 1, ..., n− 2.
+Moreover, the following statements are equivalent:
+1. vol([ L, M]k)2 = vol([L, M]k−1) vol([L, M]k+1) for all k = 1, ..., n− 2;
+2. vol([ L, M]n−2)n−1 = vol([L, M]0) vol([L, M]n−1)n−2;
+3. L, M are proportional.
+Proof. By the Hodge-Riemann bilinear relations as in the proof of Theorem 7.5, for any movable
+(1,1)-class N we ﬁnd that
+(L· M· Ln−2−k· M k−1· N)2≥ (L2· Ln−2−k· M k−1· N)(M 2· Ln−2−k· M k−1· N).
+By the deﬁnition of mixed class and Brunn-Minkowski inequalities, if we take N = [L, M]k, then
+we get that
+vol([L, M]k)2≥ (⟨[L, M]n−1
+k−1⟩· [L, M]k)(⟨[L, M]n−1
+k+1⟩· [L, M]k)
+≥ vol([L, M]k−1)n−1/n vol([L, M]k+1)n−1/n vol([L, M]k)2/n.
+This implies the log concavity: vol([ L, M]k)2≥ vol([L, M]k−1) vol([L, M]k+1).
+For the equality characterizations, ﬁrst note that the equivalence of (2) and (3) is a direct con-
+sequence of Proposition 7.7. We only need to verify the equivalence of (1) and (2), but this follows
+directly from the log concavity of the sequence {vol([L, M]i)}i=n−1
+i=0 . □
+By the properties of positive product, Blaschke addition is compatible with mixed divisor class
+construction in the following sense.
+Proposition 7.9. Let X be a projective variety of dimension n. Assume that L, M are big and nef.
+For any big (1,1)-classes D2, ..., Dn−1 we have
+[L + M, D2, ..., Dn−1] = [L, D2, ..., Dn−1]#[M, D2, ..., Dn−1]
+where # is the Blaschke addition.
+B. Lehmann and J. Xiao, Correspondences between convex geometry and complex geometry 23B. Lehmann and J. Xiao, Correspondences between convex geometry and complex geometry 23
+Proof. Firstly, by the deﬁnition of positive products, we always have
+⟨(L + M)· D2· ...· Dn−1⟩⪰⟨ L· D2· ...· Dn−1⟩ +⟨M· D2· ...· Dn−1⟩.
+On the other hand, since L, M are nef, we claim that the equality holds: for any ample class A, we
+have
+⟨(L + M)· D2· ...· Dn−1⟩· A =⟨(L + M)· D2· ...· Dn−1· A⟩
+= (L + M)·⟨ D2· ...· Dn−1· A⟩
+=⟨L· D2· ...· Dn−1⟩· A +⟨M· D2· ...· Dn−1⟩· A.
+By the deﬁnition of mixed class, we have
+⟨([L, D2, ..., Dn−1]#[M, D2, ..., Dn−1])n−1⟩ =⟨[L, D2, ..., Dn−1]n−1⟩ +⟨[M, D2, ..., Dn−1]n−1⟩
+=⟨L· D2· ...· Dn−1⟩ +⟨M· D2· ...· Dn−1⟩
+=⟨(L + M)· D2· ...· Dn−1⟩
+=⟨[L + M, D2, ..., Dn−1]n−1⟩.
+As a consequence of the Teissier proportionality for big and movable classes proved in [LX16b],
+we immediately get the equality [ L + M, D2, ..., Dn−1] = [L, D2, ..., Dn−1]#[M, D2, ..., Dn−1]. □
+Similar to the convex geometry setting [Lut86], using Blaschke addition and mixed divisor classes,
+we get a somewhat improved Khovanskii-Teissier inequality for (1,1)-classes.
+Theorem 7.10. Let X be a smooth projective variety of dimension n. Assume that L, M are big and
+nef (1,1)-classes, then
+vol(L + M)1/n≥
+(n−1∑
+i=0
+(n− 1)!
+i!(n− 1− i)! vol([L, M]i)n−1/n
+)1/n−1
+≥ vol(L)1/n + vol(M)1/n.
+The equality in either inequality holds if and only if L, M are proportional.
+Proof. By Proposition 7.9 we have
+[L + M, ..., L + M] =
+n−1∑
+i=0
+(n− 1)!
+i!(n− 1− i)!· [L, M]i, (7.9)
+where the above addition is the Blaschke addition. We claim that
+vol(L + M)n−1/n≥
+n−1∑
+i=0
+(n− 1)!
+i!(n− 1− i)! vol([L, M]i)n−1/n (7.10)
+with equality if and only if L, M are proportional. To this end, note that
+vol(L + M) =⟨[L + M, ..., L + M]n−1⟩· (L + M)
+=⟨(
+n−1∑
+i=0
+(n− 1)!
+i!(n− 1− i)!· [L, M]i)n−1⟩· (L + M)
+=
+n−1∑
+i=0
+(n− 1)!
+i!(n− 1− i)!⟨[L, M]n−1
+i ⟩· (L + M)
+24 8. Projection volumes and the Brascamp-Lieb inequality24 8. Projection volumes and the Brascamp-Lieb inequality
+where the third line follows from the deﬁnition of Blaschke addition. Then by the Brunn-Minkowski
+inequality, we immediately get the claimed inequality. If the equality holds, then we must have
+⟨[L, M]n−1
+i ⟩· (L + M) = vol([L, M]i)n−1/n vol(L + M)1/n for every i.
+In particular, applying Theorem 7.5 to the cases when i = 0, n−1, we get that L, M are proportional.
+On the other hand, by Proposition 7.7 we have
+vol([L, M]i)n−1≥ vol(L)n−1−i vol(M)i.
+This implies that
+n−1∑
+i=0
+(n− 1)!
+i!(n− 1− i)! vol([L, M]i)n−1/n≥
+(
+vol(L)1/n + vol(M)1/n
+)n−1
+. (7.11)
+For the characterization of the equality, note that the equality implies that, for every i we have
+vol([L, M]i)n−1 = vol(L)n−1−i vol(M)i.
+Hence, by Proposition 7.7, we get that L, M must be proportional. □
+7.A. Kneser-S¨ uss inequality for divisors
+In the convex geometry setting, let K, L∈ Kn be convex bodies, and let M be the convex body
+satifying
+S(M n−1;·) = S(Kn−1;·) + S(Ln−1;·).
+It is proved in [KS32] (see also [Sch14, Chapter 8]) that
+vol(M)n−1/n≥ vol(K)n−1/n + vol(L)n−1/n,
+where equality holds if and ifK, L are homothetic. This inequality is called the Kneser-S¨ uss inequality.
+Let X be a smooth projective variety of dimension n, in [Xia15a] we deﬁned the following volume
+type function for movable curve classes:
+M(α) = inf
+B big divisor
+( α· B
+vol(B)1/n
+)n/n−1
+, α ∈ Mov1(X).
+By its deﬁnition, we have
+M(α1 + α2)n−1/n≥ M(α1)n−1/n + M(α2)n−1/n. (7.12)
+Later, in [LX16b] (see also [LX16a]), by analyzing “Zariski decomposition structure” of M, we have
+Theorem 7.11. Let X be a smooth projective variety of dimension n, and assume that αi∈ Mov1(X)
+satisﬁes M(αi) > 0 (i = 1, 2), then
+M(α1 + α2)n−1/n≥ M(α1)n−1/n + M(α2)n−1/n (7.13)
+with equality if and only if α1, α2 are proportional.
+Equivalently, if we translate the above statement to Blaschke addition for (1 , 1)-classes, then we
+get
+Theorem 7.12. Let X be a smooth projective variety of dimension n, and assume that L, M are big
+movable (1, 1)-classes, then
+vol(L#M)n−1/n≥ vol(L)n−1/n + vol(M)n−1/n (7.14)
+with equality if and only if L, M are proportional.
+B. Lehmann and J. Xiao, Correspondences between convex geometry and complex geometry 25B. Lehmann and J. Xiao, Correspondences between convex geometry and complex geometry 25
+8. Projection volumes and the Brascamp-Lieb inequality
+There are many geometric inequalities relating the volume of a convex body to the volumes of its im-
+ages under linear maps. One of the most well-known is the Loomis-Whitney inequality [LW49]: let K
+be a measurable subset of Rn, and let πj : Rn→ Rn−1, (x1, ..., xn)↦→ ˆxj := (x1, ..., xj−1, xj+1, ..., xn)
+be projections, then
+vol(K)n−1≤
+n∏
+j=1
+vol(πj(K)).
+More generally, the Loomis-Whitney inequality ﬁnds its natural generalisation in the Brascamp-Lieb
+inequality for general linear projections (see e.g. [BL76], [BCCT08]), but the inequality needs to be
+corrected by a factor determined by the projections.
+In this section, we formulate and prove an analogue for (1 , 1) classes.
+8.A. Projection volumes
+Fix a convex body P⊆ Rn and a unit vector v∈ Rn. Then the volume of the orthogonal projection
+of P onto v⊥ is computed by the mixed volume n⟨P n−1, 0v⟩, where 0v is the segment between 0 and
+v. The volume of the projection onto the orthogonal of a subspace W can be computed by a similar
+procedure.
+The analogous construction in complex geometry is as follows. In place of an orthogonal projection,
+we ﬁx a dominant rational map f : X99K Z whose resolution has connected ﬁbers. (This is motivated
+by toric geometry, where a “direction” in the polytope space identiﬁes a map on a blow-up.) Recall
+that [BFJ09] shows that for a big divisor L and a prime divisor H the restricted volume vol X|H(L)
+is just the positive product ⟨Ln−1⟩· H. Given a big class L, the projection volume onto the ﬁber is
+deﬁned to be
+volf(L) :=⟨φ∗Ln−d⟩· F
+where d = dim Z, φ : X′→ X is a resolution of f and F is a general ﬁber of the induced map on X′.
+We next need to ask when a collection{fi : X99K Zi} is “mutually orthogonal”. Guided by the toric
+case, we require that the induced rational map X99K ∏
+i Zi is birational.
+8.B. Loomis-Whitney inequality
+Inspired by the Loomis-Whitney inequality for convex bodies, we ﬁrst prove the following analogue
+on projective varieties.
+Theorem 8.1. (Loomis-Whitney inequality) Let X be a smooth projective variety of dimension
+n. Suppose that {fi : X 99K Ci}n
+i=1 is a collection of dominant rational maps onto curves whose
+resolution has connected ﬁbers, and assume that the induced map X99K ∏n
+i=1 Ci is birational. Then
+for any big (1, 1) class L, we have
+(vol(L)/n!)n−1≤
+n∏
+i=1
+(volfi(L)/(n− 1)!) .
+If all the fi are morphisms, then we obtain equality if and only if the positive part of L is numerically
+proportional to a sum of ﬁbers of the fi.
+Note that the inclusion of the factorials corrects for the discrepancy between volumes in the
+complex geometry and in the convex geometry settings.
+The ﬁrst proof of the Loomis-Whitney inequality in the convex geometry setting was given by
+[LW49]. The strategy is to approximate a polytope by hypercubes and to use a counting argument
+which inducts on dimension. In our setting, we follow the approach of [SL07], where the authors
+mainly applied the method of [Zha99] using mixed volumes.
+26 8. Projection volumes and the Brascamp-Lieb inequality26 8. Projection volumes and the Brascamp-Lieb inequality
+Proof of Theorem 8.1. After passing to a birational model of X and pulling back L, we may suppose
+that each rational map fi is a morphism.
+Denote the general ﬁber of fi by Fi, and assume that a1, ..., an are positive numbers. Note
+vol(
+n∑
+i=1
+aiFi) = n!
+n∏
+i=1
+ai.
+By the Khovanski-Teissier inequality for big divisors as in [LX16b], we get
+⟨Ln−1⟩· (
+n∑
+i=1
+aiFi)≥ vol(L)n−1/n vol(
+n∑
+i=1
+aiFi)1/n
+≥ (n!
+n∏
+i=1
+ai)1/n vol(L)n−1/n
+with equality iﬀ the positive parts of the divisors are numerically proportional. Settingai = ci/⟨Ln−1⟩·
+Fi for a variable ci, the above inequality implies that
+n∏
+i=1
+⟨Ln−1⟩· Fi≥ n! vol(L)n−1
+∏n
+i=1 ci
+(∑n
+i=1 ci)n .
+Note that
+∏n
+i=1 ci
+(∑n
+i=1 ci)n≤ 1/nn with equality if and only if all the ci are equal. Letting ci = 1, we get
+n∏
+i=1
+⟨Ln−1⟩· Fi/(n− 1)!≥ (vol(L)/n!)n−1.
+Furthermore, equality holds here if and only if equality holds in the Khovanskii-Teissier inequality
+above, ﬁnishing the proof of our theorem. □
+8.C. Rank-one Brascamp-Lieb inequality
+The following statement can be seen as a special case of the Brascamp-Lieb inequality. In the convex
+geometry setting, it corresponds to comparing the volume of a polytope to its projections onto the
+coordinate axes (instead of the coordinate hyperplanes).
+Proposition 8.2. (Rank-one Brascamp-Lieb inequality) Suppose that X is a smooth projective
+variety birational to a product of curves ∏n
+i=1 Ci. Then for any big class L on X we have
+vol(L)/n!≤
+n∏
+i=1
+⟨L⟩· Ti
+where Ti is a general ﬁber of the rational map X99K ∏
+j̸=i Cj.
+Proof. The proof is by induction on the dimension n.
+By passing to a birational model of X and pulling back L, we may suppose that each rational
+map fi is a morphism. Note that the quantities ⟨L⟩· Ti do not change upon such pullback, since a
+very general ﬁber Ti avoids the restricted base locus of⟨L⟩. We may also replace L by⟨L⟩ so that we
+may assume L is big and movable.
+Let Fi denote a very general ﬁber of the map X→ Ci. Let s denote the largest real number such
+that L− sF1 is pseudo-eﬀective. Note that s≤ L· T1 since F1· T1 = 1 and ( L− sF1)· T1≥ 0. Then
+we have
+vol(L)/n =
+∫ s
+0
+⟨(L− tF1)n−1⟩· F1 dt≤ (L· T1)(⟨Ln−1⟩· F1).
+B. Lehmann and J. Xiao, Correspondences between convex geometry and complex geometry 27B. Lehmann and J. Xiao, Correspondences between convex geometry and complex geometry 27
+Clearly⟨Ln−1⟩· F1 is at most vol( L|F1). And by induction, we have
+vol(L|F1)/(n− 1)!≤
+n∏
+i=2
+⟨L|F1⟩· Ti.
+Furthermore, for 2≤ i≤ n we have⟨L|F1⟩· Ti = L· Ti. Indeed, this follows from the fact that L|F1
+is movable when F1 is very general, so that the positive product on the left agrees with L|F1. We
+conclude that
+vol(L)/n≤ (n− 1)!
+n∏
+i=1
+L· Ti
+giving the statement. □
+References
+[ADM99] S. Alesker, S. Dar, and V. Milman, A remarkable measure preserving diﬀeomorphism
+between two convex bodies in Rn, Geom. Dedicata 74 (1999), no. 2, 201–212. MR-1674116
+[Ale38] A. D. Alexandrov, On the theory of mixed volumes of convex bodies III. Extension of two
+theorems of Minkowski on convex polyhedra to arbitrary convex bodies (Russian), Mat.
+Sbornik 3(45) (1938), no. 1, 27–46. mathnet:msb5652
+[Ale96] , Selected works. Part 1: Selected scientiﬁc papers. Ed. by Yu. G. Reshetnyak and S.
+S. Kutateladze, transl. from the Russian by P. S. V. Naidu. Classics of Soviet Mathematics,
+vol. 4, Gordon and Breach Publishers, Amsterdam, 1996. MR-1629804
+[BB10] R. Berman and S. Boucksom, Growth of balls of holomorphic sections and energy at equi-
+librium, Invent. Math. 181 (2010), no. 2, 337–394. MR-2657428
+[BBGZ13] R. Berman, S. Boucksom, V. Guedj, and A. Zeriahi, A variational approach to complex
+Monge-Amp` ere equations, Publ. Math. Inst. Hautes ´Etud. Sci. 117 (2013), 179–245. MR-
+3090260
+[BCCT08] J. Bennett, A. Carbery, M. Christ, and T. Tao,The Brascamp–Lieb inequalities: ﬁniteness,
+structure and extremals, Geom. Funct. Anal. 17 (2008), no. 5, 1343–1415. MR-2377493
+[BDPP13] S. Boucksom, J.-P. Demailly, M. P˘ aun, and T. Peternell, The pseudo-eﬀective cone of a
+compact K¨ ahler manifold and varieties of negative Kodaira dimension, J. Algebraic Geom.
+22 (2013), no. 2, 201–248. MR-3019449
+[BEGZ10] S. Boucksom, P. Eyssidieux, V. Guedj, and A. Zeriahi, Monge-Amp` ere equations in big
+cohomology classes, Acta Math. 205 (2010), no. 2, 199–262. MR-2746347
+[BFJ09] S. Boucksom, C. Favre, and M. Jonsson, Diﬀerentiability of volumes of divisors and a
+problem of Teissier , J. Algebraic Geom. 18 (2009), no. 2, 279–308. MR-2475816
+[BFJ15] , Solution to a non-Archimedean Monge-Amp` ere equation, J. Amer. Math. Soc. 28
+(2015), no. 3, 617–667. MR-3327532
+[BL76] H. J. Brascamp and E. H. Lieb, Best constants in Young’s inequality, its converse, and its
+generalization to more than three functions, Advances in Math. 20 (1976), no. 2, 151–173.
+MR-0412366
+[Bou02] S. Boucksom, On the volume of a line bundle , Internat. J. Math. 13 (2002), no. 10, 1043–
+1063. MR-1945706
+28 References28 References
+[Bou04] S. Boucksom, Divisorial Zariski decompositions on compact complex manifolds , Ann. Sci.
+´Ecole Norm. Sup. (4) 37 (2004), no. 1, 45–76. MR-2050205
+[Bre91] Y. Brenier, Polar factorization and monotone rearrangement of vector-valued functions ,
+Comm. Pure Appl. Math. 44 (1991), no. 4, 375–417. MR-1100809
+[CLS11] D. A. Cox, J. B. Little, and H. K. Schenck, Toric varieties, Graduate Studies in Mathe-
+matics, vol. 124, American Mathematical Society, Providence, RI, 2011. MR-2810322
+[Cut13] S. D. Cutkosky, Teissier’s problem on inequalities of nef divisors over an arbitrary ﬁeld ,
+preprint, 2013. arXiv:1304.1218
+[Dem92] J.-P. Demailly, Regularization of closed positive currents and intersection theory , J. Alge-
+braic Geom. 1 (1992), no. 3, 361–409. MR-1158622
+[DN06] T.-C. Dinh and V.-A. Nguyˆ en, The mixed Hodge-Riemann bilinear relations for compact
+K¨ ahler manifolds, Geom. Funct. Anal. 16 (2006), no. 4, 838–849. MR-2255382
+[Fir67] W. J. Firey, Blaschke sums of convex bodies and mixed bodies. In: Proc. Colloq. Convexity
+(Copenhagen 1965), pp. 94–101, Kobenhavns Univ. Mat. Inst., Copenhagen, 1967. MR-
+0220165
+[FL13] M. Fulger and B. Lehmann, Zariski decompositions of numerical cycle classes, J. Algebraic
+Geom. 26 (2017), no. 1, 43–106. MR-3570583
+[Ful11] M. Fulger, The cones of eﬀective cycles on projective bundles over curves , Math. Z. 269
+(2011), no. 1, 449–459. MR-2836078
+[FX14] J. Fu and J. Xiao, Teissier’s problem on proportionality of nef and big classes over a
+compact K¨ ahler manifold, preprint, 2014. arXiv:1410.4878
+[Gro90] M. Gromov, Convex sets and K¨ ahler manifolds. In: Advances in Diﬀerential Geometry
+and Topology, pp. 1–38, World Sci. Publ., Teaneck, NJ, 1990. MR-1095529
+[H¨ or55] L. H¨ ormander, Sur la fonction d’appui des ensembles convexes dans un espace localement
+convexe, Ark. Mat. 3 (1955), 181–186. MR-0068112
+[Kho89] A. G. Khovanski˘ ı, Newton polytopes (algebra and geometry) . In: Theory of operators
+in function spaces (Russian) (Kuybyshev, 1988), pp. 202–221, Saratov. Gos. Univ.,
+Ku˘ ıbyshev. Filial, Kuybyshev, 1989. MR-1138528
+[KK12] K. Kaveh and A. G. Khovanskii, Newton-Okounkov bodies, semigroups of integral points,
+graded algebras and intersection theory , Ann. of Math. (2) 176 (2012), no. 2, 925–978.
+MR-2950767
+[KLM13] A. K¨ uronya, V. Lozovanu, and C. Maclean, Volume functions of linear series, Math. Ann.
+356 (2013), no. 2, 635–652. MR-3048610
+[KS32] H. Kneser and W. S¨ uss, Die Volumina in linearen Scharen konvexer k¨ orper, Matematisk
+Tidsskrift. B (1932), 19–25. jstor:24529990
+[LM09] R. Lazarsfeld and M. Mustat ¸˘ a, Convex bodies associated to linear series , Ann. Sci. ´Ec.
+Norm. Sup´ er. (4)42 (2009), no. 5, 783–835. MR-2571958
+[Lut86] E. Lutwak, Volume of mixed bodies, Trans. Amer. Math. Soc. 294 (1986), no. 2, 487–500.
+MR-0825717
+B. Lehmann and J. Xiao, Correspondences between convex geometry and complex geometry 29B. Lehmann and J. Xiao, Correspondences between convex geometry and complex geometry 29
+[Lut88] , Intersection bodies and dual mixed volumes , Adv. in Math. 71 (1988), no. 2,
+232–261. MR-0963487
+[LW49] L. H. Loomis and H. Whitney, An inequality related to the isoperimetric inequality , Bull.
+Amer. Math. Soc. 55 (1949), 961–962. MR-0031538
+[LX16a] B. Lehmann and J. Xiao, Convexity and Zariski decomposition structure , Geom. Funct.
+Anal. 26 (2016), no. 4, 1135–1189. MR-3558307
+[LX16b] , Positivity functions for curves on algebraic varieties , preprint, 2016. arXiv:
+1607.05337
+[McC95] R. J. McCann, Existence and uniqueness of monotone measure-preserving maps , Duke
+Math. J. 80 (1995), no. 2, 309–323. MR-1369395
+[Nak04] N. Nakayama, Zariski-decomposition and abundance, MSJ Memoirs, vol. 14, Mathematical
+Society of Japan, Tokyo, 2004. MR-2104208
+[Pop15] D. Popovici, Volume and self-intersection of diﬀerences of two nef classes , preprint, 2015.
+arXiv:1505.03457
+[Pop16] , Suﬃcient bigness criterion for diﬀerences of two nef classes. , Math. Ann. 364
+(2016), no. 1-2, 649–655. MR-3451400
+[Pri13] M. Principato, Mobile product and Zariski decomposition, preprint, 2013. arXiv:1301.1477
+[Sch14] R. Schneider, Convex bodies: the Brunn-Minkowski theory . Second expanded edition. En-
+cyclopedia of Mathematics and its Applications, vol. 151, Cambridge University Press,
+Cambridge, 2014. MR-3155183
+[SL07] L. Si and G. Leng, Loomis-Whitney’s inequality about mixed body, Acta Math. Sci. Ser. B
+Engl. Ed. 27 (2007), no. 3, 619–624. MR-2339401
+[Tei82] B. Teissier, Bonnesen-type inequalities in algebraic geometry. I. Introduction to the prob-
+lem. In: Seminar on Diﬀerential Geometry, pp. 85–105, Ann. of Math. Stud., vol. 102,
+Princeton Univ. Press, Princeton, N.J., 1982. MR-0645731
+[WN16] D. W. Nystr¨ om, Duality between the pseudoeﬀective and the movable cone on a projective
+manifold, with an appendix by S. Boucksom, preprint, 2016. arXiv:1602.03778
+[Xia14] J. Xiao, Movable intersection and bigness criterion , preprint, 2014. arXiv:1405.1582
+[Xia15a] , Characterizing volume via cone duality, Math. Ann., to appear. arXiv:1502.06450
+[Xia15b] , Weak transcendental holomorphic Morse inequalities on compact K¨ ahler mani-
+folds, Ann. Inst. Fourier (Grenoble) 65 (2015), no. 3, 1367–1379. MR-3449182
+[Yau78] S. T. Yau, On the Ricci curvature of a compact K¨ ahler manifold and the complex Monge-
+Amp` ere equation. I, Comm. Pure Appl. Math. 31 (1978), no. 3, 339–411. MR-0480350
+[Zha99] G. Zhang, The aﬃne Sobolev inequality , J. Diﬀerential Geom. 53 (1999), no. 1, 183–202.
+MR-1776095

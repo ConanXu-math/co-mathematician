@@ -1,11 +1,37 @@
-language_policy:
-  status: pending_user_choice
-  schema_language: English
-  project_docs_language: ''
-  notes_language: ''
-  review_language: English
-  final_output_language: ''
 research_question:
-  status: onboarding
-  text: ''
-goals: []
+  status: approved
+  text: Determine, for n >= 2 and 0 <= m <= n, the necessary and sufficient condition
+    on (n, m) under which, for every fixed convex body L in K^n, the functional F_{m,L}(K)
+    = V(K[n-m], L[m]) / V(K[n-1], L) is Minkowski convex as a function of K.
+goals:
+- id: G1
+  title: Classify the universal Minkowski-convex cases of F_{m,L}
+  status: approved
+  approved_by: user
+  approved_at: '2026-05-30T06:11:41Z'
+  summary: Find the exact iff characterization of the pairs (n, m) for which the functional
+    is Minkowski convex in K for every fixed convex body L.
+  deliverables:
+  - A precise theorem statement with all conventions fixed.
+  - A proof of the positive cases.
+  - Explicit counterexamples or impossibility arguments for the negative cases.
+  verification:
+  - Every nontrivial claim must cite a source, calculation, proof sketch, or review.
+  - Any case split must be checked against counterexamples or standard inequalities.
+  - The final report must pass independent review before completion.
+  workstreams:
+  - WS-G1-001-classify-minkowski-convexity-of-f-m-l
+- id: G2
+  title: Produce a reviewed working-paper writeup
+  status: approved
+  approved_by: user
+  approved_at: '2026-05-30T06:11:41Z'
+  summary: Turn the classification result into a durable working paper with provenance,
+    uncertainty tracking, and preserved failed explorations.
+  deliverables:
+  - Reviewed workstream reports for proof, literature, and any computation used.
+  - workspace/final/working_paper.md rendered from approved reports.
+  verification:
+  - No workstream is complete without independent reviewer approval.
+  - Any code-backed or calculation-backed claim is either verified or marked unverified.
+  workstreams: []
