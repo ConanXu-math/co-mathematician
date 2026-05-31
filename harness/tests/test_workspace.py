@@ -20,11 +20,17 @@ def test_init_creates_workspace_scaffold_and_is_idempotent(tmp_path):
     assert (workspace / "final").is_dir()
 
     goals_text = (workspace / "project" / "GOALS.yaml").read_text()
+    assert "language_policy:" in goals_text
+    assert "pending_user_choice" in goals_text
     assert "goals:" in goals_text
     assert "approved" not in goals_text
 
+    project_text = (workspace / "project" / "PROJECT.md").read_text()
+    assert "Language Policy" in project_text
+
     status_text = (workspace / "project" / "PROJECT_STATUS.md").read_text()
     assert "onboarding" in status_text
+    assert "language_policy: pending_user_choice" in status_text
 
 
 def test_append_message_writes_jsonl_records(tmp_path):

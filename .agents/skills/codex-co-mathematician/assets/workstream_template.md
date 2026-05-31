@@ -12,6 +12,7 @@
 - Approved goal:
 - Project context:
 - Constraints:
+- Language policy:
 
 ## Plan
 

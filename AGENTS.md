@@ -18,6 +18,7 @@ The coding agent is the driver:
 ## Hard Rules
 
 - Always run onboarding before goal approval.
+- During onboarding, ask the user to choose a workspace document language policy.
 - Always get explicit user approval of goals before starting any workstream.
 - Never start a workstream for an unapproved goal.
 - Important claims must include provenance.
@@ -37,6 +38,17 @@ or another repository-aware coding agent.
 - Cursor should read `.cursor/rules/codex-co-mathematician.mdc` and use Agent mode with durable file edits.
 - If an environment has no native subagent feature, the Project Coordinator must still create an independent review pass with a fresh prompt and save the review artifact under the workstream `reviews/` directory.
 - No agent may self-approve its own workstream report.
+
+## Language Policy
+
+At project start, ask the user which language policy to use for generated
+workspace artifacts. Record the answer in `workspace/project/PROJECT.md`,
+`workspace/project/PROJECT_STATUS.md`, and the `language_policy` block of
+`workspace/project/GOALS.yaml`.
+
+Schema keys, gate names, statuses, and harness commands must remain in English.
+Human-readable research notes and final working papers may follow the user's
+chosen project language.
 
 ## Architecture Principles
 

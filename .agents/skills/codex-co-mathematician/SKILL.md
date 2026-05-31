@@ -27,6 +27,7 @@ onboarding -> research question formalization -> goal approval -> workstreams ->
 ```
 
 - Do not solve the math problem during onboarding.
+- Ask the user to choose a workspace document language policy during onboarding.
 - Do not start a workstream until the user explicitly approves a goal.
 - Do not mark a workstream complete until an independent reviewer approves its report.
 - Do not hide uncertainty, failed attempts, or missing provenance.
@@ -35,6 +36,7 @@ onboarding -> research question formalization -> goal approval -> workstreams ->
 
 Collect enough context to write `workspace/project/PROJECT.md`:
 
+- workspace document language policy
 - problem statement and mathematical setting
 - definitions, notation, constraints, and allowed assumptions
 - known references and user-provided artifacts
@@ -42,6 +44,18 @@ Collect enough context to write `workspace/project/PROJECT.md`:
 - user expertise, steering preferences, and review expectations
 
 Record durable status in `workspace/project/messages.jsonl`. Keep user-facing chat high level; put detailed logs in files.
+
+Recommended language policy options:
+
+1. English for all workspace documents.
+2. User language for research notes, English for schemas, gates, and reviews.
+3. User language for all human-readable research documents.
+4. Match each project or conversation.
+
+Record the selected policy in `workspace/project/PROJECT.md`,
+`workspace/project/PROJECT_STATUS.md`, and the `language_policy` block of
+`workspace/project/GOALS.yaml`. Schema keys, gate names, statuses, and harness
+commands stay in English.
 
 ## Research Question And Goals
 

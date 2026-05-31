@@ -22,6 +22,7 @@ onboarding -> research question formalization -> goal approval -> workstreams ->
 Hard rules:
 
 - Always run onboarding before goal approval.
+- During onboarding, ask the user to choose a workspace document language policy.
 - Always get explicit user approval of goals before starting any workstream.
 - Never start a workstream for an unapproved goal.
 - Important claims must include provenance.
@@ -39,6 +40,10 @@ Hard rules:
 - Use Claude Code Task/subagent-style delegation for narrow proof, computation, citation, logic-review, adversarial-review, or synthesis work when available.
 - If no delegation mechanism is available, run a separate reviewer pass from a fresh reviewer prompt and save the output in `workspace/workstreams/<id>/reviews/`.
 - Never let the author of a report approve that same report.
+- Record the user's language policy in `workspace/project/PROJECT.md`,
+  `workspace/project/PROJECT_STATUS.md`, and the `language_policy` block of
+  `workspace/project/GOALS.yaml`; keep schema keys, gate names, statuses, and
+  harness commands in English.
 
 ## Harness Commands
 
@@ -51,4 +56,3 @@ co-math check-gate --workspace workspace --gate workstream_completion --workstre
 co-math render-final --workspace workspace
 python3 -m pytest harness/tests -q
 ```
-

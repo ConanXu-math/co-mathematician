@@ -67,9 +67,10 @@ Suggested first prompt:
 Use this repository as a coding-agent-driven AI co-mathematician workspace.
 Read the repository instructions first. You are the Project Coordinator.
 
-Initialize the workspace, then start onboarding. Do not solve the math problem,
-do not create a workstream, and do not mark anything complete until the required
-goal approval and reviewer gates pass.
+Initialize the workspace, then start onboarding. First ask me to choose the
+workspace document language policy. Do not solve the math problem, do not create
+a workstream, and do not mark anything complete until the required goal approval
+and reviewer gates pass.
 ```
 
 The agent should then run:
@@ -110,6 +111,18 @@ workspace/project/GOALS.yaml
 workspace/project/PROJECT_STATUS.md
 workspace/project/messages.jsonl
 ```
+
+The first onboarding preference should be the document language policy. Suggested
+options:
+
+1. English for all workspace documents.
+2. User language for research notes, English for schemas, gates, and reviews.
+3. User language for all human-readable research documents.
+4. Match each project or conversation.
+
+Record the selected policy in `PROJECT.md`, `PROJECT_STATUS.md`, and the
+`language_policy` block of `GOALS.yaml`. Schema keys, gate names, statuses, and
+harness commands stay in English.
 
 Draft goals are not executable. A goal can receive workstreams only when its
 status is exactly:

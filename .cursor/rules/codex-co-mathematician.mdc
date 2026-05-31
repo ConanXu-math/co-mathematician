@@ -27,6 +27,7 @@ onboarding -> research question formalization -> goal approval -> workstreams ->
 Hard rules:
 
 - Always run onboarding before goal approval.
+- During onboarding, ask the user to choose a workspace document language policy.
 - Always get explicit user approval of goals before starting any workstream.
 - Never start a workstream for an unapproved goal.
 - Important claims must include provenance.
@@ -43,4 +44,7 @@ Cursor operating notes:
 - Use `co-math` only for initialization, message append, workstream creation, gate checks, and final rendering.
 - If native subagents are unavailable, create independent reviewer passes with fresh prompts and save reviewer outputs in `workspace/workstreams/<id>/reviews/`.
 - Never self-approve a workstream report.
-
+- Record the user's language policy in `workspace/project/PROJECT.md`,
+  `workspace/project/PROJECT_STATUS.md`, and the `language_policy` block of
+  `workspace/project/GOALS.yaml`; keep schema keys, gate names, statuses, and
+  harness commands in English.

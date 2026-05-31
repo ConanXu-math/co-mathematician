@@ -23,11 +23,30 @@ onboarding
 ## Research Question
 Pending user discussion and formal approval.
 
+## Language Policy
+Status: pending user choice.
+
+Ask the user which language policy to use for generated workspace artifacts
+before writing project content:
+
+1. English for all workspace documents.
+2. User language for research notes, English for schemas, gates, and reviews.
+3. User language for all human-readable research documents.
+4. Match each project or conversation.
+
 ## Operating Rule
 Do not start workstreams until the user approves explicit goals in GOALS.yaml.
 """
 
 DEFAULT_GOALS = {
+    "language_policy": {
+        "status": "pending_user_choice",
+        "schema_language": "English",
+        "project_docs_language": "",
+        "notes_language": "",
+        "review_language": "English",
+        "final_output_language": "",
+    },
     "research_question": {"status": "onboarding", "text": ""},
     "goals": [],
 }
@@ -35,6 +54,7 @@ DEFAULT_GOALS = {
 DEFAULT_PROJECT_STATUS = """# Project Status
 
 - phase: onboarding
+- language_policy: pending_user_choice
 - approved_goals: 0
 - active_workstreams: 0
 - final_output: not_started

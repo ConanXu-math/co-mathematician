@@ -6,6 +6,16 @@ Status: onboarding
 
 Write the refined research question here only after discussing scope with the user.
 
+## Language Policy
+
+Status: pending user choice
+
+- Schema keys, gate names, statuses, and harness commands: English
+- Project documents:
+- Research notes:
+- Review artifacts:
+- Final working paper:
+
 ## Background
 
 - User-provided context:
