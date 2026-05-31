@@ -1,11 +1,24 @@
 ---
 name: codex-co-mathematician
-description: Use when conducting a Codex-driven mathematical research project that needs durable workspace state, approved goals, parallel workstreams, reviewer gates, provenance, uncertainty tracking, failed exploration records, and a final working paper.
+description: Use when conducting a coding-agent-driven mathematical research project that needs durable workspace state, approved goals, parallel workstreams, reviewer gates, provenance, uncertainty tracking, failed exploration records, and a final working paper.
 ---
 
 # Codex Co-Mathematician
 
-Use this skill to run mathematical research as a stateful Codex workspace. Codex remains the driver; do not implement a new platform. The harness is only for state, schema, gates, report skeletons, and validation.
+Use this skill to run mathematical research as a stateful coding-agent workspace.
+Codex, Claude Code, Cursor, or another repository-aware coding agent remains the
+driver; do not implement a new platform. The harness is only for state, schema,
+gates, report skeletons, and validation.
+
+## Agent Model
+
+- In Codex, the Codex main thread is the Project Coordinator.
+- In Claude Code, the main Claude Code conversation is the Project Coordinator.
+- In Cursor, the active Agent chat/session is the Project Coordinator.
+- The repository filesystem is the shared artifact store.
+- Native subagents, task agents, or separate reviewer passes are workstream coordinators, specialized agents, and reviewers.
+- If native subagents are unavailable, create an independent reviewer pass with a fresh prompt and save the review artifact under the workstream `reviews/` directory.
+- No agent may self-approve its own report.
 
 ## Non-Negotiable Flow
 
@@ -95,7 +108,7 @@ Reports must contain explicit `Provenance`, `Uncertainty`, and `Failed Explorati
 
 ## Reviewer Loop
 
-Send each workstream report to an independent reviewer subagent. Reviewers should output JSON matching `assets/reviewer_output_schema.json`.
+Send each workstream report to an independent reviewer subagent, task agent, or fresh reviewer pass. Reviewers should output JSON matching `assets/reviewer_output_schema.json`.
 
 If review fails:
 

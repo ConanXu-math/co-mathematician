@@ -2,20 +2,25 @@
 
 > [English](README.md) | 中文
 
-一个轻量级、由 Codex 驱动的数学研究工作区模式。
+一个轻量级、由 coding agent 驱动的数学研究工作区模式。它的目标是：
+Codex、Claude Code、Cursor 或其他能读写仓库的 coding agent clone 之后，
+都能知道如何启动和使用。
 
 本项目受 Google DeepMind
 [AI co-mathematician 论文](https://arxiv.org/abs/2605.06651)中公开设计原则启发，
-但**不是**对其系统的复现。本项目将这些思想改写为一个 Codex-native、基于文件系统的
+但**不是**对其系统的复现。本项目将这些思想改写为一个 coding-agent-native、基于文件系统的
 轻量工作流。
 
-本仓库**不是**新的多 agent 平台。Codex 本身就是 driver；仓库文件系统
-就是 shared artifact store；Codex subagents 扮演 workstream coordinator、
-specialist 和 reviewer；harness 只负责 schema、状态、gating、报告骨架和验证脚本。
+本仓库**不是**新的多 agent 平台。coding agent 本身就是 driver；仓库文件系统
+就是 shared artifact store；原生 subagents、task agents 或独立 reviewer pass
+扮演 workstream coordinator、specialist 和 reviewer；harness 只负责 schema、
+状态、gating、报告骨架和验证脚本。
 
 ## 包含什么
 
-- `AGENTS.md`：本工作区的硬规则。
+- `AGENTS.md`：Codex 和其他 coding agent 的硬规则。
+- `CLAUDE.md`：Claude Code 入口说明。
+- `.cursor/rules/`：Cursor Agent 规则。
 - `.agents/skills/codex-co-mathematician/`：Codex Skill 和可复用模板。
 - `.codex/`：窄角色 custom agents，包括 proof、computation、review、citation checking 和 synthesis。
 - `harness/co_math/`：用于 workspace 状态和 gates 的小型 Python harness。
@@ -44,16 +49,47 @@ co-math --help
 PYTHONPATH=. python3 -m harness.co_math.cli --help
 ```
 
+## 在 Coding Agent 里使用
+
+clone 仓库后，在你的 coding agent 里打开项目，并让 agent 先读取对应入口文件：
+
+| Agent | 入口文件 |
+| --- | --- |
+| Codex | `AGENTS.md`、`.agents/skills/codex-co-mathematician/SKILL.md`、`.codex/config.toml` |
+| Claude Code | `CLAUDE.md`、`AGENTS.md`、`.agents/skills/codex-co-mathematician/SKILL.md` |
+| Cursor | `.cursor/rules/codex-co-mathematician.mdc`、`AGENTS.md`、`.agents/skills/codex-co-mathematician/SKILL.md` |
+
+推荐第一条 prompt：
+
+```text
+Use this repository as a coding-agent-driven AI co-mathematician workspace.
+Read the repository instructions first. You are the Project Coordinator.
+
+Initialize the workspace, then start onboarding. Do not solve the math problem,
+do not create a workstream, and do not mark anything complete until the required
+goal approval and reviewer gates pass.
+```
+
+随后 agent 应运行：
+
+```bash
+python3 -m pip install -e ".[dev]"
+co-math init --workspace workspace
+```
+
 ## 使用 Skill
 
-让 Codex 使用 `codex-co-mathematician` Skill。流程是：
+让 coding agent 使用 `codex-co-mathematician` Skill，或直接遵循本仓库里的
+`.agents/skills/codex-co-mathematician/SKILL.md`。流程是：
 
 ```text
 onboarding -> research question formalization -> goal approval -> workstreams -> reviewer loop -> final working paper
 ```
 
 核心规则很简单：用户明确 approve goal 之前，不得启动 workstream；workstream report
-未通过独立 reviewer 审查之前，不得标记 complete。
+未通过独立 reviewer 审查之前，不得标记 complete。如果当前 agent 环境没有原生
+subagent 功能，就用一个 fresh prompt 做独立 reviewer pass，并把 review 保存到
+workstream 的 `reviews/` 目录。
 
 ## 开始一个新项目
 
@@ -63,7 +99,7 @@ onboarding -> research question formalization -> goal approval -> workstreams ->
 co-math init --workspace workspace
 ```
 
-onboarding 阶段，Codex 应更新：
+onboarding 阶段，Project Coordinator 应更新：
 
 ```text
 workspace/project/PROJECT.md
@@ -95,6 +131,20 @@ co-math new-workstream \
 ```
 
 允许的 workstream kind 是 `proof`、`computation`、`literature` 和 `review`。
+
+## Agent 角色
+
+Project Coordinator 可以把窄任务委派给 subagents、task agents 或独立 reviewer pass：
+
+- `proof_explorer`：证明路线、归约、例子和 proof gaps。
+- `computational_experimenter`：有边界的计算实验和可复现性检查。
+- `logic_reviewer`：逻辑正确性和依赖结构审查。
+- `adversarial_reviewer`：反例、隐藏假设和过度 claim 检查。
+- `citation_checker`：provenance 与 source-to-claim 对齐检查。
+- `synthesis_agent`：只从 reviewer-approved workstream reports 综合 working paper。
+
+这些角色都必须保持窄边界。它们不能 approve goals，不能启动未批准的 workstreams，
+也不能把自己的 report 标记为 complete。
 
 ## Harness 命令
 

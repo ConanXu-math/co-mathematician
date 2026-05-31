@@ -2,13 +2,15 @@
 
 ## Repository Contract
 
-This repository is a Codex-driven AI co-mathematician workspace.
+This repository is a coding-agent-driven AI co-mathematician workspace.
 
-Codex is the driver:
+The coding agent is the driver:
 
-- The Codex main thread is the Project Coordinator.
+- In Codex, the Codex main thread is the Project Coordinator.
+- In Claude Code, the main Claude Code conversation is the Project Coordinator.
+- In Cursor, the active Agent chat/session is the Project Coordinator.
 - The repository filesystem is the shared artifact store.
-- Codex subagents are workstream coordinators, specialized agents, and reviewers.
+- Native subagents, task agents, or separate reviewer passes are workstream coordinators, specialized agents, and reviewers.
 - The harness only provides schemas, state files, gates, report skeletons, and validation scripts.
 - Do not build a new multi-agent platform here.
 - Do not start a mathematical research project during workspace initialization.
@@ -24,6 +26,17 @@ Codex is the driver:
 - Every workstream report must be reviewed by an independent reviewer subagent.
 - A workstream whose review has not passed must not be marked complete.
 - Final output must be a working paper, not a chat summary.
+
+## Agent Compatibility
+
+This workspace is intended to work after cloning in Codex, Claude Code, Cursor,
+or another repository-aware coding agent.
+
+- Codex should read `AGENTS.md`, `.codex/config.toml`, and the custom agent definitions in `.codex/agents/`.
+- Claude Code should read `CLAUDE.md` and may use Task/subagent-style delegation for workstreams and reviews.
+- Cursor should read `.cursor/rules/codex-co-mathematician.mdc` and use Agent mode with durable file edits.
+- If an environment has no native subagent feature, the Project Coordinator must still create an independent review pass with a fresh prompt and save the review artifact under the workstream `reviews/` directory.
+- No agent may self-approve its own workstream report.
 
 ## Architecture Principles
 

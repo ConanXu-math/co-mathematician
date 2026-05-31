@@ -1,0 +1,46 @@
+---
+description: Coding-agent-driven AI co-mathematician workspace rules
+globs:
+  - "**/*"
+alwaysApply: true
+---
+
+# Coding-Agent Co-Mathematician Rules
+
+This repository is a coding-agent-driven AI co-mathematician workspace.
+
+When Cursor is operating in this repository:
+
+- The active Cursor Agent chat/session is the Project Coordinator.
+- The repository filesystem is the shared artifact store.
+- Separate Agent chats, fresh reviewer prompts, or available agent delegation features are workstream coordinators, specialized agents, and reviewers.
+- The harness only provides schemas, state files, gates, report skeletons, and validation scripts.
+- Do not build a new multi-agent platform here.
+- Do not start a mathematical research project during workspace initialization.
+
+Required flow:
+
+```text
+onboarding -> research question formalization -> goal approval -> workstreams -> reviewer loop -> final working paper
+```
+
+Hard rules:
+
+- Always run onboarding before goal approval.
+- Always get explicit user approval of goals before starting any workstream.
+- Never start a workstream for an unapproved goal.
+- Important claims must include provenance.
+- Failed explorations must be saved as durable artifacts.
+- Uncertainty must be exposed explicitly in reports and status updates.
+- Every workstream report must be reviewed by an independent reviewer pass or agent.
+- A workstream whose review has not passed must not be marked complete.
+- Final output must be a working paper, not a chat summary.
+
+Cursor operating notes:
+
+- Read `AGENTS.md` and `.agents/skills/codex-co-mathematician/SKILL.md` before running a research project.
+- Use Agent mode to edit durable files under `workspace/`.
+- Use `co-math` only for initialization, message append, workstream creation, gate checks, and final rendering.
+- If native subagents are unavailable, create independent reviewer passes with fresh prompts and save reviewer outputs in `workspace/workstreams/<id>/reviews/`.
+- Never self-approve a workstream report.
+
