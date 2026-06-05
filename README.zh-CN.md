@@ -91,16 +91,10 @@ PYTHONPATH=. python3 -m harness.co_math.cli --help
 在 coding agent 中打开仓库后，可以用类似这样的第一条 prompt：
 
 ```text
-请把这个仓库作为 Co-Mathematician 数学研究工作区使用。
-你是 Project Coordinator。
+我想用这个仓库启动一个 Co-Mathematician 数学研究项目。
 
-请先阅读 AGENTS.md 和 co-mathematician Skill。
-如果 workspace 还没有初始化，请先初始化；然后开始 onboarding。
-第一步请让我选择 workspace 文档语言策略。
-
-现在不要解数学问题。
-在我明确 approve goals 之前，不要创建任何 workstream。
-在 reviewer gates 通过之前，不要把任何内容标记为 complete。
+请先检查工作区状态，然后带我完成 onboarding。
+现在不要开始具体研究。
 ```
 
 onboarding 的第一个偏好问题应该是文档语言策略：
