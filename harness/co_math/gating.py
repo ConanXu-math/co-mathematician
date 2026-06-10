@@ -48,9 +48,7 @@ def check_final_render(workspace: str | Path) -> GateResult:
     root = Path(workspace)
     approved = []
     rejected = {}
-    for workstream in sorted((root / "workstreams").glob("*")):
-        if not workstream.is_dir():
-            continue
+    for workstream in _selected_workstreams(root, None):
         gate = check_workstream_completion(root, workstream.name)
         if gate.passed:
             approved.append(workstream.name)
@@ -89,7 +87,11 @@ def _selected_workstreams(root: Path, workstream_id: str | None) -> list[Path]:
         return [path] if path.exists() else []
     if not workstreams_dir.exists():
         return []
-    return sorted(path for path in workstreams_dir.iterdir() if path.is_dir())
+    return sorted(
+        path
+        for path in workstreams_dir.iterdir()
+        if path.is_dir() and _is_workstream_dir(path)
+    )
 
 
 def _workstream_issues(workstream: Path) -> list[str]:
@@ -114,8 +116,11 @@ def _workstream_issues(workstream: Path) -> list[str]:
     if not independent_approvals:
         issues.append(f"{label}: missing independent reviewer approval.")
 
+    resolved_reviews = _resolved_review_names(reviews)
     for path, review in reviews:
-        if review.get("severity") == "blocking":
+        if review.get("severity") == "blocking" and not _review_is_resolved(
+            path, review, resolved_reviews
+        ):
             issues.append(f"{label}: blocking review in {path.name}.")
 
     if report.exists():
@@ -150,6 +155,39 @@ def _load_reviews(workstream: Path) -> list[tuple[Path, dict[str, Any]]]:
             data = {"severity": "blocking", "comment": "Review JSON is invalid."}
         reviews.append((path, data))
     return reviews
+
+
+def _is_workstream_dir(path: Path) -> bool:
+    return any(
+        (path / marker).exists()
+        for marker in ("status.yaml", "WORKSTREAM.md", "report.md", "messages.jsonl")
+    )
+
+
+def _resolved_review_names(reviews: list[tuple[Path, dict[str, Any]]]) -> set[str]:
+    resolved: set[str] = set()
+    for path, review in reviews:
+        if review.get("resolved") is True:
+            resolved.update((path.name, path.stem))
+        resolves = review.get("resolves", [])
+        if not isinstance(resolves, list):
+            continue
+        for target in resolves:
+            if not isinstance(target, str) or not target.strip():
+                continue
+            target_path = Path(target.strip())
+            resolved.update((target.strip(), target_path.name, target_path.stem))
+    return resolved
+
+
+def _review_is_resolved(
+    path: Path, review: dict[str, Any], resolved_reviews: set[str]
+) -> bool:
+    return (
+        review.get("resolved") is True
+        or path.name in resolved_reviews
+        or path.stem in resolved_reviews
+    )
 
 
 def _has_section(text: str, section: str) -> bool:

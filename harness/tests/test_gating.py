@@ -5,7 +5,11 @@ import json
 import pytest
 import yaml
 
-from harness.co_math.gating import check_goal_approval, check_workstream_completion
+from harness.co_math.gating import (
+    check_final_render,
+    check_goal_approval,
+    check_workstream_completion,
+)
 from harness.co_math.workspace import init_workspace, new_workstream
 
 
@@ -109,3 +113,58 @@ def test_workstream_completion_gate_requires_report_review_and_provenance(tmp_pa
     passed = check_workstream_completion(workspace, workstream.name)
     assert passed.passed
     assert passed.issues == []
+
+
+def test_workstream_completion_gate_allows_preserved_resolved_blocking_reviews(tmp_path):
+    workspace = tmp_path / "workspace"
+    init_workspace(workspace)
+    write_goals(workspace, [{"id": "G1", "title": "Approved goal", "status": "approved"}])
+    workstream = new_workstream(
+        workspace, goal_id="G1", title="Resolved review validation", kind="review"
+    )
+    (workstream / "report.md").write_text(valid_report(), encoding="utf-8")
+
+    write_review(
+        workstream,
+        "logic_initial.json",
+        {
+            "approved": False,
+            "severity": "blocking",
+            "issue_type": "logic",
+            "reviewer": "logic_reviewer",
+            "comment": "A blocking issue remains.",
+            "suggested_fix": "Clarify the proof dependency.",
+        },
+    )
+    write_review(
+        workstream,
+        "logic_followup.json",
+        {
+            "approved": True,
+            "severity": "info",
+            "issue_type": "logic",
+            "reviewer": "logic_reviewer_followup",
+            "comment": "The proof dependency has been clarified.",
+            "suggested_fix": "",
+            "resolves": ["logic_initial.json"],
+        },
+    )
+
+    gate = check_workstream_completion(workspace, workstream.name)
+
+    assert gate.passed
+    assert gate.issues == []
+
+
+def test_final_render_gate_ignores_empty_residue_directories(tmp_path):
+    workspace = tmp_path / "workspace"
+    init_workspace(workspace)
+    residue = workspace / "workstreams" / "WS-G1-001-stale-empty-dir"
+    (residue / "artifacts").mkdir(parents=True)
+    (residue / "failures").mkdir()
+
+    gate = check_final_render(workspace)
+
+    assert not gate.passed
+    assert gate.issues == ["No reviewed workstream reports are ready to render."]
+    assert gate.details["rejected_workstreams"] == {}

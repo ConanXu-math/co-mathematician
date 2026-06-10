@@ -125,3 +125,20 @@ def test_suggest_skills_can_refresh_before_matching(tmp_path):
 
     assert matches[0]["name"] == "optimization-skill"
     assert (workspace / "project" / "skill_registry.json").is_file()
+
+
+def test_suggest_skills_expands_common_chinese_math_terms(tmp_path):
+    repo = tmp_path / "repo"
+    workspace = repo / "workspace"
+    init_workspace(workspace)
+    write_skill(
+        repo,
+        "optimization-skill",
+        "Use when modeling conic, semidefinite, nonlinear, or manifold optimization problems.",
+    )
+    refresh_skill_registry(workspace, repo_root=repo)
+
+    matches = suggest_skills(workspace, "流形优化", limit=1)
+
+    assert len(matches) == 1
+    assert matches[0]["name"] == "optimization-skill"

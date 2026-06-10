@@ -11,6 +11,22 @@ SKILL_ROOT = Path(".agents") / "skills"
 REGISTRY_JSON = "skill_registry.json"
 REGISTRY_MD = "SKILL_REGISTRY.md"
 
+COMMON_CJK_MATH_ALIASES: dict[str, tuple[str, ...]] = {
+    "优化": ("optimization", "optimize", "optimizer"),
+    "流形": ("manifold",),
+    "半定": ("semidefinite", "sdp"),
+    "锥": ("cone", "conic"),
+    "非线性": ("nonlinear",),
+    "矩阵": ("matrix", "matrices"),
+    "证明": ("proof", "prove"),
+    "形式化": ("formal", "formalization"),
+    "文献": ("literature", "reference"),
+    "引用": ("citation", "provenance"),
+    "审查": ("review", "reviewer"),
+    "工作区": ("workspace",),
+    "研究": ("research",),
+}
+
 
 def refresh_skill_registry(
     workspace: str | Path,
@@ -146,11 +162,21 @@ def _score_skill(skill: dict[str, Any], query: str, query_tokens: set[str]) -> i
 
 
 def _tokens(text: str) -> set[str]:
-    return {
+    tokens = {
         token
         for token in re.findall(r"[a-zA-Z0-9][a-zA-Z0-9_-]*", text.lower())
         if len(token) > 2
     }
+    for run in re.findall(r"[\u3400-\u9fff]+", text):
+        if len(run) > 1:
+            tokens.add(run)
+        tokens.update(
+            run[index : index + 2] for index in range(max(0, len(run) - 1))
+        )
+    for phrase, aliases in COMMON_CJK_MATH_ALIASES.items():
+        if phrase in text:
+            tokens.update(aliases)
+    return tokens
 
 
 def _registry_markdown(registry: dict[str, Any]) -> str:

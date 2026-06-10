@@ -1,9 +1,13 @@
 from __future__ import annotations
 
 import json
+from pathlib import Path
 
 from harness.co_math.messages import append_message, read_messages
 from harness.co_math.workspace import init_workspace
+
+
+ROOT = Path(__file__).resolve().parents[2]
 
 
 def test_init_creates_workspace_scaffold_and_is_idempotent(tmp_path):
@@ -75,3 +79,18 @@ def test_append_message_accepts_goal_proposal_records(tmp_path):
     )
 
     assert record["type"] == "proposal"
+
+
+def test_checked_in_workspace_scaffold_includes_skill_handoff_state():
+    project_text = (ROOT / "workspace" / "project" / "PROJECT.md").read_text(
+        encoding="utf-8"
+    )
+    status_text = (ROOT / "workspace" / "project" / "PROJECT_STATUS.md").read_text(
+        encoding="utf-8"
+    )
+    handoff_log = ROOT / "workspace" / "project" / "skill_handoffs.jsonl"
+
+    assert "skill-guided mode" in project_text
+    assert "co-math skill-handoff" in project_text
+    assert "active_skill_handoffs: 0" in status_text
+    assert handoff_log.is_file()

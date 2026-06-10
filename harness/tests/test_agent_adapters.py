@@ -67,3 +67,25 @@ def test_adapters_point_back_to_canonical_role_cards():
         assert re.search(r"^---\n.*?^name: " + role_id + r"\n", claude_text, re.S | re.M)
         assert "description:" in claude_text
         assert "Read the canonical role card" in claude_text
+
+
+def test_codex_config_points_to_existing_agent_adapter_files():
+    config_text = (ROOT / ".codex" / "config.toml").read_text(encoding="utf-8")
+    config_paths = re.findall(r'config_file = "([^"]+)"', config_text)
+
+    assert sorted(config_paths) == [
+        f"./.codex/agents/{role_id}.toml" for role_id in sorted(ROLE_IDS)
+    ]
+    for config_path in config_paths:
+        assert (ROOT / config_path).is_file()
+
+
+def test_platform_entry_docs_mention_skill_guided_mode():
+    claude_text = (ROOT / "CLAUDE.md").read_text(encoding="utf-8")
+    cursor_text = (ROOT / ".cursor" / "rules" / "co-mathematician.mdc").read_text(
+        encoding="utf-8"
+    )
+
+    for text in (claude_text, cursor_text):
+        assert "skill-guided mode" in text
+        assert "co-math skill-handoff" in text

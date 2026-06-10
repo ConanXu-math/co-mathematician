@@ -40,6 +40,17 @@
     "suggested_fix": {
       "type": "string"
     },
+    "resolved": {
+      "type": "boolean",
+      "default": false
+    },
+    "resolves": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
     "checked_artifacts": {
       "type": "array",
       "items": {

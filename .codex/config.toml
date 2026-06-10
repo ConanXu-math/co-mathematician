@@ -12,24 +12,24 @@ job_max_runtime_seconds = 3600
 
 [agents.proof_explorer]
 description = "Searches proof strategies and proof gaps for an approved workstream."
-config_file = "./agents/proof_explorer.toml"
+config_file = "./.codex/agents/proof_explorer.toml"
 
 [agents.computational_experimenter]
 description = "Runs narrow computational experiments for an approved workstream."
-config_file = "./agents/computational_experimenter.toml"
+config_file = "./.codex/agents/computational_experimenter.toml"
 
 [agents.logic_reviewer]
 description = "Checks logical consistency of a workstream report."
-config_file = "./agents/logic_reviewer.toml"
+config_file = "./.codex/agents/logic_reviewer.toml"
 
 [agents.adversarial_reviewer]
 description = "Looks for shortcuts, counterexamples, and premature success claims."
-config_file = "./agents/adversarial_reviewer.toml"
+config_file = "./.codex/agents/adversarial_reviewer.toml"
 
 [agents.citation_checker]
 description = "Checks citation and provenance claims in a workstream report."
-config_file = "./agents/citation_checker.toml"
+config_file = "./.codex/agents/citation_checker.toml"
 
 [agents.synthesis_agent]
 description = "Synthesizes reviewed workstream reports into a working-paper draft."
-config_file = "./agents/synthesis_agent.toml"
+config_file = "./.codex/agents/synthesis_agent.toml"

@@ -20,16 +20,25 @@ When Cursor is operating in this repository:
 - Do not build a new multi-agent platform here.
 - Do not start a mathematical research project during workspace initialization.
 
-Required flow:
+Default workspace-mode flow:
 
 ```text
 onboarding -> research question formalization -> goal approval -> workstreams -> reviewer loop -> final working paper
 ```
 
+If the user explicitly invokes a project-local domain Skill, or accepts a Skill
+suggested by `co-math suggest-skills`, enter skill-guided mode instead. Record
+the handoff with `co-math skill-handoff` and follow that Skill's own opening,
+modeling, and approval flow for the inner task. Promote the task into goals and
+workstreams only when the user wants durable research output, reviewer-gated
+claims, or a final working paper.
+
 Hard rules:
 
-- Always run onboarding before goal approval.
-- During onboarding, ask the user to choose a workspace document language policy.
+- Default workspace mode runs onboarding before goal approval.
+- During workspace-mode onboarding, ask the user to choose a workspace document language policy.
+- Refresh the project-local skill registry at session start, after skill installation, and before formalizing goals.
+- Before creating any workstream, match the workstream scope against the project-local skill registry and read any relevant `SKILL.md`.
 - Always get explicit user approval of goals before starting any workstream.
 - Never start a workstream for an unapproved goal.
 - Important claims must include provenance.
@@ -43,7 +52,8 @@ Cursor operating notes:
 
 - Read `AGENTS.md`, `agents/roles/`, `.agents/skills/co-mathematician/SKILL.md`, and `.cursor/rules/co-mathematician-roles.mdc` before running a research project.
 - Use Agent mode to edit durable files under `workspace/`.
-- Use `co-math` only for initialization, message append, workstream creation, gate checks, and final rendering.
+- Install or copy project-specific Skills into `.agents/skills/` by default, not global skill roots, unless the user explicitly asks for a personal cross-project install.
+- Use `co-math` only for initialization, skill registry and handoff records, message append, workstream creation, gate checks, and final rendering.
 - If native subagents are unavailable, create independent reviewer passes with fresh prompts and save reviewer outputs in `workspace/workstreams/<id>/reviews/`.
 - Never self-approve a workstream report.
 - Record the user's language policy in `workspace/project/PROJECT.md`,

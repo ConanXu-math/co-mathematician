@@ -125,7 +125,9 @@ A workstream may be treated as complete only when:
 
 - `report.md` exists.
 - At least one independent reviewer has approved it.
-- No blocking review remains unresolved.
+- No blocking review remains unresolved. Preserve historical blocking reviews; a
+  later reviewer JSON may resolve them with `resolves: ["<review-file>.json"]`,
+  or the original review may be marked `resolved: true`.
 - The report has explicit `Provenance`, `Uncertainty`, and `Failed Explorations` sections.
 - Any code-backed claim has passing tests or is marked unverified.
 - Project status has been updated to reflect the workstream state.

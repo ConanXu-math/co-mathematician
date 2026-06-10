@@ -218,6 +218,11 @@ If review fails:
 - keep unresolved uncertainty visible
 - do not mark the workstream complete
 
+If a later reviewer pass resolves a blocking review, preserve both reviews. Mark
+the follow-up reviewer JSON with `resolves: ["<blocking-review-file>.json"]`, or
+mark the original review with `resolved: true`, so the completion gate can
+distinguish archived blocking feedback from unresolved blockers.
+
 Use:
 
 ```bash
